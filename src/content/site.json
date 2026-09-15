@@ -37,6 +37,11 @@
     ]
   },
   "workHeading": "Selected work",
+  "nav": [
+    { "label": "Work", "href": "#work" },
+    { "label": "About", "href": "#about" },
+    { "label": "Contact", "href": "#contact" }
+  ],
   "testimonials": [
     {
       "quote": "Luli is a fantastic collaborator. She led user interviews with real curiosity and developed a deep empathy for our users, which came through clearly in her designs. She was thoughtful, collaborative, and an absolute pleasure to work with.",

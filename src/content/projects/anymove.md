@@ -1,5 +1,5 @@
 ---
-title: ANYMOVE
+title: Anymove
 subtitle: Multimodal mobility platform
 summary: End-to-end product design for a multimodal mobility platform helping users make smarter transport choices.
 tags:
@@ -15,7 +15,7 @@ cover: /img/projects/anymove/cover.svg
 
 ## Overview
 
-ANYMOVE helps people choose smarter ways to move through the city. I led end-to-end product design for a multimodal platform spanning discovery, booking, and onboarding.
+Anymove helps people choose smarter ways to move through the city. I led end-to-end product design for a multimodal platform spanning discovery, booking, and onboarding.
 
 ## Role
 
