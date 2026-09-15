@@ -1,6 +1,6 @@
 ---
-import outfit400 from '@fontsource/outfit/files/outfit-latin-400-normal.woff2?url';
-import outfit500 from '@fontsource/outfit/files/outfit-latin-500-normal.woff2?url';
+import dmSans400 from '@fontsource/dm-sans/files/dm-sans-latin-400-normal.woff2?url';
+import dmSans500 from '@fontsource/dm-sans/files/dm-sans-latin-500-normal.woff2?url';
 
 interface Props {
   title?: string;
@@ -27,14 +27,14 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
     <link rel="icon" href={`${base}favicon.ico`} />
     <link
       rel="preload"
-      href={outfit400}
+      href={dmSans400}
       as="font"
       type="font/woff2"
       crossorigin
     />
     <link
       rel="preload"
-      href={outfit500}
+      href={dmSans500}
       as="font"
       type="font/woff2"
       crossorigin
