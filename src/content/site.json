@@ -6,7 +6,7 @@
   "intro": {
     "prefix": "A ",
     "struck": "Berlin",
-    "suffix": "–Valencia-based product designer focused on building thoughtful, people-first products."
+    "suffix": " Valencia-based product designer focused on building thoughtful, people-first products."
   },
   "specializingLabel": "Specializing in:",
   "specialties": ["UX/UI", "Research", "Product"],
@@ -16,23 +16,28 @@
     "items": [
       {
         "title": "Design is for everyone",
-        "body": "Inclusive products meet people where they are — across ability, language, culture, and context. Accessibility and clarity are not extras; they are how thoughtful design earns trust."
+        "body": "Inclusive products meet people where they are — across ability, language, culture, and context. Accessibility and clarity are not extras; they are how thoughtful design earns trust.",
+        "icon": "everyone"
       },
       {
         "title": "Design is strategy",
-        "body": "Every screen is a decision about what matters. I connect research insights to business goals so design choices move metrics and meaning, not just pixels."
+        "body": "Every screen is a decision about what matters. I connect research insights to business goals so design choices move metrics and meaning, not just pixels.",
+        "icon": "strategy"
       },
       {
         "title": "Design is collaboration",
-        "body": "The best outcomes come from working closely with product, engineering, support, and stakeholders. Shared understanding beats solitary perfection."
+        "body": "The best outcomes come from working closely with product, engineering, support, and stakeholders. Shared understanding beats solitary perfection.",
+        "icon": "collaboration"
       },
       {
         "title": "Design needs evidence",
-        "body": "Curiosity drives the work: interviews, usability tests, data, and messy real-world feedback. Evidence keeps taste honest and iteration purposeful."
+        "body": "Curiosity drives the work: interviews, usability tests, data, and messy real-world feedback. Evidence keeps taste honest and iteration purposeful.",
+        "icon": "evidence"
       },
       {
         "title": "Design doesn't end at launch",
-        "body": "Shipping is a beginning. I stay close to how products perform, learn from what breaks, and keep refining until the experience feels quietly inevitable."
+        "body": "Shipping is a beginning. I stay close to how products perform, learn from what breaks, and keep refining until the experience feels quietly inevitable.",
+        "icon": "launch"
       }
     ]
   },
