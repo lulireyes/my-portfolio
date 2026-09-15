@@ -217,7 +217,7 @@ const nav = site.nav ?? [
       document.documentElement.setAttribute('data-theme', theme);
       document.documentElement.style.colorScheme = theme;
       const meta = document.querySelector('meta[name="theme-color"]');
-      if (meta) meta.setAttribute('content', theme === 'dark' ? '#0c0b0a' : '#f3efe8');
+      if (meta) meta.setAttribute('content', theme === 'dark' ? '#0d0d0d' : '#f3efe8');
     }
 
     const toggle = document.getElementById('theme-toggle');
