@@ -371,6 +371,7 @@ p {
   grid-area: 1 / 1;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   min-height: 100%;
   height: 100%;
   padding: 1rem 0.95rem 1.05rem;
@@ -383,7 +384,7 @@ p {
 
 .flip-card-front {
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   text-align: center;
   gap: 0.65rem;
 }
