@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img" aria-label="ANYMOVE cover">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img" aria-label="Anymove cover">
   <rect width="1200" height="750" fill="#0a0a0a"/>
   <circle cx="620" cy="380" r="220" fill="#1a1a1a"/>
   <circle cx="620" cy="380" r="140" fill="#121212" stroke="#DF9375" stroke-width="2" opacity="0.7"/>
@@ -7,5 +7,5 @@
   <circle cx="620" cy="280" r="28" fill="#DF9375"/>
   <rect x="540" y="340" width="160" height="12" rx="6" fill="#ebe4d8" opacity="0.4"/>
   <rect x="560" y="370" width="120" height="10" rx="5" fill="#ebe4d8" opacity="0.25"/>
-  <text x="80" y="80" fill="#DF9375" font-family="Georgia, serif" font-size="36">ANYMOVE</text>
+  <text x="80" y="80" fill="#DF9375" font-family="Georgia, serif" font-size="36">Anymove</text>
 </svg>
