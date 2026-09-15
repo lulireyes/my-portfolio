@@ -1,0 +1,30 @@
+{
+  "name": "Luciana Reyes",
+  "role": "Product Designer",
+  "location": "Berlin",
+  "tagline": "Creating delightful and human experiences.",
+  "about": "Product designer focused on clear, human experiences. Selected work is coming soon.",
+  "seo": {
+    "title": "Luciana Reyes — Product Designer",
+    "description": "Product Designer based in Berlin."
+  },
+  "links": [
+    {
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/lucianareyes"
+    },
+    {
+      "label": "Medium",
+      "href": "https://medium.com/@lucianareyes"
+    },
+    {
+      "label": "GitHub",
+      "href": "https://github.com/lulireyes"
+    },
+    {
+      "label": "Behance",
+      "href": "https://www.behance.net/lucianareyes"
+    }
+  ],
+  "footer": "Luciana Reyes"
+}

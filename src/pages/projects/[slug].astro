@@ -1,0 +1,60 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getSite } from '../../lib/site';
+import { withBase } from '../../lib/paths';
+import '../../styles/global.css';
+
+export async function getStaticPaths() {
+  const projects = await getCollection(
+    'projects',
+    ({ data }) => !data.draft && !data.externalUrl,
+  );
+
+  return projects.map((project) => ({
+    params: { slug: project.id },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const site = getSite();
+const { Content } = await render(project);
+---
+
+<BaseLayout
+  title={`${project.data.title} — ${site.name}`}
+  description={project.data.subtitle ?? site.seo.description}
+>
+  <main class="site project-page">
+    <p class="eyebrow">
+      <a href={withBase('/')}>← Back</a>
+    </p>
+
+    <header class="project-hero">
+      <h1>{project.data.title}</h1>
+      {
+        project.data.subtitle && (
+          <p class="project-subtitle">{project.data.subtitle}</p>
+        )
+      }
+      {
+        project.data.year && <p class="work-year">{project.data.year}</p>
+      }
+    </header>
+
+    {
+      project.data.cover && (
+        <img
+          class="project-cover"
+          src={withBase(project.data.cover)}
+          alt=""
+        />
+      )
+    }
+
+    <article class="prose">
+      <Content />
+    </article>
+  </main>
+</BaseLayout>
