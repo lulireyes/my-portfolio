@@ -89,9 +89,8 @@ const philosophyIcons: Record<string, { viewBox: string; paths: string }> = {
         <p class="intro-copy">
           {site.intro.prefix}
           <s>{site.intro.struck}</s>{site.intro.suffix}
-          {' '}
-          <span class="specializing">{site.specializingLabel}</span>
         </p>
+        <p class="specializing">{site.specializingLabel}</p>
         <ul class="specialties">
           {site.specialties.map((item) => <li>{item}</li>)}
         </ul>
@@ -100,48 +99,50 @@ const philosophyIcons: Record<string, { viewBox: string; paths: string }> = {
       <hr class="divider" />
 
       <section class="shell philosophy" aria-labelledby="philosophy-heading">
-        <div class="philosophy-intro">
+        <div class="philosophy-layout">
           <h2 class="philosophy-label" id="philosophy-heading">{site.philosophy.label}</h2>
-          <p class="philosophy-body">{site.philosophy.body}</p>
-        </div>
-        <div class="flip-cards" data-flip-cards>
-          {
-            site.philosophy.items.map((item, index) => {
-              const icon = philosophyIcons[item.icon ?? ''] ?? philosophyIcons.everyone;
-              return (
-                <button
-                  type="button"
-                  class="flip-card"
-                  aria-pressed="false"
-                  aria-label={`${item.title}. Flip card for details.`}
-                  id={`philosophy-card-${index}`}
-                >
-                  <span class="flip-card-inner">
-                    <span class="flip-card-face flip-card-front">
-                      <span class="flip-card-title">{item.title}</span>
-                      <svg
-                        class="flip-card-icon"
-                        viewBox={icon.viewBox}
-                        fill="none"
-                        aria-hidden="true"
-                      >
-                        <path
-                          d={icon.paths}
-                          stroke="currentColor"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </span>
-                    <span class="flip-card-face flip-card-back">
-                      <span class="flip-card-body">{item.body}</span>
-                    </span>
-                  </span>
-                </button>
-              );
-            })
-          }
+          <div class="philosophy-main">
+            <p class="philosophy-body">{site.philosophy.body}</p>
+            <div class="flip-cards" data-flip-cards>
+              {
+                site.philosophy.items.map((item, index) => {
+                  const icon = philosophyIcons[item.icon ?? ''] ?? philosophyIcons.everyone;
+                  return (
+                    <button
+                      type="button"
+                      class="flip-card"
+                      aria-pressed="false"
+                      aria-label={`${item.title}. Flip card for details.`}
+                      id={`philosophy-card-${index}`}
+                    >
+                      <span class="flip-card-inner">
+                        <span class="flip-card-face flip-card-front">
+                          <span class="flip-card-title">{item.title}</span>
+                          <svg
+                            class="flip-card-icon"
+                            viewBox={icon.viewBox}
+                            fill="none"
+                            aria-hidden="true"
+                          >
+                            <path
+                              d={icon.paths}
+                              stroke="currentColor"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </span>
+                        <span class="flip-card-face flip-card-back">
+                          <span class="flip-card-body">{item.body}</span>
+                        </span>
+                      </span>
+                    </button>
+                  );
+                })
+              }
+            </div>
+          </div>
         </div>
       </section>
 
