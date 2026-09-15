@@ -89,8 +89,9 @@ const philosophyIcons: Record<string, { viewBox: string; paths: string }> = {
         <p class="intro-copy">
           {site.intro.prefix}
           <s>{site.intro.struck}</s>{site.intro.suffix}
+          <br />
+          {site.specializingLabel}
         </p>
-        <p class="specializing">{site.specializingLabel}</p>
         <ul class="specialties">
           {site.specialties.map((item) => <li>{item}</li>)}
         </ul>

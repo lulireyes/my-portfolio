@@ -9,6 +9,9 @@
   --color-bg: #0d0d0d;
   --color-bg-elevated: #161412;
   --color-ink: #f2f1ef;
+  --color-beige: #efe9dd;
+  --color-intro: #d6cfbf;
+  --color-nav: #d1d1d1;
   --color-muted: #a0a09a;
   --color-muted-soft: #8e8e88;
   --color-line: #2a2927;
@@ -28,6 +31,9 @@
   --color-bg: #f3efe8;
   --color-bg-elevated: #ebe6dc;
   --color-ink: #1a1814;
+  --color-beige: #3a342c;
+  --color-intro: #3a342c;
+  --color-nav: #1a1814;
   --color-muted: #5c564e;
   --color-muted-soft: #6e6860;
   --color-line: #d4ccc0;
@@ -120,10 +126,12 @@ p {
 }
 
 .brand {
-  font-size: 1.1875rem;
+  /* ~35pt on 1512pt PDF page ≈ 2.2× nav (~16pt) */
+  font-size: clamp(1.75rem, 2.4vw, 2.1875rem);
   font-weight: 500;
-  letter-spacing: -0.015em;
-  color: var(--color-ink);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--color-beige);
   text-decoration: none;
 }
 
@@ -146,12 +154,12 @@ p {
 }
 
 .site-nav-list a {
-  font-size: 0.95rem;
-  font-weight: 450;
+  font-size: 1rem;
+  font-weight: 500;
   letter-spacing: -0.01em;
   text-decoration: none;
-  color: var(--color-ink);
-  opacity: 0.88;
+  color: var(--color-nav);
+  opacity: 1;
   transition:
     opacity 0.2s ease,
     color 0.2s ease;
@@ -215,10 +223,11 @@ p {
 }
 
 .intro-copy {
-  max-width: 40rem;
+  max-width: 42rem;
   margin-inline: auto;
-  color: var(--color-ink);
-  font-size: clamp(1.2rem, 2.4vw, 1.55rem);
+  color: var(--color-intro);
+  /* ~24pt on PDF */
+  font-size: clamp(1.25rem, 2.2vw, 1.5rem);
   font-weight: 400;
   line-height: 1.55;
   letter-spacing: -0.015em;
@@ -227,15 +236,8 @@ p {
 .intro-copy s {
   text-decoration: line-through;
   text-decoration-thickness: 1.5px;
-  text-decoration-color: color-mix(in srgb, var(--color-ink) 55%, transparent);
-  color: var(--color-ink);
-}
-
-.specializing {
-  margin: clamp(1.75rem, 4vh, 2.5rem) 0 0;
-  color: var(--color-ink);
-  font-size: clamp(1.05rem, 2vw, 1.25rem);
-  font-weight: 400;
+  text-decoration-color: color-mix(in srgb, var(--color-intro) 55%, transparent);
+  color: var(--color-intro);
 }
 
 .specialties {
@@ -243,14 +245,14 @@ p {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem clamp(2.75rem, 8vw, 5rem);
-  margin: clamp(1.25rem, 3vh, 1.75rem) 0 0;
+  margin: clamp(1.75rem, 4vh, 2.5rem) 0 0;
   list-style: none;
   padding: 0;
-  color: var(--color-ink);
+  color: var(--color-intro);
 }
 
 .specialties li {
-  font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+  font-size: clamp(1.25rem, 2.2vw, 1.5rem);
   font-weight: 400;
   letter-spacing: -0.02em;
   line-height: 1.3;
@@ -333,8 +335,8 @@ p {
   position: relative;
   display: block;
   width: 100%;
-  aspect-ratio: 1 / 1.05;
-  min-height: 11rem;
+  aspect-ratio: 1 / 0.72;
+  min-height: 7.75rem;
   padding: 0;
   border: 0;
   background: transparent;
@@ -371,7 +373,7 @@ p {
   flex-direction: column;
   min-height: 100%;
   height: 100%;
-  padding: 1.2rem 1.05rem 1.25rem;
+  padding: 1rem 0.95rem 1.05rem;
   border: 1px solid var(--color-accent);
   border-radius: 1rem;
   background: var(--color-bg);
@@ -383,7 +385,7 @@ p {
   align-items: center;
   justify-content: space-between;
   text-align: center;
-  gap: 1rem;
+  gap: 0.65rem;
 }
 
 .flip-card-back {
@@ -402,8 +404,8 @@ p {
 
 .flip-card-icon {
   display: block;
-  width: clamp(3.25rem, 6vw, 4.25rem);
-  height: clamp(3.25rem, 6vw, 4.25rem);
+  width: clamp(2.5rem, 4.5vw, 3.25rem);
+  height: clamp(2.5rem, 4.5vw, 3.25rem);
   margin-inline: auto;
   color: var(--color-accent);
   flex-shrink: 0;
