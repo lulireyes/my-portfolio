@@ -597,7 +597,8 @@ p {
   font-style: italic;
   line-height: 1.35;
   letter-spacing: -0.015em;
-  color: var(--color-accent);
+  /* Darker terracotta on cream — #df9375 fails WCAG AA on --color-surface-alt */
+  color: #9a4f38;
 }
 
 .testimonial-meta {
