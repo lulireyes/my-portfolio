@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/global.css';
+
+const year = new Date().getFullYear();
+
+const links = [
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/lucianareyes' },
+  { label: 'Medium', href: 'https://medium.com/@lucianareyes' },
+  { label: 'GitHub', href: 'https://github.com/lulireyes' },
+  { label: 'Behance', href: 'https://www.behance.net/lucianareyes' },
+];
+---
+
+<BaseLayout>
+  <main class="site">
+    <header class="hero">
+      <p class="eyebrow">Berlin</p>
+      <h1>Luciana Reyes</h1>
+      <p class="role">Product Designer</p>
+    </header>
+
+    <section class="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About</h2>
+      <p>
+        Product designer focused on clear, human experiences. Selected work is
+        coming soon.
+      </p>
+    </section>
+
+    <section class="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <ul class="contact-links">
+        {
+          links.map((link) => (
+            <li>
+              <a href={link.href} target="_blank" rel="noopener noreferrer">
+                {link.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; {year} Luciana Reyes</p>
+    </footer>
+  </main>
+</BaseLayout>
