@@ -1,5 +1,6 @@
 ---
 import { getCollection, render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getSite } from '../../lib/site';
 import { withBase } from '../../lib/paths';
@@ -13,48 +14,348 @@ export async function getStaticPaths() {
 
   return projects.map((project) => ({
     params: { slug: project.id },
-    props: { project },
+    props: { project, projects },
   }));
 }
 
-const { project } = Astro.props;
+interface Props {
+  project: CollectionEntry<'projects'>;
+  projects: CollectionEntry<'projects'>[];
+}
+
+const { project, projects } = Astro.props;
 const site = getSite();
-const { Content } = await render(project);
+const home = withBase('/');
+const linkedIn = site.links?.find((l) => /linkedin/i.test(l.label) || /linkedin/i.test(l.href));
+
+const ordered = [...projects].sort(
+  (a, b) => a.data.order - b.data.order || a.data.title.localeCompare(b.data.title),
+);
+
+/** Current project first, then the rest in site order — continuous scroll. */
+const stack = [
+  project,
+  ...ordered.filter((p) => p.id !== project.id),
+];
+
+const rendered = await Promise.all(
+  stack.map(async (entry) => {
+    const { Content } = await render(entry);
+    return { entry, Content };
+  }),
+);
 ---
 
 <BaseLayout
   title={`${project.data.title} — ${site.name}`}
-  description={project.data.subtitle ?? site.seo.description}
+  description={project.data.summary ?? project.data.subtitle ?? site.seo.description}
 >
-  <main class="site project-page">
-    <p class="eyebrow">
-      <a href={withBase('/')}>← Back</a>
-    </p>
-
-    <header class="project-hero">
-      <h1>{project.data.title}</h1>
-      {
-        project.data.subtitle && (
-          <p class="project-subtitle">{project.data.subtitle}</p>
-        )
-      }
-      {
-        project.data.year && <p class="work-year">{project.data.year}</p>
-      }
+  <div class="case-page">
+    <header class="case-topbar">
+      <div class="case-topbar-inner">
+        <a class="case-brand" href={home}>{site.name}</a>
+        <nav class="case-nav" aria-label="Projects">
+          <ul class="case-nav-list">
+            {
+              ordered.map((p) => {
+                const active = p.id === project.id;
+                return (
+                  <li>
+                    <a
+                      href={withBase(`projects/${p.id}/`)}
+                      class:list={[{ 'is-active': active }]}
+                      aria-current={active ? 'page' : undefined}
+                    >
+                      {p.data.title}
+                    </a>
+                  </li>
+                );
+              })
+            }
+          </ul>
+        </nav>
+        {
+          linkedIn && (
+            <a
+              class="case-linkedin"
+              href={linkedIn.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M6.94 8.5H4.1V19h2.84V8.5ZM5.52 7.2a1.65 1.65 0 1 0 0-3.3 1.65 1.65 0 0 0 0 3.3ZM19.9 19h-2.84v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.86V19H10.3V8.5h2.73v1.43h.04c.38-.72 1.3-1.48 2.68-1.48 2.87 0 3.4 1.89 3.4 4.34V19Z"
+                />
+              </svg>
+            </a>
+          )
+        }
+        <button
+          type="button"
+          class="theme-toggle case-theme-toggle"
+          id="theme-toggle"
+          aria-label="Toggle color theme"
+        >
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path
+              d="M21 14.3A8.5 8.5 0 0 1 9.7 3 7 7 0 1 0 21 14.3Z"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linejoin="round"></path>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"></circle>
+            <path
+              d="M12 2.5v2.2M12 19.3v2.2M4.7 4.7l1.6 1.6M17.7 17.7l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.7 19.3l1.6-1.6M17.7 6.3l1.6-1.6"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"></path>
+          </svg>
+        </button>
+      </div>
     </header>
 
-    {
-      project.data.cover && (
-        <img
-          class="project-cover"
-          src={withBase(project.data.cover)}
-          alt=""
-        />
-      )
+    <main>
+      {
+        rendered.map(({ entry, Content }, index) => {
+          const d = entry.data;
+          const summary = d.overview ?? d.summary ?? d.subtitle ?? '';
+          const period = d.period ?? (d.year ? String(d.year) : '');
+          const isPrimary = index === 0;
+          const showMoreLabel = index === 1;
+
+          return (
+            <article
+              class:list={['case-study', { 'case-study--continued': !isPrimary }]}
+              id={entry.id}
+              data-project={entry.id}
+            >
+              {showMoreLabel && (
+                <div class="case-continued-label shell-case">
+                  <p class="case-whats-next">More work</p>
+                </div>
+              )}
+
+              <header class="case-hero shell-case">
+                <h1 class="case-title">{d.title}</h1>
+                {d.subtitle && <p class="case-subtitle">{d.subtitle}</p>}
+              </header>
+
+              <section class="case-summary-block shell-case" aria-labelledby={`summary-${entry.id}`}>
+                <div class="case-summary-main">
+                  <h2 class="case-section-title" id={`summary-${entry.id}`}>
+                    Summary
+                  </h2>
+                  {summary && <p class="case-body">{summary}</p>}
+                </div>
+                <aside class="case-meta" aria-label="Project details">
+                  {d.role && (
+                    <div class="case-meta-item">
+                      <span class="case-meta-label">Role</span>
+                      <p class="case-meta-value">{d.role}</p>
+                    </div>
+                  )}
+                  {period && (
+                    <div class="case-meta-item">
+                      <span class="case-meta-label">Year</span>
+                      <p class="case-meta-value">{period}</p>
+                    </div>
+                  )}
+                  {d.market && (
+                    <div class="case-meta-item">
+                      <span class="case-meta-label">Product / Market</span>
+                      <p class="case-meta-value">{d.market}</p>
+                    </div>
+                  )}
+                </aside>
+              </section>
+
+              {d.highlights.length > 0 && (
+                <section
+                  class="case-highlights shell-case"
+                  aria-labelledby={`highlights-${entry.id}`}
+                >
+                  <h2 class="case-section-display" id={`highlights-${entry.id}`}>
+                    Highlights
+                  </h2>
+                  <div class="case-highlights-body">
+                    {d.highlights.map((line) => (
+                      <p class="case-body">{line}</p>
+                    ))}
+                  </div>
+                </section>
+              )}
+
+              <div class="case-marquee" aria-hidden="true">
+                <div class="case-marquee-track">
+                  {[0, 1].map(() => (
+                    <span class="case-marquee-group">
+                      {Array.from({ length: 6 }).map(() => (
+                        <span class="case-marquee-item">
+                          <span>{d.title}</span>
+                          <span class="case-marquee-sep" />
+                        </span>
+                      ))}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {(d.roleSummary || d.team) && (
+                <section class="case-role-block shell-case">
+                  <div class="case-role-main">
+                    {d.roleSummary && (
+                      <>
+                        <h2 class="case-section-title">My Role</h2>
+                        <p class="case-body">{d.roleSummary}</p>
+                      </>
+                    )}
+                  </div>
+                  <aside class="case-meta">
+                    {d.role && (
+                      <div class="case-meta-item">
+                        <span class="case-meta-label">Role</span>
+                        <p class="case-meta-value">{d.role}</p>
+                      </div>
+                    )}
+                    {d.market && (
+                      <div class="case-meta-item">
+                        <span class="case-meta-label">Product / Market</span>
+                        <p class="case-meta-value">{d.market}</p>
+                      </div>
+                    )}
+                    {period && (
+                      <div class="case-meta-item">
+                        <span class="case-meta-label">Year</span>
+                        <p class="case-meta-value">{period}</p>
+                      </div>
+                    )}
+                    {d.team && (
+                      <div class="case-meta-item">
+                        <span class="case-meta-label">Team</span>
+                        <p class="case-meta-value">{d.team}</p>
+                      </div>
+                    )}
+                    {d.tags.length > 0 && (
+                      <div class="case-meta-item">
+                        <span class="case-meta-label">Focus</span>
+                        <p class="case-meta-value">{d.tags.join(' · ')}</p>
+                      </div>
+                    )}
+                  </aside>
+                </section>
+              )}
+
+              <section class="case-process shell-case" aria-labelledby={`process-${entry.id}`}>
+                <h2 class="case-section-display" id={`process-${entry.id}`}>
+                  Process
+                </h2>
+                <div class="case-process-grid">
+                  {d.cover && (
+                    <figure class="case-process-media">
+                      <img
+                        src={withBase(d.cover)}
+                        alt=""
+                        loading={isPrimary ? 'eager' : 'lazy'}
+                      />
+                    </figure>
+                  )}
+                  <div class="case-process-copy prose case-prose">
+                    <Content />
+                  </div>
+                </div>
+              </section>
+
+              {d.impact.length > 0 && (
+                <section class="case-impact shell-case" aria-labelledby={`impact-${entry.id}`}>
+                  <h2 class="case-section-display" id={`impact-${entry.id}`}>
+                    Impact
+                  </h2>
+                  <ul class="case-impact-grid">
+                    {d.impact.map((item) => (
+                      <li class="case-impact-item">
+                        <p class="case-impact-metric">{item.metric}</p>
+                        <p class="case-impact-desc">{item.description}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              )}
+
+              {!isPrimary && (
+                <p class="case-open-full shell-case">
+                  <a href={withBase(`projects/${entry.id}/`)}>Open {d.title} as primary →</a>
+                </p>
+              )}
+            </article>
+          );
+        })
+      }
+    </main>
+
+    <footer class="case-footer" id="contact">
+      <div class="case-footer-inner">
+        <div class="case-footer-brand-row">
+          <p class="case-footer-name">{site.name}</p>
+          {
+            linkedIn && (
+              <a
+                class="case-linkedin case-linkedin--footer"
+                href={linkedIn.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M6.94 8.5H4.1V19h2.84V8.5ZM5.52 7.2a1.65 1.65 0 1 0 0-3.3 1.65 1.65 0 0 0 0 3.3ZM19.9 19h-2.84v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.86V19H10.3V8.5h2.73v1.43h.04c.38-.72 1.3-1.48 2.68-1.48 2.87 0 3.4 1.89 3.4 4.34V19Z"
+                  />
+                </svg>
+              </a>
+            )
+          }
+        </div>
+        <div class="case-footer-meta">
+          <div>
+            <p class="case-footer-label">Location</p>
+            <p class="case-footer-value">{site.footer.location}</p>
+          </div>
+          <div>
+            <p class="case-footer-label">Contact</p>
+            <a class="case-footer-value" href={`mailto:${site.footer.email}`}>
+              {site.footer.email}
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    function getPreferredTheme() {
+      const stored = localStorage.getItem('theme');
+      if (stored === 'light' || stored === 'dark') return stored;
+      return 'dark';
     }
 
-    <article class="prose">
-      <Content />
-    </article>
-  </main>
+    function applyTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      document.documentElement.style.colorScheme = theme;
+      const meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) meta.setAttribute('content', theme === 'dark' ? '#0d0d0d' : '#f3efe8');
+    }
+
+    const toggle = document.getElementById('theme-toggle');
+    applyTheme(getPreferredTheme());
+
+    toggle?.addEventListener('click', () => {
+      const next =
+        document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('theme', next);
+      applyTheme(next);
+    });
+  </script>
 </BaseLayout>
