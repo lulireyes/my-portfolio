@@ -1041,15 +1041,18 @@ p {
   display: flex;
   width: max-content;
   animation: case-marquee 28s linear infinite;
+  will-change: transform;
 }
 
 .case-marquee-group {
-  display: inline-flex;
+  display: flex;
+  flex-shrink: 0;
 }
 
 .case-marquee-item {
   display: inline-flex;
   align-items: center;
+  flex-shrink: 0;
   gap: 0.65rem;
   padding-inline: 0.45rem;
   font-family: var(--font-serif);
