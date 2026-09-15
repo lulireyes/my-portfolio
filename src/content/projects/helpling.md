@@ -10,7 +10,7 @@ tags:
 year: 2024
 order: 1
 draft: false
-cover: /img/projects/helpling/cover.svg
+cover: /img/projects/helpling/cover.webp
 ---
 
 ## Overview

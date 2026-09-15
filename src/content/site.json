@@ -6,10 +6,10 @@
   "intro": {
     "prefix": "A ",
     "struck": "Berlin",
-    "suffix": " Valencia-based product designer focused on building thoughtful, people-first products."
+    "suffix": "–Valencia-based product designer focused on building thoughtful, people-first products."
   },
   "specializingLabel": "Specializing in:",
-  "specialties": ["UX/UI", "Research", "Product"],
+  "specialties": ["UX/UI", "Research", "Accessibility"],
   "philosophy": {
     "label": "Design Philosophy",
     "body": "Design starts with intention. For me, good design is about more than creating a polished interface. It starts with understanding people, the context they are in, and the problem we are trying to solve. I believe the best products don't force behaviour, but remove friction, build trust, and make complex systems feel simple and human. There is no single formula for good design; the approach should adapt to the context, but every decision should have a clear and helpful purpose.",
@@ -33,15 +33,10 @@
         "title": "Design needs evidence",
         "body": "Curiosity drives the work: interviews, usability tests, data, and messy real-world feedback. Evidence keeps taste honest and iteration purposeful.",
         "icon": "evidence"
-      },
-      {
-        "title": "Design doesn't end at launch",
-        "body": "Shipping is a beginning. I stay close to how products perform, learn from what breaks, and keep refining until the experience feels quietly inevitable.",
-        "icon": "launch"
       }
     ]
   },
-  "workHeading": "Selected work",
+  "workHeading": "Work",
   "nav": [
     { "label": "Work", "href": "#work" },
     { "label": "About", "href": "#about" },
@@ -52,41 +47,98 @@
       "quote": "Luli is a fantastic collaborator. She led user interviews with real curiosity and developed a deep empathy for our users, which came through clearly in her designs. She was thoughtful, collaborative, and an absolute pleasure to work with.",
       "name": "Anil Ravindrakumar",
       "role": "Senior Product Manager at Groove",
-      "avatar": "/img/testimonials/anil.svg"
+      "avatar": "/img/testimonials/anil.webp"
     },
     {
       "quote": "Luli is a force of nature. She is always energic and ready not only to suggest a new idea but also to make it happen. With her, I learned not only how to solve any problem that was interfering with our plans but even to do it with optimism and positivity. I recommend working with her when you especially need a competent, motivated and pro-active team member.",
       "name": "Maddalena Zampitelli",
       "role": "Design Mentor at Apple Academy",
-      "avatar": "/img/testimonials/maddalena.svg"
+      "avatar": "/img/testimonials/maddalena.webp"
     }
   ],
+  "about": {
+    "heading": "About",
+    "path": "Buenos Aires → Berlin → Valencia via design",
+    "blocks": [
+      {
+        "photo": "/img/about/photo-1.webp",
+        "text": "I've always been more curious about what happens behind the scenes than what ends up on the screen. That curiosity took me to Buenos Aires first, where I studied film and specialised in art direction. Ten years in video production, art direction and editing followed."
+      },
+      {
+        "photo": "/img/about/photo-2.webp",
+        "text": "Then I moved to Berlin and joined a German VoD platform as a Content Manager. There, I found a new fascination with human behaviour and psychology, and with how interfaces are designed to solve real problems. Turns out I'd found my next career without meaning to."
+      },
+      {
+        "photo": "/img/about/photo-3.webp",
+        "text": "For the past 7+ years, I've worked with German and international companies across service platforms, mobility, EdTech and marketplaces—designing products for people in Germany, Singapore and beyond. Still the same curiosity, just a different screen: understanding people, how things work, and what makes an experience feel right."
+      },
+      {
+        "photo": "/img/about/photo-4.webp",
+        "text": "Outside of work, I love discovering new places, hosting friends for dinner, getting competitive over board games and, since moving to Valencia, playing padel."
+      }
+    ]
+  },
+  "journey": {
+    "heading": "The journey",
+    "items": [
+      {
+        "company": "Helpling",
+        "role": "Senior Product Designer",
+        "dates": "2022 - 2025",
+        "logo": "/img/logos/helpling.webp"
+      },
+      {
+        "company": "Anymove",
+        "role": "Product Designer",
+        "dates": "2022",
+        "logo": "/img/logos/anymove.webp"
+      },
+      {
+        "company": "Beelinguapp",
+        "role": "Product Designer & Illustrator",
+        "dates": "2021 - 2022",
+        "logo": "/img/logos/beelinguapp.webp"
+      },
+      {
+        "company": "Skoove",
+        "role": "Designer",
+        "dates": "2021",
+        "logo": "/img/logos/skoove.webp"
+      },
+      {
+        "company": "yoona.ai",
+        "role": "Product Designer",
+        "dates": "2020",
+        "logo": "/img/logos/yoona.webp"
+      },
+      {
+        "company": "Mello",
+        "role": "UX/UI Designer",
+        "dates": "2020",
+        "logo": "/img/logos/mello.webp"
+      },
+      {
+        "company": "PANTAFLIX AG",
+        "role": "Content Manager",
+        "dates": "2017 - 2019",
+        "logo": "/img/logos/pantaflix.webp"
+      }
+    ]
+  },
   "seo": {
     "title": "Luli Reyes — Product Designer",
-    "description": "Valencia-based product designer focused on thoughtful, people-first products. UX/UI, research, and product design."
+    "description": "Valencia-based product designer focused on thoughtful, people-first products. UX/UI, research, and accessibility."
   },
   "links": [
     {
       "label": "Linkedin",
       "href": "https://www.linkedin.com/in/lucianareyes"
-    },
-    {
-      "label": "Medium",
-      "href": "https://medium.com/@lucianareyes"
-    },
-    {
-      "label": "GitHub",
-      "href": "https://github.com/lulireyes"
-    },
-    {
-      "label": "Behance",
-      "href": "https://www.behance.net/lucianareyes"
     }
   ],
   "footer": {
+    "thanks": "Thanks for visiting!",
+    "smile": "(^_^)",
     "location": "Valencia, Spain",
-    "email": "lucianareyes@gmail.com",
-    "linkedinLabel": "Linkedin",
-    "linkedinHref": "https://www.linkedin.com/in/lucianareyes"
+    "email": "lucianareyes@gmail.com"
   }
 }
