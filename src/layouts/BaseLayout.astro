@@ -5,8 +5,8 @@ interface Props {
 }
 
 const {
-  title = 'Luciana Reyes — Product Designer',
-  description = 'Product Designer based in Berlin.',
+  title = 'Luli Reyes — Product Designer',
+  description = 'Berlin-Valencia-based product designer focused on thoughtful, people-first products.',
 } = Astro.props;
 
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
@@ -19,14 +19,28 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#0c0b0a" />
     <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
     <link rel="icon" href={`${base}favicon.ico`} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Instrument+Sans:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Outfit:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <script is:inline>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = stored === 'light' || stored === 'dark' ? stored : prefersDark ? 'dark' : 'light';
+          document.documentElement.setAttribute('data-theme', theme);
+          document.documentElement.style.colorScheme = theme;
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
     <title>{title}</title>
   </head>
   <body>

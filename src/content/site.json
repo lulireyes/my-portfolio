@@ -1,16 +1,59 @@
 {
-  "name": "Luciana Reyes",
+  "name": "Luli Reyes",
   "role": "Product Designer",
-  "location": "Berlin",
-  "tagline": "Creating delightful and human experiences.",
-  "about": "Product designer focused on clear, human experiences. Selected work is coming soon.",
+  "location": "Valencia, Spain",
+  "email": "lucianareyes@gmail.com",
+  "intro": "A Berlin-Valencia-based product designer focused on building thoughtful, people-first products.",
+  "specializingLabel": "Specializing in:",
+  "specialties": ["UX/UI", "Research", "Product"],
+  "philosophy": {
+    "label": "Design Philosophy",
+    "body": "Design starts with intention. For me, good design is about more than creating a polished interface. It starts with understanding people, the context they are in, and the problem we are trying to solve. I believe the best products don't force behaviour, but remove friction, build trust, and make complex systems feel simple and human. There is no single formula for good design; the approach should adapt to the context, but every decision should have a clear and helpful purpose.",
+    "items": [
+      {
+        "title": "Design is for everyone",
+        "body": "Inclusive products meet people where they are — across ability, language, culture, and context. Accessibility and clarity are not extras; they are how thoughtful design earns trust."
+      },
+      {
+        "title": "Design is strategy",
+        "body": "Every screen is a decision about what matters. I connect research insights to business goals so design choices move metrics and meaning, not just pixels."
+      },
+      {
+        "title": "Design is collaboration",
+        "body": "The best outcomes come from working closely with product, engineering, support, and stakeholders. Shared understanding beats solitary perfection."
+      },
+      {
+        "title": "Design needs evidence",
+        "body": "Curiosity drives the work: interviews, usability tests, data, and messy real-world feedback. Evidence keeps taste honest and iteration purposeful."
+      },
+      {
+        "title": "Design doesn't end at launch",
+        "body": "Shipping is a beginning. I stay close to how products perform, learn from what breaks, and keep refining until the experience feels quietly inevitable."
+      }
+    ]
+  },
+  "workHeading": "Selected work",
+  "testimonials": [
+    {
+      "quote": "Luli is a fantastic collaborator. She led user interviews with real curiosity and developed a deep empathy for our users, which came through clearly in her designs. She was thoughtful, collaborative, and an absolute pleasure to work with.",
+      "name": "Anil Ravindrakumar",
+      "role": "Senior Product Manager at Groove",
+      "avatar": "/img/testimonials/anil.svg"
+    },
+    {
+      "quote": "Luli is a force of nature. She is always energic and ready not only to suggest a new idea but also to make it happen. With her, I learned not only how to solve any problem that was interfering with our plans but even to do it with optimism and positivity. I recommend working with her when you especially need a competent, motivated and pro-active team member.",
+      "name": "Maddalena Zampitelli",
+      "role": "Design Mentor at Apple Academy",
+      "avatar": "/img/testimonials/maddalena.svg"
+    }
+  ],
   "seo": {
-    "title": "Luciana Reyes — Product Designer",
-    "description": "Product Designer based in Berlin."
+    "title": "Luli Reyes — Product Designer",
+    "description": "Berlin-Valencia-based product designer focused on thoughtful, people-first products. UX/UI, research, and product design."
   },
   "links": [
     {
-      "label": "LinkedIn",
+      "label": "Linkedin",
       "href": "https://www.linkedin.com/in/lucianareyes"
     },
     {
@@ -26,5 +69,10 @@
       "href": "https://www.behance.net/lucianareyes"
     }
   ],
-  "footer": "Luciana Reyes"
+  "footer": {
+    "location": "Valencia, Spain",
+    "email": "lucianareyes@gmail.com",
+    "linkedinLabel": "Linkedin",
+    "linkedinHref": "https://www.linkedin.com/in/lucianareyes"
+  }
 }

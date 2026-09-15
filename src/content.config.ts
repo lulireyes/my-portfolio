@@ -6,6 +6,10 @@ const projects = defineCollection({
   schema: z.object({
     title: z.string(),
     subtitle: z.string().optional(),
+    /** Short homepage card summary */
+    summary: z.string().optional(),
+    /** Homepage tag pills */
+    tags: z.array(z.string()).default([]),
     year: z.number().optional(),
     /** Path under public/, e.g. /img/projects/example/cover.webp */
     cover: z.string().optional(),
