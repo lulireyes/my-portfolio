@@ -3,7 +3,11 @@
   "role": "Product Designer",
   "location": "Valencia, Spain",
   "email": "lucianareyes@gmail.com",
-  "intro": "A Berlin-Valencia-based product designer focused on building thoughtful, people-first products.",
+  "intro": {
+    "prefix": "A ",
+    "struck": "Berlin",
+    "suffix": "–Valencia-based product designer focused on building thoughtful, people-first products."
+  },
   "specializingLabel": "Specializing in:",
   "specialties": ["UX/UI", "Research", "Product"],
   "philosophy": {
@@ -49,7 +53,7 @@
   ],
   "seo": {
     "title": "Luli Reyes — Product Designer",
-    "description": "Berlin-Valencia-based product designer focused on thoughtful, people-first products. UX/UI, research, and product design."
+    "description": "Valencia-based product designer focused on thoughtful, people-first products. UX/UI, research, and product design."
   },
   "links": [
     {
