@@ -48,7 +48,8 @@ const linkedin =
     <main>
       <section class="shell intro" aria-label="Introduction">
         <p class="intro-copy">
-          {site.intro}
+          {site.intro.prefix}
+          <s>{site.intro.struck}</s>{site.intro.suffix}
           {' '}
           <span class="specializing">{site.specializingLabel}</span>
         </p>
@@ -188,7 +189,7 @@ const linkedin =
     function getPreferredTheme() {
       const stored = localStorage.getItem('theme');
       if (stored === 'light' || stored === 'dark') return stored;
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      return 'dark';
     }
 
     function applyTheme(theme) {
@@ -206,11 +207,6 @@ const linkedin =
         document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
       localStorage.setItem('theme', next);
       applyTheme(next);
-    });
-
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
-      if (localStorage.getItem('theme')) return;
-      applyTheme(event.matches ? 'dark' : 'light');
     });
 
     document.querySelectorAll('[data-accordion]').forEach((root) => {

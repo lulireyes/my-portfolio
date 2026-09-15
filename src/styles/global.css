@@ -1,21 +1,5 @@
+/* Dark is the default first-paint theme (also set on <html data-theme="dark">). */
 :root,
-[data-theme='light'] {
-  --color-bg: #f3efe8;
-  --color-bg-elevated: #ebe6dc;
-  --color-ink: #1a1814;
-  --color-muted: #5c564e;
-  --color-line: #d4ccc0;
-  --color-accent: #df9375;
-  --color-accent-soft: color-mix(in srgb, #df9375 18%, transparent);
-  --color-footer-bg: #0c0b0a;
-  --color-footer-ink: #df9375;
-  --color-surface-alt: #ebe6dc;
-  --color-tag-border: #1a1814;
-  --color-tag-ink: #1a1814;
-  --shadow-soft: 0 18px 40px rgba(26, 24, 20, 0.06);
-  color-scheme: light;
-}
-
 [data-theme='dark'] {
   --color-bg: #0c0b0a;
   --color-bg-elevated: #161412;
@@ -31,6 +15,23 @@
   --color-tag-ink: #f4f0ea;
   --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.35);
   color-scheme: dark;
+}
+
+[data-theme='light'] {
+  --color-bg: #f3efe8;
+  --color-bg-elevated: #ebe6dc;
+  --color-ink: #1a1814;
+  --color-muted: #5c564e;
+  --color-line: #d4ccc0;
+  --color-accent: #df9375;
+  --color-accent-soft: color-mix(in srgb, #df9375 18%, transparent);
+  --color-footer-bg: #0c0b0a;
+  --color-footer-ink: #df9375;
+  --color-surface-alt: #ebe6dc;
+  --color-tag-border: #1a1814;
+  --color-tag-ink: #1a1814;
+  --shadow-soft: 0 18px 40px rgba(26, 24, 20, 0.06);
+  color-scheme: light;
 }
 
 :root {
@@ -177,6 +178,13 @@ p {
   font-weight: 400;
   line-height: 1.45;
   letter-spacing: -0.02em;
+}
+
+.intro-copy s {
+  text-decoration: line-through;
+  text-decoration-thickness: 1.5px;
+  text-decoration-color: color-mix(in srgb, var(--color-ink) 55%, transparent);
+  color: color-mix(in srgb, var(--color-ink) 62%, var(--color-muted));
 }
 
 .intro-copy .specializing {
