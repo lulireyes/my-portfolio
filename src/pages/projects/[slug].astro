@@ -359,5 +359,39 @@ const rendered = await Promise.all(
       localStorage.setItem('theme', next);
       applyTheme(next);
     });
+
+    const marqueeSeeds = new WeakMap();
+
+    function fillCaseMarquees() {
+      document.querySelectorAll('.case-marquee').forEach((root) => {
+        const track = root.querySelector('.case-marquee-track');
+        const first = track?.querySelector('.case-marquee-group');
+        if (!(track instanceof HTMLElement) || !(first instanceof HTMLElement)) return;
+
+        if (!marqueeSeeds.has(root)) {
+          marqueeSeeds.set(root, first.innerHTML);
+        }
+        const seed = marqueeSeeds.get(root);
+        if (!seed) return;
+
+        track.style.animation = 'none';
+        first.innerHTML = seed;
+
+        let guard = 0;
+        while (first.scrollWidth < root.clientWidth && guard < 60) {
+          first.insertAdjacentHTML('beforeend', seed);
+          guard += 1;
+        }
+        // Extra chunk so short titles still cover the viewport while scrolling.
+        first.insertAdjacentHTML('beforeend', seed);
+
+        track.replaceChildren(first, first.cloneNode(true));
+        void track.offsetWidth;
+        track.style.removeProperty('animation');
+      });
+    }
+
+    fillCaseMarquees();
+    window.addEventListener('resize', fillCaseMarquees);
   </script>
 </BaseLayout>
