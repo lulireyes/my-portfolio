@@ -125,8 +125,8 @@ const rendered = await Promise.all(
           const period = d.period ?? (d.year ? String(d.year) : '');
           const isPrimary = index === 0;
           const showMoreLabel = index === 1;
-          // Enough items per half so short titles still fill the viewport; track has 2 identical halves for -50% loop.
-          const marqueeRepeats = Math.max(16, Math.ceil(160 / Math.max(d.title.length, 1)));
+          // SSR fallback density; client script also fills until each half ≥ viewport.
+          const marqueeRepeats = Math.max(24, Math.ceil(480 / Math.max(d.title.length, 1)));
 
           return (
             <article
@@ -361,6 +361,7 @@ const rendered = await Promise.all(
     });
 
     const marqueeSeeds = new WeakMap();
+    let marqueeResizeTimer = 0;
 
     function fillCaseMarquees() {
       document.querySelectorAll('.case-marquee').forEach((root) => {
@@ -374,16 +375,19 @@ const rendered = await Promise.all(
         const seed = marqueeSeeds.get(root);
         if (!seed) return;
 
+        const targetWidth = Math.max(root.clientWidth, 1);
         track.style.animation = 'none';
         first.innerHTML = seed;
 
         let guard = 0;
-        while (first.scrollWidth < root.clientWidth && guard < 60) {
+        while (first.scrollWidth < targetWidth && guard < 80) {
           first.insertAdjacentHTML('beforeend', seed);
           guard += 1;
         }
-        // Extra chunk so short titles still cover the viewport while scrolling.
-        first.insertAdjacentHTML('beforeend', seed);
+        // Keep a little extra so the visible window never empties mid-cycle.
+        if (first.scrollWidth < targetWidth * 1.25) {
+          first.insertAdjacentHTML('beforeend', seed);
+        }
 
         track.replaceChildren(first, first.cloneNode(true));
         void track.offsetWidth;
@@ -391,7 +395,19 @@ const rendered = await Promise.all(
       });
     }
 
-    fillCaseMarquees();
-    window.addEventListener('resize', fillCaseMarquees);
+    async function initCaseMarquees() {
+      try {
+        if (document.fonts?.ready) await document.fonts.ready;
+      } catch {
+        /* ignore */
+      }
+      fillCaseMarquees();
+    }
+
+    initCaseMarquees();
+    window.addEventListener('resize', () => {
+      window.clearTimeout(marqueeResizeTimer);
+      marqueeResizeTimer = window.setTimeout(fillCaseMarquees, 100);
+    });
   </script>
 </BaseLayout>
