@@ -379,7 +379,8 @@ p {
 }
 
 .flip-card-front {
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
 }
 
 .flip-card-back {
@@ -396,15 +397,17 @@ p {
 
 .flip-card-title {
   color: var(--color-accent);
-  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.25;
+  font-size: clamp(1.35rem, 2.6vw, 1.65rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
 }
 
 .flip-card-icon {
+  display: block;
   width: 3.75rem;
   height: 3.75rem;
+  margin-inline: auto;
   color: color-mix(in srgb, var(--color-accent) 82%, var(--color-ink));
   opacity: 0.92;
   flex-shrink: 0;
