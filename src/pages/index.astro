@@ -1,38 +1,80 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getSite } from '../lib/site';
+import { withBase } from '../lib/paths';
 import '../styles/global.css';
 
+const site = getSite();
 const year = new Date().getFullYear();
 
-const links = [
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/lucianareyes' },
-  { label: 'Medium', href: 'https://medium.com/@lucianareyes' },
-  { label: 'GitHub', href: 'https://github.com/lulireyes' },
-  { label: 'Behance', href: 'https://www.behance.net/lucianareyes' },
-];
+const projects = (await getCollection('projects'))
+  .filter((project) => !project.data.draft)
+  .sort((a, b) => a.data.order - b.data.order || a.data.title.localeCompare(b.data.title));
 ---
 
-<BaseLayout>
+<BaseLayout title={site.seo.title} description={site.seo.description}>
   <main class="site">
     <header class="hero">
-      <p class="eyebrow">Berlin</p>
-      <h1>Luciana Reyes</h1>
-      <p class="role">Product Designer</p>
+      <p class="eyebrow">{site.location}</p>
+      <h1>{site.name}</h1>
+      <p class="role">{site.role}</p>
+      {site.tagline && <p class="tagline">{site.tagline}</p>}
     </header>
 
     <section class="about" aria-labelledby="about-heading">
       <h2 id="about-heading">About</h2>
-      <p>
-        Product designer focused on clear, human experiences. Selected work is
-        coming soon.
-      </p>
+      <p>{site.about}</p>
     </section>
+
+    {
+      projects.length > 0 && (
+        <section class="work" aria-labelledby="work-heading">
+          <h2 id="work-heading">Selected work</h2>
+          <ul class="work-list">
+            {projects.map((project) => {
+              const href = project.data.externalUrl
+                ? project.data.externalUrl
+                : withBase(`projects/${project.id}/`);
+              const external = Boolean(project.data.externalUrl);
+
+              return (
+                <li>
+                  <a
+                    class="work-card"
+                    href={href}
+                    target={external ? '_blank' : undefined}
+                    rel={external ? 'noopener noreferrer' : undefined}
+                  >
+                    {project.data.cover && (
+                      <img
+                        class="work-cover"
+                        src={withBase(project.data.cover)}
+                        alt=""
+                        loading="lazy"
+                      />
+                    )}
+                    <div class="work-meta">
+                      <h3>{project.data.title}</h3>
+                      {project.data.subtitle && <p>{project.data.subtitle}</p>}
+                      {project.data.year && (
+                        <span class="work-year">{project.data.year}</span>
+                      )}
+                    </div>
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      )
+    }
 
     <section class="contact" aria-labelledby="contact-heading">
       <h2 id="contact-heading">Contact</h2>
       <ul class="contact-links">
         {
-          links.map((link) => (
+          site.links.map((link) => (
             <li>
               <a href={link.href} target="_blank" rel="noopener noreferrer">
                 {link.label}
@@ -44,7 +86,7 @@ const links = [
     </section>
 
     <footer class="footer">
-      <p>&copy; {year} Luciana Reyes</p>
+      <p>&copy; {year} {site.footer}</p>
     </footer>
   </main>
 </BaseLayout>
