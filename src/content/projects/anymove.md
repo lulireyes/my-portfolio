@@ -4,13 +4,13 @@ subtitle: Multimodal mobility platform
 summary: End-to-end product design for a multimodal mobility platform helping users make smarter transport choices.
 tags:
   - End-to-end design
-  - 0—1
+  - 0→1
   - Onboarding
   - Mobility
 year: 2023
 order: 2
 draft: false
-cover: /img/projects/anymove/cover.svg
+cover: /img/projects/anymove/cover.webp
 ---
 
 ## Overview

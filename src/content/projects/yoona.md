@@ -10,7 +10,7 @@ tags:
 year: 2025
 order: 4
 draft: false
-cover: /img/projects/yoona/cover.svg
+cover: /img/projects/yoona/cover.webp
 ---
 
 ## Overview

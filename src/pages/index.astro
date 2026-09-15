@@ -11,11 +11,6 @@ const projects = (await getCollection('projects'))
   .filter((project) => !project.data.draft)
   .sort((a, b) => a.data.order - b.data.order || a.data.title.localeCompare(b.data.title));
 
-const linkedin =
-  site.footer?.linkedinHref ??
-  site.links.find((link) => /linkedin/i.test(link.label))?.href ??
-  'https://www.linkedin.com/in/lucianareyes';
-
 const home = withBase('/');
 const nav = site.nav ?? [
   { label: 'Work', href: '#work' },
@@ -43,11 +38,6 @@ const philosophyIcons: Record<string, { viewBox: string; paths: string }> = {
     viewBox: '0 0 24 24',
     paths:
       'M10.5 17.25a6.75 6.75 0 1 0 0-13.5 6.75 6.75 0 0 0 0 13.5ZM15.5 15.5 20 20',
-  },
-  launch: {
-    viewBox: '0 0 24 24',
-    paths:
-      'M4.5 12a7.5 7.5 0 0 1 12.4-5.7M19.5 12a7.5 7.5 0 0 1-12.4 5.7M16 3.8l.9 3.4 3.4.9-3.4.9-.9 3.4-.9-3.4-3.4-.9 3.4-.9.9-3.4ZM8 12.5l.55 2.05 2.05.55-2.05.55L8 17.7l-.55-2.05-2.05-.55 2.05-.55L8 12.5Z',
   },
 };
 ---
@@ -109,7 +99,7 @@ const philosophyIcons: Record<string, { viewBox: string; paths: string }> = {
 
       <hr class="divider" />
 
-      <section class="shell philosophy" id="about" aria-labelledby="philosophy-heading">
+      <section class="shell philosophy" aria-labelledby="philosophy-heading">
         <div class="philosophy-intro">
           <h2 class="philosophy-label" id="philosophy-heading">{site.philosophy.label}</h2>
           <p class="philosophy-body">{site.philosophy.body}</p>
@@ -232,15 +222,75 @@ const philosophyIcons: Record<string, { viewBox: string; paths: string }> = {
           </section>
         )
       }
+
+      {
+        site.about && (
+          <section class="shell about" id="about" aria-labelledby="about-heading">
+            <h2 class="about-heading" id="about-heading">
+              {site.about.heading}
+            </h2>
+            <p class="about-path">{site.about.path}</p>
+            <div class="about-blocks">
+              {site.about.blocks.map((block) => (
+                <div class="about-block">
+                  {block.photo && (
+                    <img
+                      class="about-photo"
+                      src={withBase(block.photo)}
+                      alt=""
+                      width="160"
+                      height="160"
+                      loading="lazy"
+                    />
+                  )}
+                  <p class="about-text">{block.text}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )
+      }
+
+      {
+        site.journey && (
+          <section class="shell journey" aria-labelledby="journey-heading">
+            <h2 class="journey-heading" id="journey-heading">
+              {site.journey.heading}
+            </h2>
+            <ul class="journey-list">
+              {site.journey.items.map((item) => (
+                <li class="journey-item">
+                  {item.logo && (
+                    <img
+                      class="journey-logo"
+                      src={withBase(item.logo)}
+                      alt=""
+                      width="48"
+                      height="48"
+                      loading="lazy"
+                    />
+                  )}
+                  <div class="journey-copy">
+                    <span class="journey-company">{item.company}</span>
+                    <span class="journey-role">{item.role}</span>
+                  </div>
+                  <span class="journey-dates">{item.dates}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )
+      }
     </main>
 
     <footer class="site-footer" id="contact">
       <div class="shell site-footer-inner">
-        <span>{site.footer.location}</span>
-        <a href={`mailto:${site.footer.email}`}>{site.footer.email}</a>
-        <a href={linkedin} target="_blank" rel="noopener noreferrer">
-          {site.footer.linkedinLabel}
+        <p class="footer-thanks">{site.footer.thanks}</p>
+        {site.footer.smile && <p class="footer-smile">{site.footer.smile}</p>}
+        <a class="footer-email" href={`mailto:${site.footer.email}`}>
+          {site.footer.email}
         </a>
+        <p class="footer-location">{site.footer.location}</p>
       </div>
     </footer>
   </div>

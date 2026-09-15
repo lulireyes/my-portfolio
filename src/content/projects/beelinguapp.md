@@ -10,7 +10,7 @@ tags:
 year: 2022
 order: 3
 draft: false
-cover: /img/projects/beelinguapp/cover.svg
+cover: /img/projects/beelinguapp/cover.webp
 ---
 
 ## Overview
