@@ -337,7 +337,7 @@ p {
 }
 
 .flip-card:focus-visible {
-  outline: 2px solid var(--color-lavender);
+  outline: 2px solid var(--color-accent);
   outline-offset: 3px;
   border-radius: 0.85rem;
 }
@@ -365,12 +365,12 @@ p {
   min-height: inherit;
   height: 100%;
   padding: 1.05rem 1rem 1.1rem;
-  border: 1px solid color-mix(in srgb, var(--color-lavender) 28%, var(--color-line));
+  border: 1px solid color-mix(in srgb, var(--color-accent) 28%, var(--color-line));
   border-radius: 0.85rem;
   background:
     linear-gradient(
       155deg,
-      color-mix(in srgb, var(--color-lavender) 10%, var(--color-bg-elevated)) 0%,
+      color-mix(in srgb, var(--color-accent) 10%, var(--color-bg-elevated)) 0%,
       var(--color-bg-elevated) 55%,
       color-mix(in srgb, var(--color-bg) 35%, var(--color-bg-elevated)) 100%
     );
@@ -388,14 +388,14 @@ p {
   background:
     linear-gradient(
       165deg,
-      color-mix(in srgb, var(--color-lavender) 14%, var(--color-bg-elevated)) 0%,
+      color-mix(in srgb, var(--color-accent) 14%, var(--color-bg-elevated)) 0%,
       var(--color-bg-elevated) 100%
     );
   overflow: auto;
 }
 
 .flip-card-title {
-  color: var(--color-lavender);
+  color: var(--color-accent);
   font-size: 0.9rem;
   font-weight: 500;
   letter-spacing: -0.01em;
@@ -405,7 +405,7 @@ p {
 .flip-card-icon {
   width: 3.75rem;
   height: 3.75rem;
-  color: color-mix(in srgb, var(--color-lavender) 82%, var(--color-ink));
+  color: color-mix(in srgb, var(--color-accent) 82%, var(--color-ink));
   opacity: 0.92;
   flex-shrink: 0;
 }
@@ -418,7 +418,7 @@ p {
 }
 
 .flip-card:hover .flip-card-front {
-  border-color: color-mix(in srgb, var(--color-lavender) 48%, var(--color-line));
+  border-color: color-mix(in srgb, var(--color-accent) 48%, var(--color-line));
 }
 
 @media (prefers-reduced-motion: reduce) {
