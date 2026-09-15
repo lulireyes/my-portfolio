@@ -107,8 +107,7 @@ p {
 
 /* ——— Top bar ——— */
 .topbar {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  display: flex;
   align-items: center;
   gap: 1rem;
   padding-block: 1.35rem;
@@ -116,7 +115,6 @@ p {
 }
 
 .brand {
-  justify-self: start;
   font-size: 1.1875rem;
   font-weight: 500;
   letter-spacing: -0.015em;
@@ -130,7 +128,7 @@ p {
 }
 
 .site-nav {
-  justify-self: center;
+  margin-left: auto;
 }
 
 .site-nav-list {
@@ -160,7 +158,6 @@ p {
 }
 
 .theme-toggle {
-  justify-self: end;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -577,24 +574,18 @@ p {
 
 @media (max-width: 640px) {
   .topbar {
-    grid-template-columns: 1fr auto;
-    grid-template-areas:
-      'brand toggle'
-      'nav nav';
-  }
-
-  .brand {
-    grid-area: brand;
+    flex-wrap: wrap;
   }
 
   .site-nav {
-    grid-area: nav;
-    justify-self: start;
+    order: 3;
+    flex-basis: 100%;
+    margin-left: 0;
     margin-top: 0.15rem;
   }
 
   .theme-toggle {
-    grid-area: toggle;
+    margin-left: auto;
   }
 }
 
