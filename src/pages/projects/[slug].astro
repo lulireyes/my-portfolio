@@ -125,6 +125,8 @@ const rendered = await Promise.all(
           const period = d.period ?? (d.year ? String(d.year) : '');
           const isPrimary = index === 0;
           const showMoreLabel = index === 1;
+          // Enough items per half so short titles still fill the viewport; track has 2 identical halves for -50% loop.
+          const marqueeRepeats = Math.max(16, Math.ceil(160 / Math.max(d.title.length, 1)));
 
           return (
             <article
@@ -191,14 +193,14 @@ const rendered = await Promise.all(
               <div class="case-marquee" aria-hidden="true">
                 <div class="case-marquee-track">
                   {[0, 1].map(() => (
-                    <span class="case-marquee-group">
-                      {Array.from({ length: 6 }).map(() => (
+                    <div class="case-marquee-group">
+                      {Array.from({ length: marqueeRepeats }).map(() => (
                         <span class="case-marquee-item">
                           <span>{d.title}</span>
                           <span class="case-marquee-sep" />
                         </span>
                       ))}
-                    </span>
+                    </div>
                   ))}
                 </div>
               </div>
