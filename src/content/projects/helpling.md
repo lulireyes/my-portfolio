@@ -353,18 +353,109 @@ sections:
   - id: growth-retention
     title: Growth, Retention & A/B Experiments
     emoji: "🚀"
-    summary:
-      - I led growth, retention, and experimentation work across conversion and retention journeys — pairing qualitative research with product analytics and A/B tests to find where the experience leaked value.
-      - "Experiments were designed as product decisions, not vanity tests: clear hypotheses, measurable outcomes, and design variants that could ship into the live apps."
-    role: Product Designer, Growth
+    role: Product Designer (Growth & Retention)
     timeline: Ongoing
-    blocks:
-      - heading: Opportunity Finding
+    story:
+      - id: gr-hero
+        layout: hero
+        title: Growth, Retention & A/B Experiments
+        tagline: Finding the invisible barrier at the start of the funnel — and proving the fix weekly.
+        impactLine: +15% conversion lift, >90% user satisfaction, and high long-term adoption across Germany and Singapore.
+        placeholders:
+          - "[IMAGE PLACEHOLDER — growth experiment / How Helpling Works modal / strongest UI visual]"
+
+      - id: gr-overview
+        layout: overview
+        title: Overview
+        contextLabel: Context
+        challengeLabel: Impact
+        roleLabel: My role
         paragraphs:
-          - I combined interview insights, funnel analytics, and support signals to identify drop-off points and retention risks, then framed opportunities the team could test quickly.
-      - heading: Experimentation
+          - Driving growth and retention metrics across Germany and Singapore markets through continuous weekly A/B testing.
+          - Collaborating closely with Product Managers, Data, Engineering, Marketing, Operations, and Business stakeholders.
+        lead: "+15% conversion lift, >90% user satisfaction, and high long-term adoption."
+        roleLine: "Role: Product Designer (Growth & Retention)"
+        responsibilities: "Scope: Growth & Retention Strategy, Weekly A/B Testing, User Interviews, Usability Testing, Competitor Analysis, Cross-functional Workshops, Interaction Design & Prototyping"
+
+      - id: gr-challenge
+        number: "01"
+        layout: challenge
+        title: The Challenge
+        lead: Tackling an invisible comprehension barrier at the start of the funnel causing early drop-offs globally.
         paragraphs:
-          - Across conversion and retention experiments, we validated changes that delivered a 15% conversion uplift — while keeping the experience coherent with the broader product and design system.
+          - Users were entering the booking funnel without a clear mental model of how Helpling worked. That gap showed up as hesitation, abandoned sessions, and early drop-offs — especially for first-time customers across Germany and Singapore.
+          - "The problem was not a missing feature. It was a comprehension barrier at the moment of highest intent: people needed just enough context to feel confident continuing, without slowing down the conversion path."
+        pullQuote: The drop-off looked like a conversion problem. Underneath, it was a clarity problem.
+        placeholders:
+          - "[VISUAL PLACEHOLDER — funnel drop-off / comprehension barrier diagram]"
+
+      - id: gr-methodology
+        number: "02"
+        layout: strategy
+        title: Methodology & Process
+        lead: Cross-functional alignment, rigorous user interviews, usability testing, and competitor analysis shaped a focused set of testable variants — including contextual question marks alongside three core options.
+        principles:
+          - title: Option A — Classic onboarding
+            body: A familiar, multi-step introduction intended to educate users before they entered the funnel.
+          - title: Option B — FAQ page
+            body: A self-serve answers surface for common questions, reachable before or during the booking journey.
+          - title: Option C — Pre-funnel contextual modal
+            body: A lightweight “How Helpling Works” modal that explained the service in context, right before the funnel — without forcing a full onboarding path.
+          - title: Contextual question marks
+            body: Inline help affordances that surfaced explanations at the moment of confusion, tested alongside the core variants.
+        placeholders:
+          - "[IMAGE PLACEHOLDER — experiment variants A / B / C comparison]"
+          - "[IMAGE PLACEHOLDER — research artefacts / interview & usability synthesis]"
+
+      - id: gr-experimentation
+        number: "03"
+        layout: solution
+        title: Experimentation, Interaction Design & Validation
+        lead: Option C — the “How Helpling Works” pre-funnel contextual modal — emerged as the winning variant. I crafted the interaction design, smooth micro-animations, and a close developer hand-off so the experience felt polished in production.
+        solutions:
+          - title: Winning variant
+            body: Validating Option C as the clearest path to reduce early drop-off while preserving funnel momentum.
+            placeholder: "[IMAGE PLACEHOLDER — How Helpling Works modal (winning variant)]"
+          - title: Interaction & motion
+            body: Custom interaction design and restrained micro-animations that reinforced comprehension without adding friction — with prefers-reduced-motion respected in implementation.
+            placeholder: "[IMAGE PLACEHOLDER — interaction / micro-animation detail]"
+          - title: Developer hand-off
+            body: Tight collaboration with Engineering to ship a production-ready experience aligned with the design system and experiment instrumentation.
+            placeholder: "[IMAGE PLACEHOLDER — specs / hand-off / instrumentation notes]"
+
+      - id: gr-impact
+        number: "04"
+        layout: impact
+        title: Results & Long-term Impact
+        lead: The winning experiment delivered a measurable conversion lift and strong satisfaction signals — and remained in production a year later, evidence of durable product value beyond a one-off test.
+        pullQuote: A weekly experiment that became lasting product behaviour.
+        metrics:
+          - value: +15%
+            label: conversion lift
+            verified: true
+          - value: ">90%"
+            label: user satisfaction
+            verified: true
+          - value: "1 yr+"
+            label: still live in production
+            verified: true
+        before:
+          - Invisible comprehension barrier at funnel entry
+          - Early global drop-offs
+          - Unclear mental model of how Helpling works
+        after:
+          - Contextual “How Helpling Works” modal
+          - Higher conversion and satisfaction
+          - Persistent adoption in production
+        placeholders:
+          - "[VISUAL PLACEHOLDER — results / long-term adoption summary]"
+
+      - id: gr-cta
+        layout: cta
+        title: Learn more
+        lead: NDA constraints apply. Detailed flows are password-protected upon request. Reach out to me to learn more about this project.
+        contactHref: "mailto:lucianareyes@gmail.com"
+        contactLabel: lucianareyes@gmail.com
 order: 1
 draft: false
 cover: /img/projects/helpling/cover.webp
