@@ -1,18 +1,17 @@
 ---
-import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import LocationBar from '../components/LocationBar.astro';
 import Topbar from '../components/Topbar.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import { getSite } from '../lib/site';
 import { withBase } from '../lib/paths';
+import { getWorkProjects } from '../lib/workProjects';
 import '../styles/global.css';
 
 const site = getSite();
 
-const projects = (await getCollection('projects'))
-  .filter((project) => !project.data.draft)
-  .sort((a, b) => a.data.order - b.data.order || a.data.title.localeCompare(b.data.title));
+/** Fixed 4-card Work grid: Helpling, AnyMove, Beelinguapp, Yoona.ai */
+const projects = await getWorkProjects();
 
 ---
 

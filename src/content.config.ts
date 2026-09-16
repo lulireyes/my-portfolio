@@ -98,7 +98,14 @@ const storyChapter = z.object({
   tagline: z.string().optional(),
   impactLine: z.string().optional(),
   lead: z.string().optional(),
-  paragraphs: z.array(z.string()).default([]),
+  /**
+   * Mid-edit YAML sometimes puts objects in paragraphs; rejecting the whole
+   * entry then removes Helpling from Work + static paths (404). Keep strings only.
+   */
+  paragraphs: z.preprocess((value) => {
+    if (!Array.isArray(value)) return [];
+    return value.filter((item): item is string => typeof item === 'string');
+  }, z.array(z.string()).default([])),
   bullets: z.array(z.string()).default([]),
   pullQuote: z.string().optional(),
   placeholders: z.array(z.string()).default([]),
@@ -175,8 +182,12 @@ const projects = defineCollection({
     cover: z.string().optional(),
     /** Lower numbers appear first */
     order: z.number().default(100),
-    /** Hidden on the site while true */
-    draft: z.boolean().default(true),
+    /**
+     * Hidden on the site while true.
+     * Default false so a missing/partial `draft` key cannot silently drop
+     * published case studies (Helpling) from Work + static paths → 404.
+     */
+    draft: z.boolean().default(false),
     /**
      * If set, the home card links out instead of opening a case study page.
      * Useful for Behance / Medium pieces.
