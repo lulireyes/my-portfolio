@@ -42,8 +42,17 @@ sections:
         title: Resolution Center
         tagline: Designing for two people who both believe they're right.
         impactLine: Reduced operational costs by 35% by turning manual dispute handling into a scalable self-service experience.
-        placeholders:
-          - "[IMAGE PLACEHOLDER — Resolution Center product experience / strongest UI visual]"
+        figures:
+          - src: /img/projects/helpling/helpling-rc-issue-flow-phones.png
+            alt: Two Helpling Resolution Center phone screens — Create new request issue categories on the left, and a follow-up screen to narrow the problem with a Continue button on the right.
+            caption: Resolution Center in product — structured issue intake and guided follow-up, designed for clarity under stress.
+            tone: default
+            size: lg
+          - src: /img/projects/helpling/helpling-rc-service-portal-issue.png
+            alt: Helpling Service-Portal mobile screen titled What is the issue you want to resolve, listing billing, no-show, damage claim, and fee dispute options with chevrons.
+            caption: Service-Portal issue selection — clear categories and next actions so customers can start the right resolution path.
+            tone: default
+            size: lg
 
       - id: rc-overview
         layout: overview
@@ -90,8 +99,12 @@ sections:
             - Operations
             - Business
             - Constraints
-        placeholders:
-          - "[VISUAL PLACEHOLDER — marketplace dispute ecosystem / system overview]"
+        figures:
+          - src: /img/projects/helpling/helpling-rc-chaos-to-order.png
+            alt: Minimalist line drawing on a black background — a tangled scribble on the left transitions through a smooth curve into a neat concentric spiral on the right.
+            caption: From tangled disputes to a structured path — the challenge was turning operational chaos into a system both sides could trust.
+            tone: default
+            size: md
 
       - id: rc-system
         number: "02"
@@ -118,10 +131,12 @@ sections:
         paragraphs:
           - Over 80% of disputes followed recurring scenarios that could be structured rather than manually handled. [METRIC — verify exact definition before publishing]
           - That didn't mean every case could be automated. It meant the system could be designed around patterns — with clear paths for predictable cases, and room for human judgment when it mattered.
-        placeholders:
-          - "[VISUAL PLACEHOLDER — dispute case analysis / data patterns]"
-          - "[VISUAL PLACEHOLDER — simplified decision tree or service map]"
-          - "[VISUAL PLACEHOLDER — Operations workflow / current-state system map]"
+        figures:
+          - src: /img/projects/helpling/helpling-rc-whiteboard-refund-logic.jpg
+            alt: Whiteboard sketch of a Case page with Refund and Reject actions, branching into full refund versus partial refund logic with hour-based options and timing notes.
+            caption: Early refund and case logic on the whiteboard — mapping full vs. partial paths before the flows became product.
+            tone: process
+            size: sm
 
       - id: rc-insights
         number: "03"
@@ -168,11 +183,12 @@ sections:
           - why a resolution was being reached
           - when human intervention was required
         pullQuote: Clarity over vague legal or procedural language.
-        placeholders:
-          - "[IMAGE PLACEHOLDER — Resolution Center flow]"
-          - "[IMAGE PLACEHOLDER — key screen / status explanation]"
-          - "[IMAGE PLACEHOLDER — customer experience]"
-          - "[IMAGE PLACEHOLDER — provider experience]"
+        figures:
+          - src: /img/projects/helpling/helpling-rc-figma-iteration-board.png
+            alt: Figma board titled Resolution Center 1. iteration mobile, showing customer report-a-new-issue flow B and provider response flow with detailed screen grids below.
+            caption: First mobile iteration board — customer intake and provider response flows mapped end to end before high-fidelity polish.
+            tone: default
+            size: lg
 
       - id: rc-constraints
         number: "06"
@@ -202,7 +218,12 @@ sections:
             placeholder: "[IMAGE PLACEHOLDER — status / progress experience]"
           - title: Self-service
             body: How predictable disputes can be handled without agent intervention.
-            placeholder: "[IMAGE PLACEHOLDER — self-service flow]"
+            figure:
+              src: /img/projects/helpling/helpling-rc-service-portal-issue.png
+              alt: Service-Portal create-new-request screen listing billing errors, cleaner no-show, damage during an event, and wrongful fee charge as selectable issue cards.
+              caption: Structured self-service entry — each issue type maps to a clear next action.
+              tone: default
+              size: md
           - title: Transparency
             body: How the experience communicates what information is being considered and what happens next.
             placeholder: "[IMAGE PLACEHOLDER — explanation / decision screen]"
@@ -226,8 +247,12 @@ sections:
             contribution: helped shape what could realistically be implemented
           - role: Design
             contribution: translated these inputs into a coherent experience across both sides of the marketplace
-        placeholders:
-          - "[VISUAL PLACEHOLDER — collaboration / iteration / service design artefact]"
+        figures:
+          - src: /img/projects/helpling/helpling-rc-journey-map-workshop.jpg
+            alt: Collaborative workshop table with a printed UX journey map and sticky notes for customer, problem, and interest themes.
+            caption: Cross-functional discovery in the room — journey mapping that informed what the Resolution Center needed to resolve.
+            tone: process
+            size: sm
 
       - id: rc-impact
         number: "08"
