@@ -305,6 +305,21 @@ sections:
           - title: Laying the Foundations
             body: We established core rules for typography, spacing, and color using Figma’s Auto Layout and Variants, ensuring engineering naming conventions were respected from day one.
         figures:
+          - src: /img/projects/helpling/helpling-ds-atomic-modular.webp
+            alt: Flat illustration of colorful geometric building blocks stacked in a stair formation beside a small person silhouette on a yellow grid background.
+            caption: Atomic approach — modular building blocks that scale from simple parts into a coherent system.
+            tone: default
+            size: md
+          - src: /img/projects/helpling/helpling-ds-collaboration.webp
+            alt: Flat illustration of two facing people silhouettes with overlapping speech bubbles — one outlined, one solid teal — on a white background.
+            caption: Collaboration and research — aligning designers across platforms through shared conversation and critique.
+            tone: default
+            size: md
+          - src: /img/projects/helpling/helpling-ds-foundations-scaling.webp
+            alt: Flat illustration of nested purple squares aligned at the bottom-left corner, framed by a black selection border with Figma-like corner handles.
+            caption: Foundations and components — scaling from a shared origin with clear structure and selection.
+            tone: default
+            size: md
           - src: /img/projects/helpling/helpling-ds-modal-component.png
             alt: Figma panels for a Modal component showing nested layer hierarchy, size and buttons properties, and nested Button variants for size, type, status, label, and icons.
             caption: Foundations under the hood — Modal component architecture with Auto Layout, properties, and nested Button variants in Figma.
