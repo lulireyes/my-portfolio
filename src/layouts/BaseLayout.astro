@@ -1,6 +1,6 @@
 ---
-import dmSans400 from '@fontsource/dm-sans/files/dm-sans-latin-400-normal.woff2?url';
-import dmSans500 from '@fontsource/dm-sans/files/dm-sans-latin-500-normal.woff2?url';
+import spaceGrotesk500 from '@fontsource/space-grotesk/files/space-grotesk-latin-500-normal.woff2?url';
+import inter400 from '@fontsource/inter/files/inter-latin-400-normal.woff2?url';
 
 interface Props {
   title?: string;
@@ -27,14 +27,14 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
     <link rel="icon" href={`${base}favicon.ico`} />
     <link
       rel="preload"
-      href={dmSans400}
+      href={spaceGrotesk500}
       as="font"
       type="font/woff2"
       crossorigin
     />
     <link
       rel="preload"
-      href={dmSans500}
+      href={inter400}
       as="font"
       type="font/woff2"
       crossorigin
