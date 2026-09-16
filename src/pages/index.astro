@@ -46,13 +46,6 @@ const projects = (await getCollection('projects'))
           <div class="philosophy-main">
             <div class="philosophy-copy">
               {site.philosophy.paragraphs.map((paragraph) => <p class="philosophy-body">{paragraph}</p>)}
-              {
-                site.philosophy.learnMore && (
-                  <a class="philosophy-more" href={`${withBase('/')}${site.philosophy.learnMore.href}`}>
-                    {site.philosophy.learnMore.label}
-                  </a>
-                )
-              }
             </div>
             <div class="flip-cards" data-flip-cards>
               {
