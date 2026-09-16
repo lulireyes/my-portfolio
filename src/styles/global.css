@@ -308,14 +308,6 @@ p {
   white-space: nowrap;
 }
 
-.specialty-chip::before {
-  content: '[';
-}
-
-.specialty-chip::after {
-  content: ']';
-}
-
 /* Full-bleed rule under the intro — spans the viewport, not the content max-width */
 .divider {
   display: block;
@@ -510,30 +502,12 @@ p {
   user-select: none;
 }
 
-.flip-card-affordance {
-  display: inline-flex;
-  align-items: center;
-  margin-top: auto;
-  color: var(--color-muted);
-  z-index: 1;
-}
-
-.flip-card-rotate {
-  width: 1rem;
-  height: 1rem;
-  flex-shrink: 0;
-}
-
 .flip-card-body {
   color: var(--color-ink);
   font-family: var(--font-sans);
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.55;
-}
-
-.flip-card[aria-pressed='true'] .flip-card-front .flip-card-affordance {
-  opacity: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -726,8 +700,8 @@ p {
 
 /* ——— Testimonials ——— */
 .testimonials {
-  background: #d8d1c2;
-  color: #111111;
+  background: #241f1c;
+  color: #d8d1c2;
   padding-block: clamp(5rem, 14vh, 9rem);
   animation: rise 0.8s var(--ease-out) 0.24s both;
 }
@@ -787,7 +761,7 @@ p {
 .testimonial-meta {
   font-family: var(--font-mono);
   font-size: 0.82rem;
-  color: #111111;
+  color: #d8d1c2;
   line-height: 1.4;
 }
 
