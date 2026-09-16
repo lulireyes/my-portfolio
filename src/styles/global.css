@@ -1936,75 +1936,6 @@ html[data-theme='light'] .journey-tags li {
   color: var(--color-accent);
 }
 
-.rc-diagram {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: clamp(1.35rem, 3vh, 1.85rem);
-  width: 100%;
-  max-width: min(100%, 48rem);
-  margin: clamp(2.25rem, 6vh, 4rem) auto;
-  padding: clamp(2rem, 5vw, 3.25rem) clamp(1.5rem, 4vw, 2.75rem);
-  border: 1px solid var(--color-line);
-  background: color-mix(in srgb, var(--color-bg-elevated) 80%, transparent);
-}
-
-.rc-diagram-row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem 1.1rem;
-  width: 100%;
-}
-
-.rc-diagram-node {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 7.5rem;
-  padding: 0.85rem 1.35rem;
-  font-family: var(--font-display);
-  font-size: var(--case-fs-h3);
-  font-weight: 600;
-  letter-spacing: -0.015em;
-  line-height: var(--case-lh-heading);
-  color: var(--color-ink);
-  border: 1px solid var(--color-line);
-  background: var(--color-bg);
-}
-
-.rc-diagram-node--center {
-  min-width: 9.5rem;
-  border-color: color-mix(in srgb, var(--color-accent) 55%, var(--color-line));
-  color: var(--color-accent);
-}
-
-.rc-diagram-arrow {
-  color: var(--color-muted);
-  font-size: 1.15rem;
-}
-
-.rc-diagram-under {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.55rem 1rem;
-  padding-top: 0.35rem;
-  border-top: 1px solid color-mix(in srgb, var(--color-line) 80%, transparent);
-  width: 100%;
-  max-width: 28rem;
-}
-
-.rc-diagram-chip {
-  font-family: var(--font-mono);
-  font-size: var(--case-fs-meta);
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--color-muted);
-}
-
 /* Compact early outcomes block — metrics only, no before/after */
 .rc-chapter--impact:not(:has(.rc-before-after)) .rc-impact {
   padding-block: 0.25rem 0;
@@ -2490,6 +2421,12 @@ html[data-theme='light'] .journey-tags li {
   object-position: center;
 }
 
+/* Transparent dark-ink asset: invert for light strokes on dark page */
+html[data-theme='dark'] .rc-figure--visual .rc-figure-frame img,
+:root:not([data-theme='light']) .rc-figure--visual .rc-figure-frame img {
+  filter: invert(1);
+}
+
 .rc-figure-stack:has(> .rc-figure--visual:only-child) {
   width: 100%;
   align-items: stretch;
@@ -2735,9 +2672,6 @@ a.case-footer-value:hover {
     gap: 0.25rem;
   }
 
-  .rc-diagram-row {
-    flex-direction: column;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

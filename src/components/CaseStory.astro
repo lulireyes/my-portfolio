@@ -46,12 +46,6 @@ interface Metric {
   verified?: boolean;
   note?: string;
 }
-interface Diagram {
-  left: string;
-  center: string;
-  right: string;
-  under?: string[];
-}
 interface Chapter {
   id: string;
   number?: string;
@@ -99,7 +93,6 @@ interface Chapter {
   contactLabel?: string;
   contactInline?: boolean;
   contactSuffix?: string;
-  diagram?: Diagram;
 }
 
 interface Props {
@@ -210,28 +203,6 @@ function figureClasses(fig: StoryFigure, extra = '') {
               ))}
             </div>
             {ch.pullQuote && <blockquote class="rc-pull">{ch.pullQuote}</blockquote>}
-            {ch.diagram && (
-              <div class="rc-diagram" role="img" aria-label="Customer, Resolution Center, Provider system">
-                <div class="rc-diagram-row">
-                  <span class="rc-diagram-node">{ch.diagram.left}</span>
-                  <span class="rc-diagram-arrow" aria-hidden="true">
-                    ↔️
-                  </span>
-                  <span class="rc-diagram-node rc-diagram-node--center">{ch.diagram.center}</span>
-                  <span class="rc-diagram-arrow" aria-hidden="true">
-                    ↔️
-                  </span>
-                  <span class="rc-diagram-node">{ch.diagram.right}</span>
-                </div>
-                {ch.diagram.under && ch.diagram.under.length > 0 && (
-                  <div class="rc-diagram-under">
-                    {ch.diagram.under.map((label) => (
-                      <span class="rc-diagram-chip">{label}</span>
-                    ))}
-                  </div>
-                )}
-              </div>
-            )}
             {(ch.figures?.length ?? 0) > 0 ? (
               <div class:list={['rc-figure-stack', { 'rc-figure-gallery': (ch.figures?.length ?? 0) > 1 }]}>
                 {ch.figures?.map((fig) => (

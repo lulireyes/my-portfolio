@@ -128,14 +128,6 @@ const storyChapter = z.object({
   /** When true, contact link is rendered inline inside the CTA lead */
   contactInline: z.boolean().default(false),
   contactSuffix: z.string().optional(),
-  diagram: z
-    .object({
-      left: z.string(),
-      center: z.string(),
-      right: z.string(),
-      under: z.array(z.string()).default([]),
-    })
-    .optional(),
 });
 
 const caseSection = z.object({
