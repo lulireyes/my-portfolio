@@ -386,8 +386,11 @@ sections:
           - Users were entering the booking funnel without a clear mental model of how Helpling worked. That gap showed up as hesitation, abandoned sessions, and early drop-offs — especially for first-time customers across Germany and Singapore.
           - "The problem was not a missing feature. It was a comprehension barrier at the moment of highest intent: people needed just enough context to feel confident continuing, without slowing down the conversion path."
         pullQuote: The drop-off looked like a conversion problem. Underneath, it was a clarity problem.
-        placeholders:
-          - "[VISUAL PLACEHOLDER — funnel drop-off / comprehension barrier diagram]"
+        figures:
+          - src: /img/projects/helpling/helpling-growth-whiteboard-churn.jpg
+            alt: Hand-drawn whiteboard funnel diagram in red marker, grouping service friction into customer and provider problems.
+            caption: Early problem framing on the whiteboard — mapping funnel friction into customer vs. provider causes before we jumped to solutions.
+            size: md
 
       - id: gr-methodology
         number: "02"
@@ -403,15 +406,30 @@ sections:
             body: A lightweight “How Helpling Works” modal that explained the service in context, right before the funnel — without forcing a full onboarding path.
           - title: Contextual question marks
             body: Inline help affordances that surfaced explanations at the moment of confusion, tested alongside the core variants.
-        placeholders:
-          - "[IMAGE PLACEHOLDER — experiment variants A / B / C comparison]"
-          - "[IMAGE PLACEHOLDER — research artefacts / interview & usability synthesis]"
+        figures:
+          - src: /img/projects/helpling/helpling-growth-wireflow.jpg
+            alt: Hand-drawn mobile wireflow sketches in blue ink showing Helpling onboarding and booking steps, including account and address screens.
+            caption: Discovery sketches for the onboarding and booking flow — low-fidelity wireflows used to pressure-test the funnel before high-fidelity work.
+            size: sm
+          - src: /img/projects/helpling/helpling-growth-usability-session.png
+            alt: Remote usability testing interface showing the Helpling Offers app beside a participant video feed with eyes barred and a session activity log.
+            caption: Remote usability session validating offer and booking comprehension — participant identity protected; feed shows live research notes.
+            size: sm
+          - src: /img/projects/helpling/helpling-growth-retro-board.png
+            alt: Team retrospective board with four quadrants of sticky notes for continue, kudos, stop, and start themes.
+            caption: Collaboration context from a team retrospective — culture and continuous improvement sitting alongside the growth workstream.
+            size: sm
 
       - id: gr-experimentation
         number: "03"
         layout: solution
         title: Experimentation, Interaction Design & Validation
         lead: Option C — the “How Helpling Works” pre-funnel contextual modal — emerged as the winning variant. I crafted the interaction design, smooth micro-animations, and a close developer hand-off so the experience felt polished in production.
+        figures:
+          - src: /img/projects/helpling/helpling-growth-figma-iteration.jpg
+            alt: Figma board labeled Ticket 1 Iteration with entry-point screens, a V1 text-and-icons flow, and a READ ME interaction design specification panel.
+            caption: Experimentation board for Ticket 1 — entry points, V1 screen iterations, and interaction specs written for a clean engineering hand-off.
+            size: md
         solutions:
           - title: Winning variant
             body: Validating Option C as the clearest path to reduce early drop-off while preserving funnel momentum.
