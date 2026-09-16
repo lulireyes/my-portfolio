@@ -1,0 +1,65 @@
+---
+import { getSite } from '../lib/site';
+
+const site = getSite();
+const meta = site.locationMeta;
+---
+
+{
+  meta && (
+    <div class="location-bar" role="status" aria-live="polite">
+      <div class="shell location-bar-inner">
+        <span class="location-city">{meta.city}</span>
+        <span class="location-sep" aria-hidden="true">
+          ·
+        </span>
+        <span class="location-coords">{meta.coordinates}</span>
+        <span class="location-sep" aria-hidden="true">
+          ·
+        </span>
+        <time
+          class="location-time"
+          data-local-time
+          data-timezone={meta.timeZone}
+          datetime=""
+        >
+          —
+        </time>
+      </div>
+    </div>
+  )
+}
+
+<script>
+  function formatLocalTime(timeZone) {
+    const now = new Date();
+    const clock = new Intl.DateTimeFormat('en-GB', {
+      timeZone,
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: false,
+    }).format(now);
+    const offsetPart = new Intl.DateTimeFormat('en-US', {
+      timeZone,
+      timeZoneName: 'shortOffset',
+    })
+      .formatToParts(now)
+      .find((part) => part.type === 'timeZoneName')?.value;
+    return offsetPart ? `${clock} ${offsetPart}` : clock;
+  }
+
+  function tickLocalTimes() {
+    document.querySelectorAll('[data-local-time]').forEach((el) => {
+      if (!(el instanceof HTMLTimeElement)) return;
+      const timeZone = el.dataset.timezone;
+      if (!timeZone) return;
+      const label = formatLocalTime(timeZone);
+      el.textContent = label;
+      el.setAttribute('datetime', new Date().toISOString());
+      el.setAttribute('aria-label', `Local time in ${timeZone}: ${label}`);
+    });
+  }
+
+  tickLocalTimes();
+  setInterval(tickLocalTimes, 30_000);
+</script>
