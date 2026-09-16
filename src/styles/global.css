@@ -405,17 +405,6 @@ p {
   grid-template-columns: 1fr;
 }
 
-.flip-cards-hint {
-  grid-column: 1 / -1;
-  margin: 0 0 0.15rem;
-  color: var(--color-muted);
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 400;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
 @media (min-width: 560px) {
   .flip-cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -510,7 +499,7 @@ p {
 }
 
 .flip-card-back {
-  justify-content: space-between;
+  justify-content: center;
   gap: 0.85rem;
   transform: rotateY(180deg);
   overflow: auto;
@@ -544,28 +533,15 @@ p {
 .flip-card-affordance {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
   margin-top: auto;
   color: var(--color-muted);
   z-index: 1;
-}
-
-.flip-card-affordance--back {
-  margin-top: 0;
 }
 
 .flip-card-rotate {
   width: 1rem;
   height: 1rem;
   flex-shrink: 0;
-}
-
-.flip-card-hint {
-  font-family: var(--font-mono);
-  font-size: 0.6875rem;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  line-height: 1.2;
 }
 
 .flip-card-body {

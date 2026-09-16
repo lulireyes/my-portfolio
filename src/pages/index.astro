@@ -12,8 +12,6 @@ const projects = (await getCollection('projects'))
   .filter((project) => !project.data.draft)
   .sort((a, b) => a.data.order - b.data.order || a.data.title.localeCompare(b.data.title));
 
-const flipHint = 'Click to flip';
-const flipBackHint = 'Click to flip back';
 ---
 
 <BaseLayout title={site.seo.title} description={site.seo.description}>
@@ -57,9 +55,6 @@ const flipBackHint = 'Click to flip back';
               }
             </div>
             <div class="flip-cards" data-flip-cards>
-              <p class="flip-cards-hint" id="flip-cards-hint">
-                Select a card to flip it and read more
-              </p>
               {
                 site.philosophy.items.map((item, index) => {
                   const number = String(index + 1).padStart(2, '0');
@@ -68,9 +63,8 @@ const flipBackHint = 'Click to flip back';
                       type="button"
                       class="flip-card"
                       aria-pressed="false"
-                      aria-describedby="flip-cards-hint"
                       data-title={item.title}
-                      aria-label={`${item.title}. ${flipHint}.`}
+                      aria-label={item.title}
                       id={`philosophy-card-${index}`}
                     >
                       <span class="flip-card-inner">
@@ -92,7 +86,6 @@ const flipBackHint = 'Click to flip back';
                                 stroke-linejoin="round"
                               />
                             </svg>
-                            <span class="flip-card-hint">{flipHint}</span>
                           </span>
                           <span class="flip-card-number" aria-hidden="true">
                             {number}
@@ -100,9 +93,6 @@ const flipBackHint = 'Click to flip back';
                         </span>
                         <span class="flip-card-face flip-card-back">
                           <span class="flip-card-body">{item.body}</span>
-                          <span class="flip-card-affordance flip-card-affordance--back" aria-hidden="true">
-                            <span class="flip-card-hint">{flipBackHint}</span>
-                          </span>
                         </span>
                       </span>
                     </button>
@@ -343,7 +333,7 @@ const flipBackHint = 'Click to flip back';
           card.setAttribute('aria-pressed', next ? 'true' : 'false');
           card.setAttribute(
             'aria-label',
-            next ? `${title}. Showing details. Click to flip back.` : `${title}. Click to flip.`
+            next ? `${title}. Showing details.` : title
           );
         });
       });
