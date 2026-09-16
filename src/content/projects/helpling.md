@@ -1,6 +1,9 @@
 ---
 title: Helpling
 summary: Europe’s leading household-services platform — Resolution Center, Design System 1.0, and growth experiments across Customer and Partner Apps.
+order: 1
+draft: false
+cover: /img/projects/helpling/cover.webp
 overview:
   - Helpling is Europe’s leading platform for household services, connecting customers with trusted service providers across multiple markets.
   - I joined Helpling as a Product Designer and grew into a Senior Product Designer, working across the Customer and Partner Apps in Germany and Singapore. I worked on everything from complex service experiences and new product initiatives to growth, retention and experimentation.
@@ -444,7 +447,4 @@ sections:
         lead: NDA constraints apply. Detailed flows are password-protected upon request. Reach out to me to learn more about this project.
         contactHref: "mailto:lucianareyes@gmail.com"
         contactLabel: lucianareyes@gmail.com
-order: 1
-draft: false
-cover: /img/projects/helpling/cover.webp
 ---
