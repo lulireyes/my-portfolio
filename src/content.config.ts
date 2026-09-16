@@ -6,6 +6,32 @@ const impactItem = z.object({
   description: z.string(),
 });
 
+/** Linked highlight paragraph (anchor jump to a case-study section). */
+const highlightLink = z.object({
+  before: z.string().default(''),
+  title: z.string(),
+  href: z.string(),
+  after: z.string().default(''),
+  /** Bold outcome text after the linked title */
+  emphasis: z.string().optional(),
+  afterEmphasis: z.string().optional(),
+});
+
+const caseSectionBlock = z.object({
+  heading: z.string().optional(),
+  paragraphs: z.array(z.string()).default([]),
+});
+
+const caseSection = z.object({
+  id: z.string(),
+  title: z.string(),
+  emoji: z.string().optional(),
+  summary: z.array(z.string()).default([]),
+  role: z.string().optional(),
+  timeline: z.string().optional(),
+  blocks: z.array(caseSectionBlock).default([]),
+});
+
 const projects = defineCollection({
   loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/projects' }),
   schema: z.object({
@@ -13,8 +39,8 @@ const projects = defineCollection({
     subtitle: z.string().optional(),
     /** Short homepage card summary */
     summary: z.string().optional(),
-    /** Longer summary for the case study intro */
-    overview: z.string().optional(),
+    /** Longer summary for the case study intro (string or paragraphs) */
+    overview: z.union([z.string(), z.array(z.string())]).optional(),
     /** Homepage tag pills */
     tags: z.array(z.string()).default([]),
     year: z.number().optional(),
@@ -28,8 +54,13 @@ const projects = defineCollection({
     market: z.string().optional(),
     /** Optional team credits */
     team: z.string().optional(),
-    /** Highlight paragraphs under Highlights */
-    highlights: z.array(z.string()).default([]),
+    /**
+     * Highlight paragraphs under Highlights.
+     * Plain strings for simple case studies; objects for linked section jumps.
+     */
+    highlights: z.array(z.union([z.string(), highlightLink])).default([]),
+    /** Multi-part case study sections (marquee → title → summary → blocks) */
+    sections: z.array(caseSection).default([]),
     /** Big metric tiles under Impact */
     impact: z.array(impactItem).default([]),
     /** Path under public/, e.g. /img/projects/example/cover.webp */
