@@ -147,16 +147,28 @@
     "title": "Luli Reyes — Product Designer",
     "description": "Valencia-based product designer focused on thoughtful, people-first products. UX/UI, research, and accessibility."
   },
+  "locationMeta": {
+    "city": "Valencia, ES",
+    "coordinates": "39.4699° N, 0.3763° W",
+    "timeZone": "Europe/Madrid"
+  },
   "links": [
     {
       "label": "Linkedin",
       "href": "https://www.linkedin.com/in/lucianareyes"
+    },
+    {
+      "label": "GitHub",
+      "href": "https://github.com/lulireyes"
     }
   ],
   "footer": {
     "thanks": "Thanks for visiting!",
     "smile": "(^_^)",
     "location": "Valencia, Spain",
-    "email": "lucianareyes@gmail.com"
+    "email": "lucianareyes@gmail.com",
+    "connectHeading": "Let's connect",
+    "connectBody": "Always happy to chat about product design, research, or collaboration opportunities.",
+    "madeIn": "Made in Valencia, Spain"
   }
 }

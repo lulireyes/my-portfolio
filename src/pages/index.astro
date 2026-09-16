@@ -1,7 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import LocationBar from '../components/LocationBar.astro';
 import Topbar from '../components/Topbar.astro';
+import SiteFooter from '../components/SiteFooter.astro';
 import { getSite } from '../lib/site';
 import { withBase } from '../lib/paths';
 import '../styles/global.css';
@@ -16,6 +18,7 @@ const projects = (await getCollection('projects'))
 
 <BaseLayout title={site.seo.title} description={site.seo.description}>
   <div class="page">
+    <LocationBar />
     <Topbar />
 
     <main>
@@ -254,16 +257,7 @@ const projects = (await getCollection('projects'))
       }
     </main>
 
-    <footer class="site-footer" id="contact">
-      <div class="shell site-footer-inner">
-        <p class="footer-thanks">{site.footer.thanks}</p>
-        {site.footer.smile && <p class="footer-smile">{site.footer.smile}</p>}
-        <a class="footer-email" href={`mailto:${site.footer.email}`}>
-          {site.footer.email}
-        </a>
-        <p class="footer-location">{site.footer.location}</p>
-      </div>
-    </footer>
+    <SiteFooter />
   </div>
 
   <script>

@@ -2,7 +2,9 @@
 import { getCollection, render } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import LocationBar from '../../components/LocationBar.astro';
 import Topbar from '../../components/Topbar.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
 import CaseStory from '../../components/CaseStory.astro';
 import { getSite } from '../../lib/site';
 import { withBase } from '../../lib/paths';
@@ -27,7 +29,6 @@ interface Props {
 
 const { project, projects } = Astro.props;
 const site = getSite();
-const linkedIn = site.links?.find((l) => /linkedin/i.test(l.label) || /linkedin/i.test(l.href));
 
 const ordered = [...projects].sort(
   (a, b) => a.data.order - b.data.order || a.data.title.localeCompare(b.data.title),
@@ -63,6 +64,7 @@ function sectionMarqueeRepeats(title: string) {
   description={project.data.summary ?? project.data.subtitle ?? site.seo.description}
 >
   <div class="case-page">
+    <LocationBar />
     <Topbar />
 
     <main>
@@ -348,43 +350,7 @@ function sectionMarqueeRepeats(title: string) {
       </article>
     </main>
 
-    <footer class="case-footer" id="contact">
-      <div class="case-footer-inner">
-        <div class="case-footer-brand-row">
-          <p class="case-footer-name">{site.name}</p>
-          {
-            linkedIn && (
-              <a
-                class="case-linkedin case-linkedin--footer"
-                href={linkedIn.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-              >
-                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-                  <path
-                    fill="currentColor"
-                    d="M6.94 8.5H4.1V19h2.84V8.5ZM5.52 7.2a1.65 1.65 0 1 0 0-3.3 1.65 1.65 0 0 0 0 3.3ZM19.9 19h-2.84v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.86V19H10.3V8.5h2.73v1.43h.04c.38-.72 1.3-1.48 2.68-1.48 2.87 0 3.4 1.89 3.4 4.34V19Z"
-                  />
-                </svg>
-              </a>
-            )
-          }
-        </div>
-        <div class="case-footer-meta">
-          <div>
-            <p class="case-footer-label">Location</p>
-            <p class="case-footer-value">{site.footer.location}</p>
-          </div>
-          <div>
-            <p class="case-footer-label">Contact</p>
-            <a class="case-footer-value" href={`mailto:${site.footer.email}`}>
-              {site.footer.email}
-            </a>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <SiteFooter />
   </div>
 
   <script>
