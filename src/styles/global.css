@@ -858,54 +858,196 @@ p {
 }
 
 .journey-list {
+  --journey-rail: 3.5rem;
   list-style: none;
   margin: 0;
   padding: 0;
-  border-top: 1px solid var(--color-line);
+  position: relative;
 }
 
 .journey-item {
   display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 1rem 1.15rem;
-  align-items: center;
-  padding-block: 1.15rem;
-  border-bottom: 1px solid var(--color-line);
+  grid-template-columns: var(--journey-rail) minmax(0, 1fr);
+  gap: 0 clamp(1.15rem, 3vw, 1.75rem);
+  align-items: start;
+  padding-bottom: clamp(2.5rem, 6vh, 3.75rem);
+}
+
+.journey-item:last-child {
+  padding-bottom: 0;
+}
+
+.journey-rail {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-self: stretch;
+}
+
+.journey-rail::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  transform: translateX(-50%);
+  background: var(--color-line);
+}
+
+.journey-item:last-child .journey-rail::before {
+  bottom: auto;
+  height: var(--journey-rail);
+}
+
+.journey-logo-frame {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: var(--journey-rail);
+  height: var(--journey-rail);
+  border-radius: 0.85rem;
+  border: 1px solid var(--color-line);
+  background: #ffffff;
+  box-shadow: 0 1px 2px color-mix(in srgb, #0d0d0d 4%, transparent);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+:root:not([data-theme='light']) .journey-logo-frame {
+  background: #ffffff;
 }
 
 .journey-logo {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 0.7rem;
-  object-fit: cover;
-  background: var(--color-bg-elevated);
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
 }
 
-.journey-copy {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
+.journey-body {
   min-width: 0;
+  padding-top: 0.15rem;
+}
+
+.journey-dates {
+  margin: 0 0 0.65rem;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-muted);
 }
 
 .journey-company {
+  margin: 0 0 0.35rem;
   font-family: var(--font-display);
-  font-size: 1.05rem;
-  font-weight: 500;
+  font-size: clamp(1.65rem, 3.2vw, 2.15rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
   color: var(--color-ink);
 }
 
 .journey-role {
-  font-size: 0.9rem;
+  margin: 0 0 1.15rem;
+  font-family: var(--font-sans);
+  font-size: clamp(1.02rem, 2vw, 1.15rem);
+  font-weight: 500;
   color: var(--color-muted);
 }
 
-.journey-dates {
-  font-family: var(--font-mono);
-  font-size: 0.82rem;
-  font-weight: 400;
+.journey-desc {
+  margin: 0 0 1.35rem;
+  max-width: 40rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-intro);
+}
+
+.journey-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem 0.65rem;
+}
+
+.journey-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.journey-tags li {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  background: var(--color-bg-elevated);
   color: var(--color-muted);
-  white-space: nowrap;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+html[data-theme='light'] .journey-tags li {
+  background: #f4f4f5;
+  color: #52525b;
+}
+
+.journey-case {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-left: 0.15rem;
+  padding: 0.4rem 0.85rem 0.4rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-line);
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.2;
+  text-decoration: none;
+  transition:
+    color 0.2s var(--ease-out),
+    background 0.2s var(--ease-out),
+    border-color 0.2s var(--ease-out);
+}
+
+.journey-case:hover {
+  background: var(--color-ink);
+  border-color: var(--color-ink);
+  color: var(--color-bg);
+}
+
+.journey-case-icon {
+  width: 0.75rem;
+  height: 0.75rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 560px) {
+  .journey-list {
+    --journey-rail: 2.85rem;
+  }
+
+  .journey-item {
+    gap: 0 0.9rem;
+    padding-bottom: 2.25rem;
+  }
+
+  .journey-logo-frame {
+    border-radius: 0.7rem;
+  }
+
+  .journey-case {
+    margin-left: 0;
+  }
 }
 
 /* ——— Site footer ——— */
