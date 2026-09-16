@@ -323,6 +323,19 @@ function figureClasses(fig: StoryFigure, extra = '') {
                 {ch.title}
               </h3>
             </header>
+            {ch.lead && <p class="rc-lead">{ch.lead}</p>}
+            <div class="rc-prose-stack">
+              {ch.paragraphs?.map((p) => (
+                <p class="rc-body">{p}</p>
+              ))}
+            </div>
+            {(ch.bullets?.length ?? 0) > 0 && (
+              <ul class="rc-list rc-list--dense">
+                {ch.bullets?.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            )}
             <ol class="rc-insight-list">
               {ch.insights?.map((insight) => (
                 <li class="rc-insight">
@@ -336,6 +349,18 @@ function figureClasses(fig: StoryFigure, extra = '') {
                 </li>
               ))}
             </ol>
+            {(ch.figures?.length ?? 0) > 0 && (
+              <div class:list={['rc-figure-stack', { 'rc-figure-gallery': (ch.figures?.length ?? 0) > 1 }]}>
+                {ch.figures?.map((fig) => (
+                  <figure class={figureClasses(fig)}>
+                    <div class="rc-figure-frame">
+                      <img src={withBase(fig.src)} alt={fig.alt} loading="lazy" decoding="async" />
+                    </div>
+                    {fig.caption && <figcaption class="rc-figure-caption">{fig.caption}</figcaption>}
+                  </figure>
+                ))}
+              </div>
+            )}
           </div>
         )}
 
@@ -451,29 +476,31 @@ function figureClasses(fig: StoryFigure, extra = '') {
                 <li>{item}</li>
               ))}
             </ul>
-            <div class="rc-tradeoffs" aria-label="Design trade-offs">
-              <div class="rc-tradeoff-head" aria-hidden="true">
-                <span>User need</span>
-                <span>Constraint</span>
-                <span>Design response</span>
-              </div>
-              {ch.tradeoffs?.map((t) => (
-                <div class="rc-tradeoff">
-                  <p>
-                    <span class="rc-tradeoff-mobile-label">User need</span>
-                    {t.need}
-                  </p>
-                  <p>
-                    <span class="rc-tradeoff-mobile-label">Constraint</span>
-                    {t.constraint}
-                  </p>
-                  <p>
-                    <span class="rc-tradeoff-mobile-label">Design response</span>
-                    {t.response}
-                  </p>
+            {(ch.tradeoffs?.length ?? 0) > 0 && (
+              <div class="rc-tradeoffs" aria-label="Design trade-offs">
+                <div class="rc-tradeoff-head" aria-hidden="true">
+                  <span>User need</span>
+                  <span>Constraint</span>
+                  <span>Design response</span>
                 </div>
-              ))}
-            </div>
+                {ch.tradeoffs?.map((t) => (
+                  <div class="rc-tradeoff">
+                    <p>
+                      <span class="rc-tradeoff-mobile-label">User need</span>
+                      {t.need}
+                    </p>
+                    <p>
+                      <span class="rc-tradeoff-mobile-label">Constraint</span>
+                      {t.constraint}
+                    </p>
+                    <p>
+                      <span class="rc-tradeoff-mobile-label">Design response</span>
+                      {t.response}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         )}
 
@@ -502,7 +529,7 @@ function figureClasses(fig: StoryFigure, extra = '') {
                 <article class="rc-solution-item">
                   <h4 class="rc-solution-title">{sol.title}</h4>
                   {sol.body && <p class="rc-body">{sol.body}</p>}
-                  {sol.figure ? (
+                  {sol.figure && (
                     <figure class={figureClasses(sol.figure, 'rc-figure--solution')}>
                       <div class="rc-figure-frame">
                         <img
@@ -516,16 +543,6 @@ function figureClasses(fig: StoryFigure, extra = '') {
                         <figcaption class="rc-figure-caption">{sol.figure.caption}</figcaption>
                       )}
                     </figure>
-                  ) : (
-                    sol.placeholder && (
-                      <figure
-                        class="rc-placeholder rc-placeholder--solution"
-                        role="img"
-                        aria-label={sol.placeholder}
-                      >
-                        <span class="rc-placeholder-label">{sol.placeholder}</span>
-                      </figure>
-                    )
                   )}
                 </article>
               ))}
@@ -598,25 +615,31 @@ function figureClasses(fig: StoryFigure, extra = '') {
                 ))}
               </ul>
             )}
-            <div class="rc-before-after">
-              <div class="rc-ba-col">
-                <h4 class="rc-ba-label">Before</h4>
-                <ul class="rc-ba-list">
-                  {ch.before?.map((item) => (
-                    <li>{item}</li>
-                  ))}
-                </ul>
+            {((ch.before?.length ?? 0) > 0 || (ch.after?.length ?? 0) > 0) && (
+              <div class="rc-before-after">
+                {(ch.before?.length ?? 0) > 0 && (
+                  <div class="rc-ba-col">
+                    <h4 class="rc-ba-label">Before</h4>
+                    <ul class="rc-ba-list">
+                      {ch.before?.map((item) => (
+                        <li>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {(ch.after?.length ?? 0) > 0 && (
+                  <div class="rc-ba-col">
+                    <h4 class="rc-ba-label">After</h4>
+                    <ul class="rc-ba-list">
+                      {ch.after?.map((item) => (
+                        <li>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
-              <div class="rc-ba-col">
-                <h4 class="rc-ba-label">After</h4>
-                <ul class="rc-ba-list">
-                  {ch.after?.map((item) => (
-                    <li>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            {(ch.figures?.length ?? 0) > 0 ? (
+            )}
+            {(ch.figures?.length ?? 0) > 0 && (
               <div class:list={['rc-figure-stack', { 'rc-figure-gallery': (ch.figures?.length ?? 0) > 1 }]}>
                 {ch.figures?.map((fig) => (
                   <figure class={figureClasses(fig)}>
@@ -627,12 +650,6 @@ function figureClasses(fig: StoryFigure, extra = '') {
                   </figure>
                 ))}
               </div>
-            ) : (
-              ch.placeholders?.map((ph) => (
-                <figure class="rc-placeholder rc-placeholder--wide" role="img" aria-label={ph}>
-                  <span class="rc-placeholder-label">{ph}</span>
-                </figure>
-              ))
             )}
           </div>
         )}
