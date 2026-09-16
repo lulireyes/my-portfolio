@@ -105,10 +105,15 @@ const storyChapter = z.object({
   roleLine: z.string().optional(),
   responsibilities: z.string().optional(),
   challengeLabel: z.string().optional(),
+  /** Optional intro line above challenge bullets (e.g. "The new X needed to:") */
+  challengeIntro: z.string().optional(),
   contextLabel: z.string().optional(),
   roleLabel: z.string().optional(),
   contactHref: z.string().optional(),
   contactLabel: z.string().optional(),
+  /** When true, contact link is rendered inline inside the CTA lead */
+  contactInline: z.boolean().default(false),
+  contactSuffix: z.string().optional(),
   diagram: z
     .object({
       left: z.string(),

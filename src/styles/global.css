@@ -2252,9 +2252,11 @@ html[data-theme='light'] .journey-tags li {
   text-decoration: none;
 }
 
-.rc-cta-link:hover {
-  text-decoration: underline;
-  text-underline-offset: 0.18em;
+.rc-cta-link--inline {
+  display: inline;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
 }
 
 .rc-placeholder {
