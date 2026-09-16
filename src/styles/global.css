@@ -604,7 +604,7 @@ p {
   margin: 0;
   padding: 0;
   display: grid;
-  gap: clamp(2.5rem, 5vw, 3.5rem) clamp(1.75rem, 3vw, 2.5rem);
+  gap: clamp(3.25rem, 7vw, 5rem) clamp(2rem, 3.5vw, 2.75rem);
   grid-template-columns: 1fr;
 }
 
@@ -617,27 +617,48 @@ p {
 .work-card {
   display: flex;
   flex-direction: column;
-  gap: 1.1rem;
+  height: 100%;
+  overflow: hidden;
   text-decoration: none;
   color: inherit;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-media);
+  box-shadow: var(--shadow-soft);
+  transition:
+    transform 0.45s var(--ease-out),
+    border-color 0.25s ease,
+    box-shadow 0.45s var(--ease-out);
 }
 
 .work-card:hover {
   opacity: 1;
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--color-line) 70%, var(--color-accent));
+  box-shadow: 0 22px 44px color-mix(in srgb, var(--color-accent) 12%, transparent);
+}
+
+.work-card:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
 }
 
 .work-cover {
+  display: block;
   width: 100%;
   aspect-ratio: 16 / 10;
   object-fit: cover;
-  border-radius: var(--radius-media);
+  border-radius: 0;
   background: var(--color-bg-elevated);
-  box-shadow: var(--shadow-soft);
-  transition: transform 0.45s var(--ease-out);
 }
 
-.work-card:hover .work-cover {
-  transform: translateY(-4px);
+.work-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 1rem;
+  padding: 1.25rem 1.35rem 1.45rem;
+  background: var(--color-bg-elevated);
 }
 
 .work-title {
@@ -651,6 +672,7 @@ p {
 }
 
 .work-summary {
+  margin: 0;
   color: var(--color-ink);
   font-size: 1rem;
   line-height: 1.55;
@@ -684,7 +706,8 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  margin-top: 0.15rem;
+  margin-top: auto;
+  padding-top: 0.15rem;
   color: var(--color-accent);
   font-family: var(--font-mono);
   font-size: 0.9rem;
