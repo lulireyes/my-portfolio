@@ -110,6 +110,8 @@ const projects = (await getCollection('projects'))
                   : withBase(`projects/${project.id}/`);
                 const external = Boolean(project.data.externalUrl);
                 const summary = project.data.summary ?? project.data.subtitle ?? '';
+                const ctaLabel =
+                  project.id === 'helpling' ? 'View case studies' : 'View case study';
 
                 return (
                   <li>
@@ -130,7 +132,7 @@ const projects = (await getCollection('projects'))
                       <div class="work-body">
                         <h3 class="work-title">{project.data.title}</h3>
                         {summary && <p class="work-summary">{summary}</p>}
-                        <span class="work-cta">View case study →</span>
+                        <span class="work-cta">{ctaLabel} →</span>
                       </div>
                     </a>
                   </li>
