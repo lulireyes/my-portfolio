@@ -292,8 +292,12 @@ sections:
         title: Design System 1.0
         tagline: Scaling a product starts with scaling decisions.
         impactLine: "Bringing order to chaos: how I built Helpling’s first cross-platform Design System from the ground up."
-        placeholders:
-          - "[IMAGE PLACEHOLDER — strongest Design System visual / component library composition]"
+        figures:
+          - src: /img/projects/helpling/helpling-ds-product-screens.png
+            alt: Four Helpling mobile screens side by side — provider selection with Anna selected, October date picker, personalized dashboard greeting Isabela, and Help FAQ with suggested articles — showing the Design System applied across product flows.
+            caption: Design System 1.0 in product — provider selection, scheduling, dashboard, and Help, sharing one cohesive UI language.
+            tone: default
+            size: lg
 
       - id: ds-overview
         layout: overview
@@ -330,8 +334,12 @@ sections:
             body: Working hand-in-hand with another designer, we dove deep into the multi-platform ecosystem—auditing and rebuilding components separately for Customer App, Partner App, and Connect App, broken down clearly across mobile and desktop.
           - title: Laying the Foundations
             body: We established core rules for typography, spacing, and color using Figma’s Auto Layout and Variants, ensuring engineering naming conventions were respected from day one.
-        placeholders:
-          - "[IMAGE PLACEHOLDER — foundations / component architecture / Figma variants]"
+        figures:
+          - src: /img/projects/helpling/helpling-ds-modal-component.png
+            alt: Figma panels for a Modal component showing nested layer hierarchy, size and buttons properties, and nested Button variants for size, type, status, label, and icons.
+            caption: Foundations under the hood — Modal component architecture with Auto Layout, properties, and nested Button variants in Figma.
+            tone: default
+            size: lg
 
       - id: ds-reflection
         number: "03"
