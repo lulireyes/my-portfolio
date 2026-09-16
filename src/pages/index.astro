@@ -130,13 +130,6 @@ const projects = (await getCollection('projects'))
                       <div class="work-body">
                         <h3 class="work-title">{project.data.title}</h3>
                         {summary && <p class="work-summary">{summary}</p>}
-                        {project.data.tags.length > 0 && (
-                          <ul class="work-tags">
-                            {project.data.tags.map((tag) => (
-                              <li>{tag}</li>
-                            ))}
-                          </ul>
-                        )}
                         <span class="work-cta">View case study →</span>
                       </div>
                     </a>
