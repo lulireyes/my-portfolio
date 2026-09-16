@@ -18,22 +18,23 @@
     "intro": "Design starts with intention. It means understanding people, their context, and the problem we’re trying to solve, while being intentional about how we want the experience to feel.",
     "items": [
       {
-        "title": "People",
-        "body": "Design for different needs, abilities, and contexts."
+        "title": "Design is for everyone",
+        "body": "Inclusive products meet people where they are. Accessibility and clarity help build trust across ability, language, culture, and context."
       },
       {
-        "title": "Evidence",
-        "body": "Research and data keep assumptions honest."
+        "title": "Design is strategy",
+        "body": "I connect research insights with business goals to make decisions that move both metrics and meaning."
       },
       {
-        "title": "Systems",
-        "body": "Think beyond individual screens and design for the bigger picture."
+        "title": "Design is collaboration",
+        "body": "The best outcomes come from working closely with product, engineering, data, and stakeholders."
       },
       {
-        "title": "Collaboration",
-        "body": "The best solutions are built together."
+        "title": "Design needs evidence",
+        "body": "Interviews, usability testing, data, and real-world feedback keep assumptions honest and iteration purposeful."
       }
-    ]
+    ],
+    "bridge": "Here’s what that looks like in practice."
   },
   "workHeading": "Work",
   "nav": [

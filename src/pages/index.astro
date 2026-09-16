@@ -45,24 +45,32 @@ const projects = (await getCollection('projects'))
 
       <section class="shell philosophy" aria-labelledby="philosophy-heading">
         <p class="philosophy-label">{site.philosophy.label}</p>
-        <h2 class="philosophy-title" id="philosophy-heading">{site.philosophy.title}</h2>
-        <p class="philosophy-intro">{site.philosophy.intro}</p>
-        <ol class="philosophy-list">
-          {
-            site.philosophy.items.map((item, index) => {
-              const number = String(index + 1).padStart(2, '0');
-              return (
-                <li class="philosophy-row">
-                  <span class="philosophy-num" aria-hidden="true">
-                    {number}
-                  </span>
-                  <span class="philosophy-principle">{item.title}</span>
-                  <p class="philosophy-desc">{item.body}</p>
-                </li>
-              );
-            })
-          }
-        </ol>
+        <div class="philosophy-compose">
+          <header class="philosophy-lead">
+            <h2 class="philosophy-title" id="philosophy-heading">{site.philosophy.title}</h2>
+            <p class="philosophy-intro">{site.philosophy.intro}</p>
+          </header>
+          <ol class="philosophy-list">
+            {
+              site.philosophy.items.map((item, index) => {
+                const number = String(index + 1).padStart(2, '0');
+                const slot = String(index + 1).padStart(2, '0');
+                return (
+                  <li class={`philosophy-item philosophy-item--${slot}`}>
+                    <span class="philosophy-num" aria-hidden="true">
+                      {number}
+                    </span>
+                    <h3 class="philosophy-principle">{item.title}</h3>
+                    <p class="philosophy-desc">{item.body}</p>
+                  </li>
+                );
+              })
+            }
+          </ol>
+        </div>
+        {site.philosophy.bridge && (
+          <p class="philosophy-bridge">{site.philosophy.bridge}</p>
+        )}
       </section>
 
       {
