@@ -327,7 +327,7 @@ p {
 
 /* ——— Philosophy (label | body+cards) ——— */
 .philosophy {
-  padding-block: clamp(3rem, 9vh, 5.5rem);
+  padding-block: clamp(4rem, 12vh, 7.5rem);
   animation: rise 0.8s var(--ease-out) 0.12s both;
 }
 
@@ -584,18 +584,19 @@ p {
 
 /* ——— Selected work ——— */
 .work {
-  padding-block: clamp(3rem, 9vh, 5.5rem);
+  padding-block: clamp(4.5rem, 14vh, 8.5rem);
   animation: rise 0.8s var(--ease-out) 0.18s both;
 }
 
 .work-heading {
   margin: 0 0 clamp(2rem, 5vh, 3.25rem);
   font-family: var(--font-display);
-  font-size: clamp(2.75rem, 7vw, 4.5rem);
+  font-size: clamp(2.75rem, 10vw, 5.5rem);
   font-weight: 500;
   letter-spacing: -0.04em;
   line-height: 1;
-  color: var(--color-ink);
+  text-transform: uppercase;
+  color: var(--color-accent);
 }
 
 .work-grid {
@@ -701,7 +702,7 @@ p {
 .testimonials {
   background: var(--color-surface-alt);
   color: #111111;
-  padding-block: clamp(4rem, 12vh, 7rem);
+  padding-block: clamp(5rem, 14vh, 9rem);
   animation: rise 0.8s var(--ease-out) 0.24s both;
 }
 
@@ -762,16 +763,19 @@ p {
 
 /* ——— About ——— */
 .about {
-  padding-block: clamp(3.5rem, 10vh, 6rem);
+  padding-block: clamp(5rem, 14vh, 8.5rem);
   animation: rise 0.8s var(--ease-out) 0.28s both;
 }
 
 .about-heading {
   margin: 0 0 0.85rem;
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-size: clamp(2.75rem, 10vw, 5.5rem);
   font-weight: 500;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--color-accent);
 }
 
 .about-path {
@@ -820,16 +824,19 @@ p {
 
 /* ——— Journey ——— */
 .journey {
-  padding-block: 0 clamp(4rem, 12vh, 7rem);
+  padding-block: clamp(4rem, 12vh, 7rem) clamp(5rem, 14vh, 9rem);
   animation: rise 0.8s var(--ease-out) 0.32s both;
 }
 
 .journey-heading {
   margin: 0 0 clamp(1.75rem, 4vh, 2.75rem);
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-size: clamp(2.75rem, 10vw, 5.5rem);
   font-weight: 500;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--color-accent);
 }
 
 .journey-list {
