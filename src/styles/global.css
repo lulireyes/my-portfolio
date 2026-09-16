@@ -33,24 +33,24 @@
 }
 
 [data-theme='light'] {
-  --color-bg: #fafafa;
-  --color-bg-elevated: #f4f4f5;
-  --color-ink: #111111;
+  --color-bg: #d8d1c2;
+  --color-bg-elevated: #e5dfd3;
+  --color-ink: #0d0d0d;
   --color-beige: #27272a;
   --color-intro: #3f3f46;
-  --color-nav: #111111;
+  --color-nav: #0d0d0d;
   --color-muted: #52525b;
   --color-muted-soft: #71717a;
-  --color-line: #e4e4e7;
+  --color-line: #c4bba8;
   --color-accent: #c45d45;
   --color-accent-soft: color-mix(in srgb, #e07a5f 18%, transparent);
   --color-lavender: #7a6b8c;
   --color-footer-bg: #0d0d0d;
   --color-footer-ink: #e07a5f;
-  --color-surface-alt: #f4f4f5;
-  --color-tag-border: #111111;
-  --color-tag-ink: #111111;
-  --shadow-soft: 0 18px 40px rgba(17, 17, 17, 0.06);
+  --color-surface-alt: #cbc3b3;
+  --color-tag-border: #0d0d0d;
+  --color-tag-ink: #0d0d0d;
+  --shadow-soft: 0 18px 40px rgba(13, 13, 13, 0.08);
   color-scheme: light;
 }
 
@@ -986,8 +986,8 @@ html[data-theme='dark'] .journey-tags li,
 }
 
 html[data-theme='light'] .journey-tags li {
-  border-color: #d4d4d8;
-  background: #f4f4f5;
+  border-color: #c4bba8;
+  background: #e5dfd3;
   color: #3f3f46;
 }
 
