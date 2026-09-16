@@ -28,8 +28,7 @@ sections:
     story:
       - id: yo-hero
         layout: hero
-        title: Yoona.ai
-        tagline: Simplifying the fashion value chain through AI and product design
+        title: Simplifying the fashion value chain through AI and product design
         impactLine: End-to-end redesign of a deep tech B2B platform — from concept to real production and the Metaverse.
         placeholders:
           - "[IMAGE PLACEHOLDER — strongest Yoona.ai platform / AI fashion workflow visual]"

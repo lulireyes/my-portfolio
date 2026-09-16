@@ -1275,8 +1275,8 @@ html[data-theme='light'] .journey-tags li {
 .case-page {
   --case-max: 72rem;
   --case-measure: 38rem;
-  --case-fs-h1: clamp(2.25rem, 5vw, 3rem);
-  --case-fs-h2: clamp(1.5rem, 2.8vw, 1.85rem);
+  --case-fs-h1: clamp(2.75rem, 6vw, 3.75rem);
+  --case-fs-h2: clamp(1.85rem, 3.5vw, 2.4rem);
   --case-fs-h3: clamp(1.125rem, 1.8vw, 1.25rem);
   --case-fs-body: 1.0625rem;
   --case-fs-meta: 0.8125rem;
@@ -1741,11 +1741,11 @@ html[data-theme='light'] .journey-tags li {
 
 .rc-hero-title {
   margin: 0;
-  max-width: var(--case-measure);
+  max-width: min(42rem, 100%);
   font-family: var(--font-display);
-  font-size: var(--case-fs-h2);
-  font-weight: 600;
-  letter-spacing: var(--case-tracking-h2);
+  font-size: var(--case-fs-h1);
+  font-weight: 700;
+  letter-spacing: var(--case-tracking-h1);
   line-height: var(--case-lh-heading);
   color: var(--color-ink);
 }
