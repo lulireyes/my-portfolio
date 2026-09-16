@@ -13,7 +13,7 @@ const nav = site.nav ?? [
 
 <header class="shell topbar">
   <a class="brand" href={home}>{site.name.toUpperCase()}</a>
-  <nav class="site-nav" aria-label="Primary">
+  <nav class="site-nav" id="site-nav" aria-label="Primary">
     <ul class="site-nav-list">
       {
         nav.map((item) => {
@@ -27,21 +27,73 @@ const nav = site.nav ?? [
       }
     </ul>
   </nav>
-  <button
-    type="button"
-    class="theme-toggle"
-    id="theme-toggle"
-    aria-label="Switch to light mode"
-  >
-    <!-- Destination theme: sun in dark (→ light), moon in light (→ dark). Stroke-only, no fill. -->
-    <svg class="theme-icon icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <circle cx="12" cy="12" r="3.75"></circle>
-      <path
-        d="M12 2.5v2.25M12 19.25V21.5M2.5 12h2.25M19.25 12H21.5M5.05 5.05l1.6 1.6M17.35 17.35l1.6 1.6M5.05 18.95l1.6-1.6M17.35 6.65l1.6-1.6"
-      ></path>
-    </svg>
-    <svg class="theme-icon icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <path d="M20.5 14.25A8.25 8.25 0 1 1 9.75 3.5 6.75 6.75 0 0 0 20.5 14.25z"></path>
-    </svg>
-  </button>
+  <div class="topbar-actions">
+    <button
+      type="button"
+      class="theme-toggle"
+      id="theme-toggle"
+      aria-label="Switch to light mode"
+    >
+      <!-- Destination theme: sun in dark (→ light), moon in light (→ dark). Stroke-only, no fill. -->
+      <svg class="theme-icon icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <circle cx="12" cy="12" r="3.75"></circle>
+        <path
+          d="M12 2.5v2.25M12 19.25V21.5M2.5 12h2.25M19.25 12H21.5M5.05 5.05l1.6 1.6M17.35 17.35l1.6 1.6M5.05 18.95l1.6-1.6M17.35 6.65l1.6-1.6"
+        ></path>
+      </svg>
+      <svg class="theme-icon icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M20.5 14.25A8.25 8.25 0 1 1 9.75 3.5 6.75 6.75 0 0 0 20.5 14.25z"></path>
+      </svg>
+    </button>
+    <button
+      type="button"
+      class="menu-toggle"
+      id="menu-toggle"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="site-nav"
+    >
+      <!-- Two-line minimalist hamburger; rotates to X when open. -->
+      <svg class="menu-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <line class="menu-line menu-line-a" x1="4" y1="9" x2="20" y2="9"></line>
+        <line class="menu-line menu-line-b" x1="4" y1="15" x2="20" y2="15"></line>
+      </svg>
+    </button>
+  </div>
 </header>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const siteNav = document.getElementById('site-nav');
+
+  function setMenuOpen(open: boolean) {
+    document.documentElement.classList.toggle('nav-open', open);
+    menuToggle?.setAttribute('aria-expanded', open ? 'true' : 'false');
+    menuToggle?.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+
+  function isMenuOpen() {
+    return document.documentElement.classList.contains('nav-open');
+  }
+
+  menuToggle?.addEventListener('click', () => {
+    setMenuOpen(!isMenuOpen());
+  });
+
+  siteNav?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => setMenuOpen(false));
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && isMenuOpen()) {
+      setMenuOpen(false);
+      menuToggle?.focus();
+    }
+  });
+
+  const mq = window.matchMedia('(min-width: 641px)');
+  const syncDesktop = () => {
+    if (mq.matches) setMenuOpen(false);
+  };
+  mq.addEventListener('change', syncDesktop);
+</script>
