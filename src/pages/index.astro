@@ -44,45 +44,26 @@ const projects = (await getCollection('projects'))
       <hr class="divider" />
 
       <section class="shell philosophy" aria-labelledby="philosophy-heading">
-        <div class="philosophy-panel">
-          <p class="philosophy-label">{site.philosophy.label}</p>
-          <h2 class="philosophy-title" id="philosophy-heading">
-            <span class="philosophy-title-lead">{site.philosophy.title}</span>{' '}
-            <span class="philosophy-title-accent">{site.philosophy.titleAccent}</span>
-          </h2>
-          <div class="philosophy-copy">
-            {site.philosophy.paragraphs.map((paragraph) => <p class="philosophy-body">{paragraph}</p>)}
-          </div>
-          <div class="flip-cards" data-flip-cards>
-            {
-              site.philosophy.items.map((item, index) => {
-                const number = String(index + 1).padStart(2, '0');
-                return (
-                  <button
-                    type="button"
-                    class="flip-card"
-                    aria-pressed="false"
-                    data-title={item.title}
-                    aria-label={item.title}
-                    id={`philosophy-card-${index}`}
-                  >
-                    <span class="flip-card-inner">
-                      <span class="flip-card-face flip-card-front">
-                        <span class="flip-card-title">{item.title}</span>
-                        <span class="flip-card-number" aria-hidden="true">
-                          {number}
-                        </span>
-                      </span>
-                      <span class="flip-card-face flip-card-back">
-                        <span class="flip-card-body">{item.body}</span>
-                      </span>
-                    </span>
-                  </button>
-                );
-              })
-            }
-          </div>
-        </div>
+        <p class="philosophy-label">{site.philosophy.label}</p>
+        <h2 class="philosophy-title" id="philosophy-heading">{site.philosophy.title}</h2>
+        <p class="philosophy-intro">{site.philosophy.intro}</p>
+        <ol class="philosophy-list">
+          {
+            site.philosophy.items.map((item, index) => {
+              const number = String(index + 1).padStart(2, '0');
+              return (
+                <li class="philosophy-row">
+                  <span class="philosophy-num" aria-hidden="true">
+                    {number}
+                  </span>
+                  <span class="philosophy-principle">{item.title}</span>
+                  <p class="philosophy-desc">{item.body}</p>
+                </li>
+              );
+            })
+          }
+        </ol>
+        <p class="philosophy-bridge">{site.philosophy.bridge}</p>
       </section>
 
       {
@@ -293,22 +274,5 @@ const projects = (await getCollection('projects'))
       applyTheme(next);
     });
 
-    document.querySelectorAll('[data-flip-cards]').forEach((root) => {
-      root.querySelectorAll('.flip-card').forEach((card) => {
-        if (!(card instanceof HTMLButtonElement)) return;
-
-        const title = card.dataset.title ?? 'Card';
-
-        card.addEventListener('click', () => {
-          const pressed = card.getAttribute('aria-pressed') === 'true';
-          const next = !pressed;
-          card.setAttribute('aria-pressed', next ? 'true' : 'false');
-          card.setAttribute(
-            'aria-label',
-            next ? `${title}. Showing details.` : title
-          );
-        });
-      });
-    });
   </script>
 </BaseLayout>

@@ -14,27 +14,25 @@
   "specialties": ["UX/UI", "Research", "Prototyping"],
   "philosophy": {
     "label": "Design Philosophy",
-    "title": "Design starts with",
-    "titleAccent": "intentions",
-    "paragraphs": [
-      "Design starts with intention—it means understanding people, the context they are in, and the problem we are trying to solve, but also being clear about how we want people to feel. The best products don't force behaviour, but remove friction, build trust, and make complex systems feel simple and human. There is no single formula for good design; the approach should adapt to the context, but that intention should remain clear throughout the process and guide every decision."
-    ],
+    "title": "Design starts with intention.",
+    "intro": "Design starts with intention. It means understanding people, their context, and the problem we’re trying to solve, while being intentional about how we want the experience to feel.",
+    "bridge": "Here’s what that looks like in practice.",
     "items": [
       {
-        "title": "Design is for everyone",
-        "body": "Inclusive products meet people where they are — across ability, language, culture, and context. Accessibility and clarity are not extras; they are how thoughtful design earns trust."
+        "title": "People",
+        "body": "Design for different needs, abilities, and contexts."
       },
       {
-        "title": "Design is strategy",
-        "body": "Every screen is a decision about what matters. I connect research insights to business goals so design choices move metrics and meaning, not just pixels."
+        "title": "Evidence",
+        "body": "Research and data keep assumptions honest."
       },
       {
-        "title": "Design is collaboration",
-        "body": "The best outcomes come from working closely with product, engineering, support, and stakeholders. Shared understanding beats solitary perfection."
+        "title": "Systems",
+        "body": "Think beyond individual screens and design for the bigger picture."
       },
       {
-        "title": "Design needs evidence",
-        "body": "Curiosity drives the work: interviews, usability tests, data, and messy real-world feedback. Evidence keeps taste honest and iteration purposeful."
+        "title": "Collaboration",
+        "body": "The best solutions are built together."
       }
     ]
   },
