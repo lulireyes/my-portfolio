@@ -13,7 +13,7 @@ tags:
 year: 2020
 period: "2020"
 role: Product Designer (End-to-End)
-roleSummary: Product Designer (End-to-End) — Web & Desktop App Redesign, Qualitative User Research, Design System Components & Principles, Wireframing, Prototyping, and High-Fidelity Testing. Status: MVP Live / In Production.
+roleSummary: "Product Designer (End-to-End) — Web & Desktop App Redesign, Qualitative User Research, Design System Components & Principles, Wireframing, Prototyping, and High-Fidelity Testing. Status: MVP Live / In Production."
 market: Fashion · B2B SaaS · Deep Tech · AI
 highlights:
   - Led the end-to-end redesign of web and desktop so fashion brands could move from concept to production-ready and AR-ready outputs without an overwhelming learning curve.
@@ -79,7 +79,7 @@ sections:
         number: "04"
         layout: strategy
         title: Design Systems and Brand Coherency
-        lead: To unify the perception of a cutting-edge brand operating at the intersection of Deep Tech and Fashion:
+        lead: "To unify the perception of a cutting-edge brand operating at the intersection of Deep Tech and Fashion:"
         principles:
           - title: Components & Principles
             body: Built modular UI components specifically tailored for 3D asset manipulation and data visualization, laying the foundation for a scalable platform design system.
@@ -94,7 +94,7 @@ sections:
         title: Prototyping & High-Fidelity Testing
         lead: Developed interactive high-fidelity prototypes to simulate AI-driven 3D design generation and AR pre-visualization environments.
         paragraphs:
-          - Conducted iterative usability testing sessions to eliminate friction at critical workflow milestones, ensuring the promise of "3 clicks to production" translated into a smooth, frictionless reality.
+          - "Conducted iterative usability testing sessions to eliminate friction at critical workflow milestones, ensuring the promise of \"3 clicks to production\" translated into a smooth, frictionless reality."
           - Covered interactive high-fidelity prototypes for AI-driven 3D generation, AR pre-visualization environments for collection review, and iterative usability testing at critical workflow milestones.
         placeholders:
           - "[IMAGE PLACEHOLDER — high-fidelity prototype / AR pre-visualization]"
