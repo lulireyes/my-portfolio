@@ -178,8 +178,11 @@ const projects = (await getCollection('projects'))
             <h2 class="about-heading" id="about-heading">
               {site.about.heading}
             </h2>
-            <p class="about-path">{site.about.path}</p>
             <div class="about-blocks">
+              <div class="about-block about-block--path">
+                <span class="about-photo-slot" aria-hidden="true"></span>
+                <p class="about-path">{site.about.path}</p>
+              </div>
               {site.about.blocks.map((block) => (
                 <div class="about-block">
                   {block.photo && (
