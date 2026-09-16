@@ -30,8 +30,12 @@ sections:
         layout: hero
         title: Simplifying the fashion value chain through AI and product design
         impactLine: End-to-end redesign of a deep tech B2B platform — from concept to real production and the Metaverse.
-        placeholders:
-          - "[IMAGE PLACEHOLDER — strongest Yoona.ai platform / AI fashion workflow visual]"
+        figures:
+          - src: /img/projects/yoona/yoona-web-mens-tshirts-assistants.png
+            alt: Silver laptop mockup of the yoona.ai web app — left sidebar with Yolanda’s Premium Account, Your Assistants, Your Data, and Your Collections; main workspace titled Men’s T-shirts showing a grid of AI-patterned t-shirts with one item hovered for collection actions.
+            caption: Product UI — Men’s T-shirts assistant workspace with collection grid, data sets, and ready-to-ship design actions.
+            tone: default
+            size: lg
 
       - id: yo-overview
         layout: overview
@@ -52,6 +56,12 @@ sections:
         lead: While AI-driven 3D design and textile production technology holds immense potential, its steep technical complexity created friction for traditional fashion professionals and product managers.
         paragraphs:
           - The strategic challenge was to translate complex algorithms and massive data analytics into clean, human, and predictable interfaces. This allowed brands to drastically reduce physical sample costs, lower their carbon footprint, and accelerate time-to-market without an overwhelming learning curve.
+        figures:
+          - src: /img/projects/yoona/yoona-atmosphere-fashion-fabric.jpg
+            alt: Fashion concept photo of a figure on a stone ledge with translucent white fabric billowing against a clear blue sky, with open cream space below for layout breathing room.
+            caption: Brand atmosphere — airy fashion imagery that steered the visual direction away from sterile enterprise software.
+            tone: process
+            size: sm
 
       - id: yo-discovery
         number: "02"
