@@ -726,7 +726,7 @@ p {
 
 /* ——— Testimonials ——— */
 .testimonials {
-  background: var(--color-surface-alt);
+  background: #d8d1c2;
   color: #111111;
   padding-block: clamp(5rem, 14vh, 9rem);
   animation: rise 0.8s var(--ease-out) 0.24s both;
@@ -772,12 +772,11 @@ p {
   margin: 0;
   font-family: var(--font-display);
   font-size: clamp(1.35rem, 2.4vw, 1.75rem);
-  font-weight: 500;
+  font-weight: 400;
   font-style: italic;
   line-height: 1.35;
   letter-spacing: -0.015em;
-  /* Darker accent on cream surface for WCAG AA */
-  color: #c45d45;
+  color: #111111;
 }
 
 .testimonial-meta {
