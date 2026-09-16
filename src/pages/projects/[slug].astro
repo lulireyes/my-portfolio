@@ -1,5 +1,5 @@
 ---
-import { getCollection, render } from 'astro:content';
+import { render } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import LocationBar from '../../components/LocationBar.astro';
@@ -8,13 +8,12 @@ import SiteFooter from '../../components/SiteFooter.astro';
 import CaseStory from '../../components/CaseStory.astro';
 import { getSite } from '../../lib/site';
 import { withBase } from '../../lib/paths';
+import { getPublishedProjectsOrThrow } from '../../lib/workProjects';
 import '../../styles/global.css';
 
 export async function getStaticPaths() {
-  const projects = await getCollection(
-    'projects',
-    ({ data }) => !data.draft && !data.externalUrl,
-  );
+  // Throws if Helpling (or any required case study) was dropped by draft/schema.
+  const projects = await getPublishedProjectsOrThrow();
 
   return projects.map((project) => ({
     params: { slug: project.id },

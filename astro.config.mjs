@@ -39,6 +39,7 @@ function rehypePrefixBase(siteBase) {
 export default defineConfig({
   site: 'https://lulireyes.github.io',
   base,
+  trailingSlash: 'always',
   markdown: {
     processor: unified({
       rehypePlugins: [rehypePrefixBase(base)],
