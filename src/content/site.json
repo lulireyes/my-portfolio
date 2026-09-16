@@ -13,7 +13,9 @@
   "specializingLabel": "Specializing in:",
   "specialties": ["UX/UI", "Research", "Prototyping"],
   "philosophy": {
-    "label": "DESIGN PHILOSOPHY",
+    "label": "Design Philosophy",
+    "title": "Design starts with",
+    "titleAccent": "intentions",
     "paragraphs": [
       "Design starts with intention—it means understanding people, the context they are in, and the problem we are trying to solve, but also being clear about how we want people to feel. The best products don't force behaviour, but remove friction, build trust, and make complex systems feel simple and human. There is no single formula for good design; the approach should adapt to the context, but that intention should remain clear throughout the process and guide every decision."
     ],
