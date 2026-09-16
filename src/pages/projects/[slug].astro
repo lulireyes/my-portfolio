@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Topbar from '../../components/Topbar.astro';
+import CaseStory from '../../components/CaseStory.astro';
 import { getSite } from '../../lib/site';
 import { withBase } from '../../lib/paths';
 import '../../styles/global.css';
@@ -163,49 +164,60 @@ function sectionMarqueeRepeats(title: string) {
                   </div>
                 </div>
 
-                <div class="case-part-inner shell-case">
-                  <h2 class="case-part-title" id={`${section.id}-title`}>
-                    {section.title}
-                  </h2>
-
-                  <div class="case-summary-block" aria-labelledby={`${section.id}-summary`}>
-                    <div class="case-summary-main">
-                      <h3 class="case-section-title" id={`${section.id}-summary`}>
-                        Summary
-                      </h3>
-                      {section.summary.map((paragraph) => (
-                        <p class="case-body">{paragraph}</p>
-                      ))}
+                {
+                  section.story && section.story.length > 0 ? (
+                    <div class="case-part-story">
+                      <h2 class="visually-hidden" id={`${section.id}-title`}>
+                        {section.title}
+                      </h2>
+                      <CaseStory chapters={section.story} />
                     </div>
-                    <aside class="case-meta" aria-label={`${section.title} details`}>
-                      {section.role && (
-                        <div class="case-meta-item">
-                          <span class="case-meta-label">Role</span>
-                          <p class="case-meta-value">{section.role}</p>
-                        </div>
-                      )}
-                      {section.timeline && (
-                        <div class="case-meta-item">
-                          <span class="case-meta-label">Timeline</span>
-                          <p class="case-meta-value">{section.timeline}</p>
-                        </div>
-                      )}
-                    </aside>
-                  </div>
+                  ) : (
+                    <div class="case-part-inner shell-case">
+                      <h2 class="case-part-title" id={`${section.id}-title`}>
+                        {section.title}
+                      </h2>
 
-                  {section.blocks.length > 0 && (
-                    <div class="case-part-blocks prose case-prose">
-                      {section.blocks.map((block) => (
-                        <div class="case-part-block">
-                          {block.heading && <h3>{block.heading}</h3>}
-                          {block.paragraphs.map((paragraph) => (
-                            <p>{paragraph}</p>
+                      <div class="case-summary-block" aria-labelledby={`${section.id}-summary`}>
+                        <div class="case-summary-main">
+                          <h3 class="case-section-title" id={`${section.id}-summary`}>
+                            Summary
+                          </h3>
+                          {section.summary.map((paragraph) => (
+                            <p class="case-body">{paragraph}</p>
                           ))}
                         </div>
-                      ))}
+                        <aside class="case-meta" aria-label={`${section.title} details`}>
+                          {section.role && (
+                            <div class="case-meta-item">
+                              <span class="case-meta-label">Role</span>
+                              <p class="case-meta-value">{section.role}</p>
+                            </div>
+                          )}
+                          {section.timeline && (
+                            <div class="case-meta-item">
+                              <span class="case-meta-label">Timeline</span>
+                              <p class="case-meta-value">{section.timeline}</p>
+                            </div>
+                          )}
+                        </aside>
+                      </div>
+
+                      {section.blocks.length > 0 && (
+                        <div class="case-part-blocks prose case-prose">
+                          {section.blocks.map((block) => (
+                            <div class="case-part-block">
+                              {block.heading && <h3>{block.heading}</h3>}
+                              {block.paragraphs.map((paragraph) => (
+                                <p>{paragraph}</p>
+                              ))}
+                            </div>
+                          ))}
+                        </div>
+                      )}
                     </div>
-                  )}
-                </div>
+                  )
+                }
               </section>
             ))
           ) : (

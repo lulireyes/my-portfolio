@@ -22,6 +22,103 @@ const caseSectionBlock = z.object({
   paragraphs: z.array(z.string()).default([]),
 });
 
+/** Structured deep-dive chapters for editorial case-study sections. */
+const storyPerspective = z.object({
+  title: z.string(),
+  body: z.string(),
+});
+
+const storyInsight = z.object({
+  number: z.string(),
+  title: z.string(),
+  body: z.string(),
+});
+
+const storyPrinciple = z.object({
+  title: z.string(),
+  body: z.string(),
+});
+
+const storyTradeoff = z.object({
+  need: z.string(),
+  constraint: z.string(),
+  response: z.string(),
+});
+
+const storySolution = z.object({
+  title: z.string(),
+  body: z.string().optional(),
+  placeholder: z.string(),
+});
+
+const storyCollaborator = z.object({
+  role: z.string(),
+  contribution: z.string(),
+});
+
+const storyMetric = z.object({
+  value: z.string(),
+  label: z.string(),
+  /** When false, treat as unverified / placeholder copy */
+  verified: z.boolean().default(true),
+  note: z.string().optional(),
+});
+
+const storyChapter = z.object({
+  id: z.string(),
+  /** Display number e.g. "01" — omit for hero / overview / cta */
+  number: z.string().optional(),
+  title: z.string(),
+  layout: z.enum([
+    'hero',
+    'overview',
+    'challenge',
+    'system',
+    'mapping',
+    'insights',
+    'strategy',
+    'design',
+    'constraints',
+    'solution',
+    'collaboration',
+    'impact',
+    'reflection',
+    'cta',
+  ]),
+  tagline: z.string().optional(),
+  impactLine: z.string().optional(),
+  lead: z.string().optional(),
+  paragraphs: z.array(z.string()).default([]),
+  bullets: z.array(z.string()).default([]),
+  pullQuote: z.string().optional(),
+  placeholders: z.array(z.string()).default([]),
+  perspectives: z.array(storyPerspective).default([]),
+  insights: z.array(storyInsight).default([]),
+  principles: z.array(storyPrinciple).default([]),
+  constraints: z.array(z.string()).default([]),
+  tradeoffs: z.array(storyTradeoff).default([]),
+  solutions: z.array(storySolution).default([]),
+  collaborators: z.array(storyCollaborator).default([]),
+  metrics: z.array(storyMetric).default([]),
+  before: z.array(z.string()).default([]),
+  after: z.array(z.string()).default([]),
+  roleLine: z.string().optional(),
+  responsibilities: z.string().optional(),
+  challengeLabel: z.string().optional(),
+  contextLabel: z.string().optional(),
+  roleLabel: z.string().optional(),
+  contactHref: z.string().optional(),
+  contactLabel: z.string().optional(),
+  diagram: z
+    .object({
+      left: z.string(),
+      center: z.string(),
+      right: z.string(),
+      under: z.array(z.string()).default([]),
+    })
+    .optional(),
+});
+
 const caseSection = z.object({
   id: z.string(),
   title: z.string(),
@@ -30,6 +127,8 @@ const caseSection = z.object({
   role: z.string().optional(),
   timeline: z.string().optional(),
   blocks: z.array(caseSectionBlock).default([]),
+  /** When present, renders editorial deep-dive instead of summary + blocks */
+  story: z.array(storyChapter).optional(),
 });
 
 const projects = defineCollection({
