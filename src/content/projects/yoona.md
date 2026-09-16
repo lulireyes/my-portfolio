@@ -50,7 +50,6 @@ sections:
         responsibilities: "Scope: Web & Desktop App Redesign, Qualitative User Research, Design System Components & Principles, Wireframing, Prototyping, and High-Fidelity Testing. Status: MVP Live / In Production."
 
       - id: yo-challenge
-        number: "01"
         layout: challenge
         title: "The Challenge: Turning deep tech complexity into an intuitive experience"
         lead: While AI-driven 3D design and textile production technology holds immense potential, its steep technical complexity created friction for traditional fashion professionals and product managers.
@@ -64,7 +63,6 @@ sections:
             size: sm
 
       - id: yo-discovery
-        number: "02"
         layout: challenge
         title: "Process & Value Delivery — Discovery and Qualitative Research"
         lead: To uncover the actual needs of fashion design teams, I structured a research phase centered on qualitative interviews with key industry users (fashion designers and product directors).
@@ -74,7 +72,6 @@ sections:
         pullQuote: "Professionals didn’t want to learn an AI tool—they needed a natural extension of their creative workflow."
 
       - id: yo-architecture
-        number: "03"
         layout: mapping
         title: "Product Architecture: Web & Desktop App Redesign"
         lead: I spearheaded the comprehensive redesign of the platform, balancing the public-facing B2B acquisition and conversion website with the deep, functional environment of the desktop app.
@@ -85,7 +82,6 @@ sections:
           - "[IMAGE PLACEHOLDER — web & desktop product architecture / end-to-end flow]"
 
       - id: yo-design-system
-        number: "04"
         layout: strategy
         title: Design Systems and Brand Coherency
         lead: "To unify the perception of a cutting-edge brand operating at the intersection of Deep Tech and Fashion:"
@@ -98,7 +94,6 @@ sections:
           - "[IMAGE PLACEHOLDER — design system components / 3D & data visualization UI]"
 
       - id: yo-prototyping
-        number: "05"
         layout: challenge
         title: Prototyping & High-Fidelity Testing
         lead: Developed interactive high-fidelity prototypes to simulate AI-driven 3D design generation and AR pre-visualization environments.
@@ -109,7 +104,6 @@ sections:
           - "[IMAGE PLACEHOLDER — high-fidelity prototype / AR pre-visualization]"
 
       - id: yo-results
-        number: "06"
         layout: strategy
         title: Results & Impact
         principles:

@@ -50,7 +50,6 @@ sections:
         responsibilities: "Responsibilities: Discovery, qualitative user interviews, competitor research, user journeys, wireframes, visual design, redesigning the web and desktop app, creation of Design System components and principles, prototyping & testing, and iteration."
 
       - id: am-challenge
-        number: "01"
         layout: challenge
         title: The Challenge
         lead: Designing one mobility service is relatively straightforward. Designing a platform that should support many services in a stealth environment is different.
@@ -70,7 +69,6 @@ sections:
             size: sm
 
       - id: am-discovery
-        number: "02"
         layout: challenge
         title: Discovery, Qualitative User Interviews & Insights
         lead: Starting from a blank canvas meant every assumption had to be challenged.
@@ -80,7 +78,6 @@ sections:
         pullQuote: "Core Insight: People didn't think in services; they thought in journeys. The experience needed to organize different mobility options into one coherent product."
 
       - id: am-home
-        number: "03"
         layout: mapping
         title: "One Decision That Changed Everything: The Home Screen"
         lead: One of the biggest UX challenges was the home screen. Early explorations tried to combine every possible use case into one interface and became overwhelming.
@@ -94,7 +91,6 @@ sections:
             size: lg
 
       - id: am-mvp
-        number: "04"
         layout: strategy
         title: Designing the MVP & the Design System
         lead: Beyond defining the product architecture and core flows across web and desktop, I focused heavily on systemizing the product.
@@ -118,7 +114,6 @@ sections:
             size: lg
 
       - id: am-prototyping
-        number: "05"
         layout: system
         title: Prototyping, Testing & Iteration
         lead: Created a beta community of existing users to validate hypotheses.
@@ -131,7 +126,6 @@ sections:
           - Iteration of every major flow before platform expansion
 
       - id: am-learned
-        number: "06"
         layout: reflection
         title: What I Learned
         paragraphs:
