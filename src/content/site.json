@@ -88,44 +88,62 @@
       {
         "company": "Helpling",
         "role": "Senior Product Designer",
-        "dates": "2022 - 2025",
-        "logo": "/img/logos/helpling.webp"
+        "dates": "2022 – 2025",
+        "logo": "/img/logos/helpling.webp",
+        "description": "Led product design across Customer and Partner Apps in Germany and Singapore — from complex service flows and a first design system to growth experiments that cut dispute costs and lifted conversion.",
+        "tags": ["Marketplace", "Design systems", "Growth"],
+        "caseStudy": "helpling"
       },
       {
-        "company": "Anymove",
+        "company": "AnyMove",
         "role": "Product Designer",
         "dates": "2022",
-        "logo": "/img/logos/anymove.webp"
+        "logo": "/img/logos/anymove.webp",
+        "description": "Led end-to-end product design for a multimodal mobility platform — discovery, comparison, booking, and onboarding — so people could choose smarter ways to move through the city.",
+        "tags": ["Mobility", "0→1", "Onboarding"],
+        "caseStudy": "anymove"
       },
       {
         "company": "Beelinguapp",
         "role": "Product Designer & Illustrator",
-        "dates": "2021 - 2022",
-        "logo": "/img/logos/beelinguapp.webp"
+        "dates": "2021 – 2022",
+        "logo": "/img/logos/beelinguapp.webp",
+        "description": "Shaped learning flows and illustration for an EdTech app with 1M+ users — making language practice feel closer to reading a story than grinding flashcards.",
+        "tags": ["EdTech", "B2C", "Illustration"],
+        "caseStudy": "beelinguapp"
       },
       {
         "company": "Skoove",
         "role": "Designer",
         "dates": "2021",
-        "logo": "/img/logos/skoove.webp"
+        "logo": "/img/logos/skoove.webp",
+        "description": "Designed product surfaces for an interactive piano learning app, focusing on clear practice flows and motivating visual feedback for self-taught learners.",
+        "tags": ["EdTech", "Music", "B2C"]
       },
       {
         "company": "yoona.ai",
         "role": "Product Designer",
         "dates": "2020",
-        "logo": "/img/logos/yoona.webp"
+        "logo": "/img/logos/yoona.webp",
+        "description": "Redesigned a B2B AI platform for fashion brands — clarifying complex idea-to-production workflows so intelligent tools felt approachable and trustworthy.",
+        "tags": ["AI", "B2B", "Fashion"],
+        "caseStudy": "yoona"
       },
       {
         "company": "Mello",
         "role": "UX/UI Designer",
         "dates": "2020",
-        "logo": "/img/logos/mello.webp"
+        "logo": "/img/logos/mello.webp",
+        "description": "Designed UX/UI for an early-stage product, turning fuzzy requirements into clear flows and approachable interfaces that supported fast iteration.",
+        "tags": ["UX/UI", "Startup", "0→1"]
       },
       {
         "company": "PANTAFLIX AG",
         "role": "Content Manager",
-        "dates": "2017 - 2019",
-        "logo": "/img/logos/pantaflix.webp"
+        "dates": "2017 – 2019",
+        "logo": "/img/logos/pantaflix.webp",
+        "description": "Managed content for a German VoD platform — bridging storytelling craft and digital product operations before moving fully into product design.",
+        "tags": ["Media", "Content", "VoD"]
       }
     ]
   },

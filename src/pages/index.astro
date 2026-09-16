@@ -229,21 +229,57 @@ const flipBackHint = 'Click to flip back';
             <ul class="journey-list">
               {site.journey.items.map((item) => (
                 <li class="journey-item">
-                  {item.logo && (
-                    <img
-                      class="journey-logo"
-                      src={withBase(item.logo)}
-                      alt=""
-                      width="48"
-                      height="48"
-                      loading="lazy"
-                    />
-                  )}
-                  <div class="journey-copy">
-                    <span class="journey-company">{item.company}</span>
-                    <span class="journey-role">{item.role}</span>
+                  <div class="journey-rail" aria-hidden="true">
+                    <span class="journey-logo-frame">
+                      {item.logo && (
+                        <img
+                          class="journey-logo"
+                          src={withBase(item.logo)}
+                          alt=""
+                          width="56"
+                          height="56"
+                          loading="lazy"
+                        />
+                      )}
+                    </span>
                   </div>
-                  <span class="journey-dates">{item.dates}</span>
+                  <div class="journey-body">
+                    <p class="journey-dates">{item.dates}</p>
+                    <h3 class="journey-company">{item.company}</h3>
+                    <p class="journey-role">{item.role}</p>
+                    {item.description && <p class="journey-desc">{item.description}</p>}
+                    {(item.tags?.length || item.caseStudy) && (
+                      <div class="journey-meta">
+                        {item.tags?.length ? (
+                          <ul class="journey-tags" aria-label={`${item.company} focus areas`}>
+                            {item.tags.map((tag) => (
+                              <li>{tag}</li>
+                            ))}
+                          </ul>
+                        ) : null}
+                        {item.caseStudy && (
+                          <a
+                            class="journey-case"
+                            href={withBase(`projects/${item.caseStudy}/`)}
+                          >
+                            Case study
+                            <svg
+                              class="journey-case-icon"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              aria-hidden="true"
+                            >
+                              <path d="M9 5l7 7-7 7" />
+                            </svg>
+                          </a>
+                        )}
+                      </div>
+                    )}
+                  </div>
                 </li>
               ))}
             </ul>
