@@ -105,17 +105,9 @@ sections:
           - title: Business & constraints
             body: As volume grew, manual handling became expensive and hard to scale. The challenge wasn't only fewer support contacts — it was maintaining trust on both sides while creating a more scalable operating model within legal, policy and technical limits.
         pullQuote: The goal wasn't to optimise one side of the marketplace. It was to design a system that could work for the marketplace as a whole.
-        diagram:
-          left: Customer
-          center: Resolution Center
-          right: Provider
-          under:
-            - Operations
-            - Business
-            - Constraints
         figures:
           - src: /img/projects/helpling/helpling-rc-chaos-to-order.png
-            alt: Minimalist line drawing on a black background — a tangled scribble on the left transitions through a smooth curve into a neat concentric spiral on the right.
+            alt: Minimalist line drawing — a tangled scribble on the left transitions through a smooth curve into a neat concentric spiral on the right.
             tone: visual
             size: full
 
