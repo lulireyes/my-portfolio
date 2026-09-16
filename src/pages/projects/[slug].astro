@@ -52,7 +52,6 @@ const summaryParagraphs = Array.isArray(overviewRaw)
     : [];
 const period = d.period ?? (d.year ? String(d.year) : '');
 const hasSections = d.sections.length > 0;
-const marqueeRepeats = Math.max(24, Math.ceil(480 / Math.max(d.title.length, 1)));
 
 function sectionMarqueeRepeats(title: string) {
   return Math.max(18, Math.ceil(480 / Math.max(title.length, 1)));
@@ -224,23 +223,6 @@ function sectionMarqueeRepeats(title: string) {
             ))
           ) : (
             <>
-              <div class="case-marquee" aria-hidden="true">
-                <div class="case-marquee-track">
-                  {
-                    [0, 1].map(() => (
-                      <div class="case-marquee-group">
-                        {Array.from({ length: marqueeRepeats }).map(() => (
-                          <span class="case-marquee-item">
-                            <span>{d.title}</span>
-                            <span class="case-marquee-sep" />
-                          </span>
-                        ))}
-                      </div>
-                    ))
-                  }
-                </div>
-              </div>
-
               {
                 (d.roleSummary || d.team) && (
                   <section class="case-role-block shell-case">
