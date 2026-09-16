@@ -59,7 +59,7 @@
   --font-sans: 'Inter', 'Avenir Next', 'Segoe UI', sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   --space: clamp(1.25rem, 4vw, 2.75rem);
-  --measure: 40rem;
+  --measure: 44rem;
   --radius-media: 1.5rem;
   --page-max: 78rem;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
@@ -471,7 +471,7 @@ html.nav-open .menu-toggle .menu-line-b {
 
 .philosophy-intro {
   margin: 0 0 clamp(1.5rem, 3.5vh, 2rem);
-  max-width: 34rem;
+  max-width: 38rem;
   color: var(--color-intro);
   font-family: var(--font-sans);
   font-size: clamp(0.875rem, 1.05vw, 0.9875rem);
@@ -537,7 +537,7 @@ html.nav-open .menu-toggle .menu-line-b {
   }
 
   .philosophy-intro {
-    max-width: 30rem;
+    max-width: 34rem;
   }
 
   .philosophy-list {
@@ -564,7 +564,7 @@ html.nav-open .menu-toggle .menu-line-b {
 
   .philosophy-desc {
     font-size: 0.84375rem;
-    max-width: 28rem;
+    max-width: 32rem;
   }
 }
 
@@ -683,7 +683,7 @@ html.nav-open .menu-toggle .menu-line-b {
   color: var(--color-ink);
   font-size: 1rem;
   line-height: 1.55;
-  max-width: 34rem;
+  max-width: 38rem;
   opacity: 0.92;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -744,7 +744,7 @@ html.nav-open .menu-toggle .menu-line-b {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  max-width: 34rem;
+  max-width: 38rem;
 }
 
 .testimonial-avatar {
@@ -799,7 +799,7 @@ html.nav-open .menu-toggle .menu-line-b {
   display: flex;
   flex-direction: column;
   gap: clamp(1.75rem, 4vh, 2.5rem);
-  max-width: 48rem;
+  max-width: 52rem;
 }
 
 .about-block {
@@ -977,7 +977,7 @@ html.nav-open .menu-toggle .menu-line-b {
 
 .journey-desc {
   margin: 0 0 1.35rem;
-  max-width: 40rem;
+  max-width: 44rem;
   font-size: 1rem;
   line-height: 1.7;
   color: var(--color-intro);
@@ -1108,7 +1108,7 @@ html[data-theme='light'] .journey-tags li {
 
 .footer-connect-body {
   margin: 0;
-  max-width: 28rem;
+  max-width: 32rem;
   font-size: 1.0625rem;
   line-height: 1.55;
   color: #a8a29a;
@@ -1256,7 +1256,7 @@ html[data-theme='light'] .journey-tags li {
 /* Sober type scale — 5 steps only: H1 / H2 / H3 / body / meta */
 .case-page {
   --case-max: 72rem;
-  --case-measure: 38rem;
+  --case-measure: 42rem;
   --case-fs-h1: clamp(2.75rem, 6vw, 3.75rem);
   --case-fs-h2: clamp(1.85rem, 3.5vw, 2.4rem);
   --case-fs-h3: clamp(1.125rem, 1.8vw, 1.25rem);
