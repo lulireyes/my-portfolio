@@ -30,8 +30,12 @@ sections:
         layout: hero
         title: Language learning that feels less like studying
         impactLine: Making practice feel closer to reading a story than grinding flashcards — for an EdTech experience with 1M+ learners.
-        placeholders:
-          - "[IMAGE PLACEHOLDER — Beelinguapp story-led learning / illustration visual]"
+        figures:
+          - src: /img/projects/beelinguapp/beelinguapp-hero-brand-phones.jpg
+            alt: Orange Beelinguapp banner with the brand name in white beside two phones — Library story categories in front and synchronized dual-language reading behind.
+            caption: Brand and product in one frame — Library discovery beside the parallel reading experience that defines Beelinguapp.
+            tone: default
+            size: lg
 
       - id: bee-overview
         layout: overview
@@ -53,6 +57,12 @@ sections:
         paragraphs:
           - "The design problem was dual: keep learning goals readable and progressive, while making each session feel like a short, satisfying story beat rather than another drill to clear."
           - Delight alone was not enough. Illustration and narrative had to reinforce comprehension and habit — not decorate screens that still felt like homework underneath.
+        figures:
+          - src: /img/projects/beelinguapp/beelinguapp-lifestyle-student-library.jpg
+            alt: Student in a yellow hoodie and blue headphones studies in a library, looking at a smartphone while writing in a notebook.
+            caption: Learning in context — audio, phone, and notes together; the session had to feel worth opening between real life, not like another worksheet.
+            tone: process
+            size: sm
 
       - id: bee-discovery
         number: "02"
@@ -62,6 +72,12 @@ sections:
         paragraphs:
           - "Research pointed to a simple pattern: people stayed longer when progress felt like finishing a chapter, not ticking off exercises. That shifted how we framed flows, feedback, and visual hierarchy."
         pullQuote: "When progress felt like finishing a chapter instead of clearing a drill, people came back. Visual storytelling wasn’t decoration; it was the retention mechanic."
+        figures:
+          - src: /img/projects/beelinguapp/beelinguapp-product-library-reading.jpg
+            alt: Orange Beelinguapp banner with two phones — Library showing streak and collection cards, and a dual-language reading screen with synchronized yellow highlights.
+            caption: Progress made visible — streaks, collections, and parallel reading so returning felt like continuing a story, not restarting a drill.
+            tone: default
+            size: lg
 
       - id: bee-process
         number: "03"
@@ -75,6 +91,12 @@ sections:
             body: Built a cohesive illustration system that supported comprehension and emotion across features, so visuals carried meaning inside the learning loop rather than sitting beside it.
           - title: Retention-minded UI
             body: Focused UI patterns on habit formation for B2C learners at scale — reducing friction to start, making return visits feel familiar, and keeping goals visible without turning the app into a worksheet.
+        figures:
+          - src: /img/projects/beelinguapp/beelinguapp-product-lesson-journey.jpg
+            alt: Four Beelinguapp screens on black — lesson overview with Read, parallel English–Spanish reading with audio, true/false quiz, and a 3-in-a-row achievement with Continue.
+            caption: One narrative session — overview, parallel reading, comprehension check, and a light achievement beat before the next chapter.
+            tone: default
+            size: lg
 
       - id: bee-results
         number: "04"
