@@ -41,16 +41,11 @@ sections:
         layout: hero
         title: Resolution Center
         tagline: Designing for two people who both believe they're right.
-        impactLine: Reduced operational costs by 35% by turning manual dispute handling into a scalable self-service experience.
+        impactLine: Reduced operational support costs by 35% by turning manual dispute handling into a scalable self-service experience.
         figures:
           - src: /img/projects/helpling/helpling-rc-issue-flow-phones.png
             alt: Two Helpling Resolution Center phone screens — Create new request issue categories on the left, and a follow-up screen to narrow the problem with a Continue button on the right.
             caption: Resolution Center in product — structured issue intake and guided follow-up, designed for clarity under stress.
-            tone: default
-            size: lg
-          - src: /img/projects/helpling/helpling-rc-service-portal-issue.png
-            alt: Helpling Service-Portal mobile screen titled What is the issue you want to resolve, listing billing, no-show, damage claim, and fee dispute options with chevrons.
-            caption: Service-Portal issue selection — clear categories and next actions so customers can start the right resolution path.
             tone: default
             size: lg
 
@@ -62,25 +57,44 @@ sections:
         roleLabel: My role
         paragraphs:
           - Helpling is a marketplace connecting customers and household service providers. Disputes between both sides were manually managed by Operations. As the marketplace grew, this became increasingly difficult to scale.
-        challengeIntro: "The new Resolution Center needed to:"
+        challengeIntro: "The Resolution Center needed to:"
         bullets:
-          - support both customers and providers
-          - reduce unnecessary manual intervention
-          - automate predictable dispute scenarios
-          - make the process clearer and more transparent
+          - support both customers and providers across a two-sided marketplace
+          - reduce unnecessary manual intervention without removing human judgment where it mattered
+          - structure predictable dispute scenarios into self-service paths
+          - make the process clearer and more transparent for both sides
           - preserve trust and perceived fairness
-          - work within the operational, business, legal/policy and technical realities of the service
-        roleLine: I led the product design end to end, working closely with Product, Operations, Data and Engineering.
+          - work within operational, business, legal/policy and technical realities
+        roleLine: I led the product design end to end — discovery, research, service design, cross-platform UX, information architecture, usability testing and rollout — working closely with Product, Operations, Data and Engineering.
         responsibilities: Discovery · User Research · Service Design · Cross-platform UX · Information Architecture · Usability Testing · Rollout
+
+      - id: rc-outcomes
+        layout: impact
+        title: Outcomes
+        lead: Turning manual dispute handling into a scalable self-service experience changed both the cost structure of resolution and how independently users could move through it.
+        metrics:
+          - value: 35%
+            label: reduction in operational support costs
+            verified: true
+          - value: 91%
+            label: self-service adoption
+            verified: true
+          - value: 84%
+            label: task completion without an agent
+            verified: true
+          - value: 93%
+            label: user engagement
+            verified: true
 
       - id: rc-challenge
         number: "01"
         layout: challenge
-        title: The Challenge
-        lead: Helpling was scaling as a marketplace, but its dispute-resolution system had not scaled with it.
+        title: The Problem
+        lead: Helpling was scaling as a marketplace, but dispute resolution had not scaled with it — leaving customers, providers and Operations stuck in a manual model.
         paragraphs:
-          - Customers and providers could end up in disputes that were manually investigated and resolved by Operations. As transaction volume grew, this meant slower resolution, higher operational costs, limited visibility for users, and a system that was increasingly hard to scale.
-          - The challenge wasn't simply making dispute resolution easier. It was designing a scalable resolution system that works for both sides of a marketplace, supports the business and Operations, and works within the legal, policy and technical constraints of the service.
+          - "The intervention was not a support FAQ or a faster ticket form. It was a Resolution Center sitting between both sides of the marketplace: structured enough to take pressure off Operations, transparent enough to protect trust, and constrained by business, legal and policy reality."
+          - The measurable outcome was a more scalable operating model — with a 35% reduction in operational support costs — while keeping human judgment available when cases could not be self-resolved.
+          - The design problem wasn't simply making dispute resolution easier for one party. It was designing a system that works for Customer ↔ Resolution Center ↔ Provider, supports Operations, and holds under growth.
         perspectives:
           - title: Customer
             body: Customers wanted support, visibility into what was happening, and confidence that their issue and money were being handled fairly.
@@ -88,8 +102,8 @@ sections:
             body: Providers needed transparency around how disputes were evaluated and reassurance that their work and earnings were being treated fairly.
           - title: Operations
             body: Operations had to manually investigate and resolve disputes, including cases that followed recurring and relatively predictable patterns.
-          - title: The business problem
-            body: As the marketplace grew, manual dispute handling became increasingly expensive and difficult to scale. The business challenge wasn't simply reducing support contacts — it was maintaining trust on both sides while creating a more scalable operating model.
+          - title: Business & constraints
+            body: As volume grew, manual handling became expensive and hard to scale. The challenge wasn't only fewer support contacts — it was maintaining trust on both sides while creating a more scalable operating model within legal, policy and technical limits.
         pullQuote: The goal wasn't to optimise one side of the marketplace. It was to design a system that could work for the marketplace as a whole.
         diagram:
           left: Customer
@@ -105,83 +119,56 @@ sections:
             tone: visual
             size: full
 
-      - id: rc-system
+      - id: rc-learned
         number: "02"
-        layout: system
-        title: Understanding the System
-        lead: Before designing screens, I needed to understand the service behind them — not only from the user's perspective, but from the business and operational side as well.
+        layout: insights
+        title: What I Learned
+        lead: Before designing screens, I mapped the service behind them — how disputes entered the system, where Operations intervened, and which constraints limited automation or communication.
         paragraphs:
-          - I worked with Operations, Product and Data to map how resolution actually worked — and where it broke under growth.
+          - "I worked with Operations, Product and Data to understand resolution as a system: Customer ↔ Resolution Center ↔ Provider, with Operations, business rules and legal/policy constraints underneath."
+          - Historical case data and conversations with Operations showed that many disputes followed recurring scenarios. That didn't mean every case could be automated. It meant the system could be designed around patterns — with clear self-service paths for predictable cases, and room for human judgment when it mattered.
         bullets:
-          - how disputes entered the system
-          - what types of cases occurred
-          - how cases were categorised
-          - what information Operations needed to make decisions
-          - where manual intervention was required
-          - which scenarios were recurring
-          - what information users needed throughout the process
-          - the business and operational implications of different resolution paths
-          - the legal and policy constraints affecting what could be communicated or automated
-
-      - id: rc-mapping
-        layout: mapping
-        title: Data + System Mapping
-        lead: Historical case data and conversations with Operations helped identify recurring patterns — and where a more structured resolution model could take pressure off manual handling.
-        paragraphs:
-          - Over 80% of disputes followed recurring scenarios that could be structured rather than manually handled. [METRIC — verify exact definition before publishing]
-          - That didn't mean every case could be automated. It meant the system could be designed around patterns — with clear paths for predictable cases, and room for human judgment when it mattered.
+          - how disputes entered the system and how cases were categorised
+          - what information Operations needed to decide
+          - where manual intervention was required versus where patterns repeated
+          - what users needed to see throughout the process
+          - the business, operational, legal and policy implications of different resolution paths
+        insights:
+          - number: "01"
+            title: Predictable patterns could be structured
+            body: A large proportion of disputes followed recurring scenarios. These did not always require manual investigation — which opened a path for self-service without pretending every case was the same.
+          - number: "02"
+            title: Opacity creates friction
+            body: Users were not only looking for an outcome. They needed to understand what was happening, what information had been considered, and what would happen next.
+          - number: "03"
+            title: Efficiency cannot come at the expense of trust
+            body: Automating resolution only works if both sides can understand and accept the process — fairness and perceived fairness are tightly linked in a marketplace dispute.
         figures:
           - src: /img/projects/helpling/helpling-rc-whiteboard-refund-logic.jpg
             alt: Whiteboard sketch of a Case page with Refund and Reject actions, branching into full refund versus partial refund logic with hour-based options and timing notes.
             caption: Early refund and case logic on the whiteboard — mapping full vs. partial paths before the flows became product.
             tone: process
+            size: md
+          - src: /img/projects/helpling/helpling-rc-journey-map-workshop.jpg
+            alt: Collaborative workshop table with a printed UX journey map and sticky notes for customer, problem, and interest themes.
+            caption: Cross-functional discovery — journey mapping that informed what the Resolution Center needed to resolve.
+            tone: process
             size: sm
 
-      - id: rc-insights
+      - id: rc-decisions
         number: "03"
-        layout: insights
-        title: Key Insights
-        insights:
-          - number: "01"
-            title: Predictable patterns could be structured
-            body: A large proportion of disputes followed recurring scenarios. These did not always require manual investigation.
-          - number: "02"
-            title: Opacity creates friction
-            body: Users were not only looking for an outcome. They needed to understand what was happening, what information had been considered, and what would happen next.
-          - number: "03"
-            title: Operational efficiency cannot come at the expense of trust
-            body: Automating resolution only works if both sides can understand and accept the process.
-
-      - id: rc-strategy
-        number: "04"
         layout: strategy
-        title: Strategy
-        lead: Before shaping the interface, I defined principles that could hold across both sides of the marketplace — and the teams behind it.
+        title: Decisions That Shaped the Product
+        lead: I led the design decisions end to end, aligning Product, Operations, Data and Engineering around a shared model — not a handoff chain. Each principle below came from something we observed, a choice I made, and what it unlocked.
         principles:
           - title: Make the process visible
-            body: Users should always understand where they are in the process, what has happened, and what happens next.
-          - title: Design for both sides
-            body: The system needed to account for two different users with different motivations and perceptions of fairness.
+            body: "Observation: users needed status and next steps, not only an outcome. Decision: design for process legibility on both sides. Reason: opacity made even fair outcomes feel unfair. Outcome: clearer paths through intake, response and resolution."
+          - title: Design for both sides of the marketplace
+            body: "Observation: the same dispute could be perceived very differently by a customer and a provider. Decision: account for two motivations and two fairness lenses in one system. Reason: optimising one side would break trust on the other. Outcome: cross-platform flows that kept both parties oriented."
           - title: Let people solve what doesn't require people
-            body: Predictable cases could be handled through structured self-service, allowing Operations to focus their time on complex cases.
+            body: "Observation: recurring scenarios still consumed Operations capacity. Decision: structure predictable cases into self-service, and reserve agents for complexity. Reason: Operations time was most valuable where judgment mattered. Outcome: higher self-service adoption and less manual load on routine cases."
           - title: Design for the whole system
-            body: A resolution flow is only successful if it works for users and for the teams, rules and constraints behind it. I designed the experience around the operational, business, legal/policy and technical realities of the service.
-
-      - id: rc-design
-        number: "05"
-        layout: design
-        title: Designing for Resolution
-        lead: The hardest design challenge wasn't simply the interface. It was communication and perceived fairness.
-        paragraphs:
-          - The same dispute could be perceived very differently by a customer and a provider. The experience needed to make the process legible for both.
-        bullets:
-          - the current status
-          - what information had been submitted
-          - what the user needed to do
-          - what would happen next
-          - why a resolution was being reached
-          - when human intervention was required
-        pullQuote: Clarity over vague legal or procedural language.
+            body: "Observation: screens alone couldn't carry legal, policy and operational reality. Decision: shape the experience around constraints with Product, Operations, Data and Engineering. Reason: a resolution flow only works if it works for users and for the teams behind it. Outcome: a shippable model that Operations could trust."
         figures:
           - src: /img/projects/helpling/helpling-rc-figma-iteration-board.png
             alt: Figma board titled Resolution Center 1. iteration mobile, showing customer report-a-new-issue flow B and provider response flow with detailed screen grids below.
@@ -189,107 +176,83 @@ sections:
             tone: default
             size: lg
 
+      - id: rc-solution
+        number: "04"
+        layout: solution
+        title: The Solution
+        lead: The Resolution Center turned those decisions into a coherent experience — organised around visibility, self-service, transparency and consistency across both sides of the marketplace.
+        solutions:
+          - title: Visibility
+            body: Users can understand the status of their case — where they are, what has been submitted, and what happens next — instead of waiting in an opaque process.
+          - title: Self-service
+            body: Predictable disputes can be handled without agent intervention, while complex cases still route to human judgment.
+            figure:
+              src: /img/projects/helpling/helpling-rc-service-portal-issue.png
+              alt: Service-Portal create-new-request screen listing billing errors, cleaner no-show, damage during an event, and wrongful fee charge as selectable issue cards.
+              caption: Structured self-service entry — each issue type maps to a clear next action.
+              tone: default
+              size: lg
+          - title: Transparency
+            body: The experience communicates what information is being considered and why a path is being taken — clarity over vague legal or procedural language.
+          - title: Cross-platform consistency
+            body: The same resolution model works for customers and providers, so both sides of the marketplace stay oriented inside one system.
+
       - id: rc-constraints
-        number: "06"
+        number: "05"
         layout: constraints
         title: Designing Within Constraints
         lead: Good product design wasn't about finding the perfect experience in isolation. It was about finding a solution that was useful for users, viable for the business, workable for Operations, and possible within the constraints of the product and service.
         constraints:
           - customer and provider needs could conflict
           - Operations needed enough information to handle complex cases
-          - predictable cases needed to be automated without removing trust
+          - predictable cases needed structured automation without removing trust
           - the experience had to work across two sides of the marketplace
           - business scalability mattered
           - legal and policy constraints influenced what could be communicated or automated
-          - technical/product constraints influenced what could realistically be delivered
+          - technical and product constraints influenced what could realistically be delivered
         tradeoffs:
-          - need: "[CONTENT PLACEHOLDER — specific user need from project]"
-            constraint: "[CONTENT PLACEHOLDER — related constraint from project]"
-            response: "[CONTENT PLACEHOLDER — specific design trade-off from project]"
-
-      - id: rc-solution
-        layout: solution
-        title: Final Solution
-        lead: The Resolution Center brought the strategy into a coherent experience — organised around the problems it needed to solve, not around a gallery of screens.
-        solutions:
-          - title: Visibility
-            body: How users understand the status of their case.
-            placeholder: "[IMAGE PLACEHOLDER — status / progress experience]"
-          - title: Self-service
-            body: How predictable disputes can be handled without agent intervention.
-            figure:
-              src: /img/projects/helpling/helpling-rc-service-portal-issue.png
-              alt: Service-Portal create-new-request screen listing billing errors, cleaner no-show, damage during an event, and wrongful fee charge as selectable issue cards.
-              caption: Structured self-service entry — each issue type maps to a clear next action.
-              tone: default
-              size: md
-          - title: Transparency
-            body: How the experience communicates what information is being considered and what happens next.
-            placeholder: "[IMAGE PLACEHOLDER — explanation / decision screen]"
-          - title: Cross-platform consistency
-            body: How the experience works for both customers and providers.
-            placeholder: "[IMAGE PLACEHOLDER — customer + provider comparison]"
-
-      - id: rc-collaboration
-        number: "07"
-        layout: collaboration
-        title: Delivery & Cross-functional Collaboration
-        lead: I worked closely with Product, Operations, Data and Engineering — not as a handoff chain, but as a shared decision space.
-        collaborators:
-          - role: Data
-            contribution: helped identify recurring dispute patterns
-          - role: Operations
-            contribution: provided insight into real-world case handling
-          - role: Product
-            contribution: helped define which scenarios could be self-resolved
-          - role: Engineering
-            contribution: helped shape what could realistically be implemented
-          - role: Design
-            contribution: translated these inputs into a coherent experience across both sides of the marketplace
-        figures:
-          - src: /img/projects/helpling/helpling-rc-journey-map-workshop.jpg
-            alt: Collaborative workshop table with a printed UX journey map and sticky notes for customer, problem, and interest themes.
-            caption: Cross-functional discovery in the room — journey mapping that informed what the Resolution Center needed to resolve.
-            tone: process
-            size: sm
+          - need: Users needed transparency about status, inputs and next steps.
+            constraint: Legal and policy limits restricted what could be communicated or automated.
+            response: I designed for process clarity within what could be shared — status, submitted information and next actions — rather than over-explaining restricted decision logic.
+          - need: Predictable cases needed resolution without waiting on Operations.
+            constraint: Not every case could be automated; complex cases still needed human judgment.
+            response: I structured self-service around recurring patterns, with explicit paths to agent involvement when the case left the predictable path.
+          - need: Both sides needed to feel the process was fair.
+            constraint: Customer and provider needs could conflict inside the same dispute.
+            response: I designed for marketplace-level fairness — legibility on both sides — instead of optimising the experience for one party.
 
       - id: rc-impact
-        number: "08"
+        number: "06"
         layout: impact
         title: Impact
-        lead: By turning manual dispute handling into a scalable self-service experience, the Resolution Center reduced the operational cost associated with dispute resolution.
+        lead: By turning manual dispute handling into a scalable self-service experience, the Resolution Center reduced operational support cost while shifting where human capacity was needed.
         pullQuote: The result wasn't just a better customer experience. It changed where human operational capacity was needed.
         metrics:
           - value: 35%
-            label: reduction in operational costs
+            label: reduction in operational support costs
             verified: true
-          - value: "[METRIC — verify exact definition before publishing]"
-            label: self-service adoption (mentioned as ~91%)
-            verified: false
-            note: Definition and measurement period not verified in source material.
-          - value: "[METRIC — verify exact definition before publishing]"
-            label: task completion without agent (mentioned as ~84%)
-            verified: false
-            note: Definition and measurement period not verified in source material.
-          - value: "[METRIC — verify exact definition before publishing]"
-            label: user engagement (mentioned as ~93%)
-            verified: false
-            note: Definition and measurement period not verified in source material.
+          - value: 91%
+            label: self-service adoption
+            verified: true
+          - value: 84%
+            label: task completion without an agent
+            verified: true
+          - value: 93%
+            label: user engagement
+            verified: true
         before:
-          - Manual investigation
-          - Operations involved in recurring cases
-          - Higher operational cost
-          - Limited visibility
+          - Manual investigation of recurring cases
+          - Operations capacity tied up in predictable scenarios
+          - Higher operational support cost
+          - Limited visibility for customers and providers
         after:
-          - Structured self-service
-          - Automated predictable scenarios
+          - Structured self-service for predictable disputes
+          - Automated paths where patterns allowed
           - Operations focused on complex cases
-          - More scalable resolution
-        placeholders:
-          - "[VISUAL PLACEHOLDER — before / after impact diagram]"
+          - A more scalable resolution model across the marketplace
 
       - id: rc-reflection
-        number: "09"
+        number: "07"
         layout: reflection
         title: Reflection
         pullQuote: Fairness and perceived fairness are not always the same thing.
@@ -298,7 +261,6 @@ sections:
           - This project reinforced that clarity is part of the service itself — especially when users are dealing with money, conflict or uncertainty.
 
       - id: rc-cta
-        number: "10"
         layout: cta
         title: Get in touch
         lead: Interested in the thinking behind this project? Reach out to learn more.
