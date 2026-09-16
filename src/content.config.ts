@@ -50,9 +50,9 @@ const storyFigure = z.object({
   src: z.string(),
   alt: z.string(),
   caption: z.string().optional(),
-  /** Modest process frame by default — not a full-bleed hero */
-  tone: z.enum(['process', 'default']).default('process'),
-  size: z.enum(['sm', 'md', 'lg']).default('md'),
+  /** Modest process frame by default — not a full-bleed hero; `visual` = bare editorial illustration */
+  tone: z.enum(['process', 'default', 'visual']).default('process'),
+  size: z.enum(['sm', 'md', 'lg', 'full']).default('md'),
 });
 
 const storySolution = z.object({
