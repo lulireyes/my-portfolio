@@ -376,14 +376,14 @@ p {
   border-top: 1px solid var(--color-line);
 }
 
-/* ——— Philosophy (editorial chapter) ——— */
+/* ——— Philosophy (compact editorial field) ——— */
 .philosophy {
-  padding-block: clamp(2rem, 5vh, 3.25rem) clamp(1.75rem, 4vh, 2.75rem);
+  padding-block: clamp(2rem, 4.5vh, 2.75rem) clamp(1.5rem, 3.5vh, 2.25rem);
   animation: rise 0.8s var(--ease-out) 0.12s both;
 }
 
 .philosophy-label {
-  margin: 0 0 1rem;
+  margin: 0 0 0.75rem;
   font-family: var(--font-mono);
   font-size: 0.6875rem;
   font-weight: 500;
@@ -392,24 +392,11 @@ p {
   color: var(--color-muted);
 }
 
-.philosophy-compose {
-  display: flex;
-  flex-direction: column;
-  gap: clamp(2rem, 4.5vh, 2.75rem);
-}
-
-.philosophy-lead {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  max-width: 36rem;
-}
-
 .philosophy-title {
-  margin: 0;
+  margin: 0 0 0.65rem;
   max-width: 14ch;
   font-family: var(--font-display);
-  font-size: clamp(2rem, 6.5vw, 3.15rem);
+  font-size: clamp(2rem, 5.5vw, 2.85rem);
   font-weight: 600;
   letter-spacing: -0.035em;
   line-height: 1.05;
@@ -417,140 +404,70 @@ p {
 }
 
 .philosophy-intro {
-  margin: 0;
-  max-width: 32rem;
+  margin: 0 0 clamp(1.5rem, 3.5vh, 2rem);
+  max-width: 34rem;
   color: var(--color-intro);
   font-family: var(--font-sans);
-  font-size: clamp(0.875rem, 1.05vw, 1rem);
+  font-size: clamp(0.875rem, 1.05vw, 0.9875rem);
   font-weight: 400;
-  line-height: 1.65;
+  line-height: 1.6;
 }
 
 .philosophy-list {
   margin: 0;
   padding: 0;
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: clamp(1.35rem, 3vh, 1.75rem);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.15rem 0;
 }
 
 .philosophy-item {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  column-gap: 0.65rem;
-  row-gap: 0.35rem;
-  align-content: start;
-  max-width: 28rem;
-  transition:
-    opacity 0.25s ease,
-    transform 0.25s var(--ease-out);
-}
-
-.philosophy-item:hover {
-  opacity: 0.88;
+  grid-template-columns: 1.75rem minmax(0, 1fr);
+  column-gap: 0.55rem;
+  align-items: start;
+  min-width: 0;
 }
 
 .philosophy-num {
-  grid-column: 1;
-  grid-row: 1;
-  margin-top: 0.35em;
+  margin-top: 0.28em;
   font-family: var(--font-mono);
   font-size: 0.625rem;
   font-weight: 500;
   letter-spacing: 0.08em;
   color: var(--color-muted-soft);
   line-height: 1.2;
-  transition:
-    transform 0.25s var(--ease-out),
-    color 0.25s ease;
 }
 
-.philosophy-item:hover .philosophy-num {
-  color: var(--color-accent);
-  transform: translateX(0.15rem);
+.philosophy-copy {
+  min-width: 0;
 }
 
 .philosophy-principle {
-  grid-column: 2;
-  grid-row: 1;
-  margin: 0;
+  margin: 0 0 0.3rem;
   font-family: var(--font-display);
+  font-size: clamp(0.9375rem, 1.4vw, 1.0625rem);
   font-weight: 600;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
   color: var(--color-ink);
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 .philosophy-desc {
-  grid-column: 2;
-  grid-row: 2;
   margin: 0;
   color: var(--color-muted);
   font-family: var(--font-sans);
-  font-size: 0.875rem;
-  font-weight: 400;
-  line-height: 1.55;
-}
-
-/* Differentiated weight — not identical cards */
-.philosophy-item--01 .philosophy-principle {
-  font-size: clamp(1.2rem, 2.4vw, 1.55rem);
-  letter-spacing: -0.025em;
-}
-
-.philosophy-item--02 .philosophy-principle {
-  font-size: clamp(1.05rem, 1.9vw, 1.3rem);
-}
-
-.philosophy-item--03 .philosophy-principle {
-  font-size: clamp(1.1rem, 2.1vw, 1.4rem);
-}
-
-.philosophy-item--04 .philosophy-principle {
-  font-size: clamp(1rem, 1.7vw, 1.2rem);
-}
-
-.philosophy-item--01 .philosophy-desc {
-  font-size: 0.9375rem;
-}
-
-.philosophy-item--04 .philosophy-desc {
   font-size: 0.8125rem;
-}
-
-.philosophy-bridge {
-  margin: clamp(1.75rem, 4vh, 2.5rem) 0 0;
-  max-width: 28rem;
-  font-family: var(--font-display);
-  font-size: clamp(1rem, 1.8vw, 1.2rem);
-  font-weight: 500;
-  letter-spacing: -0.015em;
-  line-height: 1.4;
-  color: var(--color-beige);
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 @media (min-width: 720px) {
-  .philosophy-compose {
-    display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    column-gap: clamp(1rem, 2.2vw, 1.75rem);
-    row-gap: clamp(1.35rem, 2.8vh, 1.85rem);
-    align-items: start;
-    gap: unset;
-  }
-
-  .philosophy-lead {
-    grid-column: 1 / 8;
-    grid-row: 1;
-    max-width: none;
-    padding-inline-end: 1rem;
-    /* Visual pause before principle 01 — breath, not emptiness */
-    margin-bottom: clamp(0.85rem, 2.2vh, 1.5rem);
-  }
-
   .philosophy-title {
     max-width: 12ch;
+    font-size: clamp(2.15rem, 3.4vw, 2.85rem);
   }
 
   .philosophy-intro {
@@ -558,90 +475,30 @@ p {
   }
 
   .philosophy-list {
-    display: contents;
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+    column-gap: clamp(1.75rem, 4vw, 3rem);
+    row-gap: 1.35rem;
   }
 
-  .philosophy-item {
-    max-width: none;
-  }
-
-  /* Zigzag: 01 left → 02 right → 03 left → 04 right */
-  .philosophy-item--01 {
-    grid-column: 1 / 7;
-    grid-row: 2;
-    width: min(100%, 26rem);
-  }
-
-  .philosophy-item--02 {
-    grid-column: 7 / 13;
-    grid-row: 3;
-    justify-self: end;
-    width: min(100%, 24rem);
-  }
-
-  .philosophy-item--03 {
-    grid-column: 1 / 7;
-    grid-row: 4;
-    width: min(100%, 25rem);
-  }
-
-  .philosophy-item--04 {
-    grid-column: 7 / 13;
-    grid-row: 5;
-    justify-self: end;
-    width: min(100%, 23rem);
-  }
-
-  .philosophy-bridge {
-    margin-top: clamp(2rem, 4.5vh, 2.75rem);
+  .philosophy-item:nth-child(1),
+  .philosophy-item:nth-child(2) {
+    padding-bottom: 1.35rem;
+    border-bottom: 1px solid var(--color-line);
   }
 }
 
 @media (min-width: 1024px) {
-  .philosophy-compose {
-    row-gap: clamp(1.45rem, 2.6vh, 1.95rem);
+  .philosophy-list {
+    column-gap: clamp(2.25rem, 5vw, 4rem);
   }
 
-  .philosophy-title {
-    font-size: clamp(2.35rem, 3.6vw, 3.35rem);
+  .philosophy-principle {
+    font-size: 1.0625rem;
   }
 
-  .philosophy-lead {
-    grid-column: 1 / 7;
-    margin-bottom: clamp(1rem, 2.5vh, 1.75rem);
-  }
-
-  .philosophy-item--01 {
-    grid-column: 1 / 6;
-    width: auto;
-  }
-
-  .philosophy-item--02 {
-    grid-column: 8 / 13;
-    justify-self: stretch;
-    width: auto;
-  }
-
-  .philosophy-item--03 {
-    grid-column: 2 / 7;
-    width: auto;
-  }
-
-  .philosophy-item--04 {
-    grid-column: 7 / 12;
-    justify-self: stretch;
-    width: auto;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .philosophy-item,
-  .philosophy-num {
-    transition: none;
-  }
-
-  .philosophy-item:hover .philosophy-num {
-    transform: none;
+  .philosophy-desc {
+    font-size: 0.84375rem;
+    max-width: 28rem;
   }
 }
 
