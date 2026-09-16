@@ -803,13 +803,6 @@ p {
   color: var(--color-accent);
 }
 
-.about-path {
-  margin: 0 0 clamp(2rem, 5vh, 3rem);
-  font-size: 1.05rem;
-  font-weight: 500;
-  color: var(--color-ink);
-}
-
 .about-blocks {
   display: flex;
   flex-direction: column;
@@ -824,6 +817,26 @@ p {
   grid-template-columns: auto 1fr;
 }
 
+.about-block--path {
+  margin-bottom: clamp(0.25rem, 1vh, 0.5rem);
+}
+
+.about-path {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--color-ink);
+}
+
+/* Matches photo column width so the path lines up with about-text */
+.about-photo-slot {
+  display: block;
+  width: 5.5rem;
+  height: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .about-photo {
   width: 5.5rem;
   height: 5.5rem;
@@ -833,8 +846,12 @@ p {
 }
 
 @media (min-width: 640px) {
-  .about-photo {
+  .about-photo,
+  .about-photo-slot {
     width: 7rem;
+  }
+
+  .about-photo {
     height: 7rem;
     border-radius: 1.35rem;
   }
