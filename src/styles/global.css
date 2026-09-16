@@ -648,7 +648,6 @@ p {
   border-radius: 1.1rem;
   object-fit: cover;
   background: var(--color-bg-elevated);
-  filter: grayscale(1);
 }
 
 @media (min-width: 640px) {
