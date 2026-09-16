@@ -320,12 +320,10 @@ sections:
 
       - id: ds-cta
         layout: cta
-        title: Let's chat
-        lead: Some specifics of this project are password-protected or restricted due to confidentiality. If you’re intrigued by the problem space,
-        contactInline: true
+        title: Get in touch
+        lead: Interested in the thinking behind this project? Reach out to learn more.
         contactHref: "mailto:lucianareyes@gmail.com"
-        contactLabel: hit me up and let’s chat
-        contactSuffix: "."
+        contactLabel: lucianareyes@gmail.com
 
   - id: growth-retention
     title: Growth, Retention & A/B Experiments
@@ -443,8 +441,8 @@ sections:
 
       - id: gr-cta
         layout: cta
-        title: Learn more
-        lead: NDA constraints apply. Detailed flows are password-protected upon request. Reach out to me to learn more about this project.
+        title: Get in touch
+        lead: Interested in the thinking behind this project? Reach out to learn more.
         contactHref: "mailto:lucianareyes@gmail.com"
         contactLabel: lucianareyes@gmail.com
 ---
