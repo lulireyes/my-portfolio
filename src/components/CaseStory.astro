@@ -1,0 +1,515 @@
+---
+/**
+ * Editorial deep-dive chapters for multi-part case studies (e.g. Resolution Center).
+ * Layout variants create visual rhythm — not a repeating card template.
+ */
+interface Perspective {
+  title: string;
+  body: string;
+}
+interface Insight {
+  number: string;
+  title: string;
+  body: string;
+}
+interface Principle {
+  title: string;
+  body: string;
+}
+interface Tradeoff {
+  need: string;
+  constraint: string;
+  response: string;
+}
+interface Solution {
+  title: string;
+  body?: string;
+  placeholder: string;
+}
+interface Collaborator {
+  role: string;
+  contribution: string;
+}
+interface Metric {
+  value: string;
+  label: string;
+  verified?: boolean;
+  note?: string;
+}
+interface Diagram {
+  left: string;
+  center: string;
+  right: string;
+  under?: string[];
+}
+interface Chapter {
+  id: string;
+  number?: string;
+  title: string;
+  layout:
+    | 'hero'
+    | 'overview'
+    | 'challenge'
+    | 'system'
+    | 'mapping'
+    | 'insights'
+    | 'strategy'
+    | 'design'
+    | 'constraints'
+    | 'solution'
+    | 'collaboration'
+    | 'impact'
+    | 'reflection'
+    | 'cta';
+  tagline?: string;
+  impactLine?: string;
+  lead?: string;
+  paragraphs?: string[];
+  bullets?: string[];
+  pullQuote?: string;
+  placeholders?: string[];
+  perspectives?: Perspective[];
+  insights?: Insight[];
+  principles?: Principle[];
+  constraints?: string[];
+  tradeoffs?: Tradeoff[];
+  solutions?: Solution[];
+  collaborators?: Collaborator[];
+  metrics?: Metric[];
+  before?: string[];
+  after?: string[];
+  roleLine?: string;
+  responsibilities?: string;
+  challengeLabel?: string;
+  contextLabel?: string;
+  roleLabel?: string;
+  contactHref?: string;
+  contactLabel?: string;
+  diagram?: Diagram;
+}
+
+interface Props {
+  chapters: Chapter[];
+}
+
+const { chapters } = Astro.props;
+---
+
+<div class="rc-story">
+  {
+    chapters.map((ch) => (
+      <section class={`rc-chapter rc-chapter--${ch.layout}`} id={ch.id} aria-labelledby={`${ch.id}-title`}>
+        {ch.layout === 'hero' && (
+          <div class="rc-hero shell-case">
+            <p class="rc-kicker">Case study</p>
+            <h3 class="rc-hero-title" id={`${ch.id}-title`}>
+              {ch.title}
+            </h3>
+            {ch.tagline && <p class="rc-hero-tagline">{ch.tagline}</p>}
+            {ch.impactLine && <p class="rc-hero-impact">{ch.impactLine}</p>}
+            {ch.placeholders?.map((ph) => (
+              <figure class="rc-placeholder rc-placeholder--hero" role="img" aria-label={ph}>
+                <span class="rc-placeholder-label">{ph}</span>
+              </figure>
+            ))}
+          </div>
+        )}
+
+        {ch.layout === 'overview' && (
+          <div class="rc-overview shell-case">
+            <header class="rc-chapter-head">
+              <h3 class="rc-chapter-title" id={`${ch.id}-title`}>
+                {ch.title}
+              </h3>
+            </header>
+            <div class="rc-overview-grid">
+              <div class="rc-overview-col">
+                <h4 class="rc-subhead">{ch.contextLabel ?? 'Context'}</h4>
+                {ch.paragraphs?.map((p) => (
+                  <p class="rc-body">{p}</p>
+                ))}
+              </div>
+              <div class="rc-overview-col">
+                <h4 class="rc-subhead">{ch.challengeLabel ?? 'The challenge'}</h4>
+                <p class="rc-body rc-body--tight">The new Resolution Center needed to:</p>
+                <ul class="rc-list">
+                  {ch.bullets?.map((item) => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+              </div>
+              <div class="rc-overview-col rc-overview-col--role">
+                <h4 class="rc-subhead">{ch.roleLabel ?? 'My role'}</h4>
+                {ch.roleLine && <p class="rc-body">{ch.roleLine}</p>}
+                {ch.responsibilities && (
+                  <p class="rc-responsibilities">{ch.responsibilities}</p>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {ch.layout === 'challenge' && (
+          <div class="rc-challenge shell-case">
+            <header class="rc-chapter-head">
+              {ch.number && <span class="rc-chapter-num">{ch.number}</span>}
+              <h3 class="rc-chapter-title" id={`${ch.id}-title`}>
+                {ch.title}
+              </h3>
+            </header>
+            {ch.lead && <p class="rc-lead">{ch.lead}</p>}
+            <div class="rc-prose-stack">
+              {ch.paragraphs?.map((p) => (
+                <p class="rc-body">{p}</p>
+              ))}
+            </div>
+            <div class="rc-perspectives">
+              {ch.perspectives?.map((p) => (
+                <article class="rc-perspective">
+                  <h4 class="rc-perspective-title">{p.title}</h4>
+                  <p class="rc-body">{p.body}</p>
+                </article>
+              ))}
+            </div>
+            {ch.pullQuote && <blockquote class="rc-pull">{ch.pullQuote}</blockquote>}
+            {ch.diagram && (
+              <div class="rc-diagram" role="img" aria-label="Customer, Resolution Center, Provider system">
+                <div class="rc-diagram-row">
+                  <span class="rc-diagram-node">{ch.diagram.left}</span>
+                  <span class="rc-diagram-arrow" aria-hidden="true">
+                    ↔️
+                  </span>
+                  <span class="rc-diagram-node rc-diagram-node--center">{ch.diagram.center}</span>
+                  <span class="rc-diagram-arrow" aria-hidden="true">
+                    ↔️
+                  </span>
+                  <span class="rc-diagram-node">{ch.diagram.right}</span>
+                </div>
+                {ch.diagram.under && ch.diagram.under.length > 0 && (
+                  <div class="rc-diagram-under">
+                    {ch.diagram.under.map((label) => (
+                      <span class="rc-diagram-chip">{label}</span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
+            {ch.placeholders?.map((ph) => (
+              <figure class="rc-placeholder rc-placeholder--wide" role="img" aria-label={ph}>
+                <span class="rc-placeholder-label">{ph}</span>
+              </figure>
+            ))}
+          </div>
+        )}
+
+        {ch.layout === 'system' && (
+          <div class="rc-system shell-case">
+            <header class="rc-chapter-head">
+              {ch.number && <span class="rc-chapter-num">{ch.number}</span>}
+              <h3 class="rc-chapter-title" id={`${ch.id}-title`}>
+                {ch.title}
+              </h3>
+            </header>
+            <div class="rc-split">
+              <div class="rc-split-main">
+                {ch.lead && <p class="rc-lead">{ch.lead}</p>}
+                {ch.paragraphs?.map((p) => (
+                  <p class="rc-body">{p}</p>
+                ))}
+              </div>
+              <ul class="rc-list rc-list--dense">
+                {ch.bullets?.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        )}
+
+        {ch.layout === 'mapping' && (
+          <div class="rc-mapping">
+            <div class="shell-case">
+              <header class="rc-chapter-head">
+                <h3 class="rc-chapter-title" id={`${ch.id}-title`}>
+                  {ch.title}
+                </h3>
+              </header>
+              {ch.lead && <p class="rc-lead">{ch.lead}</p>}
+              <div class="rc-prose-stack">
+                {ch.paragraphs?.map((p) => (
+                  <p class="rc-body">{p}</p>
+                ))}
+              </div>
+            </div>
+            <div class="rc-mapping-visuals shell-case">
+              {ch.placeholders?.map((ph) => (
+                <figure class="rc-placeholder rc-placeholder--map" role="img" aria-label={ph}>
+                  <span class="rc-placeholder-label">{ph}</span>
+                </figure>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {ch.layout === 'insights' && (
+          <div class="rc-insights shell-case">
+            <header class="rc-chapter-head">
+              {ch.number && <span class="rc-chapter-num">{ch.number}</span>}
+              <h3 class="rc-chapter-title" id={`${ch.id}-title`}>
+                {ch.title}
+              </h3>
+            </header>
+            <ol class="rc-insight-list">
+              {ch.insights?.map((insight) => (
+                <li class="rc-insight">
+                  <span class="rc-insight-num" aria-hidden="true">
+                    {insight.number}
+                  </span>
+                  <div>
+                    <h4 class="rc-insight-title">{insight.title}</h4>
+                    <p class="rc-body">{insight.body}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+        )}
+
+        {ch.layout === 'strategy' && (
+          <div class="rc-strategy shell-case">
+            <header class="rc-chapter-head">
+              {ch.number && <span class="rc-chapter-num">{ch.number}</span>}
+              <h3 class="rc-chapter-title" id={`${ch.id}-title`}>
+                {ch.title}
+              </h3>
+            </header>
+            {ch.lead && <p class="rc-lead">{ch.lead}</p>}
+            <div class="rc-principles">
+              {ch.principles?.map((pr) => (
+                <article class="rc-principle">
+                  <h4 class="rc-principle-title">{pr.title}</h4>
+                  <p class="rc-body">{pr.body}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {ch.layout === 'design' && (
+          <div class="rc-design">
+            <div class="shell-case">
+              <header class="rc-chapter-head">
+                {ch.number && <span class="rc-chapter-num">{ch.number}</span>}
+                <h3 class="rc-chapter-title" id={`${ch.id}-title`}>
+                  {ch.title}
+                </h3>
+              </header>
+              {ch.lead && <p class="rc-lead">{ch.lead}</p>}
+              {ch.paragraphs?.map((p) => (
+                <p class="rc-body">{p}</p>
+              ))}
+              <p class="rc-body rc-body--tight">The experience needed to communicate:</p>
+              <ul class="rc-list">
+                {ch.bullets?.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+              {ch.pullQuote && <blockquote class="rc-pull">{ch.pullQuote}</blockquote>}
+            </div>
+            <div class="rc-design-visuals shell-case">
+              {(ch.placeholders ?? []).slice(0, 2).map((ph) => (
+                <figure class="rc-placeholder rc-placeholder--ui" role="img" aria-label={ph}>
+                  <span class="rc-placeholder-label">{ph}</span>
+                </figure>
+              ))}
+            </div>
+            {(ch.placeholders?.length ?? 0) > 2 && (
+              <div class="rc-design-compare shell-case">
+                <p class="rc-compare-label">Customer + Provider</p>
+                <div class="rc-compare-grid">
+                  {(ch.placeholders ?? []).slice(2).map((ph) => (
+                    <figure class="rc-placeholder rc-placeholder--side" role="img" aria-label={ph}>
+                      <span class="rc-placeholder-label">{ph}</span>
+                    </figure>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+
+        {ch.layout === 'constraints' && (
+          <div class="rc-constraints shell-case">
+            <header class="rc-chapter-head">
+              {ch.number && <span class="rc-chapter-num">{ch.number}</span>}
+              <h3 class="rc-chapter-title" id={`${ch.id}-title`}>
+                {ch.title}
+              </h3>
+            </header>
+            {ch.lead && <p class="rc-lead">{ch.lead}</p>}
+            <ul class="rc-list rc-list--constraints">
+              {ch.constraints?.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+            <div class="rc-tradeoffs" aria-label="Design trade-offs">
+              <div class="rc-tradeoff-head" aria-hidden="true">
+                <span>User need</span>
+                <span>Constraint</span>
+                <span>Design response</span>
+              </div>
+              {ch.tradeoffs?.map((t) => (
+                <div class="rc-tradeoff">
+                  <p>
+                    <span class="rc-tradeoff-mobile-label">User need</span>
+                    {t.need}
+                  </p>
+                  <p>
+                    <span class="rc-tradeoff-mobile-label">Constraint</span>
+                    {t.constraint}
+                  </p>
+                  <p>
+                    <span class="rc-tradeoff-mobile-label">Design response</span>
+                    {t.response}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {ch.layout === 'solution' && (
+          <div class="rc-solution shell-case">
+            <header class="rc-chapter-head">
+              <h3 class="rc-chapter-title" id={`${ch.id}-title`}>
+                {ch.title}
+              </h3>
+            </header>
+            {ch.lead && <p class="rc-lead">{ch.lead}</p>}
+            <div class="rc-solution-grid">
+              {ch.solutions?.map((sol) => (
+                <article class="rc-solution-item">
+                  <h4 class="rc-solution-title">{sol.title}</h4>
+                  {sol.body && <p class="rc-body">{sol.body}</p>}
+                  <figure class="rc-placeholder rc-placeholder--solution" role="img" aria-label={sol.placeholder}>
+                    <span class="rc-placeholder-label">{sol.placeholder}</span>
+                  </figure>
+                </article>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {ch.layout === 'collaboration' && (
+          <div class="rc-collab shell-case">
+            <header class="rc-chapter-head">
+              {ch.number && <span class="rc-chapter-num">{ch.number}</span>}
+              <h3 class="rc-chapter-title" id={`${ch.id}-title`}>
+                {ch.title}
+              </h3>
+            </header>
+            {ch.lead && <p class="rc-lead">{ch.lead}</p>}
+            <ul class="rc-collab-list">
+              {ch.collaborators?.map((c) => (
+                <li class="rc-collab-item">
+                  <strong class="rc-collab-role">{c.role}</strong>
+                  <span class="rc-collab-contrib">{c.contribution}</span>
+                </li>
+              ))}
+            </ul>
+            {ch.placeholders?.map((ph) => (
+              <figure class="rc-placeholder rc-placeholder--wide" role="img" aria-label={ph}>
+                <span class="rc-placeholder-label">{ph}</span>
+              </figure>
+            ))}
+          </div>
+        )}
+
+        {ch.layout === 'impact' && (
+          <div class="rc-impact shell-case">
+            <header class="rc-chapter-head">
+              {ch.number && <span class="rc-chapter-num">{ch.number}</span>}
+              <h3 class="rc-chapter-title" id={`${ch.id}-title`}>
+                {ch.title}
+              </h3>
+            </header>
+            {ch.metrics?.[0] && (
+              <p class="rc-impact-hero">
+                <span class="rc-impact-hero-value">{ch.metrics[0].value}</span>
+                <span class="rc-impact-hero-label">{ch.metrics[0].label}</span>
+              </p>
+            )}
+            {ch.lead && <p class="rc-body">{ch.lead}</p>}
+            {ch.pullQuote && <blockquote class="rc-pull">{ch.pullQuote}</blockquote>}
+            {(ch.metrics?.length ?? 0) > 1 && (
+              <ul class="rc-metric-secondary">
+                {ch.metrics?.slice(1).map((m) => (
+                  <li class:list={['rc-metric-item', { 'rc-metric-item--placeholder': !m.verified }]}>
+                    <p class="rc-metric-value">{m.value}</p>
+                    <p class="rc-metric-label">{m.label}</p>
+                    {m.note && <p class="rc-metric-note">{m.note}</p>}
+                  </li>
+                ))}
+              </ul>
+            )}
+            <div class="rc-before-after">
+              <div class="rc-ba-col">
+                <h4 class="rc-ba-label">Before</h4>
+                <ul class="rc-ba-list">
+                  {ch.before?.map((item) => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+              </div>
+              <div class="rc-ba-col">
+                <h4 class="rc-ba-label">After</h4>
+                <ul class="rc-ba-list">
+                  {ch.after?.map((item) => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            {ch.placeholders?.map((ph) => (
+              <figure class="rc-placeholder rc-placeholder--wide" role="img" aria-label={ph}>
+                <span class="rc-placeholder-label">{ph}</span>
+              </figure>
+            ))}
+          </div>
+        )}
+
+        {ch.layout === 'reflection' && (
+          <div class="rc-reflection shell-case">
+            <header class="rc-chapter-head">
+              {ch.number && <span class="rc-chapter-num">{ch.number}</span>}
+              <h3 class="rc-chapter-title" id={`${ch.id}-title`}>
+                {ch.title}
+              </h3>
+            </header>
+            {ch.pullQuote && <blockquote class="rc-pull rc-pull--reflection">{ch.pullQuote}</blockquote>}
+            {ch.paragraphs?.map((p) => (
+              <p class="rc-body">{p}</p>
+            ))}
+          </div>
+        )}
+
+        {ch.layout === 'cta' && (
+          <div class="rc-cta shell-case">
+            <header class="rc-chapter-head">
+              {ch.number && <span class="rc-chapter-num">{ch.number}</span>}
+              <h3 class="rc-chapter-title" id={`${ch.id}-title`}>
+                {ch.title}
+              </h3>
+            </header>
+            {ch.lead && <p class="rc-cta-lead">{ch.lead}</p>}
+            {ch.contactHref && ch.contactLabel && (
+              <a class="rc-cta-link" href={ch.contactHref}>
+                {ch.contactLabel}
+              </a>
+            )}
+          </div>
+        )}
+      </section>
+    ))
+  }
+</div>
