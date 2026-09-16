@@ -50,7 +50,6 @@ sections:
         responsibilities: "Scope: Learning flows, visual storytelling, illustration systems, and retention-focused UI for a narrative-driven language app. Timeline: 2021 – 2022."
 
       - id: bee-challenge
-        number: "01"
         layout: challenge
         title: The Challenge
         lead: Language apps compete for attention against entertainment, not just other study tools. If a session feels like a chore, learners abandon it — even when they still want to improve.
@@ -65,7 +64,6 @@ sections:
             size: sm
 
       - id: bee-discovery
-        number: "02"
         layout: challenge
         title: Discovery & Key Insight
         lead: Learner feedback showed motivation dropped when practice felt like schoolwork. Stories were already in the product vocabulary — the gap was how deeply they shaped the loop itself.
@@ -80,7 +78,6 @@ sections:
             size: lg
 
       - id: bee-process
-        number: "03"
         layout: strategy
         title: Process — Design & Illustration
         lead: I designed flows and illustration systems that kept sessions light, narrative, and habit-friendly — balancing delight with clear learning goals.
@@ -99,7 +96,6 @@ sections:
             size: lg
 
       - id: bee-results
-        number: "04"
         layout: strategy
         title: Results & Impact
         lead: The work reinforced Beelinguapp’s core promise — language practice that feels less like studying — for a product already used by more than a million learners. Outcomes stay qualitative where hard metrics weren’t available to publish.

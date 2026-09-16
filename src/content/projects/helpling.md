@@ -87,7 +87,6 @@ sections:
             verified: true
 
       - id: rc-challenge
-        number: "01"
         layout: challenge
         title: The Problem
         lead: Helpling was scaling as a marketplace, but dispute resolution had not scaled with it — leaving customers, providers and Operations stuck in a manual model.
@@ -111,10 +110,9 @@ sections:
             tone: visual
             size: full
 
-      - id: rc-learned
-        number: "02"
+      - id: rc-process
         layout: insights
-        title: What I Learned
+        title: How I Approached It
         lead: Before designing screens, I mapped the service behind them — how disputes entered the system, where Operations intervened, and which constraints limited automation or communication.
         paragraphs:
           - "I worked with Operations, Product and Data to understand resolution as a system: Customer ↔ Resolution Center ↔ Provider, with Operations, business rules and legal/policy constraints underneath."
@@ -125,16 +123,6 @@ sections:
           - where manual intervention was required versus where patterns repeated
           - what users needed to see throughout the process
           - the business, operational, legal and policy implications of different resolution paths
-        insights:
-          - number: "01"
-            title: Predictable patterns could be structured
-            body: A large proportion of disputes followed recurring scenarios. These did not always require manual investigation — which opened a path for self-service without pretending every case was the same.
-          - number: "02"
-            title: Opacity creates friction
-            body: Users were not only looking for an outcome. They needed to understand what was happening, what information had been considered, and what would happen next.
-          - number: "03"
-            title: Efficiency cannot come at the expense of trust
-            body: Automating resolution only works if both sides can understand and accept the process — fairness and perceived fairness are tightly linked in a marketplace dispute.
         figures:
           - src: /img/projects/helpling/helpling-rc-whiteboard-refund-logic.jpg
             alt: Whiteboard sketch of a Case page with Refund and Reject actions, branching into full refund versus partial refund logic with hour-based options and timing notes.
@@ -148,7 +136,6 @@ sections:
             size: sm
 
       - id: rc-decisions
-        number: "03"
         layout: strategy
         title: Decisions That Shaped the Product
         lead: I led the design decisions end to end, aligning Product, Operations, Data and Engineering around a shared model — not a handoff chain. Each principle below came from something we observed, a choice I made, and what it unlocked.
@@ -169,7 +156,6 @@ sections:
             size: lg
 
       - id: rc-solution
-        number: "04"
         layout: solution
         title: The Solution
         lead: The Resolution Center turned those decisions into a coherent experience — organised around visibility, self-service, transparency and consistency across both sides of the marketplace.
@@ -190,7 +176,6 @@ sections:
             body: The same resolution model works for customers and providers, so both sides of the marketplace stay oriented inside one system.
 
       - id: rc-constraints
-        number: "05"
         layout: constraints
         title: Designing Within Constraints
         lead: Good product design wasn't about finding the perfect experience in isolation. It was about finding a solution that was useful for users, viable for the business, workable for Operations, and possible within the constraints of the product and service.
@@ -214,7 +199,6 @@ sections:
             response: I designed for marketplace-level fairness — legibility on both sides — instead of optimising the experience for one party.
 
       - id: rc-impact
-        number: "06"
         layout: impact
         title: Impact
         lead: By turning manual dispute handling into a scalable self-service experience, the Resolution Center reduced operational support cost while shifting where human capacity was needed.
@@ -243,14 +227,21 @@ sections:
           - Operations focused on complex cases
           - A more scalable resolution model across the marketplace
 
-      - id: rc-reflection
-        number: "07"
-        layout: reflection
-        title: Reflection
+      - id: rc-learned
+        layout: insights
+        title: What I Learned
+        lead: Looking back, the lasting lessons were less about screens and more about how fairness works in a two-sided marketplace.
         pullQuote: Fairness and perceived fairness are not always the same thing.
         paragraphs:
           - An objectively fair outcome can still feel unfair if the process behind it is opaque.
           - This project reinforced that clarity is part of the service itself — especially when users are dealing with money, conflict or uncertainty.
+        insights:
+          - title: Predictable patterns could be structured
+            body: A large proportion of disputes followed recurring scenarios. These did not always require manual investigation — which opened a path for self-service without pretending every case was the same.
+          - title: Opacity creates friction
+            body: Users were not only looking for an outcome. They needed to understand what was happening, what information had been considered, and what would happen next.
+          - title: Efficiency cannot come at the expense of trust
+            body: Automating resolution only works if both sides can understand and accept the process — fairness and perceived fairness are tightly linked in a marketplace dispute.
 
       - id: rc-cta
         layout: cta
@@ -290,7 +281,6 @@ sections:
         responsibilities: "Responsibilities: Product audit, component architecture, Atomic Design methodology, cross-platform Figma library setup, and multi-team collaboration."
 
       - id: ds-problem
-        number: "01"
         layout: challenge
         title: "The Real Problem: Chaos vs. Structure"
         lead: The product wasn't broken, but it was suffering from silent, accumulating friction.
@@ -301,7 +291,6 @@ sections:
           - "[VISUAL PLACEHOLDER — examples of inconsistent patterns across the existing product]"
 
       - id: ds-approach
-        number: "02"
         layout: strategy
         title: "Bringing Order: The Bottom-Up Approach"
         lead: To tackle this, I didn't wait for permission or a top-down mandate—I started by organizing my own work and scaling it outward.
@@ -320,7 +309,6 @@ sections:
             size: lg
 
       - id: ds-reflection
-        number: "03"
         layout: reflection
         title: The Reflection & Key Takeaway
         paragraphs:
@@ -364,7 +352,6 @@ sections:
         responsibilities: "Scope: Growth & Retention Strategy, Weekly A/B Testing, User Interviews, Usability Testing, Competitor Analysis, Cross-functional Workshops, Interaction Design & Prototyping"
 
       - id: gr-challenge
-        number: "01"
         layout: challenge
         title: The Challenge
         lead: Tackling an invisible comprehension barrier at the start of the funnel causing early drop-offs globally.
@@ -379,7 +366,6 @@ sections:
             size: md
 
       - id: gr-methodology
-        number: "02"
         layout: strategy
         title: Methodology & Process
         lead: Cross-functional alignment, rigorous user interviews, usability testing, and competitor analysis shaped a focused set of testable variants — including contextual question marks alongside three core options.
@@ -407,7 +393,6 @@ sections:
             size: sm
 
       - id: gr-experimentation
-        number: "03"
         layout: solution
         title: Experimentation, Interaction Design & Validation
         lead: Option C — the “How Helpling Works” pre-funnel contextual modal — emerged as the winning variant. I crafted the interaction design, smooth micro-animations, and a close developer hand-off so the experience felt polished in production.
@@ -428,7 +413,6 @@ sections:
             placeholder: "[IMAGE PLACEHOLDER — specs / hand-off / instrumentation notes]"
 
       - id: gr-impact
-        number: "04"
         layout: impact
         title: Results & Long-term Impact
         lead: The winning experiment delivered a measurable conversion lift and strong satisfaction signals — and remained in production a year later, evidence of durable product value beyond a one-off test.

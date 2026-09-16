@@ -29,7 +29,7 @@ const storyPerspective = z.object({
 });
 
 const storyInsight = z.object({
-  number: z.string(),
+  number: z.string().optional(),
   title: z.string(),
   body: z.string(),
 });
@@ -78,8 +78,6 @@ const storyMetric = z.object({
 
 const storyChapter = z.object({
   id: z.string(),
-  /** Display number e.g. "01" — omit for hero / overview / cta */
-  number: z.string().optional(),
   title: z.string(),
   layout: z.enum([
     'hero',

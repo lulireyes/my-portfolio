@@ -10,7 +10,7 @@ interface Perspective {
   body: string;
 }
 interface Insight {
-  number: string;
+  number?: string;
   title: string;
   body: string;
 }
@@ -48,7 +48,6 @@ interface Metric {
 }
 interface Chapter {
   id: string;
-  number?: string;
   title: string;
   layout:
     | 'hero'
@@ -183,7 +182,6 @@ function figureClasses(fig: StoryFigure, extra = '') {
         {ch.layout === 'challenge' && (
           <div class="rc-challenge shell-case">
             <header class="rc-chapter-head">
-              {ch.number && <span class="rc-chapter-num">{ch.number}</span>}
               <h3 class="rc-chapter-title" id={`${ch.id}-title`}>
                 {ch.title}
               </h3>
@@ -227,7 +225,6 @@ function figureClasses(fig: StoryFigure, extra = '') {
         {ch.layout === 'system' && (
           <div class="rc-system shell-case">
             <header class="rc-chapter-head">
-              {ch.number && <span class="rc-chapter-num">{ch.number}</span>}
               <h3 class="rc-chapter-title" id={`${ch.id}-title`}>
                 {ch.title}
               </h3>
@@ -289,12 +286,12 @@ function figureClasses(fig: StoryFigure, extra = '') {
         {ch.layout === 'insights' && (
           <div class="rc-insights shell-case">
             <header class="rc-chapter-head">
-              {ch.number && <span class="rc-chapter-num">{ch.number}</span>}
               <h3 class="rc-chapter-title" id={`${ch.id}-title`}>
                 {ch.title}
               </h3>
             </header>
             {ch.lead && <p class="rc-lead">{ch.lead}</p>}
+            {ch.pullQuote && <blockquote class="rc-pull">{ch.pullQuote}</blockquote>}
             <div class="rc-prose-stack">
               {ch.paragraphs?.map((p) => (
                 <p class="rc-body">{p}</p>
@@ -307,19 +304,16 @@ function figureClasses(fig: StoryFigure, extra = '') {
                 ))}
               </ul>
             )}
-            <ol class="rc-insight-list">
-              {ch.insights?.map((insight) => (
-                <li class="rc-insight">
-                  <span class="rc-insight-num" aria-hidden="true">
-                    {insight.number}
-                  </span>
-                  <div>
+            {(ch.insights?.length ?? 0) > 0 && (
+              <ul class="rc-insight-list">
+                {ch.insights?.map((insight) => (
+                  <li class="rc-insight">
                     <h4 class="rc-insight-title">{insight.title}</h4>
                     <p class="rc-body">{insight.body}</p>
-                  </div>
-                </li>
-              ))}
-            </ol>
+                  </li>
+                ))}
+              </ul>
+            )}
             {(ch.figures?.length ?? 0) > 0 && (
               <div class:list={['rc-figure-stack', { 'rc-figure-gallery': (ch.figures?.length ?? 0) > 1 }]}>
                 {ch.figures?.map((fig) => (
@@ -338,7 +332,6 @@ function figureClasses(fig: StoryFigure, extra = '') {
         {ch.layout === 'strategy' && (
           <div class="rc-strategy shell-case">
             <header class="rc-chapter-head">
-              {ch.number && <span class="rc-chapter-num">{ch.number}</span>}
               <h3 class="rc-chapter-title" id={`${ch.id}-title`}>
                 {ch.title}
               </h3>
@@ -377,7 +370,6 @@ function figureClasses(fig: StoryFigure, extra = '') {
           <div class="rc-design">
             <div class="shell-case">
               <header class="rc-chapter-head">
-                {ch.number && <span class="rc-chapter-num">{ch.number}</span>}
                 <h3 class="rc-chapter-title" id={`${ch.id}-title`}>
                   {ch.title}
                 </h3>
@@ -436,7 +428,6 @@ function figureClasses(fig: StoryFigure, extra = '') {
         {ch.layout === 'constraints' && (
           <div class="rc-constraints shell-case">
             <header class="rc-chapter-head">
-              {ch.number && <span class="rc-chapter-num">{ch.number}</span>}
               <h3 class="rc-chapter-title" id={`${ch.id}-title`}>
                 {ch.title}
               </h3>
@@ -524,7 +515,6 @@ function figureClasses(fig: StoryFigure, extra = '') {
         {ch.layout === 'collaboration' && (
           <div class="rc-collab shell-case">
             <header class="rc-chapter-head">
-              {ch.number && <span class="rc-chapter-num">{ch.number}</span>}
               <h3 class="rc-chapter-title" id={`${ch.id}-title`}>
                 {ch.title}
               </h3>
@@ -562,7 +552,6 @@ function figureClasses(fig: StoryFigure, extra = '') {
         {ch.layout === 'impact' && (
           <div class="rc-impact shell-case">
             <header class="rc-chapter-head">
-              {ch.number && <span class="rc-chapter-num">{ch.number}</span>}
               <h3 class="rc-chapter-title" id={`${ch.id}-title`}>
                 {ch.title}
               </h3>
@@ -628,7 +617,6 @@ function figureClasses(fig: StoryFigure, extra = '') {
         {ch.layout === 'reflection' && (
           <div class="rc-reflection shell-case">
             <header class="rc-chapter-head">
-              {ch.number && <span class="rc-chapter-num">{ch.number}</span>}
               <h3 class="rc-chapter-title" id={`${ch.id}-title`}>
                 {ch.title}
               </h3>
@@ -644,7 +632,6 @@ function figureClasses(fig: StoryFigure, extra = '') {
           <div class="rc-cta shell-case">
             {!ch.contactInline && (
               <header class="rc-chapter-head">
-                {ch.number && <span class="rc-chapter-num">{ch.number}</span>}
                 <h3 class="rc-chapter-title" id={`${ch.id}-title`}>
                   {ch.title}
                 </h3>
