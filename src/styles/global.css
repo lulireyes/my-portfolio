@@ -809,75 +809,6 @@ p {
   margin-inline: auto;
 }
 
-.case-topbar {
-  position: sticky;
-  top: 0;
-  z-index: 40;
-  background: #0d0d0d;
-  color: #f2f1ef;
-  border-bottom: 1px solid #2a2927;
-}
-
-.case-topbar-inner {
-  width: min(var(--case-max), calc(100% - 2 * var(--space)));
-  margin-inline: auto;
-  min-height: 3.75rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem 1.5rem;
-  flex-wrap: wrap;
-  padding-block: 0.65rem;
-}
-
-.case-brand {
-  font-family: var(--font-serif);
-  font-size: 1.35rem;
-  font-weight: 400;
-  letter-spacing: -0.02em;
-  text-decoration: none;
-  color: #efe9dd;
-  flex-shrink: 0;
-}
-
-.case-brand:hover {
-  opacity: 1;
-  color: var(--color-accent);
-}
-
-.case-nav {
-  flex: 1;
-  min-width: 0;
-}
-
-.case-nav-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem 1.15rem;
-  justify-content: flex-end;
-}
-
-.case-nav-list a {
-  font-size: 0.8125rem;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  color: #d1d1d1;
-  padding-bottom: 0.15rem;
-  border-bottom: 1px solid transparent;
-}
-
-.case-nav-list a:hover {
-  opacity: 1;
-  color: #efe9dd;
-}
-
-.case-nav-list a.is-active {
-  color: #fff;
-  border-bottom-color: #fff;
-}
-
 .case-linkedin {
   display: inline-flex;
   align-items: center;
@@ -895,51 +826,31 @@ p {
   opacity: 0.9;
 }
 
-.case-theme-toggle {
-  flex-shrink: 0;
-  color: #d1d1d1;
-  border-color: #3a3936;
-}
-
-.case-theme-toggle:hover {
-  color: #efe9dd;
-}
-
 .case-study {
   padding-block: clamp(2.5rem, 7vh, 4.5rem) clamp(3rem, 8vh, 5.5rem);
   display: flex;
   flex-direction: column;
+  align-items: stretch;
   gap: clamp(2.5rem, 6vh, 4rem);
-  scroll-margin-top: 4.5rem;
-}
-
-.case-study--continued {
-  border-top: 1px solid var(--color-line);
-  padding-top: clamp(3rem, 8vh, 5rem);
-  background: color-mix(in srgb, var(--color-surface-alt) 55%, var(--color-bg));
-}
-
-.case-whats-next {
-  font-family: var(--font-serif);
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 600;
-  letter-spacing: -0.03em;
-  line-height: 1.1;
-  margin: 0 0 0.5rem;
 }
 
 .case-hero {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: flex-start;
   gap: 0.75rem;
-  max-width: 48rem;
+  width: min(var(--case-max), calc(100% - 2 * var(--space)));
+  max-width: none;
+  margin-inline: auto;
   text-align: left;
 }
 
 .case-title {
   margin: 0;
+  margin-inline: 0;
   width: 100%;
+  max-width: none;
   font-family: var(--font-serif);
   font-size: clamp(3rem, 10vw, 5.5rem);
   font-weight: 700;
@@ -951,6 +862,7 @@ p {
 
 .case-subtitle {
   margin: 0;
+  margin-inline: 0;
   font-size: clamp(1.05rem, 2vw, 1.25rem);
   color: var(--color-muted);
   max-width: 36rem;
@@ -1044,7 +956,7 @@ p {
 .case-marquee-track {
   display: flex;
   width: max-content;
-  animation: case-marquee 28s linear infinite;
+  animation: case-marquee 70s linear infinite;
   will-change: transform;
 }
 
@@ -1196,20 +1108,35 @@ p {
   max-width: 22rem;
 }
 
-.case-open-full {
-  margin: 0;
-  font-size: 0.95rem;
+.case-pager {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem 2rem;
+  padding-top: clamp(1rem, 3vh, 2rem);
+  font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
 }
 
-.case-open-full a {
+.case-pager a {
   color: var(--color-accent);
   text-decoration: none;
-  font-weight: 500;
 }
 
-.case-open-full a:hover {
+.case-pager a:hover {
   opacity: 1;
   text-decoration: underline;
+}
+
+.case-pager-prev {
+  margin-right: auto;
+}
+
+.case-pager-next {
+  margin-left: auto;
+  text-align: right;
 }
 
 .case-footer {
@@ -1339,10 +1266,6 @@ a.case-footer-value:hover {
     grid-template-columns: 1fr;
   }
 
-  .case-nav-list {
-    justify-content: flex-start;
-  }
-
   .case-process-media {
     position: static;
   }
@@ -1353,17 +1276,6 @@ a.case-footer-value:hover {
 
   .case-impact-grid {
     grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 560px) {
-  .case-topbar-inner {
-    gap: 0.75rem;
-  }
-
-  .case-nav {
-    order: 3;
-    flex-basis: 100%;
   }
 }
 
