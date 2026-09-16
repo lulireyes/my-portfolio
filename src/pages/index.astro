@@ -12,7 +12,18 @@ const site = getSite();
 
 const projects = (await getCollection('projects'))
   .filter((project) => !project.data.draft)
-  .sort((a, b) => a.data.order - b.data.order || a.data.title.localeCompare(b.data.title));
+  .sort((a, b) => {
+    // Always pin Helpling first as the primary Work entry point.
+    if (a.id === 'helpling' && b.id !== 'helpling') return -1;
+    if (b.id === 'helpling' && a.id !== 'helpling') return 1;
+    return a.data.order - b.data.order || a.data.title.localeCompare(b.data.title);
+  });
+
+const helplingParts = [
+  { id: 'resolution-center', label: 'Resolution Center' },
+  { id: 'design-system', label: 'Design System 1.0' },
+  { id: 'growth-retention', label: 'Growth, Retention & A/B Experiments' },
+];
 
 ---
 
@@ -86,23 +97,25 @@ const projects = (await getCollection('projects'))
                   : withBase(`projects/${project.id}/`);
                 const external = Boolean(project.data.externalUrl);
                 const summary = project.data.summary ?? project.data.subtitle ?? '';
-                const ctaLabel =
-                  project.id === 'helpling' ? 'View case studies' : 'View case study';
+                const isHelpling = project.id === 'helpling';
+                const ctaLabel = isHelpling ? 'View case studies' : 'View case study';
 
                 return (
-                  <li>
+                  <li class={isHelpling ? 'work-item work-item--featured' : 'work-item'}>
                     <a
-                      class="work-card"
+                      class={`work-card${isHelpling ? ' work-card--featured' : ''}`}
                       href={href}
                       target={external ? '_blank' : undefined}
                       rel={external ? 'noopener noreferrer' : undefined}
+                      data-project={project.id}
                     >
                       {project.data.cover && (
                         <img
                           class="work-cover"
                           src={withBase(project.data.cover)}
-                          alt=""
-                          loading="lazy"
+                          alt={isHelpling ? 'Helpling' : ''}
+                          loading={isHelpling ? 'eager' : 'lazy'}
+                          fetchpriority={isHelpling ? 'high' : undefined}
                         />
                       )}
                       <div class="work-body">
@@ -111,6 +124,20 @@ const projects = (await getCollection('projects'))
                         <span class="work-cta">{ctaLabel} →</span>
                       </div>
                     </a>
+                    {isHelpling && (
+                      <ul class="work-parts" aria-label="Helpling case studies">
+                        {helplingParts.map((part) => (
+                          <li>
+                            <a
+                              class="work-part-link"
+                              href={withBase(`projects/helpling/#${part.id}`)}
+                            >
+                              {part.label}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </li>
                 );
               })}
