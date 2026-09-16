@@ -14,7 +14,8 @@
   "specialties": ["UX/UI", "Research", "Prototyping"],
   "philosophy": {
     "label": "Design Philosophy",
-    "title": "Design starts with intention ( ◠‿◠ )",
+    "title": "Design starts with intention",
+    "titleFace": "( ◠‿◠ )",
     "intro": "Understanding people, their context, and the problem we’re trying to solve, while being intentional about how we want the experience to feel.",
     "items": [
       {

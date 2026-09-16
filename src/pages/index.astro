@@ -44,7 +44,10 @@ const projects = await getWorkProjects();
 
       <section class="shell philosophy" aria-labelledby="philosophy-heading">
         <p class="philosophy-label">{site.philosophy.label}</p>
-        <h2 class="philosophy-title" id="philosophy-heading">{site.philosophy.title}</h2>
+        <h2 class="philosophy-title" id="philosophy-heading">
+          {site.philosophy.title}{' '}
+          <span class="philosophy-face">{site.philosophy.titleFace}</span>
+        </h2>
         <p class="philosophy-intro">{site.philosophy.intro}</p>
         <ol class="philosophy-list">
           {
