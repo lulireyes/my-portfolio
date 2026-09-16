@@ -31,22 +31,10 @@ const nav = site.nav ?? [
     type="button"
     class="theme-toggle"
     id="theme-toggle"
-    aria-label="Toggle color theme"
+    aria-label="Switch to light mode"
   >
-    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path
-        d="M21 14.3A8.5 8.5 0 0 1 9.7 3 7 7 0 1 0 21 14.3Z"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linejoin="round"></path>
-    </svg>
-    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"></circle>
-      <path
-        d="M12 2.5v2.2M12 19.3v2.2M4.7 4.7l1.6 1.6M17.7 17.7l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.7 19.3l1.6-1.6M17.7 6.3l1.6-1.6"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"></path>
-    </svg>
+    <!-- Show the destination theme: sun in dark (→ light), moon in light (→ dark) -->
+    <span class="material-symbols-outlined icon-sun" aria-hidden="true">light_mode</span>
+    <span class="material-symbols-outlined icon-moon" aria-hidden="true">dark_mode</span>
   </button>
 </header>
