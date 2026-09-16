@@ -761,11 +761,16 @@ p {
 }
 
 .testimonial-avatar {
-  width: 4rem;
-  height: 4rem;
+  width: 6.5rem;
+  height: 6.5rem;
+  border: 0;
   border-radius: 999px;
+  outline: none;
+  box-shadow: none;
   object-fit: cover;
-  background: #d4d4d8;
+  background: transparent;
+  /* Source assets are circular photos on a dark square — clip past the fringe */
+  clip-path: circle(46%);
 }
 
 .testimonial-quote {
@@ -776,7 +781,7 @@ p {
   font-style: italic;
   line-height: 1.35;
   letter-spacing: -0.015em;
-  color: #111111;
+  color: #e07a5f;
 }
 
 .testimonial-meta {
