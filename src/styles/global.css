@@ -272,14 +272,15 @@ p {
   transform: scale(0.92) rotate(-12deg);
 }
 
-.theme-toggle .material-symbols-outlined {
-  font-size: 1.35rem;
-  line-height: 1;
-  font-variation-settings:
-    'FILL' 1,
-    'wght' 500,
-    'GRAD' 0,
-    'opsz' 24;
+.theme-toggle .theme-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.25;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
   user-select: none;
 }
 
