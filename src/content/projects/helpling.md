@@ -1,6 +1,6 @@
 ---
 title: Helpling
-summary: Europe’s leading household-services platform — Resolution Center, Design System 1.0, and growth experiments across Customer and Partner Apps.
+summary: Designed and launched a dispute resolution feature that reduced operational costs by 35% and improved support efficiency.
 order: 1
 draft: false
 cover: /img/projects/helpling/cover.webp
