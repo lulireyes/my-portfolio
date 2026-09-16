@@ -146,24 +146,28 @@ function sectionMarqueeRepeats(title: string) {
           hasSections ? (
             d.sections.map((section) => (
               <section class="case-part" id={section.id} aria-labelledby={`${section.id}-title`}>
-                <div class="case-marquee" aria-hidden="true" data-marquee-label={section.title}>
-                  <div class="case-marquee-track">
-                    {[0, 1].map(() => (
-                      <div class="case-marquee-group">
-                        {Array.from({ length: sectionMarqueeRepeats(section.title) }).map(() => (
-                          <span class="case-marquee-item">
-                            <span>{section.title}</span>
-                            {section.emoji ? (
-                              <span class="case-marquee-emoji">{section.emoji}</span>
-                            ) : (
-                              <span class="case-marquee-sep" />
-                            )}
-                          </span>
+                {
+                  project.id === 'helpling' && (
+                    <div class="case-marquee" aria-hidden="true" data-marquee-label={section.title}>
+                      <div class="case-marquee-track">
+                        {[0, 1].map(() => (
+                          <div class="case-marquee-group">
+                            {Array.from({ length: sectionMarqueeRepeats(section.title) }).map(() => (
+                              <span class="case-marquee-item">
+                                <span>{section.title}</span>
+                                {section.emoji ? (
+                                  <span class="case-marquee-emoji">{section.emoji}</span>
+                                ) : (
+                                  <span class="case-marquee-sep" />
+                                )}
+                              </span>
+                            ))}
+                          </div>
                         ))}
                       </div>
-                    ))}
-                  </div>
-                </div>
+                    </div>
+                  )
+                }
 
                 {
                   section.story && section.story.length > 0 ? (
