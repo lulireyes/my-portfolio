@@ -13,6 +13,10 @@ const site = getSite();
 /** Fixed 4-card Work grid: Helpling, AnyMove, Beelinguapp, Yoona.ai */
 const projects = await getWorkProjects();
 
+const philosophyTitleWords = site.philosophy.title.trim().split(/\s+/);
+const philosophyTitleLast = philosophyTitleWords.pop() ?? '';
+const philosophyTitleLead = philosophyTitleWords.join(' ');
+
 ---
 
 <BaseLayout title={site.seo.title} description={site.seo.description}>
@@ -45,8 +49,11 @@ const projects = await getWorkProjects();
       <section class="shell philosophy" aria-labelledby="philosophy-heading">
         <p class="philosophy-label">{site.philosophy.label}</p>
         <h2 class="philosophy-title" id="philosophy-heading">
-          {site.philosophy.title}{' '}
-          <span class="philosophy-face">{site.philosophy.titleFace}</span>
+          {philosophyTitleLead}{' '}
+          <span class="philosophy-title-end">
+            {philosophyTitleLast}{' '}
+            <span class="philosophy-face">{site.philosophy.titleFace}</span>
+          </span>
         </h2>
         <p class="philosophy-intro">{site.philosophy.intro}</p>
         <ol class="philosophy-list">
