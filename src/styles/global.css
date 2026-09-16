@@ -456,16 +456,6 @@ p {
   line-height: 1.55;
 }
 
-.philosophy-bridge {
-  margin: clamp(1.35rem, 3.5vh, 2rem) 0 0;
-  color: var(--color-muted-soft);
-  font-family: var(--font-sans);
-  font-size: 0.9375rem;
-  font-weight: 400;
-  font-style: italic;
-  line-height: 1.5;
-}
-
 @media (min-width: 720px) {
   .philosophy-row {
     grid-template-columns: 2.75rem minmax(8.5rem, 11rem) minmax(0, 1fr);
