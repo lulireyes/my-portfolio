@@ -116,9 +116,8 @@ sections:
 
       - id: yo-cta
         layout: cta
-        title: Contact
-        contactInline: true
+        title: Get in touch
+        lead: Interested in the thinking behind this project? Reach out to learn more.
         contactHref: "mailto:lucianareyes@gmail.com"
-        contactLabel: Reach out to me to learn more about this project
-        contactSuffix: "."
+        contactLabel: lucianareyes@gmail.com
 ---
