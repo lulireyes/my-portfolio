@@ -1,6 +1,6 @@
 ---
 title: Helpling
-summary: Europe’s leading household-services platform — Resolution Center, Design System, and growth experiments across Customer and Partner Apps.
+summary: Europe’s leading household-services platform — Resolution Center, Design System 1.0, and growth experiments across Customer and Partner Apps.
 overview:
   - Helpling is Europe’s leading platform for household services, connecting customers with trusted service providers across multiple markets.
   - I joined Helpling as a Product Designer and grew into a Senior Product Designer, working across the Customer and Partner Apps in Germany and Singapore. I worked on everything from complex service experiences and new product initiatives to growth, retention and experimentation.
@@ -21,7 +21,7 @@ highlights:
     after: ", a new experience that helped customers and partners resolve issues more independently while "
     emphasis: "reducing operational support costs by 35%."
   - before: "I built Helpling’s first "
-    title: Design System
+    title: Design System 1.0
     href: "#design-system"
     after: " from the ground up, creating a shared foundation across the Customer and Partner Apps to "
     emphasis: "improve consistency and scalability across the product."
@@ -53,6 +53,7 @@ sections:
         roleLabel: My role
         paragraphs:
           - Helpling is a marketplace connecting customers and household service providers. Disputes between both sides were manually managed by Operations. As the marketplace grew, this became increasingly difficult to scale.
+        challengeIntro: "The new Resolution Center needed to:"
         bullets:
           - support both customers and providers
           - reduce unnecessary manual intervention
@@ -281,20 +282,73 @@ sections:
         contactLabel: lucianareyes@gmail.com
 
   - id: design-system
-    title: Design System
+    title: Design System 1.0
     emoji: "🎨"
-    summary:
-      - Helpling’s Customer and Partner Apps had grown through parallel product work, which made consistency and speed harder over time. I built Helpling’s first Design System from the ground up as a shared foundation for both products.
-      - The system covered foundations, components, and usage guidance so product teams could ship coherent experiences faster — and scale design quality across markets.
-    role: Lead Product Designer
-    timeline: 9 months
-    blocks:
-      - heading: Foundations
+    role: Senior Product Designer
+    timeline: 6 months
+    story:
+      - id: ds-hero
+        layout: hero
+        title: Design System 1.0
+        tagline: Scaling a product starts with scaling decisions.
+        impactLine: "Bringing order to chaos: how I built Helpling’s first cross-platform Design System from the ground up."
+        placeholders:
+          - "[IMAGE PLACEHOLDER — strongest Design System visual / component library composition]"
+
+      - id: ds-overview
+        layout: overview
+        title: Overview
+        contextLabel: Context
+        challengeLabel: The challenge
+        roleLabel: My Role
         paragraphs:
-          - I defined typography, color, spacing, and interaction patterns that worked across customer and partner contexts, then documented them so teams had a single source of truth.
-      - heading: Components & Adoption
+          - "When I joined Helpling, there was no design system in place. As the product had scaled quickly across multiple markets and teams, UI fragmentation had naturally taken over: for a single action like a primary button, there were six different versions scattered across the product, with no shared icon libraries or unified guidelines."
+        lead: Stepping into this chaotic landscape, I wanted to bring structure. What started as an initiative to clean up my own workflow organically evolved into a mission to build Helpling’s first shared Design System, designed to align design and engineering across the entire company.
+        roleLine: "Role: Senior Product Designer · Timeline: 6 months"
+        responsibilities: "Responsibilities: Product audit, component architecture, Atomic Design methodology, cross-platform Figma library setup, and multi-team collaboration."
+
+      - id: ds-problem
+        number: "01"
+        layout: challenge
+        title: "The Real Problem: Chaos vs. Structure"
+        lead: The product wasn't broken, but it was suffering from silent, accumulating friction.
         paragraphs:
-          - I designed reusable components with engineers, prioritized the highest-traffic surfaces first, and partnered with squads to migrate critical flows. Shared patterns reduced one-off UI and improved consistency across the product.
+          - "A quick product audit revealed immediate red flags: 6 versions of the primary button, 3 different icon libraries, and 0 shared documentation."
+          - Designers were constantly reinventing the wheel, engineers were implementing slightly different variations of the same components, and the lack of a single source of truth created unnecessary cognitive load for everyone.
+        placeholders:
+          - "[VISUAL PLACEHOLDER — examples of inconsistent patterns across the existing product]"
+
+      - id: ds-approach
+        number: "02"
+        layout: strategy
+        title: "Bringing Order: The Bottom-Up Approach"
+        lead: To tackle this, I didn't wait for permission or a top-down mandate—I started by organizing my own work and scaling it outward.
+        principles:
+          - title: The Atomic Approach
+            body: I adopted the Atomic Design methodology to structure the system logically, breaking down the UI from atoms to templates.
+          - title: Cross-Platform Collaboration
+            body: Working hand-in-hand with another designer, we dove deep into the multi-platform ecosystem—auditing and rebuilding components separately for Customer App, Partner App, and Connect App, broken down clearly across mobile and desktop.
+          - title: Laying the Foundations
+            body: We established core rules for typography, spacing, and color using Figma’s Auto Layout and Variants, ensuring engineering naming conventions were respected from day one.
+        placeholders:
+          - "[IMAGE PLACEHOLDER — foundations / component architecture / Figma variants]"
+
+      - id: ds-reflection
+        number: "03"
+        layout: reflection
+        title: The Reflection & Key Takeaway
+        paragraphs:
+          - "Building the technical foundations of a Design System is a massive milestone, but this project taught me an invaluable senior lesson: Creating the components is only half the battle; scaling a system across an entire company requires active governance, continuous advocacy, and deep cultural alignment."
+          - "Key takeaway: A design system cannot survive on UI quality alone. True adoption requires building bridges between teams, securing shared ownership, and timing the rollout with the organization's pace."
+
+      - id: ds-cta
+        layout: cta
+        title: Let's chat
+        lead: Some specifics of this project are password-protected or restricted due to confidentiality. If you’re intrigued by the problem space,
+        contactInline: true
+        contactHref: "mailto:lucianareyes@gmail.com"
+        contactLabel: hit me up and let’s chat
+        contactSuffix: "."
 
   - id: growth-retention
     title: Growth, Retention & A/B Experiments

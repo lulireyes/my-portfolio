@@ -81,10 +81,13 @@ interface Chapter {
   roleLine?: string;
   responsibilities?: string;
   challengeLabel?: string;
+  challengeIntro?: string;
   contextLabel?: string;
   roleLabel?: string;
   contactHref?: string;
   contactLabel?: string;
+  contactInline?: boolean;
+  contactSuffix?: string;
   diagram?: Diagram;
 }
 
@@ -131,12 +134,17 @@ const { chapters } = Astro.props;
               </div>
               <div class="rc-overview-col">
                 <h4 class="rc-subhead">{ch.challengeLabel ?? 'The challenge'}</h4>
-                <p class="rc-body rc-body--tight">The new Resolution Center needed to:</p>
-                <ul class="rc-list">
-                  {ch.bullets?.map((item) => (
-                    <li>{item}</li>
-                  ))}
-                </ul>
+                {ch.lead && <p class="rc-body">{ch.lead}</p>}
+                {ch.challengeIntro && (
+                  <p class="rc-body rc-body--tight">{ch.challengeIntro}</p>
+                )}
+                {(ch.bullets?.length ?? 0) > 0 && (
+                  <ul class="rc-list">
+                    {ch.bullets?.map((item) => (
+                      <li>{item}</li>
+                    ))}
+                  </ul>
+                )}
               </div>
               <div class="rc-overview-col rc-overview-col--role">
                 <h4 class="rc-subhead">{ch.roleLabel ?? 'My role'}</h4>
@@ -292,6 +300,11 @@ const { chapters } = Astro.props;
                 </article>
               ))}
             </div>
+            {ch.placeholders?.map((ph) => (
+              <figure class="rc-placeholder rc-placeholder--wide" role="img" aria-label={ph}>
+                <span class="rc-placeholder-label">{ph}</span>
+              </figure>
+            ))}
           </div>
         )}
 
@@ -495,17 +508,36 @@ const { chapters } = Astro.props;
 
         {ch.layout === 'cta' && (
           <div class="rc-cta shell-case">
-            <header class="rc-chapter-head">
-              {ch.number && <span class="rc-chapter-num">{ch.number}</span>}
-              <h3 class="rc-chapter-title" id={`${ch.id}-title`}>
-                {ch.title}
-              </h3>
-            </header>
-            {ch.lead && <p class="rc-cta-lead">{ch.lead}</p>}
-            {ch.contactHref && ch.contactLabel && (
-              <a class="rc-cta-link" href={ch.contactHref}>
-                {ch.contactLabel}
-              </a>
+            {!ch.contactInline && (
+              <header class="rc-chapter-head">
+                {ch.number && <span class="rc-chapter-num">{ch.number}</span>}
+                <h3 class="rc-chapter-title" id={`${ch.id}-title`}>
+                  {ch.title}
+                </h3>
+              </header>
+            )}
+            {ch.contactInline ? (
+              <p class="rc-cta-lead" id={`${ch.id}-title`}>
+                {ch.lead}
+                {ch.contactHref && ch.contactLabel && (
+                  <>
+                    {' '}
+                    <a class="rc-cta-link rc-cta-link--inline" href={ch.contactHref}>
+                      {ch.contactLabel}
+                    </a>
+                    {ch.contactSuffix ?? '.'}
+                  </>
+                )}
+              </p>
+            ) : (
+              <>
+                {ch.lead && <p class="rc-cta-lead">{ch.lead}</p>}
+                {ch.contactHref && ch.contactLabel && (
+                  <a class="rc-cta-link" href={ch.contactHref}>
+                    {ch.contactLabel}
+                  </a>
+                )}
+              </>
             )}
           </div>
         )}
