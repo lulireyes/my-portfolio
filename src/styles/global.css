@@ -2402,6 +2402,11 @@ html[data-theme='light'] .journey-tags li {
   max-width: min(100%, 40rem);
 }
 
+.rc-figure--full {
+  max-width: 100%;
+  margin-block: clamp(2.75rem, 7vh, 5rem);
+}
+
 .rc-figure-gallery .rc-figure {
   max-width: none;
 }
@@ -2422,6 +2427,32 @@ html[data-theme='light'] .journey-tags li {
   box-shadow:
     0 1px 0 color-mix(in srgb, var(--color-bg) 40%, transparent),
     0 8px 22px -16px color-mix(in srgb, var(--color-text) 35%, transparent);
+}
+
+/* Bare editorial illustration — full measure width, no card chrome */
+.rc-figure--visual .rc-figure-frame {
+  overflow: visible;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+
+.rc-figure--visual .rc-figure-frame img {
+  border-radius: 0;
+  background: transparent;
+  width: 100%;
+  height: auto;
+  max-height: min(70vh, 36rem);
+  object-fit: contain;
+  object-position: center;
+}
+
+.rc-figure-stack:has(> .rc-figure--visual:only-child) {
+  width: 100%;
+  align-items: stretch;
+  margin-top: 0;
+  gap: 0;
 }
 
 .rc-figure--process .rc-figure-frame {
@@ -2474,6 +2505,15 @@ html[data-theme='light'] .journey-tags li {
   .rc-figure--lg,
   .rc-figure--hero {
     max-width: min(100%, 28rem);
+  }
+
+  .rc-figure--full {
+    max-width: 100%;
+    margin-block: clamp(2rem, 5vh, 3.25rem);
+  }
+
+  .rc-figure--visual .rc-figure-frame img {
+    max-height: min(55vh, 22rem);
   }
 }
 

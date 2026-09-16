@@ -102,9 +102,8 @@ sections:
         figures:
           - src: /img/projects/helpling/helpling-rc-chaos-to-order.png
             alt: Minimalist line drawing on a black background — a tangled scribble on the left transitions through a smooth curve into a neat concentric spiral on the right.
-            caption: From tangled disputes to a structured path — the challenge was turning operational chaos into a system both sides could trust.
-            tone: default
-            size: md
+            tone: visual
+            size: full
 
       - id: rc-system
         number: "02"
