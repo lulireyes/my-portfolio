@@ -669,6 +669,14 @@ p {
   letter-spacing: -0.03em;
   line-height: 1.15;
   color: var(--color-ink);
+  transition: color 0.25s ease;
+}
+
+.work-card:hover .work-title,
+.work-card:focus .work-title,
+.work-card:focus-visible .work-title,
+.work-card:active .work-title {
+  color: var(--color-accent);
 }
 
 .work-summary {
@@ -707,7 +715,7 @@ p {
   align-items: center;
   gap: 0.35rem;
   margin-top: auto;
-  padding-top: 0.15rem;
+  padding-top: 0.65rem;
   color: var(--color-accent);
   font-family: var(--font-mono);
   font-size: 0.9rem;
