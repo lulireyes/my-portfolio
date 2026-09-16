@@ -13,10 +13,10 @@
 [data-theme='dark'] {
   --color-bg: #161616;
   --color-bg-elevated: #1f1f1f;
-  --color-ink: #ededed;
-  --color-beige: #f4f4f4;
-  --color-intro: #d4d4d8;
-  --color-nav: #ededed;
+  --color-ink: #d8d1c2;
+  --color-beige: #e5dfd3;
+  --color-intro: #c4bba8;
+  --color-nav: #d8d1c2;
   --color-muted: #a1a1aa;
   --color-muted-soft: #71717a;
   --color-line: #2e2e32;
@@ -26,31 +26,31 @@
   --color-footer-bg: #101010;
   --color-footer-ink: #e07a5f;
   --color-surface-alt: #f4f4f5;
-  --color-tag-border: rgba(237, 237, 237, 0.55);
-  --color-tag-ink: #ededed;
+  --color-tag-border: rgba(216, 209, 194, 0.55);
+  --color-tag-ink: #d8d1c2;
   --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.35);
   color-scheme: dark;
 }
 
 [data-theme='light'] {
-  --color-bg: #d8d1c2;
-  --color-bg-elevated: #e5dfd3;
-  --color-ink: #0d0d0d;
+  --color-bg: #fafafa;
+  --color-bg-elevated: #f4f4f5;
+  --color-ink: #111111;
   --color-beige: #27272a;
   --color-intro: #3f3f46;
-  --color-nav: #0d0d0d;
+  --color-nav: #111111;
   --color-muted: #52525b;
   --color-muted-soft: #71717a;
-  --color-line: #c4bba8;
+  --color-line: #e4e4e7;
   --color-accent: #c45d45;
   --color-accent-soft: color-mix(in srgb, #e07a5f 18%, transparent);
   --color-lavender: #7a6b8c;
   --color-footer-bg: #0d0d0d;
   --color-footer-ink: #e07a5f;
-  --color-surface-alt: #cbc3b3;
-  --color-tag-border: #0d0d0d;
-  --color-tag-ink: #0d0d0d;
-  --shadow-soft: 0 18px 40px rgba(13, 13, 13, 0.08);
+  --color-surface-alt: #f4f4f5;
+  --color-tag-border: #111111;
+  --color-tag-ink: #111111;
+  --shadow-soft: 0 18px 40px rgba(17, 17, 17, 0.06);
   color-scheme: light;
 }
 
@@ -1003,14 +1003,14 @@ p {
 
 html[data-theme='dark'] .journey-tags li,
 :root:not([data-theme='light']) .journey-tags li {
-  border-color: rgba(237, 237, 237, 0.32);
+  border-color: rgba(216, 209, 194, 0.32);
   background: #1a1a1a;
-  color: #ededed;
+  color: #d8d1c2;
 }
 
 html[data-theme='light'] .journey-tags li {
-  border-color: #c4bba8;
-  background: #e5dfd3;
+  border-color: #d4d4d8;
+  background: #f4f4f5;
   color: #3f3f46;
 }
 

@@ -296,7 +296,7 @@ const projects = (await getCollection('projects'))
       document.documentElement.setAttribute('data-theme', theme);
       document.documentElement.style.colorScheme = theme;
       const meta = document.querySelector('meta[name="theme-color"]');
-      if (meta) meta.setAttribute('content', theme === 'dark' ? '#161616' : '#d8d1c2');
+      if (meta) meta.setAttribute('content', theme === 'dark' ? '#161616' : '#fafafa');
       const toggleBtn = document.getElementById('theme-toggle');
       if (toggleBtn) {
         toggleBtn.setAttribute(
