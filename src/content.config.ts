@@ -45,10 +45,22 @@ const storyTradeoff = z.object({
   response: z.string(),
 });
 
+/** Real case-study media (process artefacts, UI, etc.) */
+const storyFigure = z.object({
+  src: z.string(),
+  alt: z.string(),
+  caption: z.string().optional(),
+  /** Modest process frame by default — not a full-bleed hero */
+  tone: z.enum(['process', 'default']).default('process'),
+  size: z.enum(['sm', 'md', 'lg']).default('md'),
+});
+
 const storySolution = z.object({
   title: z.string(),
   body: z.string().optional(),
-  placeholder: z.string(),
+  /** Shown when no figure is provided */
+  placeholder: z.string().optional(),
+  figure: storyFigure.optional(),
 });
 
 const storyCollaborator = z.object({
@@ -92,6 +104,8 @@ const storyChapter = z.object({
   bullets: z.array(z.string()).default([]),
   pullQuote: z.string().optional(),
   placeholders: z.array(z.string()).default([]),
+  /** Real images that replace or sit alongside placeholders */
+  figures: z.array(storyFigure).default([]),
   perspectives: z.array(storyPerspective).default([]),
   insights: z.array(storyInsight).default([]),
   principles: z.array(storyPrinciple).default([]),

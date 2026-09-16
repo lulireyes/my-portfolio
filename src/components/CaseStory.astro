@@ -3,6 +3,8 @@
  * Editorial deep-dive chapters for multi-part case studies (e.g. Resolution Center).
  * Layout variants create visual rhythm — not a repeating card template.
  */
+import { withBase } from '../lib/paths';
+
 interface Perspective {
   title: string;
   body: string;
@@ -21,10 +23,18 @@ interface Tradeoff {
   constraint: string;
   response: string;
 }
+interface StoryFigure {
+  src: string;
+  alt: string;
+  caption?: string;
+  tone?: 'process' | 'default';
+  size?: 'sm' | 'md' | 'lg';
+}
 interface Solution {
   title: string;
   body?: string;
-  placeholder: string;
+  placeholder?: string;
+  figure?: StoryFigure;
 }
 interface Collaborator {
   role: string;
@@ -68,6 +78,7 @@ interface Chapter {
   bullets?: string[];
   pullQuote?: string;
   placeholders?: string[];
+  figures?: StoryFigure[];
   perspectives?: Perspective[];
   insights?: Insight[];
   principles?: Principle[];
@@ -96,6 +107,12 @@ interface Props {
 }
 
 const { chapters } = Astro.props;
+
+function figureClasses(fig: StoryFigure, extra = '') {
+  const tone = fig.tone ?? 'process';
+  const size = fig.size ?? 'md';
+  return ['rc-figure', `rc-figure--${tone}`, `rc-figure--${size}`, extra].filter(Boolean).join(' ');
+}
 ---
 
 <div class="rc-story">
@@ -110,11 +127,24 @@ const { chapters } = Astro.props;
             </h3>
             {ch.tagline && <p class="rc-hero-tagline">{ch.tagline}</p>}
             {ch.impactLine && <p class="rc-hero-impact">{ch.impactLine}</p>}
-            {ch.placeholders?.map((ph) => (
-              <figure class="rc-placeholder rc-placeholder--hero" role="img" aria-label={ph}>
-                <span class="rc-placeholder-label">{ph}</span>
-              </figure>
-            ))}
+            {(ch.figures?.length ?? 0) > 0 ? (
+              <div class:list={['rc-figure-stack', { 'rc-figure-gallery': (ch.figures?.length ?? 0) > 1 }]}>
+                {ch.figures?.map((fig) => (
+                  <figure class={figureClasses(fig, 'rc-figure--hero')}>
+                    <div class="rc-figure-frame">
+                      <img src={withBase(fig.src)} alt={fig.alt} loading="lazy" decoding="async" />
+                    </div>
+                    {fig.caption && <figcaption class="rc-figure-caption">{fig.caption}</figcaption>}
+                  </figure>
+                ))}
+              </div>
+            ) : (
+              ch.placeholders?.map((ph) => (
+                <figure class="rc-placeholder rc-placeholder--hero" role="img" aria-label={ph}>
+                  <span class="rc-placeholder-label">{ph}</span>
+                </figure>
+              ))
+            )}
           </div>
         )}
 
@@ -202,11 +232,24 @@ const { chapters } = Astro.props;
                 )}
               </div>
             )}
-            {ch.placeholders?.map((ph) => (
-              <figure class="rc-placeholder rc-placeholder--wide" role="img" aria-label={ph}>
-                <span class="rc-placeholder-label">{ph}</span>
-              </figure>
-            ))}
+            {(ch.figures?.length ?? 0) > 0 ? (
+              <div class:list={['rc-figure-stack', { 'rc-figure-gallery': (ch.figures?.length ?? 0) > 1 }]}>
+                {ch.figures?.map((fig) => (
+                  <figure class={figureClasses(fig)}>
+                    <div class="rc-figure-frame">
+                      <img src={withBase(fig.src)} alt={fig.alt} loading="lazy" decoding="async" />
+                    </div>
+                    {fig.caption && <figcaption class="rc-figure-caption">{fig.caption}</figcaption>}
+                  </figure>
+                ))}
+              </div>
+            ) : (
+              ch.placeholders?.map((ph) => (
+                <figure class="rc-placeholder rc-placeholder--wide" role="img" aria-label={ph}>
+                  <span class="rc-placeholder-label">{ph}</span>
+                </figure>
+              ))
+            )}
           </div>
         )}
 
@@ -250,11 +293,24 @@ const { chapters } = Astro.props;
               </div>
             </div>
             <div class="rc-mapping-visuals shell-case">
-              {ch.placeholders?.map((ph) => (
-                <figure class="rc-placeholder rc-placeholder--map" role="img" aria-label={ph}>
-                  <span class="rc-placeholder-label">{ph}</span>
-                </figure>
-              ))}
+              {(ch.figures?.length ?? 0) > 0 ? (
+                <div class:list={['rc-figure-stack', { 'rc-figure-gallery': (ch.figures?.length ?? 0) > 1 }]}>
+                  {ch.figures?.map((fig) => (
+                    <figure class={figureClasses(fig)}>
+                      <div class="rc-figure-frame">
+                        <img src={withBase(fig.src)} alt={fig.alt} loading="lazy" decoding="async" />
+                      </div>
+                      {fig.caption && <figcaption class="rc-figure-caption">{fig.caption}</figcaption>}
+                    </figure>
+                  ))}
+                </div>
+              ) : (
+                ch.placeholders?.map((ph) => (
+                  <figure class="rc-placeholder rc-placeholder--map" role="img" aria-label={ph}>
+                    <span class="rc-placeholder-label">{ph}</span>
+                  </figure>
+                ))
+              )}
             </div>
           </div>
         )}
@@ -300,11 +356,24 @@ const { chapters } = Astro.props;
                 </article>
               ))}
             </div>
-            {ch.placeholders?.map((ph) => (
-              <figure class="rc-placeholder rc-placeholder--wide" role="img" aria-label={ph}>
-                <span class="rc-placeholder-label">{ph}</span>
-              </figure>
-            ))}
+            {(ch.figures?.length ?? 0) > 0 ? (
+              <div class:list={['rc-figure-stack', { 'rc-figure-gallery': (ch.figures?.length ?? 0) > 1 }]}>
+                {ch.figures?.map((fig) => (
+                  <figure class={figureClasses(fig)}>
+                    <div class="rc-figure-frame">
+                      <img src={withBase(fig.src)} alt={fig.alt} loading="lazy" decoding="async" />
+                    </div>
+                    {fig.caption && <figcaption class="rc-figure-caption">{fig.caption}</figcaption>}
+                  </figure>
+                ))}
+              </div>
+            ) : (
+              ch.placeholders?.map((ph) => (
+                <figure class="rc-placeholder rc-placeholder--wide" role="img" aria-label={ph}>
+                  <span class="rc-placeholder-label">{ph}</span>
+                </figure>
+              ))
+            )}
           </div>
         )}
 
@@ -329,24 +398,41 @@ const { chapters } = Astro.props;
               </ul>
               {ch.pullQuote && <blockquote class="rc-pull">{ch.pullQuote}</blockquote>}
             </div>
-            <div class="rc-design-visuals shell-case">
-              {(ch.placeholders ?? []).slice(0, 2).map((ph) => (
-                <figure class="rc-placeholder rc-placeholder--ui" role="img" aria-label={ph}>
-                  <span class="rc-placeholder-label">{ph}</span>
-                </figure>
-              ))}
-            </div>
-            {(ch.placeholders?.length ?? 0) > 2 && (
-              <div class="rc-design-compare shell-case">
-                <p class="rc-compare-label">Customer + Provider</p>
-                <div class="rc-compare-grid">
-                  {(ch.placeholders ?? []).slice(2).map((ph) => (
-                    <figure class="rc-placeholder rc-placeholder--side" role="img" aria-label={ph}>
-                      <span class="rc-placeholder-label">{ph}</span>
+            {(ch.figures?.length ?? 0) > 0 ? (
+              <div class="shell-case">
+                <div class:list={['rc-figure-stack', { 'rc-figure-gallery': (ch.figures?.length ?? 0) > 1 }]}>
+                  {ch.figures?.map((fig) => (
+                    <figure class={figureClasses(fig)}>
+                      <div class="rc-figure-frame">
+                        <img src={withBase(fig.src)} alt={fig.alt} loading="lazy" decoding="async" />
+                      </div>
+                      {fig.caption && <figcaption class="rc-figure-caption">{fig.caption}</figcaption>}
                     </figure>
                   ))}
                 </div>
               </div>
+            ) : (
+              <>
+                <div class="rc-design-visuals shell-case">
+                  {(ch.placeholders ?? []).slice(0, 2).map((ph) => (
+                    <figure class="rc-placeholder rc-placeholder--ui" role="img" aria-label={ph}>
+                      <span class="rc-placeholder-label">{ph}</span>
+                    </figure>
+                  ))}
+                </div>
+                {(ch.placeholders?.length ?? 0) > 2 && (
+                  <div class="rc-design-compare shell-case">
+                    <p class="rc-compare-label">Customer + Provider</p>
+                    <div class="rc-compare-grid">
+                      {(ch.placeholders ?? []).slice(2).map((ph) => (
+                        <figure class="rc-placeholder rc-placeholder--side" role="img" aria-label={ph}>
+                          <span class="rc-placeholder-label">{ph}</span>
+                        </figure>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </>
             )}
           </div>
         )}
@@ -399,14 +485,48 @@ const { chapters } = Astro.props;
               </h3>
             </header>
             {ch.lead && <p class="rc-lead">{ch.lead}</p>}
+            {(ch.figures?.length ?? 0) > 0 && (
+              <div class:list={['rc-figure-stack', { 'rc-figure-gallery': (ch.figures?.length ?? 0) > 1 }]}>
+                {ch.figures?.map((fig) => (
+                  <figure class={figureClasses(fig)}>
+                    <div class="rc-figure-frame">
+                      <img src={withBase(fig.src)} alt={fig.alt} loading="lazy" decoding="async" />
+                    </div>
+                    {fig.caption && <figcaption class="rc-figure-caption">{fig.caption}</figcaption>}
+                  </figure>
+                ))}
+              </div>
+            )}
             <div class="rc-solution-grid">
               {ch.solutions?.map((sol) => (
                 <article class="rc-solution-item">
                   <h4 class="rc-solution-title">{sol.title}</h4>
                   {sol.body && <p class="rc-body">{sol.body}</p>}
-                  <figure class="rc-placeholder rc-placeholder--solution" role="img" aria-label={sol.placeholder}>
-                    <span class="rc-placeholder-label">{sol.placeholder}</span>
-                  </figure>
+                  {sol.figure ? (
+                    <figure class={figureClasses(sol.figure, 'rc-figure--solution')}>
+                      <div class="rc-figure-frame">
+                        <img
+                          src={withBase(sol.figure.src)}
+                          alt={sol.figure.alt}
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </div>
+                      {sol.figure.caption && (
+                        <figcaption class="rc-figure-caption">{sol.figure.caption}</figcaption>
+                      )}
+                    </figure>
+                  ) : (
+                    sol.placeholder && (
+                      <figure
+                        class="rc-placeholder rc-placeholder--solution"
+                        role="img"
+                        aria-label={sol.placeholder}
+                      >
+                        <span class="rc-placeholder-label">{sol.placeholder}</span>
+                      </figure>
+                    )
+                  )}
                 </article>
               ))}
             </div>
@@ -430,11 +550,24 @@ const { chapters } = Astro.props;
                 </li>
               ))}
             </ul>
-            {ch.placeholders?.map((ph) => (
-              <figure class="rc-placeholder rc-placeholder--wide" role="img" aria-label={ph}>
-                <span class="rc-placeholder-label">{ph}</span>
-              </figure>
-            ))}
+            {(ch.figures?.length ?? 0) > 0 ? (
+              <div class:list={['rc-figure-stack', { 'rc-figure-gallery': (ch.figures?.length ?? 0) > 1 }]}>
+                {ch.figures?.map((fig) => (
+                  <figure class={figureClasses(fig)}>
+                    <div class="rc-figure-frame">
+                      <img src={withBase(fig.src)} alt={fig.alt} loading="lazy" decoding="async" />
+                    </div>
+                    {fig.caption && <figcaption class="rc-figure-caption">{fig.caption}</figcaption>}
+                  </figure>
+                ))}
+              </div>
+            ) : (
+              ch.placeholders?.map((ph) => (
+                <figure class="rc-placeholder rc-placeholder--wide" role="img" aria-label={ph}>
+                  <span class="rc-placeholder-label">{ph}</span>
+                </figure>
+              ))
+            )}
           </div>
         )}
 
@@ -483,11 +616,24 @@ const { chapters } = Astro.props;
                 </ul>
               </div>
             </div>
-            {ch.placeholders?.map((ph) => (
-              <figure class="rc-placeholder rc-placeholder--wide" role="img" aria-label={ph}>
-                <span class="rc-placeholder-label">{ph}</span>
-              </figure>
-            ))}
+            {(ch.figures?.length ?? 0) > 0 ? (
+              <div class:list={['rc-figure-stack', { 'rc-figure-gallery': (ch.figures?.length ?? 0) > 1 }]}>
+                {ch.figures?.map((fig) => (
+                  <figure class={figureClasses(fig)}>
+                    <div class="rc-figure-frame">
+                      <img src={withBase(fig.src)} alt={fig.alt} loading="lazy" decoding="async" />
+                    </div>
+                    {fig.caption && <figcaption class="rc-figure-caption">{fig.caption}</figcaption>}
+                  </figure>
+                ))}
+              </div>
+            ) : (
+              ch.placeholders?.map((ph) => (
+                <figure class="rc-placeholder rc-placeholder--wide" role="img" aria-label={ph}>
+                  <span class="rc-placeholder-label">{ph}</span>
+                </figure>
+              ))
+            )}
           </div>
         )}
 
