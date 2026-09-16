@@ -28,8 +28,7 @@ sections:
     story:
       - id: am-hero
         layout: hero
-        title: AnyMove
-        tagline: Designing a mobility platform before the platform existed.
+        title: Designing a mobility platform before the platform existed.
         impactLine: Creating a flexible product foundation for a stealth mobility service designed to grow beyond its first MVP.
         placeholders:
           - "[IMAGE PLACEHOLDER — strongest AnyMove mobility platform visual]"
