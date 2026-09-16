@@ -30,8 +30,12 @@ sections:
         layout: hero
         title: Designing a mobility platform before the platform existed.
         impactLine: Creating a flexible product foundation for a stealth mobility service designed to grow beyond its first MVP.
-        placeholders:
-          - "[IMAGE PLACEHOLDER — strongest AnyMove mobility platform visual]"
+        figures:
+          - src: /img/projects/anymove/anymove-home-make-your-next-move.png
+            alt: Hand holding a smartphone showing the AnyMove home map with price pins and a bottom card reading Make your next move, with Select date and Current location controls.
+            caption: Map discovery home — “Make your next move” as the entry point into booking and nearby vehicles.
+            tone: default
+            size: lg
 
       - id: am-overview
         layout: overview
@@ -53,6 +57,17 @@ sections:
         paragraphs:
           - The experience had to feel consistent whether users were renting a car today or using completely different mobility services in the future, spanning across both web and desktop experiences.
           - "Building an MVP under constraints: solving today's problems without limiting tomorrow's possibilities."
+        figures:
+          - src: /img/projects/anymove/anymove-atmosphere-architecture.jpg
+            alt: Bright minimalist white interior with a modern staircase, thin handrails, and geometric wall planes photographed from a low angle.
+            caption: Brand atmosphere — clean architectural calm that set the visual mood for a premium mobility platform.
+            tone: process
+            size: sm
+          - src: /img/projects/anymove/anymove-lifestyle-tesla.jpg
+            alt: Woman in a red beanie sitting in a Tesla driver’s seat, reaching toward the car’s large center touchscreen.
+            caption: Mobility in context — the in-car moment the product had to feel ready for, not just the phone screens.
+            tone: process
+            size: sm
 
       - id: am-discovery
         number: "02"
@@ -71,8 +86,12 @@ sections:
         lead: One of the biggest UX challenges was the home screen. Early explorations tried to combine every possible use case into one interface and became overwhelming.
         paragraphs:
           - After several iterations, wireframes, and beta testing, we introduced a split home screen that adapted to different user scenarios while maintaining a single product language.
-        placeholders:
-          - "[VISUAL PLACEHOLDER — iterations and split home screen compositions for web and desktop]"
+        figures:
+          - src: /img/projects/anymove/anymove-home-plane-im-voraus.jpg
+            alt: Hand holding a phone showing the AnyMove home screen in German — Plane im Voraus with Empfohlen shortcuts for Vorbuchen, Spontan los, and Tages-Pakete, plus Tesla Model Y and Model 3 vehicle cards.
+            caption: Split home decision — plan ahead, go spontaneously, or browse recommended vehicles without overwhelming the first screen.
+            tone: default
+            size: lg
 
       - id: am-mvp
         number: "04"
@@ -86,6 +105,17 @@ sections:
             body: Crafted the wireframes and visual design for the web and desktop apps, ensuring a seamless multi-platform experience.
           - title: Marketing partnership
             body: Partnered closely with Marketing to ensure onboarding communicated value and reduced friction.
+        figures:
+          - src: /img/projects/anymove/anymove-find-nearby-map.jpg
+            alt: Phone mockup of AnyMove search results — map with car pins above a Find a car nearby bottom sheet listing a Tesla Model 3 at 35€ per day with filters for Allrounder and Go.
+            caption: Find nearby — map discovery and vehicle shortlist as the core MVP booking surface.
+            tone: default
+            size: lg
+          - src: /img/projects/anymove/anymove-unlock-car.png
+            alt: AnyMove unlock screen in German reading Du kannst das Auto jetzt aufschließen, with Bluetooth and proximity checklist items and a black Auto aufschließen button.
+            caption: Unlock flow — Bluetooth and proximity checks before opening the car, designed as a calm last mile of the rental.
+            tone: default
+            size: lg
 
       - id: am-prototyping
         number: "05"
