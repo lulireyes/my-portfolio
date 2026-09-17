@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import LocationBar from '../components/LocationBar.astro';
 import Topbar from '../components/Topbar.astro';
 import SiteFooter from '../components/SiteFooter.astro';
+import PhilosophyIcon from '../components/PhilosophyIcon.astro';
 import { getSite } from '../lib/site';
 import { withBase } from '../lib/paths';
 import { getWorkProjects } from '../lib/workProjects';
@@ -13,9 +14,7 @@ const site = getSite();
 /** Fixed 4-card Work grid: Helpling, AnyMove, Beelinguapp, Yoona.ai */
 const projects = await getWorkProjects();
 
-const philosophyTitleWords = site.philosophy.title.trim().split(/\s+/);
-const philosophyTitleLast = philosophyTitleWords.pop() ?? '';
-const philosophyTitleLead = philosophyTitleWords.join(' ');
+type PhilosophyIconId = 'everyone' | 'strategy' | 'collaboration' | 'evidence';
 
 ---
 
@@ -48,30 +47,23 @@ const philosophyTitleLead = philosophyTitleWords.join(' ');
 
       <section class="shell philosophy" aria-labelledby="philosophy-heading">
         <p class="philosophy-label">{site.philosophy.label}</p>
-        <h2 class="philosophy-title" id="philosophy-heading">
-          {philosophyTitleLead}{' '}
-          <span class="philosophy-title-end">
-            {philosophyTitleLast}{' '}
-            <span class="philosophy-face">{site.philosophy.titleFace}</span>
-          </span>
-        </h2>
+        <h2 class="philosophy-title" id="philosophy-heading">{site.philosophy.title}</h2>
         <p class="philosophy-intro">{site.philosophy.intro}</p>
-        <ol class="philosophy-list">
+        <ul class="philosophy-list">
           {
-            site.philosophy.items.map((item, index) => {
-              const number = String(index + 1).padStart(2, '0');
-              return (
-                <li class="philosophy-item">
-                  <span class="philosophy-num" aria-hidden="true">{number}</span>
-                  <div class="philosophy-copy">
-                    <h3 class="philosophy-principle">{item.title}</h3>
-                    <p class="philosophy-desc">{item.body}</p>
-                  </div>
-                </li>
-              );
-            })
+            site.philosophy.items.map((item) => (
+              <li class="philosophy-item">
+                <div class="philosophy-icon" aria-hidden="true">
+                  <PhilosophyIcon id={item.id as PhilosophyIconId} />
+                </div>
+                <div class="philosophy-copy">
+                  <h3 class="philosophy-principle">{item.title}</h3>
+                  <p class="philosophy-desc">{item.body}</p>
+                </div>
+              </li>
+            ))
           }
-        </ol>
+        </ul>
       </section>
 
       {

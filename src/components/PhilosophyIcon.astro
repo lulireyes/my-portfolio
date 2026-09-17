@@ -1,0 +1,120 @@
+---
+/**
+ * Abstract dimensional marks for Design Philosophy.
+ * Soft geometry + lavender/blue brand mix — decorative only.
+ */
+type IconId = 'everyone' | 'strategy' | 'collaboration' | 'evidence';
+
+interface Props {
+  id: IconId;
+}
+
+const { id } = Astro.props;
+const gradId = `ph-grad-${id}`;
+const highlightId = `ph-hl-${id}`;
+---
+
+<svg
+  class="philosophy-mark"
+  viewBox="0 0 64 64"
+  width="56"
+  height="56"
+  aria-hidden="true"
+  focusable="false"
+>
+  <defs>
+    <linearGradient id={gradId} x1="12" y1="8" x2="52" y2="56" gradientUnits="userSpaceOnUse">
+      <stop class="ph-stop-light" offset="0%"></stop>
+      <stop class="ph-stop-mid" offset="55%"></stop>
+      <stop class="ph-stop-deep" offset="100%"></stop>
+    </linearGradient>
+    <linearGradient id={highlightId} x1="18" y1="10" x2="40" y2="36" gradientUnits="userSpaceOnUse">
+      <stop class="ph-stop-shine" offset="0%" stop-opacity="0.9"></stop>
+      <stop class="ph-stop-shine-fade" offset="100%" stop-opacity="0"></stop>
+    </linearGradient>
+  </defs>
+
+  {
+    id === 'everyone' && (
+      <>
+        {/* Distinct soft forms settling into one composition */}
+        <ellipse cx="22" cy="38" rx="14" ry="12" fill={`url(#${gradId})`} opacity="0.92"></ellipse>
+        <ellipse cx="42" cy="36" rx="13" ry="11" fill={`url(#${gradId})`} opacity="0.78"></ellipse>
+        <ellipse cx="32" cy="24" rx="11" ry="10" fill={`url(#${gradId})`}></ellipse>
+        <ellipse cx="28" cy="22" rx="5" ry="3.5" fill={`url(#${highlightId})`}></ellipse>
+        <ellipse cx="40" cy="32" rx="4" ry="2.5" fill={`url(#${highlightId})`} opacity="0.55"></ellipse>
+      </>
+    )
+  }
+
+  {
+    id === 'strategy' && (
+      <>
+        {/* Soft bars converging toward a shared direction */}
+        <rect
+          x="10"
+          y="38"
+          width="28"
+          height="10"
+          rx="5"
+          transform="rotate(-18 24 43)"
+          fill={`url(#${gradId})`}
+          opacity="0.7"
+        ></rect>
+        <rect
+          x="14"
+          y="26"
+          width="34"
+          height="10"
+          rx="5"
+          transform="rotate(-18 31 31)"
+          fill={`url(#${gradId})`}
+          opacity="0.88"
+        ></rect>
+        <rect
+          x="18"
+          y="14"
+          width="38"
+          height="10"
+          rx="5"
+          transform="rotate(-18 37 19)"
+          fill={`url(#${gradId})`}
+        ></rect>
+        <ellipse cx="48" cy="18" rx="5.5" ry="4" fill={`url(#${highlightId})`}></ellipse>
+      </>
+    )
+  }
+
+  {
+    id === 'collaboration' && (
+      <>
+        {/* Two forms intersecting into a shared whole */}
+        <circle cx="24" cy="32" r="15" fill={`url(#${gradId})`} opacity="0.72"></circle>
+        <circle cx="40" cy="32" r="15" fill={`url(#${gradId})`} opacity="0.72"></circle>
+        <ellipse cx="32" cy="32" rx="9" ry="11" fill={`url(#${gradId})`}></ellipse>
+        <ellipse cx="26" cy="26" rx="5" ry="3.5" fill={`url(#${highlightId})`} opacity="0.7"></ellipse>
+        <ellipse cx="40" cy="26" rx="4.5" ry="3" fill={`url(#${highlightId})`} opacity="0.45"></ellipse>
+      </>
+    )
+  }
+
+  {
+    id === 'evidence' && (
+      <>
+        {/* Layered plane revealing a form beneath */}
+        <rect x="12" y="18" width="40" height="30" rx="10" fill={`url(#${gradId})`} opacity="0.45"></rect>
+        <rect x="16" y="22" width="32" height="24" rx="8" fill={`url(#${gradId})`} opacity="0.7"></rect>
+        <ellipse cx="32" cy="34" rx="11" ry="9" fill={`url(#${gradId})`}></ellipse>
+        <ellipse cx="28" cy="30" rx="5" ry="3.2" fill={`url(#${highlightId})`}></ellipse>
+        <path
+          class="ph-mark-edge"
+          d="M20 22h24"
+          fill="none"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          opacity="0.35"
+        ></path>
+      </>
+    )
+  }
+</svg>
