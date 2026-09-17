@@ -4,11 +4,13 @@
   "location": "Valencia, Spain",
   "email": "lucianareyes@gmail.com",
   "intro": {
-    "prefix": "A ",
-    "struck": "Berlin",
-    "afterStruck": " ",
-    "accentPhrase": "Valencia-based product designer",
-    "tail": " focused on building thoughtful, people-first products."
+    "segments": [
+      { "text": "A ", "style": "normal" },
+      { "text": "Berlin", "style": "struck" },
+      { "text": " ", "style": "normal" },
+      { "text": "Valencia-based product designer", "style": "accent" },
+      { "text": " focused on building thoughtful, people-first products.", "style": "normal" }
+    ]
   },
   "specializingLabel": "Specializing in:",
   "specialties": ["UX/UI", "Research", "Prototyping"],

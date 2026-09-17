@@ -4,11 +4,15 @@
   "location": "Valencia, España",
   "email": "lucianareyes@gmail.com",
   "intro": {
-    "prefix": "Una diseñadora de producto radicada en ",
-    "struck": "Berlín",
-    "afterStruck": " ",
-    "accentPhrase": "Valencia",
-    "tail": ", enfocada en crear productos reflexivos y centrados en las personas."
+    "segments": [
+      { "text": "Una ", "style": "normal" },
+      { "text": "diseñadora de producto", "style": "accent" },
+      { "text": " en ", "style": "accent" },
+      { "text": "Berlín", "style": "struck" },
+      { "text": " ", "style": "normal" },
+      { "text": "Valencia", "style": "accent" },
+      { "text": ", enfocada en crear productos que ponen a las personas en el centro.", "style": "normal" }
+    ]
   },
   "specializingLabel": "Especializándome en:",
   "specialties": ["UX/UI", "Investigación", "Prototipado"],
