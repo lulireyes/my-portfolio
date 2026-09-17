@@ -50,24 +50,28 @@ type PhilosophyIconId = 'everyone' | 'strategy' | 'collaboration' | 'evidence';
     <hr class="divider" />
 
     <section class="shell philosophy" aria-labelledby="philosophy-heading">
-      <p class="philosophy-label">{site.philosophy.label}</p>
-      <h2 class="philosophy-title" id="philosophy-heading">{site.philosophy.title}</h2>
-      <p class="philosophy-intro">{site.philosophy.intro}</p>
-      <ul class="philosophy-list">
-        {
-          site.philosophy.items.map((item) => (
-            <li class="philosophy-item">
-              <div class="philosophy-icon" aria-hidden="true">
-                <PhilosophyIcon id={item.id as PhilosophyIconId} />
-              </div>
-              <div class="philosophy-copy">
-                <h3 class="philosophy-principle">{item.title}</h3>
-                <p class="philosophy-desc">{item.body}</p>
-              </div>
-            </li>
-          ))
-        }
-      </ul>
+      <div class="philosophy-layout">
+        <div class="philosophy-intro-col">
+          <p class="philosophy-label">{site.philosophy.label}</p>
+          <h2 class="philosophy-title" id="philosophy-heading">{site.philosophy.title}</h2>
+          <p class="philosophy-intro">{site.philosophy.intro}</p>
+        </div>
+        <ul class="philosophy-list">
+          {
+            site.philosophy.items.map((item) => (
+              <li class="philosophy-item">
+                <div class="philosophy-icon" aria-hidden="true">
+                  <PhilosophyIcon id={item.id as PhilosophyIconId} />
+                </div>
+                <div class="philosophy-copy">
+                  <h3 class="philosophy-principle">{item.title}</h3>
+                  <p class="philosophy-desc">{item.body}</p>
+                </div>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
     </section>
 
     {
