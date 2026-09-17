@@ -2,7 +2,7 @@
 title: Beelinguapp
 subtitle: Aprender idiomas de una forma que se siente menos como estudiar
 heroImage: /img/projects/beelinguapp/beelinguapp-hero.webp
-heroImageAlt: Beelinguapp — una escultura orgánica de cromo y blanco que se ramifica como una forma en crecimiento.
+heroImageAlt: Beelinguapp — bloques geométricos abstractos de cristal y metal que se encuentran en un resplandor cálido central.
 summary: Hacer que aprender idiomas se sienta menos como estudiar — una app EdTech con más de 1M de usuarios.
 overview:
   - Beelinguapp es una app de aprendizaje de idiomas basada en narrativa, usada por más de un millón de estudiantes en todo el mundo. En lugar de tratar la práctica como ejercicios repetitivos y tarjetas de memoria, el producto se apoya en historias e ilustración para que las sesiones se sientan más cercanas a la lectura que al estudio.

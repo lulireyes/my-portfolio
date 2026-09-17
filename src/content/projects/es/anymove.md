@@ -2,7 +2,7 @@
 title: AnyMove
 subtitle: Diseñar una plataforma de movilidad antes de que la plataforma existiera.
 heroImage: /img/projects/anymove/anymove-hero.webp
-heroImageAlt: AnyMove — un núcleo estructurado de cubos sostenido dentro de un anillo orbital de cristal.
+heroImageAlt: AnyMove — una escultura abstracta plateada y blanca de formas ramificadas, anillos y nodos conectados.
 summary: Crear una base de producto flexible para un servicio de movilidad en modo stealth, diseñado para crecer más allá de su primer MVP.
 overview:
   - "ANYMOVE comenzó como un proyecto stealth con una misión audaz: crear la plataforma de nueva movilidad de extremo a extremo de Europa, que hiciera posibles servicios de movilidad altamente cómodos e inclusivos para cualquier persona. En lugar de construir una única app de alquiler de vehículos, se concibió como una plataforma escalable capaz de soportar múltiples servicios, flotas diversas y formas de moverse completamente nuevas."

@@ -2,7 +2,7 @@
 title: Yoona.ai
 subtitle: Die Wertschöpfungskette der Mode durch KI und Produktdesign vereinfachen
 heroImage: /img/projects/yoona/yoona-hero.webp
-heroImageAlt: Yoona.ai — ein skulpturales weißes ‚Y‘-Emblem, geprägt in eine weiche, helle Oberfläche.
+heroImageAlt: Yoona.ai — ein skulpturales weißes ‚Y‘ mit weichen blauen Wellenformen, geprägt in eine helle Oberfläche.
 summary: Durchgängiges Redesign einer Deep-Tech-B2B-Plattform, die KI-Komplexität in einen intuitiven Weg vom Konzept bis zur realen Produktion und zum Metaverse verwandelt.
 overview:
   - "Yoona.ai ist eine Deep-Tech-B2B-Serviceplattform, die die Wertschöpfungskette der Bekleidungsindustrie vereinfachen und transformieren soll — von der ersten Konzeption bis zur realen Produktion und zum Metaverse (mit einem schlanken Workflow „3 Klicks zu Metaverse & realer Produktion“). Durch den Einsatz künstlicher Intelligenz zur Datenanalyse befähigt die Software Modemarken, margenstarke Cash-Cow-Designs zu erzeugen, Kollektionen für virtuelle Augmented-Reality-(AR-)Modenschauen vorzubereiten und Ressourcen nachhaltig zu optimieren."

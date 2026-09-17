@@ -2,7 +2,7 @@
 title: Beelinguapp
 subtitle: Sprachenlernen, das sich weniger wie Lernen anfühlt
 heroImage: /img/projects/beelinguapp/beelinguapp-hero.webp
-heroImageAlt: Beelinguapp — eine organische Skulptur aus Chrom und Weiß, die sich wie eine wachsende Form verzweigt.
+heroImageAlt: Beelinguapp — abstrakte geometrische Blöcke aus Glas und Metall, die sich in einem warmen zentralen Leuchten treffen.
 summary: Sprachenlernen soll sich weniger wie Lernen anfühlen — eine EdTech-App mit über 1 Mio. Nutzern.
 overview:
   - Beelinguapp ist eine erzählerisch geprägte Sprachlern-App, die von mehr als einer Million Lernenden weltweit genutzt wird. Statt Übung als Drills und Karteikarten zu behandeln, setzt das Produkt auf Geschichten und Illustration, sodass sich Sessions eher wie Lesen als wie Lernen anfühlen.

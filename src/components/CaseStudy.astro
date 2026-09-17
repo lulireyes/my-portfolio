@@ -161,7 +161,7 @@ function sectionMarqueeRepeats(title: string) {
         {
           hasSections ? (
             d.sections.map((section) => (
-              <section class="case-part" id={section.id} aria-labelledby={`${section.id}-title`}>
+              <section class="case-part" aria-labelledby={`${section.id}-title`}>
                 {
                   project.id === 'helpling' && (
                     <div class="case-marquee" aria-hidden="true" data-marquee-label={section.title}>
@@ -187,14 +187,14 @@ function sectionMarqueeRepeats(title: string) {
 
                 {
                   section.story && section.story.length > 0 ? (
-                    <div class="case-part-story">
+                    <div class="case-part-story" id={section.id}>
                       <h2 class="visually-hidden" id={`${section.id}-title`}>
                         {section.title}
                       </h2>
                       <CaseStory chapters={section.story} locale={locale} />
                     </div>
                   ) : (
-                    <div class="case-part-inner shell-case">
+                    <div class="case-part-inner shell-case" id={section.id}>
                       <h2 class="case-part-title" id={`${section.id}-title`}>
                         {section.title}
                       </h2>
@@ -419,5 +419,69 @@ function sectionMarqueeRepeats(title: string) {
       window.clearTimeout(marqueeResizeTimer);
       marqueeResizeTimer = window.setTimeout(fillCaseMarquees, 100);
     });
+
+    function scrollToCaseAnchor(id, behavior = 'smooth') {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.scrollIntoView({ behavior, block: 'start' });
+    }
+
+    function imagesBefore(el) {
+      return Array.from(document.querySelectorAll('.case-study img')).filter((img) => {
+        const pos = img.compareDocumentPosition(el);
+        return (pos & Node.DOCUMENT_POSITION_FOLLOWING) !== 0;
+      });
+    }
+
+    function waitForImages(images) {
+      return Promise.all(
+        images.map(
+          (img) =>
+            new Promise((resolve) => {
+              if (img.complete) {
+                resolve();
+                return;
+              }
+              img.addEventListener('load', () => resolve(), { once: true });
+              img.addEventListener('error', () => resolve(), { once: true });
+            }),
+        ),
+      );
+    }
+
+    async function alignCaseAnchor(id, behavior = 'smooth') {
+      scrollToCaseAnchor(id, behavior);
+      const target = document.getElementById(id);
+      if (!target) return;
+
+      // Lazy images above the target expand after first scroll and leave you short.
+      const pending = imagesBefore(target).filter((img) => !img.complete);
+      if (pending.length > 0) await waitForImages(pending);
+      requestAnimationFrame(() => {
+        scrollToCaseAnchor(id, 'auto');
+        // One more pass after paint / decode.
+        window.setTimeout(() => scrollToCaseAnchor(id, 'auto'), 120);
+      });
+    }
+
+    document.querySelectorAll('.case-highlight-link[href^="#"]').forEach((link) => {
+      link.addEventListener('click', (event) => {
+        const href = link.getAttribute('href');
+        if (!href || href.length < 2) return;
+        const id = decodeURIComponent(href.slice(1));
+        if (!document.getElementById(id)) return;
+        event.preventDefault();
+        history.pushState(null, '', href);
+        alignCaseAnchor(id, 'smooth');
+      });
+    });
+
+    if (location.hash.length > 1) {
+      const id = decodeURIComponent(location.hash.slice(1));
+      if (document.getElementById(id)) {
+        // Let the browser's initial jump settle, then correct for lazy layout.
+        window.setTimeout(() => alignCaseAnchor(id, 'auto'), 0);
+      }
+    }
   </script>
 </BaseLayout>

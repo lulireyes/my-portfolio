@@ -2,7 +2,7 @@
 title: AnyMove
 subtitle: Eine Mobilitätsplattform gestalten, bevor die Plattform existierte.
 heroImage: /img/projects/anymove/anymove-hero.webp
-heroImageAlt: AnyMove — ein strukturierter Kern aus Würfeln, gehalten in einem gläsernen Orbitalring.
+heroImageAlt: AnyMove — eine abstrakte silber-weiße Skulptur aus verzweigten Formen, Ringen und verbundenen Knoten.
 summary: Eine flexible Produktgrundlage für einen Mobilitätsdienst im Stealth-Modus schaffen, die über das erste MVP hinauswachsen soll.
 overview:
   - "ANYMOVE begann als Stealth-Projekt mit einer kühnen Mission: Europas durchgängige neue Mobilitätsplattform zu schaffen, die hochkomfortable und inklusive Mobilitätsdienste für alle ermöglicht. Statt nur eine einzelne App zur Fahrzeugvermietung zu bauen, wurde sie als skalierbare Plattform konzipiert, die mehrere Dienste, unterschiedliche Flotten und völlig neue Fortbewegungsformen unterstützt."
