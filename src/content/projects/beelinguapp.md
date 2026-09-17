@@ -102,7 +102,6 @@ sections:
             label: Downloads today across Apple and Android
           - value: "+20%"
             label: WAU of the flashcard function
-            note: Positive impact on overall weekly active users
           - value: "15+ days"
             label: Retention for paid and free users
           - value: Live
