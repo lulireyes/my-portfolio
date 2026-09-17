@@ -375,9 +375,9 @@ sections:
           - "The problem was not a missing feature. It was a comprehension barrier at the moment of highest intent: people needed just enough context to feel confident continuing, without slowing down the conversion path."
         pullQuote: The drop-off looked like a conversion problem. Underneath, it was a clarity problem.
         figures:
-          - src: /img/projects/helpling/helpling-growth-whiteboard-churn.jpg
-            alt: Hand-drawn whiteboard funnel diagram in red marker, grouping service friction into customer and provider problems.
-            caption: Early problem framing on the whiteboard — mapping funnel friction into customer vs. provider causes before we jumped to solutions.
+          - src: /img/projects/helpling/helpling-growth-wireflow.jpg
+            alt: Hand-drawn mobile wireflow sketches in blue ink showing Helpling onboarding and booking steps, including account and address screens.
+            caption: Discovery sketches for the onboarding and booking flow — low-fidelity wireflows used to pressure-test the funnel before high-fidelity work.
             size: md
 
       - id: gr-methodology
@@ -394,9 +394,9 @@ sections:
           - title: Contextual question marks
             body: Inline help affordances that surfaced explanations at the moment of confusion, tested alongside the core variants.
         figures:
-          - src: /img/projects/helpling/helpling-growth-wireflow.jpg
-            alt: Hand-drawn mobile wireflow sketches in blue ink showing Helpling onboarding and booking steps, including account and address screens.
-            caption: Discovery sketches for the onboarding and booking flow — low-fidelity wireflows used to pressure-test the funnel before high-fidelity work.
+          - src: /img/projects/helpling/helpling-growth-whiteboard-churn.jpg
+            alt: Hand-drawn whiteboard funnel diagram in red marker, grouping service friction into customer and provider problems.
+            caption: Early problem framing on the whiteboard — mapping funnel friction into customer vs. provider causes before we jumped to solutions.
             size: sm
           - src: /img/projects/helpling/helpling-growth-usability-session.png
             alt: Remote usability testing interface showing the Helpling Offers app beside a participant video feed with eyes barred and a session activity log.
