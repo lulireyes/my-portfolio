@@ -1,6 +1,6 @@
 import { getBase } from './paths';
 
-export const LOCALES = ['en', 'es'] as const;
+export const LOCALES = ['en', 'es', 'de'] as const;
 export type Locale = (typeof LOCALES)[number];
 export const DEFAULT_LOCALE: Locale = 'en';
 
@@ -8,16 +8,17 @@ export function isLocale(value: string): value is Locale {
   return (LOCALES as readonly string[]).includes(value);
 }
 
-/** Home URL for a locale, e.g. `/my-portfolio/` (en) or `/my-portfolio/es/` (es). */
+/** Home URL for a locale, e.g. `/my-portfolio/` (en), `/my-portfolio/es/`, `/my-portfolio/de/`. */
 export function localeHome(locale: Locale): string {
   const base = getBase();
-  return locale === DEFAULT_LOCALE ? base : `${base}es/`;
+  return locale === DEFAULT_LOCALE ? base : `${base}${locale}/`;
 }
 
 /** Human-readable label shown in the language switcher. */
 export const LOCALE_LABELS: Record<Locale, string> = {
   en: 'EN',
   es: 'ES',
+  de: 'DE',
 };
 
 /** Interface strings that live in code rather than in site content. */
@@ -39,7 +40,7 @@ export const ui: Record<Locale, UIStrings> = {
     journeyCaseStudy: 'Case study',
     allRightsReserved: 'All rights reserved.',
     switchLanguage: 'Switch language',
-    languageName: { en: 'English', es: 'Spanish' },
+    languageName: { en: 'English', es: 'Spanish', de: 'German' },
   },
   es: {
     htmlLang: 'es',
@@ -48,7 +49,16 @@ export const ui: Record<Locale, UIStrings> = {
     journeyCaseStudy: 'Caso de estudio',
     allRightsReserved: 'Todos los derechos reservados.',
     switchLanguage: 'Cambiar idioma',
-    languageName: { en: 'Inglés', es: 'Español' },
+    languageName: { en: 'Inglés', es: 'Español', de: 'Alemán' },
+  },
+  de: {
+    htmlLang: 'de',
+    viewCaseStudy: 'Case Study ansehen',
+    viewCaseStudies: 'Case Studies ansehen',
+    journeyCaseStudy: 'Case Study',
+    allRightsReserved: 'Alle Rechte vorbehalten.',
+    switchLanguage: 'Sprache wechseln',
+    languageName: { en: 'Englisch', es: 'Spanisch', de: 'Deutsch' },
   },
 };
 
