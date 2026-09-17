@@ -63,6 +63,8 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
   <body>
     <slot />
 
+    <div id="cursor-dot" class="cursor-dot" aria-hidden="true"></div>
+
     <button type="button" class="scroll-top" id="scroll-top" aria-label={backToTopLabel} title={backToTopLabel}>
       <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
         <path d="M12 19V6" />
@@ -89,6 +91,29 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
         btn.addEventListener('click', () => {
           window.scrollTo({ top: 0, behavior: prefersReduced.matches ? 'auto' : 'smooth' });
         });
+      }
+    </script>
+
+    <script>
+      const dot = document.getElementById('cursor-dot');
+      if (dot && window.matchMedia('(pointer: fine)').matches) {
+        let revealed = false;
+
+        window.addEventListener(
+          'mousemove',
+          (event) => {
+            dot.style.left = `${event.clientX}px`;
+            dot.style.top = `${event.clientY}px`;
+            if (!revealed) {
+              revealed = true;
+              dot.classList.add('is-visible');
+            }
+          },
+          { passive: true },
+        );
+
+        window.addEventListener('mousedown', () => dot.classList.add('is-clicking'));
+        window.addEventListener('mouseup', () => dot.classList.remove('is-clicking'));
       }
     </script>
   </body>
