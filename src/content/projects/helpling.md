@@ -282,8 +282,12 @@ sections:
         paragraphs:
           - "A quick product audit revealed immediate red flags: 6 versions of the primary button, 3 different icon libraries, and 0 shared documentation."
           - Designers were constantly reinventing the wheel, engineers were implementing slightly different variations of the same components, and the lack of a single source of truth created unnecessary cognitive load for everyone.
-        placeholders:
-          - "[VISUAL PLACEHOLDER — examples of inconsistent patterns across the existing product]"
+        figures:
+          - src: /img/projects/helpling/helpling-ds-product-screens.png
+            alt: Four Helpling mobile screens side by side — provider selection with Anna selected, October date picker, personalized dashboard greeting Isabela, and Help FAQ with suggested articles — showing the Design System applied across product flows.
+            caption: Design System 1.0 in product — provider selection, scheduling, dashboard, and Help, sharing one cohesive UI language.
+            tone: default
+            size: lg
 
       - id: ds-approach
         layout: strategy
@@ -315,11 +319,6 @@ sections:
           - src: /img/projects/helpling/helpling-ds-modal-component.png
             alt: Figma panels for a Modal component showing nested layer hierarchy, size and buttons properties, and nested Button variants for size, type, status, label, and icons.
             caption: Foundations under the hood — Modal component architecture with Auto Layout, properties, and nested Button variants in Figma.
-            tone: default
-            size: lg
-          - src: /img/projects/helpling/helpling-ds-product-screens.png
-            alt: Four Helpling mobile screens side by side — provider selection with Anna selected, October date picker, personalized dashboard greeting Isabela, and Help FAQ with suggested articles — showing the Design System applied across product flows.
-            caption: Design System 1.0 in product — provider selection, scheduling, dashboard, and Help, sharing one cohesive UI language.
             tone: default
             size: lg
 
