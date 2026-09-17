@@ -223,6 +223,11 @@ sections:
       - id: rc-impact
         layout: impact
         title: Impacto
+        figures:
+          - src: /video/resolution_center.mp4
+            alt: Recorrido del Resolution Center mostrando el flujo de resolución de disputas en la app de Helpling.
+            tone: bare
+            size: md
         lead: Al convertir la gestión manual de disputas en una experiencia de autoservicio escalable, la mejora de la eficiencia operativa redujo el coste operativo alemán en un 35% y disminuyó la tasa de incidencias del equipo de Operaciones alemán, a la vez que cambiaba dónde se necesitaba la capacidad humana.
         pullQuote: El resultado no fue solo una mejor experiencia de cliente. Redujo la tasa de incidencias del equipo de Operaciones alemán y cambió dónde se necesitaba la capacidad operativa humana.
         metrics:
@@ -485,4 +490,9 @@ sections:
         lead: ¿Te interesa el pensamiento detrás de este proyecto? Escríbeme para saber más.
         contactHref: "mailto:lucianareyes@gmail.com"
         contactLabel: lucianareyes@gmail.com
+        figures:
+          - src: /video/modal.mp4
+            alt: Flow animado de How Helpling Works — explorar cleaner, revisión, confirmación y cancelar o reprogramar.
+            tone: bare
+            size: md
 ---

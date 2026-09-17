@@ -1,0 +1,72 @@
+---
+/**
+ * Shared lightbox for case-study images. One instance per page is enough.
+ */
+interface Props {
+  closeLabel: string;
+}
+
+const { closeLabel } = Astro.props;
+---
+
+<dialog class="image-lightbox" id="image-lightbox" aria-label={closeLabel}>
+  <button type="button" class="image-lightbox-close" data-lightbox-close aria-label={closeLabel}>
+    <span aria-hidden="true">×</span>
+  </button>
+  <img class="image-lightbox-img" alt="" />
+</dialog>
+
+<script>
+  const ATTR = 'data-lightbox-bound';
+
+  function bindLightbox() {
+    const dialog = document.getElementById('image-lightbox') as HTMLDialogElement | null;
+    if (!dialog) return;
+
+    const img = dialog.querySelector<HTMLImageElement>('.image-lightbox-img');
+    if (!img) return;
+
+    const openFrom = (trigger: HTMLElement) => {
+      const src = trigger.getAttribute('data-lightbox-src');
+      if (!src) return;
+      img.src = src;
+      img.alt = trigger.getAttribute('data-lightbox-alt') || '';
+      if (typeof dialog.showModal === 'function') dialog.showModal();
+      else dialog.setAttribute('open', '');
+      document.documentElement.classList.add('lightbox-open');
+    };
+
+    const close = () => {
+      if (dialog.open) dialog.close();
+      document.documentElement.classList.remove('lightbox-open');
+      img.removeAttribute('src');
+      img.alt = '';
+    };
+
+    if (!dialog.hasAttribute(ATTR)) {
+      dialog.setAttribute(ATTR, '');
+      dialog.addEventListener('click', (event) => {
+        const target = event.target as HTMLElement;
+        if (target === dialog || target.closest('[data-lightbox-close]')) close();
+      });
+      dialog.addEventListener('cancel', (event) => {
+        event.preventDefault();
+        close();
+      });
+      dialog.addEventListener('close', () => {
+        document.documentElement.classList.remove('lightbox-open');
+        img.removeAttribute('src');
+        img.alt = '';
+      });
+    }
+
+    document.querySelectorAll<HTMLElement>('[data-lightbox-src]').forEach((trigger) => {
+      if (trigger.hasAttribute(ATTR)) return;
+      trigger.setAttribute(ATTR, '');
+      trigger.addEventListener('click', () => openFrom(trigger));
+    });
+  }
+
+  bindLightbox();
+  document.addEventListener('astro:page-load', bindLightbox);
+</script>

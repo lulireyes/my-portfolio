@@ -223,6 +223,11 @@ sections:
       - id: rc-impact
         layout: impact
         title: Impact
+        figures:
+          - src: /video/resolution_center.mp4
+            alt: Resolution Center product walkthrough showing the dispute resolution flow in the Helpling app.
+            tone: bare
+            size: md
         lead: By turning manual dispute handling into a scalable self-service experience, improving operational efficiency reduced German operational cost by 35% and lowered the incident rate for the German Operations Team, while shifting where human capacity was needed.
         pullQuote: The result wasn't just a better customer experience. It reduced the incident rate for the German Operations Team and changed where human operational capacity was needed.
         metrics:
@@ -485,4 +490,9 @@ sections:
         lead: Interested in the thinking behind this project? Reach out to learn more.
         contactHref: "mailto:lucianareyes@gmail.com"
         contactLabel: lucianareyes@gmail.com
+        figures:
+          - src: /video/modal.mp4
+            alt: Animated How Helpling Works flow — browse a cleaner, review, confirmation, then cancel or reschedule.
+            tone: bare
+            size: md
 ---

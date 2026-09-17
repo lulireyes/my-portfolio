@@ -1,0 +1,80 @@
+---
+/**
+ * Lazy-loaded video that plays when it enters the viewport (muted + loop).
+ * Source is applied only when near/visible so the file is not fetched eagerly.
+ */
+import { withBase } from '../lib/paths';
+
+interface Props {
+  src: string;
+  alt: string;
+  class?: string;
+}
+
+const { src, alt, class: className } = Astro.props;
+const url = withBase(src);
+---
+
+<video
+  class:list={['lazy-autoplay-video', className]}
+  data-lazy-autoplay
+  data-src={url}
+  muted
+  playsinline
+  loop
+  preload="none"
+  aria-label={alt}
+></video>
+
+<script>
+  const ATTR = 'data-lazy-autoplay-bound';
+
+  function prefersReducedMotion() {
+    return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  }
+
+  function ensureSource(video: HTMLVideoElement) {
+    const src = video.dataset.src;
+    if (!src) return;
+    if (video.getAttribute('src') === src) return;
+    video.setAttribute('src', src);
+    video.load();
+  }
+
+  function bindVideos() {
+    const videos = document.querySelectorAll<HTMLVideoElement>('video[data-lazy-autoplay]');
+    if (!videos.length) return;
+
+    if (!('IntersectionObserver' in window)) {
+      videos.forEach((video) => {
+        ensureSource(video);
+        if (!prefersReducedMotion()) video.play().catch(() => {});
+      });
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          const video = entry.target as HTMLVideoElement;
+          if (entry.isIntersecting) {
+            ensureSource(video);
+            if (!prefersReducedMotion()) video.play().catch(() => {});
+          } else {
+            video.pause();
+          }
+        }
+      },
+      { rootMargin: '120px 0px', threshold: 0.2 },
+    );
+
+    videos.forEach((video) => {
+      if (video.hasAttribute(ATTR)) return;
+      video.setAttribute(ATTR, '');
+      observer.observe(video);
+    });
+  }
+
+  bindVideos();
+  document.addEventListener('astro:page-load', bindVideos);
+</script>

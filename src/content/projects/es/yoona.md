@@ -59,9 +59,9 @@ sections:
           - El reto estratégico era traducir algoritmos complejos y análisis masivos de datos en interfaces limpias, humanas y predecibles. Esto permitía a las marcas reducir drásticamente los costes de muestras físicas, disminuir su huella de carbono y acelerar el time-to-market sin una curva de aprendizaje abrumadora.
         figures:
           - src: /img/projects/yoona/yoona-atmosphere-fashion-fabric.jpg
-            alt: Foto conceptual de moda con una figura sobre un saliente de piedra y una tela blanca translúcida ondeando contra un cielo azul despejado, con un amplio espacio crema abajo para dar aire a la composición.
+            alt: Foto conceptual de moda con una figura sobre un saliente de piedra y una tela blanca translúcida ondeando contra un cielo azul despejado.
             tone: bare
-            size: bleed
+            size: lg
 
       - id: yo-discovery
         layout: challenge
@@ -91,8 +91,11 @@ sections:
             body: Construí componentes de UI modulares específicamente adaptados a la manipulación de activos 3D y la visualización de datos, sentando las bases de un sistema de diseño de plataforma escalable.
           - title: Dirección visual
             body: Infundí un lenguaje visual fresco y refinado que alejó a Yoona.ai del aspecto estéril del software empresarial tradicional, alineándose con la estética sofisticada de la industria de la moda sin renunciar a un estricto rigor técnico.
-        placeholders:
-          - "[IMAGE PLACEHOLDER — componentes del sistema de diseño / UI de visualización 3D y de datos]"
+        figures:
+          - src: /video/yoona.mp4
+            alt: Sistema de diseño de Yoona.ai en movimiento — UI modular para manipulación 3D y visualización de datos.
+            tone: bare
+            size: lg
 
       - id: yo-prototyping
         layout: challenge

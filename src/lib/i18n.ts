@@ -54,6 +54,8 @@ type CaseStudyStrings = {
   customerProvider: string;
   ctaLead: string;
   ctaLink: string;
+  expandImage: string;
+  closeLightbox: string;
 };
 
 /** Interface strings that live in code rather than in site content. */
@@ -109,6 +111,8 @@ export const ui: Record<Locale, UIStrings> = {
       customerProvider: 'Customer + Provider',
       ctaLead: 'Want to know more about this project?',
       ctaLink: 'Let’s chat.',
+      expandImage: 'View larger image',
+      closeLightbox: 'Close image',
     },
   },
   es: {
@@ -151,6 +155,8 @@ export const ui: Record<Locale, UIStrings> = {
       customerProvider: 'Cliente + Proveedor',
       ctaLead: '¿Quieres saber más sobre este proyecto?',
       ctaLink: 'Hablemos.',
+      expandImage: 'Ver imagen más grande',
+      closeLightbox: 'Cerrar imagen',
     },
   },
   de: {
@@ -193,6 +199,8 @@ export const ui: Record<Locale, UIStrings> = {
       customerProvider: 'Kunde + Anbieter',
       ctaLead: 'Möchtest du mehr über dieses Projekt erfahren?',
       ctaLink: 'Sprechen wir.',
+      expandImage: 'Größeres Bild anzeigen',
+      closeLightbox: 'Bild schließen',
     },
   },
 };

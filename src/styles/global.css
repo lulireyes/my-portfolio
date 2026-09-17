@@ -598,7 +598,7 @@ a.lang-option:focus-visible {
 }
 
 .philosophy-intro {
-  margin: 0 0 clamp(1.5rem, 3.2vh, 1.85rem);
+  margin: 0 0 clamp(1.75rem, 4vh, 2.5rem);
   max-width: 40rem;
   color: var(--color-intro);
   font-family: var(--font-sans);
@@ -608,10 +608,10 @@ a.lang-option:focus-visible {
 }
 
 .philosophy-layout {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: clamp(1.5rem, 3.2vh, 2.25rem);
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: stretch;
 }
 
 .philosophy-list {
@@ -620,20 +620,22 @@ a.lang-option:focus-visible {
   list-style: none;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.85rem 0;
+  gap: 1.85rem;
 }
 
 .philosophy-item {
   display: flex;
-  flex-direction: column;
-  gap: 0.7rem;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0.85rem 1rem;
   min-width: 0;
 }
 
 .philosophy-icon {
+  flex: 0 0 auto;
   width: 2.75rem;
   height: 2.75rem;
-  margin: 0;
+  margin: 0.1rem 0 0;
   line-height: 0;
 }
 
@@ -666,10 +668,11 @@ a.lang-option:focus-visible {
 
 .philosophy-copy {
   min-width: 0;
+  flex: 1 1 auto;
 }
 
 .philosophy-principle {
-  margin: 0 0 0.35rem;
+  margin: 0 0 0.4rem;
   font-family: var(--font-display);
   font-size: clamp(0.9375rem, 1.35vw, 1.0625rem);
   font-weight: 600;
@@ -697,60 +700,23 @@ a.lang-option:focus-visible {
 
   .philosophy-intro {
     max-width: 36rem;
+    margin-bottom: clamp(2rem, 4.5vh, 3rem);
   }
 
   .philosophy-list {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    column-gap: clamp(1.75rem, 4vw, 3rem);
-    row-gap: clamp(1.85rem, 4vh, 2.6rem);
+    column-gap: clamp(2rem, 5vw, 3.5rem);
+    row-gap: clamp(2rem, 4.5vh, 2.85rem);
+    align-items: start;
+  }
+
+  .philosophy-item {
+    gap: 0.95rem 1.15rem;
   }
 
   .philosophy-icon {
     width: 3rem;
     height: 3rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  /* Desktop: single column with the intro on top and the four principle
-     cards cascading diagonally down-left, one per row (staircase rhythm). */
-  .philosophy-layout {
-    grid-template-columns: 1fr;
-    gap: clamp(0.75rem, 1.8vh, 1.35rem);
-  }
-
-  .philosophy-intro {
-    margin-bottom: 0;
-  }
-
-  .philosophy-list {
-    grid-template-columns: 1fr;
-    column-gap: 0;
-    row-gap: clamp(0.5rem, 1.2vh, 1rem);
-  }
-
-  /* Each card is a readable column; increasing left offset from the last card
-     (flush-left) up to the first (furthest right) builds the diagonal. Offsets
-     are percentages of the container so the staircase stays proportional and the
-     widest card still fits within the shell with no horizontal overflow. */
-  .philosophy-item {
-    max-width: 28rem;
-  }
-
-  .philosophy-item:nth-child(1) {
-    margin-left: 50%;
-  }
-
-  .philosophy-item:nth-child(2) {
-    margin-left: 34%;
-  }
-
-  .philosophy-item:nth-child(3) {
-    margin-left: 17%;
-  }
-
-  .philosophy-item:nth-child(4) {
-    margin-left: 0;
   }
 
   .philosophy-principle {
@@ -759,7 +725,7 @@ a.lang-option:focus-visible {
 
   .philosophy-desc {
     font-size: 0.90625rem;
-    max-width: 100%;
+    max-width: none;
   }
 }
 
@@ -2553,6 +2519,81 @@ html[data-theme='light'] .journey-tags li {
   max-width: min(100%, 40rem);
 }
 
+/* CTA phone strip: force one row of five (beats .rc-figure-gallery 2-col) */
+.rc-figure-gallery.rc-figure-gallery--row {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(0.35rem, 1vw, 0.75rem);
+  width: 100%;
+  max-width: none;
+  margin: 0 0 clamp(3.5rem, 8vh, 5.5rem);
+  align-items: start;
+}
+
+.rc-figure-gallery.rc-figure-gallery--row .rc-figure,
+.rc-figure-gallery.rc-figure-gallery--row .rc-figure--sm {
+  max-width: none;
+  width: 100%;
+  margin: 0;
+}
+
+.rc-figure-gallery.rc-figure-gallery--row .rc-figure-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Single animated flow media above Growth CTA */
+#gr-cta .rc-figure-stack {
+  margin: 0 0 clamp(3.5rem, 8vh, 5.5rem);
+}
+
+#gr-cta .rc-figure--md {
+  max-width: min(100%, 18rem);
+}
+
+#gr-cta .lazy-autoplay-video,
+#gr-cta .rc-figure-frame video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Resolution Center walkthrough before Impact */
+#rc-impact .rc-figure-stack {
+  margin: 0 0 clamp(2.5rem, 6vh, 4rem);
+}
+
+#rc-impact .rc-figure--md {
+  max-width: min(100%, 18rem);
+}
+
+#rc-impact .lazy-autoplay-video,
+#rc-impact .rc-figure-frame video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Yoona design-system walkthrough */
+#yo-design-system .rc-figure-stack {
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+#yo-design-system .rc-figure,
+#yo-design-system .rc-figure--lg {
+  max-width: 100%;
+  width: 100%;
+}
+
+#yo-design-system .lazy-autoplay-video,
+#yo-design-system .rc-figure-frame video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .rc-figure {
   margin: 0;
   width: 100%;
@@ -2786,6 +2827,23 @@ html[data-theme='dark'] .rc-figure--visual .rc-figure-frame img,
   background: var(--color-bg);
 }
 
+.rc-figure-zoom {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+  color: inherit;
+  text-align: left;
+}
+
+.rc-figure-zoom:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
 .rc-figure-caption {
   margin: 0.55rem 0.15rem 0;
   max-width: 36rem;
@@ -2797,10 +2855,93 @@ html[data-theme='dark'] .rc-figure--visual .rc-figure-frame img,
   color: var(--color-muted);
 }
 
+/* Case-study image lightbox */
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  width: min(100vw - 1.5rem, 96rem);
+  max-width: calc(100vw - 1.5rem);
+  height: auto;
+  max-height: calc(100vh - 1.5rem);
+  margin: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  overflow: visible;
+}
+
+.image-lightbox::backdrop {
+  background: color-mix(in srgb, #0a0a0a 82%, transparent);
+  backdrop-filter: blur(6px);
+}
+
+.image-lightbox-img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(96vw, 96rem);
+  max-height: calc(100vh - 2.5rem);
+  margin: 0 auto;
+  object-fit: contain;
+  border-radius: 0.25rem;
+  box-shadow: 0 24px 80px -28px rgba(0, 0, 0, 0.75);
+  background: var(--color-bg-elevated);
+}
+
+.image-lightbox-close {
+  position: fixed;
+  top: max(0.75rem, env(safe-area-inset-top));
+  right: max(0.75rem, env(safe-area-inset-right));
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-bg-elevated) 88%, transparent);
+  color: var(--color-ink);
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.image-lightbox-close:hover {
+  background: var(--color-bg-elevated);
+}
+
+.image-lightbox-close:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+html.lightbox-open {
+  overflow: hidden;
+}
+
 @media (max-width: 640px) {
   .rc-figure-gallery {
     grid-template-columns: 1fr;
     max-width: min(100%, 28rem);
+  }
+
+  .rc-figure-gallery.rc-figure-gallery--row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0.55rem;
+    max-width: none;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    padding-bottom: 0.35rem;
+  }
+
+  .rc-figure-gallery.rc-figure-gallery--row .rc-figure {
+    flex: 0 0 34%;
+    min-width: 6.5rem;
   }
 
   .rc-figure--process .rc-figure-frame,

@@ -3,8 +3,9 @@
  * Editorial deep-dive chapters for multi-part case studies (e.g. Resolution Center).
  * Layout variants create visual rhythm — not a repeating card template.
  */
-import { withBase } from '../lib/paths';
 import { t, type Locale } from '../lib/i18n';
+import CaseFigure from './CaseFigure.astro';
+import ImageLightbox from './ImageLightbox.astro';
 
 interface Perspective {
   title: string;
@@ -103,11 +104,6 @@ interface Props {
 const { chapters, locale = 'en' } = Astro.props;
 const cs = t(locale).caseStudy;
 
-function figureClasses(fig: StoryFigure, extra = '') {
-  const tone = fig.tone ?? 'process';
-  const size = fig.size ?? 'md';
-  return ['rc-figure', `rc-figure--${tone}`, `rc-figure--${size}`, extra].filter(Boolean).join(' ');
-}
 ---
 
 <div class="rc-story">
@@ -125,12 +121,7 @@ function figureClasses(fig: StoryFigure, extra = '') {
             {(ch.figures?.length ?? 0) > 0 ? (
               <div class:list={['rc-figure-stack', { 'rc-figure-gallery': (ch.figures?.length ?? 0) > 1 }]}>
                 {ch.figures?.map((fig) => (
-                  <figure class={figureClasses(fig, 'rc-figure--hero')}>
-                    <div class="rc-figure-frame">
-                      <img src={withBase(fig.src)} alt={fig.alt} loading="lazy" decoding="async" />
-                    </div>
-                    {fig.caption && <figcaption class="rc-figure-caption">{fig.caption}</figcaption>}
-                  </figure>
+                  <CaseFigure fig={fig} extraClass="rc-figure--hero" expandLabel={cs.expandImage} />
                 ))}
               </div>
             ) : (
@@ -209,12 +200,7 @@ function figureClasses(fig: StoryFigure, extra = '') {
             {(ch.figures?.length ?? 0) > 0 ? (
               <div class:list={['rc-figure-stack', { 'rc-figure-gallery': (ch.figures?.length ?? 0) > 1 }]}>
                 {ch.figures?.map((fig) => (
-                  <figure class={figureClasses(fig)}>
-                    <div class="rc-figure-frame">
-                      <img src={withBase(fig.src)} alt={fig.alt} loading="lazy" decoding="async" />
-                    </div>
-                    {fig.caption && <figcaption class="rc-figure-caption">{fig.caption}</figcaption>}
-                  </figure>
+                  <CaseFigure fig={fig} expandLabel={cs.expandImage} />
                 ))}
               </div>
             ) : (
@@ -250,12 +236,7 @@ function figureClasses(fig: StoryFigure, extra = '') {
             {(ch.figures?.length ?? 0) > 0 && (
               <div class:list={['rc-figure-stack', { 'rc-figure-gallery': (ch.figures?.length ?? 0) > 1 }]}>
                 {ch.figures?.map((fig) => (
-                  <figure class={figureClasses(fig)}>
-                    <div class="rc-figure-frame">
-                      <img src={withBase(fig.src)} alt={fig.alt} loading="lazy" decoding="async" />
-                    </div>
-                    {fig.caption && <figcaption class="rc-figure-caption">{fig.caption}</figcaption>}
-                  </figure>
+                  <CaseFigure fig={fig} expandLabel={cs.expandImage} />
                 ))}
               </div>
             )}
@@ -281,12 +262,7 @@ function figureClasses(fig: StoryFigure, extra = '') {
               {(ch.figures?.length ?? 0) > 0 ? (
                 <div class:list={['rc-figure-stack', { 'rc-figure-gallery': (ch.figures?.length ?? 0) > 1 }]}>
                   {ch.figures?.map((fig) => (
-                    <figure class={figureClasses(fig)}>
-                      <div class="rc-figure-frame">
-                        <img src={withBase(fig.src)} alt={fig.alt} loading="lazy" decoding="async" />
-                      </div>
-                      {fig.caption && <figcaption class="rc-figure-caption">{fig.caption}</figcaption>}
-                    </figure>
+                    <CaseFigure fig={fig} expandLabel={cs.expandImage} />
                   ))}
                 </div>
               ) : (
@@ -334,12 +310,7 @@ function figureClasses(fig: StoryFigure, extra = '') {
             {(ch.figures?.length ?? 0) > 0 && (
               <div class:list={['rc-figure-stack', { 'rc-figure-gallery': (ch.figures?.length ?? 0) > 1 }]}>
                 {ch.figures?.map((fig) => (
-                  <figure class={figureClasses(fig)}>
-                    <div class="rc-figure-frame">
-                      <img src={withBase(fig.src)} alt={fig.alt} loading="lazy" decoding="async" />
-                    </div>
-                    {fig.caption && <figcaption class="rc-figure-caption">{fig.caption}</figcaption>}
-                  </figure>
+                  <CaseFigure fig={fig} expandLabel={cs.expandImage} />
                 ))}
               </div>
             )}
@@ -365,12 +336,7 @@ function figureClasses(fig: StoryFigure, extra = '') {
             {(ch.figures?.length ?? 0) > 0 ? (
               <div class:list={['rc-figure-stack', { 'rc-figure-gallery': (ch.figures?.length ?? 0) > 1 }]}>
                 {ch.figures?.map((fig) => (
-                  <figure class={figureClasses(fig)}>
-                    <div class="rc-figure-frame">
-                      <img src={withBase(fig.src)} alt={fig.alt} loading="lazy" decoding="async" />
-                    </div>
-                    {fig.caption && <figcaption class="rc-figure-caption">{fig.caption}</figcaption>}
-                  </figure>
+                  <CaseFigure fig={fig} expandLabel={cs.expandImage} />
                 ))}
               </div>
             ) : (
@@ -407,12 +373,7 @@ function figureClasses(fig: StoryFigure, extra = '') {
               <div class="shell-case">
                 <div class:list={['rc-figure-stack', { 'rc-figure-gallery': (ch.figures?.length ?? 0) > 1 }]}>
                   {ch.figures?.map((fig) => (
-                    <figure class={figureClasses(fig)}>
-                      <div class="rc-figure-frame">
-                        <img src={withBase(fig.src)} alt={fig.alt} loading="lazy" decoding="async" />
-                      </div>
-                      {fig.caption && <figcaption class="rc-figure-caption">{fig.caption}</figcaption>}
-                    </figure>
+                    <CaseFigure fig={fig} expandLabel={cs.expandImage} />
                   ))}
                 </div>
               </div>
@@ -494,12 +455,7 @@ function figureClasses(fig: StoryFigure, extra = '') {
             {(ch.figures?.length ?? 0) > 0 && (
               <div class:list={['rc-figure-stack', { 'rc-figure-gallery': (ch.figures?.length ?? 0) > 1 }]}>
                 {ch.figures?.map((fig) => (
-                  <figure class={figureClasses(fig)}>
-                    <div class="rc-figure-frame">
-                      <img src={withBase(fig.src)} alt={fig.alt} loading="lazy" decoding="async" />
-                    </div>
-                    {fig.caption && <figcaption class="rc-figure-caption">{fig.caption}</figcaption>}
-                  </figure>
+                  <CaseFigure fig={fig} expandLabel={cs.expandImage} />
                 ))}
               </div>
             )}
@@ -509,19 +465,7 @@ function figureClasses(fig: StoryFigure, extra = '') {
                   <h4 class="rc-solution-title">{sol.title}</h4>
                   {sol.body && <p class="rc-body">{sol.body}</p>}
                   {sol.figure && (
-                    <figure class={figureClasses(sol.figure, 'rc-figure--solution')}>
-                      <div class="rc-figure-frame">
-                        <img
-                          src={withBase(sol.figure.src)}
-                          alt={sol.figure.alt}
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      </div>
-                      {sol.figure.caption && (
-                        <figcaption class="rc-figure-caption">{sol.figure.caption}</figcaption>
-                      )}
-                    </figure>
+                    <CaseFigure fig={sol.figure} extraClass="rc-figure--solution" expandLabel={cs.expandImage} />
                   )}
                 </article>
               ))}
@@ -548,12 +492,7 @@ function figureClasses(fig: StoryFigure, extra = '') {
             {(ch.figures?.length ?? 0) > 0 ? (
               <div class:list={['rc-figure-stack', { 'rc-figure-gallery': (ch.figures?.length ?? 0) > 1 }]}>
                 {ch.figures?.map((fig) => (
-                  <figure class={figureClasses(fig)}>
-                    <div class="rc-figure-frame">
-                      <img src={withBase(fig.src)} alt={fig.alt} loading="lazy" decoding="async" />
-                    </div>
-                    {fig.caption && <figcaption class="rc-figure-caption">{fig.caption}</figcaption>}
-                  </figure>
+                  <CaseFigure fig={fig} expandLabel={cs.expandImage} />
                 ))}
               </div>
             ) : (
@@ -568,6 +507,13 @@ function figureClasses(fig: StoryFigure, extra = '') {
 
         {ch.layout === 'impact' && (
           <div class="rc-impact shell-case">
+            {(ch.figures?.length ?? 0) > 0 && (
+              <div class:list={['rc-figure-stack', { 'rc-figure-gallery': (ch.figures?.length ?? 0) > 1 }]}>
+                {ch.figures?.map((fig) => (
+                  <CaseFigure fig={fig} expandLabel={cs.expandImage} />
+                ))}
+              </div>
+            )}
             <header class="rc-chapter-head">
               <h3 class="rc-chapter-title" id={`${ch.id}-title`}>
                 {ch.title}
@@ -616,18 +562,6 @@ function figureClasses(fig: StoryFigure, extra = '') {
                 )}
               </div>
             )}
-            {(ch.figures?.length ?? 0) > 0 && (
-              <div class:list={['rc-figure-stack', { 'rc-figure-gallery': (ch.figures?.length ?? 0) > 1 }]}>
-                {ch.figures?.map((fig) => (
-                  <figure class={figureClasses(fig)}>
-                    <div class="rc-figure-frame">
-                      <img src={withBase(fig.src)} alt={fig.alt} loading="lazy" decoding="async" />
-                    </div>
-                    {fig.caption && <figcaption class="rc-figure-caption">{fig.caption}</figcaption>}
-                  </figure>
-                ))}
-              </div>
-            )}
           </div>
         )}
 
@@ -647,6 +581,21 @@ function figureClasses(fig: StoryFigure, extra = '') {
 
         {ch.layout === 'cta' && (
           <div class="rc-cta shell-case">
+            {(ch.figures?.length ?? 0) > 0 && (
+              <div
+                class:list={[
+                  'rc-figure-stack',
+                  {
+                    'rc-figure-gallery': (ch.figures?.length ?? 0) > 1,
+                    'rc-figure-gallery--row': (ch.figures?.length ?? 0) > 1,
+                  },
+                ]}
+              >
+                {ch.figures?.map((fig) => (
+                  <CaseFigure fig={fig} expandLabel={cs.expandImage} />
+                ))}
+              </div>
+            )}
             <p class="rc-cta-lead" id={`${ch.id}-title`}>
               {cs.ctaLead}{' '}
               <a class="rc-cta-link rc-cta-link--inline" href="mailto:lucianareyes@gmail.com">
@@ -659,3 +608,5 @@ function figureClasses(fig: StoryFigure, extra = '') {
     ))
   }
 </div>
+
+<ImageLightbox closeLabel={cs.closeLightbox} />

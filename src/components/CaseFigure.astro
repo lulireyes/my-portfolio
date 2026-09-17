@@ -1,0 +1,51 @@
+---
+/**
+ * Case-study figure: images open in a lightbox; videos stay inline with lazy autoplay.
+ */
+import { withBase } from '../lib/paths';
+import LazyAutoplayVideo from './LazyAutoplayVideo.astro';
+
+export interface CaseFigureData {
+  src: string;
+  alt: string;
+  caption?: string;
+  tone?: 'process' | 'default' | 'visual' | 'bare';
+  size?: 'sm' | 'md' | 'lg' | 'full' | 'bleed';
+}
+
+interface Props {
+  fig: CaseFigureData;
+  extraClass?: string;
+  expandLabel: string;
+}
+
+const { fig, extraClass = '', expandLabel } = Astro.props;
+const tone = fig.tone ?? 'process';
+const size = fig.size ?? 'md';
+const classes = ['rc-figure', `rc-figure--${tone}`, `rc-figure--${size}`, extraClass]
+  .filter(Boolean)
+  .join(' ');
+const isVideo = /\.(mp4|webm|ogg|mov)(\?|$)/i.test(fig.src);
+const src = withBase(fig.src);
+---
+
+<figure class={classes}>
+  <div class="rc-figure-frame">
+    {
+      isVideo ? (
+        <LazyAutoplayVideo src={fig.src} alt={fig.alt} />
+      ) : (
+        <button
+          type="button"
+          class="rc-figure-zoom"
+          data-lightbox-src={src}
+          data-lightbox-alt={fig.alt}
+          aria-label={`${expandLabel}: ${fig.alt}`}
+        >
+          <img src={src} alt={fig.alt} loading="lazy" decoding="async" />
+        </button>
+      )
+    }
+  </div>
+  {fig.caption && <figcaption class="rc-figure-caption">{fig.caption}</figcaption>}
+</figure>

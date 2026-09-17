@@ -223,6 +223,11 @@ sections:
       - id: rc-impact
         layout: impact
         title: Wirkung
+        figures:
+          - src: /video/resolution_center.mp4
+            alt: Resolution-Center-Durchlauf mit dem Streitlösungsfluss in der Helpling-App.
+            tone: bare
+            size: md
         lead: Indem das Resolution Center die manuelle Streitbearbeitung in eine skalierbare Self-Service-Erfahrung verwandelte, senkte die gesteigerte operative Effizienz die deutschen Betriebskosten um 35% und verringerte die Vorfallrate für das deutsche Operations-Team, während sie zugleich verschob, wo menschliche Kapazität benötigt wurde.
         pullQuote: Das Ergebnis war nicht nur eine bessere Kundenerfahrung. Es verringerte die Vorfallrate für das deutsche Operations-Team und veränderte, wo menschliche operative Kapazität benötigt wurde.
         metrics:
@@ -485,4 +490,9 @@ sections:
         lead: Interessiert am Denken hinter diesem Projekt? Melde dich, um mehr zu erfahren.
         contactHref: "mailto:lucianareyes@gmail.com"
         contactLabel: lucianareyes@gmail.com
+        figures:
+          - src: /video/modal.mp4
+            alt: Animierter How Helpling Works Flow — Cleaner suchen, prüfen, bestätigen, stornieren oder umbuchen.
+            tone: bare
+            size: md
 ---
