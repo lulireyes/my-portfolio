@@ -161,6 +161,32 @@ sections:
         layout: solution
         title: The Solution
         lead: The Resolution Center turned those decisions into a coherent experience — organised around visibility, self-service, transparency and consistency across both sides of the marketplace.
+        figures:
+          - src: /img/projects/helpling/helpling-rc-flow-cleaner-not-here.webp
+            alt: End-to-end user flow for the customer scenario "My cleaner is not here", from reporting the problem to resolution.
+            caption: Customer flow — "My cleaner is not here", from report to resolution.
+            tone: default
+            size: full
+          - src: /img/projects/helpling/helpling-rc-flow-customer-new-issue.webp
+            alt: End-to-end user flow for a customer reporting a new issue through the Resolution Center.
+            caption: Customer reports a new issue — the end-to-end resolution flow.
+            tone: default
+            size: full
+          - src: /img/projects/helpling/helpling-rc-flow-provider-response.webp
+            alt: End-to-end user flow for a provider responding to a reported issue in the Resolution Center.
+            caption: Provider's response flow to a reported issue.
+            tone: default
+            size: full
+          - src: /img/projects/helpling/helpling-rc-flow-partial-refund-provider.webp
+            alt: Provider flow for a partial refund, triggered when the wrong duration was billed or the customer was dissatisfied with the quality.
+            caption: Provider flow — partial refund (wrong duration billed or dissatisfaction with quality).
+            tone: default
+            size: full
+          - src: /img/projects/helpling/helpling-rc-flow-full-refund-provider.webp
+            alt: Provider flow for a full refund, triggered when the cleaner didn't show, cancelled, the clean was rescheduled, or there was a double booking.
+            caption: Provider flow — full refund (cleaner didn't show, cancelled, rescheduled, or double booking).
+            tone: default
+            size: full
         solutions:
           - title: Visibility
             body: Users can understand the status of their case — where they are, what has been submitted, and what happens next — instead of waiting in an opaque process.

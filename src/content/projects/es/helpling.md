@@ -161,6 +161,32 @@ sections:
         layout: solution
         title: La solución
         lead: El Resolution Center convirtió esas decisiones en una experiencia coherente — organizada en torno a la visibilidad, el autoservicio, la transparencia y la consistencia en ambos lados del marketplace.
+        figures:
+          - src: /img/projects/helpling/helpling-rc-flow-cleaner-not-here.webp
+            alt: Flujo de usuario de principio a fin para el escenario del cliente «Mi limpiador/a no está», desde reportar el problema hasta la resolución.
+            caption: Flujo del cliente — «Mi limpiador/a no está», del reporte a la resolución.
+            tone: default
+            size: full
+          - src: /img/projects/helpling/helpling-rc-flow-customer-new-issue.webp
+            alt: Flujo de usuario de principio a fin para un cliente que reporta un problema nuevo a través del Resolution Center.
+            caption: El cliente reporta un problema nuevo — flujo de resolución de principio a fin.
+            tone: default
+            size: full
+          - src: /img/projects/helpling/helpling-rc-flow-provider-response.webp
+            alt: Flujo de usuario de principio a fin para un proveedor que responde a un problema reportado en el Resolution Center.
+            caption: Flujo de respuesta del proveedor ante un problema reportado.
+            tone: default
+            size: full
+          - src: /img/projects/helpling/helpling-rc-flow-partial-refund-provider.webp
+            alt: Flujo del proveedor para un reembolso parcial, activado cuando se facturó una duración incorrecta o el cliente quedó insatisfecho con la calidad.
+            caption: Flujo del proveedor — reembolso parcial (duración mal facturada o insatisfacción con la calidad).
+            tone: default
+            size: full
+          - src: /img/projects/helpling/helpling-rc-flow-full-refund-provider.webp
+            alt: Flujo del proveedor para un reembolso total, activado cuando el limpiador/a no se presentó, canceló, la limpieza se reprogramó o hubo una doble reserva.
+            caption: Flujo del proveedor — reembolso total (no se presentó, cancelación, reprogramación o doble reserva).
+            tone: default
+            size: full
         solutions:
           - title: Visibilidad
             body: Los usuarios pueden entender el estado de su caso — dónde están, qué se ha enviado y qué sucede a continuación — en lugar de esperar dentro de un proceso opaco.

@@ -161,6 +161,32 @@ sections:
         layout: solution
         title: Die Lösung
         lead: Das Resolution Center verwandelte diese Entscheidungen in eine kohärente Erfahrung — organisiert um Sichtbarkeit, Self-Service, Transparenz und Konsistenz über beide Seiten des Marktplatzes hinweg.
+        figures:
+          - src: /img/projects/helpling/helpling-rc-flow-cleaner-not-here.webp
+            alt: End-to-End-Nutzerflow für das Kundenszenario „Meine Reinigungskraft ist nicht da“, von der Meldung des Problems bis zur Lösung.
+            caption: Kundenflow — „Meine Reinigungskraft ist nicht da“, von der Meldung bis zur Lösung.
+            tone: default
+            size: full
+          - src: /img/projects/helpling/helpling-rc-flow-customer-new-issue.webp
+            alt: End-to-End-Nutzerflow für eine:n Kund:in, der:die über das Resolution Center ein neues Problem meldet.
+            caption: Kunde meldet ein neues Problem — der End-to-End-Lösungsflow.
+            tone: default
+            size: full
+          - src: /img/projects/helpling/helpling-rc-flow-provider-response.webp
+            alt: End-to-End-Nutzerflow für Dienstleister:innen, die auf ein gemeldetes Problem im Resolution Center reagieren.
+            caption: Antwortflow der Dienstleister:innen auf ein gemeldetes Problem.
+            tone: default
+            size: full
+          - src: /img/projects/helpling/helpling-rc-flow-partial-refund-provider.webp
+            alt: Dienstleister-Flow für eine Teilerstattung, ausgelöst, wenn die falsche Dauer berechnet wurde oder der:die Kund:in mit der Qualität unzufrieden war.
+            caption: Dienstleister-Flow — Teilerstattung (falsche Dauer berechnet oder Unzufriedenheit mit der Qualität).
+            tone: default
+            size: full
+          - src: /img/projects/helpling/helpling-rc-flow-full-refund-provider.webp
+            alt: Dienstleister-Flow für eine vollständige Erstattung, ausgelöst, wenn die Reinigungskraft nicht erschien, stornierte, die Reinigung verschoben wurde oder es eine Doppelbuchung gab.
+            caption: Dienstleister-Flow — vollständige Erstattung (nicht erschienen, storniert, verschoben oder Doppelbuchung).
+            tone: default
+            size: full
         solutions:
           - title: Sichtbarkeit
             body: Nutzer können den Status ihres Falls verstehen — wo sie stehen, was eingereicht wurde und was als Nächstes passiert — statt in einem undurchsichtigen Prozess zu warten.
