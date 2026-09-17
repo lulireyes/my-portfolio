@@ -399,6 +399,81 @@ a.lang-option:focus-visible {
   font-weight: 600;
 }
 
+/* ——— Back-to-top floating bubble ——— */
+.scroll-top {
+  position: fixed;
+  left: 50%;
+  bottom: clamp(1.25rem, 4vh, 2rem);
+  margin-left: -1.375rem;
+  z-index: 60;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 1px solid var(--color-line);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-bg-elevated) 90%, transparent);
+  color: var(--color-ink);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px) scale(0.9);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(8px);
+  transition:
+    opacity 0.25s var(--ease-out),
+    transform 0.25s var(--ease-out),
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.scroll-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.scroll-top:hover {
+  color: var(--color-accent);
+  border-color: color-mix(in srgb, var(--color-accent) 55%, var(--color-line));
+}
+
+.scroll-top:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.scroll-top:active {
+  transform: translateY(0) scale(0.94);
+}
+
+.scroll-top svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-top {
+    transform: none;
+    transition:
+      opacity 0.2s ease,
+      visibility 0.2s ease;
+  }
+
+  .scroll-top.is-visible {
+    transform: none;
+  }
+}
+
 /* ——— Intro (editorial hero) ——— */
 .intro {
   text-align: left;
