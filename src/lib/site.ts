@@ -1,5 +1,6 @@
 import enSite from '../content/site.json';
 import esSite from '../content/site.es.json';
+import deSite from '../content/site.de.json';
 import { DEFAULT_LOCALE, type Locale } from './i18n';
 
 type WorkCardOverride = { summary?: string };
@@ -11,6 +12,7 @@ export type SiteConfig = typeof enSite & {
 const sites: Record<Locale, SiteConfig> = {
   en: enSite as SiteConfig,
   es: esSite as unknown as SiteConfig,
+  de: deSite as unknown as SiteConfig,
 };
 
 /** Homepage/chrome content for a locale (falls back to the default locale). */

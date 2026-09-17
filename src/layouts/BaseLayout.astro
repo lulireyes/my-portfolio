@@ -14,7 +14,8 @@ const {
   lang = 'en',
 } = Astro.props;
 
-const backToTopLabel = lang === 'es' ? 'Volver arriba' : 'Back to top';
+const backToTopLabel =
+  lang === 'es' ? 'Volver arriba' : lang === 'de' ? 'Nach oben' : 'Back to top';
 
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 ---
