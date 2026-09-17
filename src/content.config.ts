@@ -151,9 +151,7 @@ const caseSection = z.object({
   story: z.array(storyChapter).optional(),
 });
 
-const projects = defineCollection({
-  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/projects' }),
-  schema: z.object({
+const projectSchema = z.object({
     title: z.string(),
     subtitle: z.string().optional(),
     /** Short homepage card summary */
@@ -200,7 +198,21 @@ const projects = defineCollection({
      * Useful for Behance / Medium pieces.
      */
     externalUrl: z.string().url().optional(),
-  }),
 });
 
-export const collections = { projects };
+const projects = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/projects/en' }),
+  schema: projectSchema,
+});
+
+const projectsEs = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/projects/es' }),
+  schema: projectSchema,
+});
+
+const projectsDe = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/projects/de' }),
+  schema: projectSchema,
+});
+
+export const collections = { projects, projectsEs, projectsDe };
