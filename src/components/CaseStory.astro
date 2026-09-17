@@ -147,7 +147,7 @@ function figureClasses(fig: StoryFigure, extra = '') {
                 {ch.title}
               </h3>
             </header>
-            <div class="rc-overview-grid">
+            <div class:list={['rc-overview-grid', { 'rc-overview-grid--no-role': !(ch.roleLine || ch.responsibilities) }]}>
               <div class="rc-overview-col">
                 <h4 class="rc-subhead">{ch.contextLabel ?? 'Context'}</h4>
                 {ch.paragraphs?.map((p) => (
@@ -168,13 +168,15 @@ function figureClasses(fig: StoryFigure, extra = '') {
                   </ul>
                 )}
               </div>
-              <div class="rc-overview-col rc-overview-col--role">
-                <h4 class="rc-subhead">{ch.roleLabel ?? 'My role'}</h4>
-                {ch.roleLine && <p class="rc-body">{ch.roleLine}</p>}
-                {ch.responsibilities && (
-                  <p class="rc-responsibilities">{ch.responsibilities}</p>
-                )}
-              </div>
+              {(ch.roleLine || ch.responsibilities) && (
+                <div class="rc-overview-col rc-overview-col--role">
+                  <h4 class="rc-subhead">{ch.roleLabel ?? 'My role'}</h4>
+                  {ch.roleLine && <p class="rc-body">{ch.roleLine}</p>}
+                  {ch.responsibilities && (
+                    <p class="rc-responsibilities">{ch.responsibilities}</p>
+                  )}
+                </div>
+              )}
             </div>
           </div>
         )}

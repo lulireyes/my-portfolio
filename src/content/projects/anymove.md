@@ -28,7 +28,8 @@ sections:
     story:
       - id: am-hero
         layout: hero
-        title: Designing a mobility platform before the platform existed.
+        title: AnyMove
+        tagline: Designing a mobility platform before the platform existed.
         impactLine: Creating a flexible product foundation for a stealth mobility service designed to grow beyond its first MVP.
         figures:
           - src: /img/projects/anymove/anymove-home-make-your-next-move.png
@@ -42,12 +43,26 @@ sections:
         title: Overview
         contextLabel: Context
         challengeLabel: The challenge
-        roleLabel: My Role & Responsibilities
         paragraphs:
           - "ANYMOVE started as a stealth project with a bold mission: to create Europe’s end-to-end new mobility platform enabling highly convenient and inclusive mobility services for anyone. Rather than building just a single vehicle rental app, it was designed as a scalable platform to support multiple services, diverse fleets, and entirely new ways of moving."
         lead: How do you create an experience that feels consistent today while leaving room for services that don't exist yet? Working closely with Product, Marketing, and Engineering, I helped design the MVP from the ground up across web and desktop apps.
-        roleLine: "Role: Product Designer (working alongside founders, engineering, and marketing during the MVP phase)"
-        responsibilities: "Responsibilities: Discovery, qualitative user interviews, competitor research, user journeys, wireframes, visual design, redesigning the web and desktop app, creation of Design System components and principles, prototyping & testing, and iteration."
+
+      - id: am-role
+        layout: system
+        title: My Role & Responsibilities
+        roleLabel: My Role & Responsibilities
+        lead: "Role: Product Designer (working alongside founders, engineering, and marketing during the MVP phase)"
+        bullets:
+          - Discovery
+          - Qualitative user interviews
+          - Competitor research
+          - User journeys
+          - Wireframes
+          - Visual design
+          - Redesigning the web and desktop app
+          - Creation of Design System components and principles
+          - Prototyping & testing
+          - Iteration
 
       - id: am-challenge
         layout: challenge
@@ -131,10 +146,12 @@ sections:
         paragraphs:
           - Designing an MVP isn't about finding the perfect solution on day one; it's about creating the right foundation. The most valuable output wasn't just a screen, but building an experience and a systemic design foundation flexible enough to evolve.
 
-      - id: am-cta
+      - id: am-closing
         layout: cta
-        title: Get in touch
-        lead: Interested in the thinking behind this project? Reach out to learn more.
+        title: Confidentiality
+        contactInline: true
+        lead: "Some specifics of this project are password-protected or restricted due to confidentiality. If you’re intrigued by the problem space,"
         contactHref: "mailto:lucianareyes@gmail.com"
-        contactLabel: lucianareyes@gmail.com
+        contactLabel: hit me up and let’s chat
+        contactSuffix: "."
 ---
