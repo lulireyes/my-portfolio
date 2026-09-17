@@ -73,10 +73,10 @@ sections:
       - id: rc-outcomes
         layout: impact
         title: Outcomes
-        lead: Turning manual dispute handling into a scalable self-service experience changed both the cost structure of resolution and how independently users could move through it.
+        lead: Turning manual dispute handling into a scalable self-service experience improved operational efficiency — reducing German operational cost by 35% and lowering the incident rate for the German Operations Team — while changing how independently users could move through resolution.
         metrics:
           - value: 35%
-            label: reduction in operational support costs
+            label: reduction in German operational cost
             verified: true
           - value: 91%
             label: self-service adoption
@@ -223,11 +223,11 @@ sections:
       - id: rc-impact
         layout: impact
         title: Impact
-        lead: By turning manual dispute handling into a scalable self-service experience, the Resolution Center reduced operational support cost while shifting where human capacity was needed.
-        pullQuote: The result wasn't just a better customer experience. It changed where human operational capacity was needed.
+        lead: By turning manual dispute handling into a scalable self-service experience, improving operational efficiency reduced German operational cost by 35% and lowered the incident rate for the German Operations Team, while shifting where human capacity was needed.
+        pullQuote: The result wasn't just a better customer experience. It reduced the incident rate for the German Operations Team and changed where human operational capacity was needed.
         metrics:
           - value: 35%
-            label: reduction in operational support costs
+            label: reduction in German operational cost
             verified: true
           - value: 91%
             label: self-service adoption

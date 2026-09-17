@@ -73,10 +73,10 @@ sections:
       - id: rc-outcomes
         layout: impact
         title: Ergebnisse
-        lead: Die manuelle Streitbearbeitung in eine skalierbare Self-Service-Erfahrung zu verwandeln veränderte sowohl die Kostenstruktur der Lösung als auch, wie eigenständig Nutzer sie durchlaufen konnten.
+        lead: Die manuelle Streitbearbeitung in eine skalierbare Self-Service-Erfahrung zu verwandeln steigerte die operative Effizienz — senkte die deutschen Betriebskosten um 35% und verringerte die Vorfallrate für das deutsche Operations-Team — und veränderte zugleich, wie eigenständig Nutzer die Lösung durchlaufen konnten.
         metrics:
           - value: 35%
-            label: Reduktion der operativen Supportkosten
+            label: Reduktion der deutschen Betriebskosten
             verified: true
           - value: 91%
             label: Self-Service-Adoption
@@ -223,11 +223,11 @@ sections:
       - id: rc-impact
         layout: impact
         title: Wirkung
-        lead: Indem das Resolution Center die manuelle Streitbearbeitung in eine skalierbare Self-Service-Erfahrung verwandelte, senkte es die operativen Supportkosten und verschob zugleich, wo menschliche Kapazität benötigt wurde.
-        pullQuote: Das Ergebnis war nicht nur eine bessere Kundenerfahrung. Es veränderte, wo menschliche operative Kapazität benötigt wurde.
+        lead: Indem das Resolution Center die manuelle Streitbearbeitung in eine skalierbare Self-Service-Erfahrung verwandelte, senkte die gesteigerte operative Effizienz die deutschen Betriebskosten um 35% und verringerte die Vorfallrate für das deutsche Operations-Team, während sie zugleich verschob, wo menschliche Kapazität benötigt wurde.
+        pullQuote: Das Ergebnis war nicht nur eine bessere Kundenerfahrung. Es verringerte die Vorfallrate für das deutsche Operations-Team und veränderte, wo menschliche operative Kapazität benötigt wurde.
         metrics:
           - value: 35%
-            label: Reduktion der operativen Supportkosten
+            label: Reduktion der deutschen Betriebskosten
             verified: true
           - value: 91%
             label: Self-Service-Adoption
