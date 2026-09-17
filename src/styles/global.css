@@ -3029,3 +3029,77 @@ a.case-footer-value:hover {
     transition: none !important;
   }
 }
+
+/* ——— Custom minimal cursor (mouse devices only) ——— */
+.cursor-dot {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  border: 1px solid rgba(17, 17, 17, 0.8);
+  pointer-events: none;
+  opacity: 0;
+  transition:
+    transform 0.12s ease,
+    opacity 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+  will-change: left, top, transform;
+}
+
+.cursor-dot.is-visible {
+  opacity: 1;
+}
+
+.cursor-dot.is-clicking {
+  transform: translate(-50%, -50%) scale(0.7);
+}
+
+[data-theme='dark'] .cursor-dot {
+  background: #161616;
+  border-color: rgba(255, 255, 255, 0.85);
+}
+
+@media (pointer: fine) {
+  html,
+  body {
+    cursor: none;
+  }
+
+  a,
+  button,
+  [role='button'],
+  input,
+  textarea,
+  select,
+  label,
+  summary,
+  .theme-toggle,
+  .menu-toggle,
+  .lang-option {
+    cursor: none;
+  }
+
+  .cursor-dot {
+    display: block;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor-dot {
+    transition:
+      opacity 0.2s ease,
+      background 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .cursor-dot.is-clicking {
+    transform: translate(-50%, -50%);
+  }
+}
