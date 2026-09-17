@@ -8,6 +8,7 @@ import SiteFooter from '../../components/SiteFooter.astro';
 import CaseStory from '../../components/CaseStory.astro';
 import { getSite } from '../../lib/site';
 import { withBase } from '../../lib/paths';
+import { localeHome } from '../../lib/i18n';
 import { getPublishedProjectsOrThrow } from '../../lib/workProjects';
 import '../../styles/global.css';
 
@@ -27,7 +28,10 @@ interface Props {
 }
 
 const { project, projects } = Astro.props;
-const site = getSite();
+const locale = 'en' as const;
+const site = getSite(locale);
+const currentUrl = withBase(`projects/${project.id}/`);
+const langHrefs = { en: currentUrl, es: localeHome('es') };
 
 const ordered = [...projects].sort(
   (a, b) => a.data.order - b.data.order || a.data.title.localeCompare(b.data.title),
@@ -66,10 +70,11 @@ function sectionMarqueeRepeats(title: string) {
 <BaseLayout
   title={`${project.data.title} — ${site.name}`}
   description={project.data.summary ?? project.data.subtitle ?? site.seo.description}
+  lang={locale}
 >
   <div class="case-page">
-    <LocationBar />
-    <Topbar />
+    <LocationBar locale={locale} />
+    <Topbar locale={locale} langHrefs={langHrefs} />
 
     <main>
       <article class="case-study" id={project.id} data-project={project.id}>
@@ -325,7 +330,7 @@ function sectionMarqueeRepeats(title: string) {
       </article>
     </main>
 
-    <SiteFooter />
+    <SiteFooter locale={locale} />
   </div>
 
   <script>

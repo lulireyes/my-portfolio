@@ -1,0 +1,36 @@
+---
+import { LOCALES, LOCALE_LABELS, localeHome, t, type Locale } from '../lib/i18n';
+
+interface Props {
+  locale: Locale;
+  /** Explicit target URLs per locale (defaults to each locale's home). */
+  hrefs?: Partial<Record<Locale, string>>;
+}
+
+const { locale, hrefs = {} } = Astro.props;
+const strings = t(locale);
+---
+
+<div class="lang-switch" role="group" aria-label={strings.switchLanguage}>
+  {
+    LOCALES.map((code) => {
+      const isActive = code === locale;
+      const href = hrefs[code] ?? localeHome(code);
+      return isActive ? (
+        <span class="lang-option is-active" aria-current="true" lang={code}>
+          {LOCALE_LABELS[code]}
+        </span>
+      ) : (
+        <a
+          class="lang-option"
+          href={href}
+          lang={code}
+          hreflang={code}
+          aria-label={strings.languageName[code]}
+        >
+          {LOCALE_LABELS[code]}
+        </a>
+      );
+    })
+  }
+</div>
