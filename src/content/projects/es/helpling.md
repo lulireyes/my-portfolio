@@ -73,10 +73,10 @@ sections:
       - id: rc-outcomes
         layout: impact
         title: Resultados
-        lead: Convertir la gestión manual de disputas en una experiencia de autoservicio escalable cambió tanto la estructura de costes de la resolución como la independencia con la que los usuarios podían recorrerla.
+        lead: Convertir la gestión manual de disputas en una experiencia de autoservicio escalable mejoró la eficiencia operativa — reduciendo el coste operativo alemán en un 35% y disminuyendo la tasa de incidencias del equipo de Operaciones alemán — a la vez que cambiaba la independencia con la que los usuarios podían recorrer la resolución.
         metrics:
           - value: 35%
-            label: reducción de costes operativos de soporte
+            label: reducción del coste operativo alemán
             verified: true
           - value: 91%
             label: adopción del autoservicio
@@ -223,11 +223,11 @@ sections:
       - id: rc-impact
         layout: impact
         title: Impacto
-        lead: Al convertir la gestión manual de disputas en una experiencia de autoservicio escalable, el Resolution Center redujo el coste operativo de soporte a la vez que cambiaba dónde se necesitaba la capacidad humana.
-        pullQuote: El resultado no fue solo una mejor experiencia de cliente. Cambió dónde se necesitaba la capacidad operativa humana.
+        lead: Al convertir la gestión manual de disputas en una experiencia de autoservicio escalable, la mejora de la eficiencia operativa redujo el coste operativo alemán en un 35% y disminuyó la tasa de incidencias del equipo de Operaciones alemán, a la vez que cambiaba dónde se necesitaba la capacidad humana.
+        pullQuote: El resultado no fue solo una mejor experiencia de cliente. Redujo la tasa de incidencias del equipo de Operaciones alemán y cambió dónde se necesitaba la capacidad operativa humana.
         metrics:
           - value: 35%
-            label: reducción de costes operativos de soporte
+            label: reducción del coste operativo alemán
             verified: true
           - value: 91%
             label: adopción del autoservicio
