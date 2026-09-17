@@ -166,12 +166,6 @@ sections:
             body: Users can understand the status of their case — where they are, what has been submitted, and what happens next — instead of waiting in an opaque process.
           - title: Self-service
             body: Predictable disputes can be handled without agent intervention, while complex cases still route to human judgment.
-            figure:
-              src: /img/projects/helpling/helpling-rc-service-portal-issue.png
-              alt: Service-Portal create-new-request screen listing billing errors, cleaner no-show, damage during an event, and wrongful fee charge as selectable issue cards.
-              caption: Structured self-service entry — each issue type maps to a clear next action.
-              tone: default
-              size: lg
           - title: Transparency
             body: The experience communicates what information is being considered and why a path is being taken — clarity over vague legal or procedural language.
           - title: Cross-platform consistency
