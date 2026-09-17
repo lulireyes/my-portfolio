@@ -2466,6 +2466,20 @@ html[data-theme='dark'] .rc-figure--visual .rc-figure-frame img,
   filter: invert(1);
 }
 
+/* Frameless photo/screenshot: no border, background, shadow, or padding — shown as-is. */
+.rc-figure--bare .rc-figure-frame {
+  overflow: visible;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+
+.rc-figure--bare .rc-figure-frame img {
+  border-radius: 0;
+  background: transparent;
+}
+
 .rc-figure-stack:has(> .rc-figure--visual:only-child) {
   width: 100%;
   align-items: stretch;
