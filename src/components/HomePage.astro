@@ -30,10 +30,17 @@ type PhilosophyIconId = 'everyone' | 'strategy' | 'collaboration' | 'evidence';
   <main>
     <section class="shell intro" aria-labelledby="intro-heading">
       <h1 class="intro-headline" id="intro-heading">
-        {site.intro.prefix}
-        <s class="intro-struck">{site.intro.struck}</s>{site.intro.afterStruck}<span
-          class="intro-accent">{site.intro.accentPhrase}</span
-        >{site.intro.tail}
+        {
+          site.intro.segments.map((seg) =>
+            seg.style === 'struck' ? (
+              <s class="intro-struck">{seg.text}</s>
+            ) : seg.style === 'accent' ? (
+              <span class="intro-accent">{seg.text}</span>
+            ) : (
+              <Fragment>{seg.text}</Fragment>
+            ),
+          )
+        }
       </h1>
       <p class="intro-specializing">{site.specializingLabel}</p>
       <ul class="specialties" aria-label={site.specializingLabel}>
