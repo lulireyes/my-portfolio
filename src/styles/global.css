@@ -3066,6 +3066,19 @@ a.case-footer-value:hover {
   border-color: rgba(255, 255, 255, 0.85);
 }
 
+/* Fast-flick "find me" state: enlarge and go solid white in both themes.
+   Placed after the theme rule so the white fill wins in dark mode too. */
+.cursor-dot.is-fast {
+  transform: translate(-50%, -50%) scale(2);
+  background: #ffffff;
+  border-color: rgba(17, 17, 17, 0.55);
+}
+
+/* Clicking scales down relative to the current (enlarged) size. */
+.cursor-dot.is-fast.is-clicking {
+  transform: translate(-50%, -50%) scale(1.4);
+}
+
 @media (pointer: fine) {
   html,
   body {
@@ -3099,7 +3112,9 @@ a.case-footer-value:hover {
       border-color 0.2s ease;
   }
 
-  .cursor-dot.is-clicking {
+  .cursor-dot.is-clicking,
+  .cursor-dot.is-fast,
+  .cursor-dot.is-fast.is-clicking {
     transform: translate(-50%, -50%);
   }
 }
