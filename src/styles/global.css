@@ -1113,17 +1113,11 @@ html.nav-open .menu-toggle .icon-close {
   border-radius: 0.85rem;
   border: 0;
   outline: none;
-  background: #ffffff;
+  /* Match page bg so border-radius anti-aliasing doesn't leave a white halo. */
+  background: var(--color-bg);
   box-shadow: none;
   overflow: hidden;
   flex-shrink: 0;
-}
-
-:root:not([data-theme='light']) .journey-logo-frame {
-  background: #ffffff;
-  border: 0;
-  outline: none;
-  box-shadow: none;
 }
 
 .journey-logo {
@@ -1134,6 +1128,8 @@ html.nav-open .menu-toggle .icon-close {
   border: 0;
   outline: none;
   box-shadow: none;
+  /* Nudge past the clip edge to hide baked-in 1px fringes on some assets. */
+  transform: scale(1.04);
 }
 
 .journey-body {
@@ -1224,25 +1220,23 @@ html[data-theme='light'] .journey-tags li {
   align-items: center;
   gap: 0.3rem;
   margin-left: 0.15rem;
-  padding: 0.4rem 0.85rem 0.4rem 0.95rem;
-  border-radius: 999px;
-  border: 1px solid var(--color-line);
-  background: var(--color-bg);
-  color: var(--color-ink);
-  font-size: 0.75rem;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--color-accent);
+  font-size: 0.8125rem;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.35;
   text-decoration: none;
-  transition:
-    color 0.2s var(--ease-out),
-    background 0.2s var(--ease-out),
-    border-color 0.2s var(--ease-out);
+  transition: opacity 0.2s var(--ease-out);
 }
 
 .journey-case:hover {
-  background: var(--color-ink);
-  border-color: var(--color-ink);
-  color: var(--color-bg);
+  background: transparent;
+  border-color: transparent;
+  color: var(--color-accent);
+  opacity: 0.8;
 }
 
 .journey-case-icon {
