@@ -14,25 +14,28 @@
   "specialties": ["UX/UI", "Research", "Prototyping"],
   "philosophy": {
     "label": "Design Philosophy",
-    "title": "Design starts with intention",
-    "titleFace": "( ◠‿◠ )",
-    "intro": "Understanding people, their context, and the problem we’re trying to solve, while being intentional about how we want the experience to feel.",
+    "title": "Design starts with intention.",
+    "intro": "Understanding the people we’re designing for, their context, and the problems we’re trying to solve, while being intentional about how the experience should feel.",
     "items": [
       {
+        "id": "everyone",
         "title": "Design is for everyone",
-        "body": "Inclusive products meet people where they are. Accessibility and clarity help build trust across ability, language, culture, and context."
+        "body": "Good design starts with understanding people, their needs, and the context they are in. Accessibility and inclusion should be part of the process from the start."
       },
       {
+        "id": "strategy",
         "title": "Design is strategy",
-        "body": "I connect research insights with business goals to make decisions that move both metrics and meaning."
+        "body": "I connect user needs, research, and business goals to make decisions that create meaningful outcomes."
       },
       {
+        "id": "collaboration",
         "title": "Design is collaboration",
-        "body": "The best outcomes come from working closely with product, engineering, data, and stakeholders."
+        "body": "The best products come from different perspectives. I work closely with product, engineering, data, and stakeholders to turn ideas into better decisions."
       },
       {
+        "id": "evidence",
         "title": "Design needs evidence",
-        "body": "Interviews, usability testing, data, and real-world feedback keep assumptions honest and iteration purposeful."
+        "body": "Ideas are starting points, not answers. Research, usability testing, data, and real-world feedback help challenge assumptions and guide what comes next."
       }
     ]
   },
