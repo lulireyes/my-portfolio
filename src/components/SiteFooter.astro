@@ -1,9 +1,15 @@
 ---
 import { getSite } from '../lib/site';
-import { withBase } from '../lib/paths';
+import { localeHome, t, type Locale } from '../lib/i18n';
 
-const site = getSite();
-const home = withBase('/');
+interface Props {
+  locale?: Locale;
+}
+
+const { locale = 'en' } = Astro.props;
+const site = getSite(locale);
+const strings = t(locale);
+const home = localeHome(locale);
 const year = new Date().getFullYear();
 const linkedIn = site.links?.find((l) => /linkedin/i.test(l.label) || /linkedin/i.test(l.href));
 const gitHub = site.links?.find((l) => /github/i.test(l.label) || /github\.com/i.test(l.href));
@@ -85,7 +91,7 @@ const nav = site.nav ?? [
     </nav>
 
     <div class="footer-bottom">
-      <p class="footer-copy">© {year} Luciana Reyes. All rights reserved.</p>
+      <p class="footer-copy">© {year} Luciana Reyes. {strings.allRightsReserved}</p>
       <p class="footer-made">{site.footer.madeIn ?? site.footer.location}</p>
     </div>
   </div>
