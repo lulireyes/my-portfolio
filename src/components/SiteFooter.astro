@@ -77,16 +77,15 @@ const nav = site.nav ?? [
         {
           nav.map((item) => {
             const hash = item.href.startsWith('#') ? item.href : `#${item.href}`;
+            const isContact = hash.toLowerCase() === '#contact';
+            const href = isContact ? `mailto:${site.email}` : `${home}${hash}`;
             return (
               <li>
-                <a href={`${home}${hash}`}>{item.label}</a>
+                <a href={href}>{item.label}</a>
               </li>
             );
           })
         }
-        <li>
-          <a href={`mailto:${site.footer.email}`}>{site.footer.email}</a>
-        </li>
       </ul>
     </nav>
 
