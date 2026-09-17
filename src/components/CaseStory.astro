@@ -632,36 +632,12 @@ function figureClasses(fig: StoryFigure, extra = '') {
 
         {ch.layout === 'cta' && (
           <div class="rc-cta shell-case">
-            {!ch.contactInline && (
-              <header class="rc-chapter-head">
-                <h3 class="rc-chapter-title" id={`${ch.id}-title`}>
-                  {ch.title}
-                </h3>
-              </header>
-            )}
-            {ch.contactInline ? (
-              <p class="rc-cta-lead" id={`${ch.id}-title`}>
-                {ch.lead}
-                {ch.contactHref && ch.contactLabel && (
-                  <>
-                    {' '}
-                    <a class="rc-cta-link rc-cta-link--inline" href={ch.contactHref}>
-                      {ch.contactLabel}
-                    </a>
-                    {ch.contactSuffix ?? '.'}
-                  </>
-                )}
-              </p>
-            ) : (
-              <>
-                {ch.lead && <p class="rc-cta-lead">{ch.lead}</p>}
-                {ch.contactHref && ch.contactLabel && (
-                  <a class="rc-cta-link" href={ch.contactHref}>
-                    {ch.contactLabel}
-                  </a>
-                )}
-              </>
-            )}
+            <p class="rc-cta-lead" id={`${ch.id}-title`}>
+              Want to know more about this project?{' '}
+              <a class="rc-cta-link rc-cta-link--inline" href="mailto:lucianareyes@gmail.com">
+                Let’s chat.
+              </a>
+            </p>
           </div>
         )}
       </section>

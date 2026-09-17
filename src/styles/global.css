@@ -2320,6 +2320,11 @@ html[data-theme='light'] .journey-tags li {
   font-weight: 600;
 }
 
+.rc-cta-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
 .rc-placeholder {
   margin: 0;
   display: flex;
