@@ -1,0 +1,423 @@
+---
+import { render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LocationBar from './LocationBar.astro';
+import Topbar from './Topbar.astro';
+import SiteFooter from './SiteFooter.astro';
+import CaseStory from './CaseStory.astro';
+import { getSite } from '../lib/site';
+import { withBase } from '../lib/paths';
+import { t, type Locale } from '../lib/i18n';
+import type { ProjectEntry } from '../lib/workProjects';
+
+interface Props {
+  project: ProjectEntry;
+  projects: ProjectEntry[];
+  locale: Locale;
+}
+
+const { project, projects, locale } = Astro.props;
+const site = getSite(locale);
+const cs = t(locale).caseStudy;
+
+/** Locale-aware base for a case-study route, e.g. `projects/`, `es/projects/`, `de/projects/`. */
+const routeBase = locale === 'en' ? 'projects' : `${locale}/projects`;
+const projectHref = (slug: string) => withBase(`${routeBase}/${slug}/`);
+
+const currentUrl = projectHref(project.id);
+const langHrefs: Partial<Record<Locale, string>> = {
+  en: withBase(`projects/${project.id}/`),
+  es: withBase(`es/projects/${project.id}/`),
+  de: withBase(`de/projects/${project.id}/`),
+};
+
+const ordered = [...projects].sort(
+  (a, b) => a.data.order - b.data.order || a.data.title.localeCompare(b.data.title),
+);
+
+const currentIndex = ordered.findIndex((p) => p.id === project.id);
+const prevProject =
+  ordered.length > 1
+    ? ordered[(currentIndex - 1 + ordered.length) % ordered.length]
+    : undefined;
+const nextProject =
+  ordered.length > 1 ? ordered[(currentIndex + 1) % ordered.length] : undefined;
+
+const { Content } = await render(project);
+const d = project.data;
+const overviewRaw = d.overview ?? d.summary ?? d.subtitle ?? '';
+const summaryParagraphs = Array.isArray(overviewRaw)
+  ? overviewRaw
+  : overviewRaw
+    ? [overviewRaw]
+    : [];
+const period = d.period ?? (d.year ? String(d.year) : '');
+const hasSections = d.sections.length > 0;
+/** Role is told once in CaseStory overview (or section meta) — skip the page Summary Role chip. */
+const roleInStory = d.sections.some(
+  (section) =>
+    Boolean(section.role) ||
+    Boolean(section.story?.some((chapter) => chapter.roleLine || chapter.roleLabel || chapter.responsibilities)),
+);
+
+function sectionMarqueeRepeats(title: string) {
+  return Math.max(18, Math.ceil(480 / Math.max(title.length, 1)));
+}
+---
+
+<BaseLayout
+  title={`${project.data.title} — ${site.name}`}
+  description={project.data.summary ?? project.data.subtitle ?? site.seo.description}
+  lang={locale}
+>
+  <div class="case-page">
+    <LocationBar locale={locale} />
+    <Topbar locale={locale} langHrefs={langHrefs} />
+
+    <main>
+      <article class="case-study" id={project.id} data-project={project.id}>
+        <header class="case-hero shell-case">
+          <h1 class="case-title">{d.title}</h1>
+          {d.subtitle && <p class="case-subtitle">{d.subtitle}</p>}
+        </header>
+
+        {
+          d.heroImage && (
+            <figure class="case-hero-figure shell-case">
+              <img src={withBase(d.heroImage)} alt={d.heroImageAlt ?? ''} loading="eager" />
+            </figure>
+          )
+        }
+
+        <section class="case-summary-block shell-case" aria-labelledby={`summary-${project.id}`}>
+          <div class="case-summary-main">
+            <h2 class="case-section-title" id={`summary-${project.id}`}>
+              {cs.summary}
+            </h2>
+            {
+              summaryParagraphs.map((paragraph) => (
+                <p class="case-body">{paragraph}</p>
+              ))
+            }
+          </div>
+          <aside class="case-meta" aria-label={cs.projectDetails}>
+            {
+              d.role && !roleInStory && (
+                <div class="case-meta-item">
+                  <span class="case-meta-label">{cs.role}</span>
+                  <p class="case-meta-value">{d.role}</p>
+                </div>
+              )
+            }
+            {
+              period && (
+                <div class="case-meta-item">
+                  <span class="case-meta-label">{cs.year}</span>
+                  <p class="case-meta-value">{period}</p>
+                </div>
+              )
+            }
+            {
+              d.market && (
+                <div class="case-meta-item">
+                  <span class="case-meta-label">{cs.productMarket}</span>
+                  <p class="case-meta-value">{d.market}</p>
+                </div>
+              )
+            }
+          </aside>
+        </section>
+
+        {
+          d.highlights.length > 0 && (
+            <section
+              class="case-highlights shell-case"
+              aria-labelledby={`highlights-${project.id}`}
+            >
+              <h2 class="case-section-title" id={`highlights-${project.id}`}>
+                {cs.highlights}
+              </h2>
+              <div class="case-highlights-body">
+                {d.highlights.map((line) =>
+                  typeof line === 'string' ? (
+                    <p class="case-body">{line}</p>
+                  ) : (
+                    <p class="case-body">
+                      {line.before}
+                      <a class="case-highlight-link" href={line.href}>
+                        {line.title}
+                      </a>
+                      {line.after}
+                      {line.emphasis && <strong>{line.emphasis}</strong>}
+                      {line.afterEmphasis}
+                    </p>
+                  ),
+                )}
+              </div>
+            </section>
+          )
+        }
+
+        {
+          hasSections ? (
+            d.sections.map((section) => (
+              <section class="case-part" id={section.id} aria-labelledby={`${section.id}-title`}>
+                {
+                  project.id === 'helpling' && (
+                    <div class="case-marquee" aria-hidden="true" data-marquee-label={section.title}>
+                      <div class="case-marquee-track">
+                        {[0, 1].map(() => (
+                          <div class="case-marquee-group">
+                            {Array.from({ length: sectionMarqueeRepeats(section.title) }).map(() => (
+                              <span class="case-marquee-item">
+                                <span>{section.title}</span>
+                                {section.emoji ? (
+                                  <span class="case-marquee-emoji">{section.emoji}</span>
+                                ) : (
+                                  <span class="case-marquee-sep" />
+                                )}
+                              </span>
+                            ))}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )
+                }
+
+                {
+                  section.story && section.story.length > 0 ? (
+                    <div class="case-part-story">
+                      <h2 class="visually-hidden" id={`${section.id}-title`}>
+                        {section.title}
+                      </h2>
+                      <CaseStory chapters={section.story} locale={locale} />
+                    </div>
+                  ) : (
+                    <div class="case-part-inner shell-case">
+                      <h2 class="case-part-title" id={`${section.id}-title`}>
+                        {section.title}
+                      </h2>
+
+                      <div class="case-summary-block" aria-labelledby={`${section.id}-summary`}>
+                        <div class="case-summary-main">
+                          <h3 class="case-section-title" id={`${section.id}-summary`}>
+                            {cs.summary}
+                          </h3>
+                          {section.summary.map((paragraph) => (
+                            <p class="case-body">{paragraph}</p>
+                          ))}
+                        </div>
+                        <aside class="case-meta" aria-label={`${section.title} ${cs.detailsSuffix}`}>
+                          {section.role && (
+                            <div class="case-meta-item">
+                              <span class="case-meta-label">{cs.role}</span>
+                              <p class="case-meta-value">{section.role}</p>
+                            </div>
+                          )}
+                          {section.timeline && (
+                            <div class="case-meta-item">
+                              <span class="case-meta-label">{cs.timeline}</span>
+                              <p class="case-meta-value">{section.timeline}</p>
+                            </div>
+                          )}
+                        </aside>
+                      </div>
+
+                      {section.blocks.length > 0 && (
+                        <div class="case-part-blocks prose case-prose">
+                          {section.blocks.map((block) => (
+                            <div class="case-part-block">
+                              {block.heading && <h3>{block.heading}</h3>}
+                              {block.paragraphs.map((paragraph) => (
+                                <p>{paragraph}</p>
+                              ))}
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  )
+                }
+              </section>
+            ))
+          ) : (
+            <>
+              {
+                (d.roleSummary || d.team) && (
+                  <section class="case-role-block shell-case">
+                    <div class="case-role-main">
+                      {d.roleSummary && (
+                        <>
+                          {/* Role title already appears in Summary meta — narrative only here */}
+                          <h2 class="case-section-title">{cs.myRole}</h2>
+                          <p class="case-body">{d.roleSummary}</p>
+                        </>
+                      )}
+                    </div>
+                    <aside class="case-meta" aria-label={cs.additionalDetails}>
+                      {/* Do not repeat Role / Year / Market — already in Summary meta above */}
+                      {d.team && (
+                        <div class="case-meta-item">
+                          <span class="case-meta-label">{cs.team}</span>
+                          <p class="case-meta-value">{d.team}</p>
+                        </div>
+                      )}
+                      {d.tags.length > 0 && (
+                        <div class="case-meta-item">
+                          <span class="case-meta-label">{cs.focus}</span>
+                          <p class="case-meta-value">{d.tags.join(' · ')}</p>
+                        </div>
+                      )}
+                    </aside>
+                  </section>
+                )
+              }
+
+              <section class="case-process shell-case" aria-labelledby={`process-${project.id}`}>
+                <h2 class="case-section-title" id={`process-${project.id}`}>
+                  {cs.process}
+                </h2>
+                <div class="case-process-grid">
+                  {
+                    d.cover && (
+                      <figure class="case-process-media">
+                        <img src={withBase(d.cover)} alt="" loading="eager" />
+                      </figure>
+                    )
+                  }
+                  <div class="case-process-copy prose case-prose">
+                    <Content />
+                  </div>
+                </div>
+              </section>
+
+              {
+                d.impact.length > 0 && (
+                  <section class="case-impact shell-case" aria-labelledby={`impact-${project.id}`}>
+                    <h2 class="case-section-title" id={`impact-${project.id}`}>
+                      {cs.impact}
+                    </h2>
+                    <ul class="case-impact-grid">
+                      {d.impact.map((item) => (
+                        <li class="case-impact-item">
+                          <p class="case-impact-metric">{item.metric}</p>
+                          <p class="case-impact-desc">{item.description}</p>
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
+                )
+              }
+            </>
+          )
+        }
+
+        {
+          (prevProject || nextProject) && (
+            <nav class="case-pager shell-case" aria-label={cs.adjacentCaseStudies}>
+              {prevProject ? (
+                <a class="case-pager-prev" href={projectHref(prevProject.id)}>
+                  {cs.prevPrefix} {prevProject.data.title}
+                </a>
+              ) : (
+                <span class="case-pager-prev" />
+              )}
+              {nextProject ? (
+                <a class="case-pager-next" href={projectHref(nextProject.id)}>
+                  {cs.nextPrefix} {nextProject.data.title} {cs.nextSuffix}
+                </a>
+              ) : (
+                <span class="case-pager-next" />
+              )}
+            </nav>
+          )
+        }
+      </article>
+    </main>
+
+    <SiteFooter locale={locale} />
+  </div>
+
+  <script>
+    function getPreferredTheme() {
+      const stored = localStorage.getItem('theme');
+      if (stored === 'light' || stored === 'dark') return stored;
+      return 'dark';
+    }
+
+    function applyTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      document.documentElement.style.colorScheme = theme;
+      const meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) meta.setAttribute('content', theme === 'dark' ? '#161616' : '#fafafa');
+      const toggleBtn = document.getElementById('theme-toggle');
+      if (toggleBtn) {
+        toggleBtn.setAttribute(
+          'aria-label',
+          theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'
+        );
+      }
+    }
+
+    const toggle = document.getElementById('theme-toggle');
+    applyTheme(getPreferredTheme());
+
+    toggle?.addEventListener('click', () => {
+      const next =
+        document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('theme', next);
+      applyTheme(next);
+    });
+
+    const marqueeSeeds = new WeakMap();
+    let marqueeResizeTimer = 0;
+
+    function fillCaseMarquees() {
+      document.querySelectorAll('.case-marquee').forEach((root) => {
+        const track = root.querySelector('.case-marquee-track');
+        const first = track?.querySelector('.case-marquee-group');
+        if (!(track instanceof HTMLElement) || !(first instanceof HTMLElement)) return;
+
+        if (!marqueeSeeds.has(root)) {
+          marqueeSeeds.set(root, first.innerHTML);
+        }
+        const seed = marqueeSeeds.get(root);
+        if (!seed) return;
+
+        const targetWidth = Math.max(root.clientWidth, 1);
+        track.style.animation = 'none';
+        first.innerHTML = seed;
+
+        let guard = 0;
+        while (first.scrollWidth < targetWidth && guard < 80) {
+          first.insertAdjacentHTML('beforeend', seed);
+          guard += 1;
+        }
+        // Keep a little extra so the visible window never empties mid-cycle.
+        if (first.scrollWidth < targetWidth * 1.25) {
+          first.insertAdjacentHTML('beforeend', seed);
+        }
+
+        track.replaceChildren(first, first.cloneNode(true));
+        void track.offsetWidth;
+        track.style.removeProperty('animation');
+      });
+    }
+
+    async function initCaseMarquees() {
+      try {
+        if (document.fonts?.ready) await document.fonts.ready;
+      } catch {
+        /* ignore */
+      }
+      fillCaseMarquees();
+    }
+
+    initCaseMarquees();
+    window.addEventListener('resize', () => {
+      window.clearTimeout(marqueeResizeTimer);
+      marqueeResizeTimer = window.setTimeout(fillCaseMarquees, 100);
+    });
+  </script>
+</BaseLayout>
