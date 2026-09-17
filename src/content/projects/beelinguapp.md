@@ -88,7 +88,7 @@ sections:
           - title: Retention-minded UI
             body: Focused UI patterns on habit formation for B2C learners at scale — reducing friction to start, making return visits feel familiar, and keeping goals visible without turning the app into a worksheet.
         figures:
-          - src: /img/projects/beelinguapp/beelinguapp-product-lesson-journey.jpg
+          - src: /img/projects/beelinguapp/beelinguapp-product-lesson-journey.webp
             alt: Four Beelinguapp screens — lesson overview with Read, parallel English–Spanish reading with audio, true/false quiz, and a 3-in-a-row achievement with Continue.
             tone: bare
             size: full

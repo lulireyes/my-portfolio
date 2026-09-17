@@ -2480,6 +2480,21 @@ html[data-theme='dark'] .rc-figure--visual .rc-figure-frame img,
   background: transparent;
 }
 
+/* Beelinguapp case study: uniform frameless images with equal rounded corners. */
+.case-study[data-project='beelinguapp'] .rc-figure-frame {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  transform: none;
+  overflow: hidden;
+}
+
+.case-study[data-project='beelinguapp'] .rc-figure-frame img {
+  border-radius: 1rem;
+  background: transparent;
+}
+
 .rc-figure-stack:has(> .rc-figure--visual:only-child) {
   width: 100%;
   align-items: stretch;
