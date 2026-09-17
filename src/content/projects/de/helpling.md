@@ -450,13 +450,10 @@ sections:
         solutions:
           - title: Siegervariante
             body: Option C als klarsten Weg validieren, um frühe Absprünge zu reduzieren und dabei das Funnel-Momentum zu bewahren.
-            placeholder: "[IMAGE PLACEHOLDER — How-Helpling-Works-Modal (Siegervariante)]"
           - title: Interaktion & Motion
             body: Maßgeschneidertes Interaction Design und zurückhaltende Mikroanimationen, die das Verständnis stärkten, ohne Reibung hinzuzufügen — mit Berücksichtigung von prefers-reduced-motion in der Implementierung.
-            placeholder: "[IMAGE PLACEHOLDER — Interaktions- / Mikroanimations-Detail]"
           - title: Übergabe an die Entwicklung
             body: Enge Zusammenarbeit mit dem Engineering, um eine produktionsreife Erfahrung auszuliefern, abgestimmt auf das Designsystem und die Experiment-Instrumentierung.
-            placeholder: "[IMAGE PLACEHOLDER — Specs / Übergabe / Instrumentierungsnotizen]"
 
       - id: gr-impact
         layout: impact
@@ -481,8 +478,6 @@ sections:
           - Kontextuelles „How Helpling Works“-Modal
           - Höhere Conversion und Zufriedenheit
           - Anhaltende Adoption in Produktion
-        placeholders:
-          - "[VISUAL PLACEHOLDER — Ergebnisse / Zusammenfassung der langfristigen Adoption]"
 
       - id: gr-cta
         layout: cta

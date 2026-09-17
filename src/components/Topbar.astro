@@ -35,9 +35,6 @@ const nav = site.nav ?? [
         })
       }
     </ul>
-    <div class="site-nav-lang">
-      <LangSwitch locale={locale} hrefs={langHrefs} />
-    </div>
   </nav>
   <div class="topbar-actions">
     <div class="topbar-lang">
@@ -49,7 +46,6 @@ const nav = site.nav ?? [
       id="theme-toggle"
       aria-label="Switch to light mode"
     >
-      <!-- Destination theme: sun in dark (→ light), moon in light (→ dark). Stroke-only, no fill. -->
       <svg class="theme-icon icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
         <circle cx="12" cy="12" r="3.75"></circle>
         <path
@@ -68,10 +64,13 @@ const nav = site.nav ?? [
       aria-expanded="false"
       aria-controls="site-nav"
     >
-      <!-- Two-line minimalist hamburger; rotates to X when open. -->
-      <svg class="menu-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-        <line class="menu-line menu-line-a" x1="4" y1="9" x2="20" y2="9"></line>
-        <line class="menu-line menu-line-b" x1="4" y1="15" x2="20" y2="15"></line>
+      <svg class="menu-icon icon-menu" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <line x1="5" y1="8" x2="19" y2="8"></line>
+        <line x1="5" y1="16" x2="19" y2="16"></line>
+      </svg>
+      <svg class="menu-icon icon-close" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <line x1="7" y1="7" x2="17" y2="17"></line>
+        <line x1="17" y1="7" x2="7" y2="17"></line>
       </svg>
     </button>
   </div>
@@ -100,10 +99,15 @@ const nav = site.nav ?? [
   });
 
   document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && isMenuOpen()) {
-      setMenuOpen(false);
-      menuToggle?.focus();
+    if (event.key !== 'Escape' || !isMenuOpen()) return;
+    const openLang = document.querySelector('details.lang-switch-dropdown[open]');
+    if (openLang instanceof HTMLDetailsElement) {
+      openLang.open = false;
+      openLang.querySelector('summary')?.focus();
+      return;
     }
+    setMenuOpen(false);
+    menuToggle?.focus();
   });
 
   const mq = window.matchMedia('(min-width: 641px)');

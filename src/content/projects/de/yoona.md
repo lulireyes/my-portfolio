@@ -79,8 +79,6 @@ sections:
         paragraphs:
           - "Durchgängige Flows: Ich gestaltete den kritischen Pfad von der Datenaufnahme globaler Trends bis zum Export produktionsfertiger 3D-Dateien oder AR-Visualisierungsformate."
           - "Nachhaltiger Fokus: Ich integrierte Echtzeit-Kennzahlen zur Umweltwirkung direkt ins Kontrollpanel, förderte bewusste Designentscheidungen und minimierte den Bedarf an der Herstellung physischer Muster."
-        placeholders:
-          - "[IMAGE PLACEHOLDER — Produktarchitektur Web & Desktop / durchgängiger Flow]"
 
       - id: yo-design-system
         layout: strategy
@@ -104,8 +102,6 @@ sections:
         paragraphs:
           - "Ich führte iterative Usability-Testing-Sessions durch, um Reibung an kritischen Workflow-Meilensteinen zu beseitigen, und sorgte dafür, dass sich das Versprechen „3 Klicks bis zur Produktion“ in eine reibungslose Realität übersetzte."
           - Abgedeckt wurden interaktive High-Fidelity-Prototypen für KI-gestützte 3D-Generierung, AR-Pre-Visualisierungsumgebungen zur Kollektionsprüfung und iteratives Usability-Testing an kritischen Workflow-Meilensteinen.
-        placeholders:
-          - "[IMAGE PLACEHOLDER — High-Fidelity-Prototyp / AR-Pre-Visualisierung]"
 
       - id: yo-results
         layout: strategy

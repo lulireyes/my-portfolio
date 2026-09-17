@@ -450,13 +450,10 @@ sections:
         solutions:
           - title: Winning variant
             body: Validating Option C as the clearest path to reduce early drop-off while preserving funnel momentum.
-            placeholder: "[IMAGE PLACEHOLDER — How Helpling Works modal (winning variant)]"
           - title: Interaction & motion
             body: Custom interaction design and restrained micro-animations that reinforced comprehension without adding friction — with prefers-reduced-motion respected in implementation.
-            placeholder: "[IMAGE PLACEHOLDER — interaction / micro-animation detail]"
           - title: Developer hand-off
             body: Tight collaboration with Engineering to ship a production-ready experience aligned with the design system and experiment instrumentation.
-            placeholder: "[IMAGE PLACEHOLDER — specs / hand-off / instrumentation notes]"
 
       - id: gr-impact
         layout: impact
@@ -481,8 +478,6 @@ sections:
           - Contextual “How Helpling Works” modal
           - Higher conversion and satisfaction
           - Persistent adoption in production
-        placeholders:
-          - "[VISUAL PLACEHOLDER — results / long-term adoption summary]"
 
       - id: gr-cta
         layout: cta

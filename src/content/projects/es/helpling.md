@@ -450,13 +450,10 @@ sections:
         solutions:
           - title: Variante ganadora
             body: Validar la Opción C como el camino más claro para reducir el abandono temprano preservando el impulso del funnel.
-            placeholder: "[IMAGE PLACEHOLDER — modal How Helpling Works (variante ganadora)]"
           - title: Interacción y movimiento
             body: Diseño de interacción a medida y microanimaciones contenidas que reforzaban la comprensión sin añadir fricción — respetando prefers-reduced-motion en la implementación.
-            placeholder: "[IMAGE PLACEHOLDER — detalle de interacción / microanimación]"
           - title: Traspaso a desarrollo
             body: Estrecha colaboración con Ingeniería para lanzar una experiencia lista para producción, alineada con el sistema de diseño y la instrumentación del experimento.
-            placeholder: "[IMAGE PLACEHOLDER — especificaciones / traspaso / notas de instrumentación]"
 
       - id: gr-impact
         layout: impact
@@ -481,8 +478,6 @@ sections:
           - Modal contextual “How Helpling Works”
           - Mayor conversión y satisfacción
           - Adopción persistente en producción
-        placeholders:
-          - "[VISUAL PLACEHOLDER — resumen de resultados / adopción a largo plazo]"
 
       - id: gr-cta
         layout: cta

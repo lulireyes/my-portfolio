@@ -79,8 +79,6 @@ sections:
         paragraphs:
           - "Flujos de extremo a extremo: diseñé el camino crítico desde la ingesta de datos de tendencias globales hasta la exportación de archivos 3D listos para producción o de formatos de visualización AR."
           - "Enfoque sostenible: integré métricas de impacto ambiental en tiempo real directamente en el panel de control, fomentando decisiones de diseño conscientes y minimizando la necesidad de fabricar muestras físicas."
-        placeholders:
-          - "[IMAGE PLACEHOLDER — arquitectura de producto web y escritorio / flujo de extremo a extremo]"
 
       - id: yo-design-system
         layout: strategy
@@ -104,8 +102,6 @@ sections:
         paragraphs:
           - "Realicé sesiones iterativas de pruebas de usabilidad para eliminar la fricción en los hitos críticos del flujo de trabajo, asegurando que la promesa de \"3 clics a la producción\" se tradujera en una realidad fluida y sin fricciones."
           - Abarqué prototipos interactivos de alta fidelidad para la generación 3D impulsada por IA, entornos de pre-visualización en AR para la revisión de colecciones y pruebas de usabilidad iterativas en los hitos críticos del flujo de trabajo.
-        placeholders:
-          - "[IMAGE PLACEHOLDER — prototipo de alta fidelidad / pre-visualización en AR]"
 
       - id: yo-results
         layout: strategy

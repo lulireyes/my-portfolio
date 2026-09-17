@@ -193,7 +193,13 @@ p {
   align-items: center;
   gap: 1rem;
   padding-block: 1.35rem;
-  animation: rise 0.7s var(--ease-out) both;
+  /*
+   * Opacity-only entrance. A transform (even translateY(0) from rise + fill-mode)
+   * makes this element a containing block for position:fixed descendants, which
+   * clipped/offset the mobile nav overlay to the shell width.
+   */
+  animation: rise-fade 0.7s var(--ease-out) both;
+  transform: none;
 }
 
 .brand {
@@ -249,7 +255,7 @@ p {
   gap: 0.15rem;
 }
 
-/* Desktop: language lives in the topbar. Mobile overlay copy is hidden. */
+/* Desktop: language lives in the topbar. */
 .site-nav-lang {
   display: none;
 }
@@ -264,18 +270,15 @@ p {
   min-height: 44px;
   padding: 0;
   border: 0;
-  border-radius: 999px;
+  border-radius: 0;
   background: transparent;
   color: var(--color-ink);
   cursor: pointer;
-  transition:
-    color 0.2s ease,
-    background-color 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .menu-toggle:hover {
   color: var(--color-accent);
-  background: color-mix(in srgb, var(--color-accent) 10%, transparent);
 }
 
 .menu-toggle:focus-visible {
@@ -284,29 +287,27 @@ p {
 }
 
 .menu-toggle .menu-icon {
-  width: 1.35rem;
-  height: 1.35rem;
+  width: 1.25rem;
+  height: 1.25rem;
   fill: none;
   stroke: currentColor;
   stroke-width: 1.25;
   stroke-linecap: round;
+  stroke-linejoin: round;
   pointer-events: none;
   user-select: none;
-  overflow: visible;
 }
 
-.menu-toggle .menu-line {
-  transform-box: view-box;
-  transform-origin: 12px 12px;
-  transition: transform 0.35s var(--ease-out);
+.menu-toggle .icon-close {
+  display: none;
 }
 
-html.nav-open .menu-toggle .menu-line-a {
-  transform: translateY(3px) rotate(45deg);
+html.nav-open .menu-toggle .icon-menu {
+  display: none;
 }
 
-html.nav-open .menu-toggle .menu-line-b {
-  transform: translateY(-3px) rotate(-45deg);
+html.nav-open .menu-toggle .icon-close {
+  display: block;
 }
 
 .theme-toggle {
@@ -371,17 +372,30 @@ html.nav-open .menu-toggle .menu-line-b {
 }
 
 /* ——— Language switch ——— */
-.lang-switch {
-  display: inline-flex;
+.topbar-lang {
+  display: flex;
   align-items: center;
-  gap: 0.1rem;
-  margin-right: 0.35rem;
-  padding-right: 0.5rem;
-  border-right: 1px solid var(--color-line);
+  margin-right: 0.15rem;
+  padding-left: 0.65rem;
+  border-left: 1px solid var(--color-line);
+}
+
+.lang-switch {
+  position: relative;
   font-family: var(--font-mono);
 }
 
-.lang-option {
+.lang-switch-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.1rem;
+}
+
+.lang-switch-dropdown {
+  display: none;
+}
+
+.lang-switch-inline .lang-option {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -390,23 +404,116 @@ html.nav-open .menu-toggle .menu-line-b {
   padding: 0 0.35rem;
   font-size: 0.8rem;
   font-weight: 500;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
   text-decoration: none;
   color: var(--color-muted);
   background: transparent;
   transition: color 0.2s ease;
 }
 
-a.lang-option:hover {
+.lang-switch-inline a.lang-option:hover {
   color: var(--color-accent);
 }
 
-a.lang-option:focus-visible {
+.lang-switch-inline a.lang-option:focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 3px;
 }
 
-.lang-option.is-active {
+.lang-switch-inline .lang-option.is-active {
+  color: var(--color-ink);
+  font-weight: 600;
+}
+
+.lang-switch-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 44px;
+  padding: 0 0.35rem;
+  list-style: none;
+  cursor: pointer;
+  color: var(--color-ink);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  user-select: none;
+}
+
+.lang-switch-trigger::-webkit-details-marker {
+  display: none;
+}
+
+.lang-switch-trigger::marker {
+  content: '';
+}
+
+.lang-switch-chevron {
+  display: inline-block;
+  font-size: 0.7em;
+  font-weight: 500;
+  color: var(--color-muted);
+  transition: transform 0.2s var(--ease-out);
+}
+
+.lang-switch-dropdown[open] .lang-switch-chevron {
+  transform: rotate(180deg);
+}
+
+.lang-switch-trigger:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.lang-switch-menu {
+  position: absolute;
+  top: calc(100% - 0.25rem);
+  right: 0;
+  z-index: 80;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 4.25rem;
+  margin: 0;
+  padding: 0.4rem;
+  list-style: none;
+  border: 1px solid var(--color-line);
+  border-radius: 0.5rem;
+  background: var(--color-bg-elevated);
+  box-shadow: var(--shadow-soft);
+}
+
+.lang-switch-menu .lang-option {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+  min-height: 2.25rem;
+  padding: 0.35rem 0.55rem;
+  border-radius: 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  color: var(--color-muted);
+  background: transparent;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.lang-switch-menu a.lang-option:hover {
+  color: var(--color-accent);
+  background: color-mix(in srgb, var(--color-accent) 10%, transparent);
+}
+
+.lang-switch-menu a.lang-option:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 1px;
+}
+
+.lang-switch-menu .lang-option.is-active {
   color: var(--color-ink);
   font-weight: 600;
 }
@@ -1380,9 +1487,8 @@ html[data-theme='light'] .journey-tags li {
     flex-wrap: nowrap;
     position: relative;
     z-index: 60;
-    /* Drop the entrance transform so it can't become the containing block
-       for the position:fixed full-screen nav overlay below. */
     animation: none;
+    transform: none;
     gap: 0.5rem;
   }
 
@@ -1391,7 +1497,7 @@ html[data-theme='light'] .journey-tags li {
     font-size: clamp(1.35rem, 5.5vw, 1.85rem);
   }
 
-  /* Keep the hamburger/close (and theme) tappable above the overlay. */
+  /* Keep lang / theme / close tappable above the overlay. */
   .topbar-actions {
     margin-left: auto;
     position: relative;
@@ -1399,20 +1505,39 @@ html[data-theme='light'] .journey-tags li {
     flex-shrink: 0;
   }
 
-  /* Language moves into the hamburger menu so the bar stays one line. */
-  .topbar-lang {
+  /* Compact language selector stays in the topbar on mobile. */
+  .lang-switch-inline {
     display: none;
+  }
+
+  .lang-switch-dropdown {
+    display: block;
+  }
+
+  .topbar-lang {
+    margin-right: 0;
+    padding-left: 0;
+    border-left: 0;
   }
 
   .menu-toggle {
     display: inline-flex;
   }
 
-  /* Open menu becomes a full-screen overlay covering the whole viewport. */
+  html.nav-open {
+    overflow: hidden;
+  }
+
+  /* Full-viewport overlay (not shell-sized). Avoid 100vw — it can exceed the body. */
   .site-nav {
     position: fixed;
-    inset: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     z-index: 50;
+    width: auto;
+    max-width: none;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -1425,6 +1550,7 @@ html[data-theme='light'] .journey-tags li {
       max(env(safe-area-inset-bottom), 1.5rem)
       max(env(safe-area-inset-left), 1.5rem);
     background: var(--color-bg);
+    overflow-x: hidden;
     overflow-y: auto;
     opacity: 0;
     visibility: hidden;
@@ -1455,30 +1581,12 @@ html[data-theme='light'] .journey-tags li {
     letter-spacing: -0.02em;
   }
 
-  .site-nav-lang {
-    display: block;
-  }
-
-  .site-nav-lang .lang-switch {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    gap: 0.35rem;
-  }
-
-  .site-nav-lang .lang-option {
-    min-width: 2.75rem;
-    font-size: 1rem;
-    letter-spacing: 0.06em;
-  }
-
   .about-block {
     grid-template-columns: 4.5rem 1fr;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .menu-toggle .menu-line,
   .site-nav {
     transition: none;
   }
@@ -3192,6 +3300,16 @@ a.case-footer-value:hover {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Opacity-only variant for ancestors of position:fixed overlays */
+@keyframes rise-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 

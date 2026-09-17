@@ -79,8 +79,6 @@ sections:
         paragraphs:
           - "End-to-End Flows: Designed the critical path from data ingestion of global trends to the export of 3D production-ready files or AR visualization formats."
           - "Sustainable Focus: Integrated real-time environmental impact metrics directly into the control panel, encouraging conscious design decisions and minimizing the need for physical sample manufacturing."
-        placeholders:
-          - "[IMAGE PLACEHOLDER — web & desktop product architecture / end-to-end flow]"
 
       - id: yo-design-system
         layout: strategy
@@ -104,8 +102,6 @@ sections:
         paragraphs:
           - "Conducted iterative usability testing sessions to eliminate friction at critical workflow milestones, ensuring the promise of \"3 clicks to production\" translated into a smooth, frictionless reality."
           - Covered interactive high-fidelity prototypes for AI-driven 3D generation, AR pre-visualization environments for collection review, and iterative usability testing at critical workflow milestones.
-        placeholders:
-          - "[IMAGE PLACEHOLDER — high-fidelity prototype / AR pre-visualization]"
 
       - id: yo-results
         layout: strategy

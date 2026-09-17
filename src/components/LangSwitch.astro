@@ -1,5 +1,5 @@
 ---
-import { LOCALES, LOCALE_LABELS, localeHome, t, type Locale } from '../lib/i18n';
+import { LOCALE_LABELS, localeHome, t, type Locale } from '../lib/i18n';
 
 interface Props {
   locale: Locale;
@@ -9,28 +9,105 @@ interface Props {
 
 const { locale, hrefs = {} } = Astro.props;
 const strings = t(locale);
+const menuLocales: Locale[] = ['en', 'de', 'es'];
+
+function option(code: Locale) {
+  const isActive = code === locale;
+  const href = hrefs[code] ?? localeHome(code);
+  return { code, isActive, href };
+}
 ---
 
-<div class="lang-switch" role="group" aria-label={strings.switchLanguage}>
-  {
-    LOCALES.map((code) => {
-      const isActive = code === locale;
-      const href = hrefs[code] ?? localeHome(code);
-      return isActive ? (
-        <span class="lang-option is-active" aria-current="true" lang={code}>
-          {LOCALE_LABELS[code]}
-        </span>
-      ) : (
-        <a
-          class="lang-option"
-          href={href}
-          lang={code}
-          hreflang={code}
-          aria-label={strings.languageName[code]}
-        >
-          {LOCALE_LABELS[code]}
-        </a>
-      );
-    })
-  }
+<div class="lang-switch">
+  <div class="lang-switch-inline" role="group" aria-label={strings.switchLanguage}>
+    {
+      menuLocales.map((code) => {
+        const { isActive, href } = option(code);
+        return isActive ? (
+          <span class="lang-option is-active" aria-current="true" lang={code}>
+            {LOCALE_LABELS[code]}
+          </span>
+        ) : (
+          <a
+            class="lang-option"
+            href={href}
+            lang={code}
+            hreflang={code}
+            aria-label={strings.languageName[code]}
+          >
+            {LOCALE_LABELS[code]}
+          </a>
+        );
+      })
+    }
+  </div>
+
+  <details class="lang-switch-dropdown">
+    <summary
+      class="lang-switch-trigger"
+      aria-label={`${strings.switchLanguage}: ${strings.languageName[locale]}`}
+    >
+      <span class="lang-switch-current" lang={locale}>{LOCALE_LABELS[locale]}</span>
+      <span class="lang-switch-chevron" aria-hidden="true">↓</span>
+    </summary>
+    <ul class="lang-switch-menu" role="list">
+      {
+        menuLocales.map((code) => {
+          const { isActive, href } = option(code);
+          return (
+            <li>
+              {
+                isActive ? (
+                  <span class="lang-option is-active" aria-current="true" lang={code}>
+                    {LOCALE_LABELS[code]}
+                  </span>
+                ) : (
+                  <a
+                    class="lang-option"
+                    href={href}
+                    lang={code}
+                    hreflang={code}
+                    aria-label={strings.languageName[code]}
+                  >
+                    {LOCALE_LABELS[code]}
+                  </a>
+                )
+              }
+            </li>
+          );
+        })
+      }
+    </ul>
+  </details>
 </div>
+
+<script>
+  function bindLangSwitch() {
+    document.querySelectorAll('details.lang-switch-dropdown').forEach((node) => {
+      if (!(node instanceof HTMLDetailsElement)) return;
+      const details = node;
+      if (details.dataset.bound === 'true') return;
+      details.dataset.bound = 'true';
+
+      const close = () => {
+        details.open = false;
+      };
+
+      document.addEventListener('click', (event) => {
+        if (!details.open) return;
+        if (event.target instanceof Node && !details.contains(event.target)) close();
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && details.open) {
+          close();
+          const trigger = details.querySelector('summary');
+          if (trigger instanceof HTMLElement) trigger.focus();
+        }
+      });
+    });
+  }
+
+  bindLangSwitch();
+  document.addEventListener('astro:page-load', () => bindLangSwitch());
+</script>
