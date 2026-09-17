@@ -50,8 +50,12 @@ const storyFigure = z.object({
   src: z.string(),
   alt: z.string(),
   caption: z.string().optional(),
-  /** Modest process frame by default — not a full-bleed hero; `visual` = bare editorial illustration */
-  tone: z.enum(['process', 'default', 'visual']).default('process'),
+  /**
+   * Modest process frame by default — not a full-bleed hero.
+   * `visual` = bare editorial illustration (inverted in dark mode);
+   * `bare` = frameless photo/screenshot shown as-is (no frame, no inversion).
+   */
+  tone: z.enum(['process', 'default', 'visual', 'bare']).default('process'),
   size: z.enum(['sm', 'md', 'lg', 'full']).default('md'),
 });
 
