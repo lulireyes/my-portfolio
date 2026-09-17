@@ -1,6 +1,8 @@
 ---
 title: Beelinguapp
 subtitle: Language learning that feels less like studying
+heroImage: /img/projects/beelinguapp/beelinguapp-hero.webp
+heroImageAlt: Beelinguapp — an organic chrome-and-white sculpture branching like a growing form.
 summary: Making language learning feel less like studying — an EdTech app with 1M+ users.
 overview:
   - Beelinguapp is a narrative-driven language learning app used by more than a million learners worldwide. Instead of treating practice as drills and flashcards, the product leans on stories and illustration so sessions feel closer to reading than studying.

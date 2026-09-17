@@ -46,9 +46,8 @@ sections:
         tagline: Designing for two people who both believe they're right.
         impactLine: Reduced operational support costs by 35% by turning manual dispute handling into a scalable self-service experience.
         figures:
-          - src: /img/projects/helpling/helpling-rc-issue-flow-phones.png
-            alt: Two Helpling Resolution Center phone screens — Create new request issue categories on the left, and a follow-up screen to narrow the problem with a Continue button on the right.
-            caption: Resolution Center in product — structured issue intake and guided follow-up, designed for clarity under stress.
+          - src: /img/projects/helpling/helpling-rc-hero.webp
+            alt: Resolution Center — translucent glass blocks meeting a solid metallic form, evoking two sides of a marketplace reaching a fair resolution.
             tone: default
             size: lg
 
@@ -265,9 +264,8 @@ sections:
         tagline: Scaling a product starts with scaling decisions.
         impactLine: "Bringing order to chaos: how I built Helpling’s first cross-platform Design System from the ground up."
         figures:
-          - src: /img/projects/helpling/helpling-ds-product-screens.png
-            alt: Four Helpling mobile screens side by side — provider selection with Anna selected, October date picker, personalized dashboard greeting Isabela, and Help FAQ with suggested articles — showing the Design System applied across product flows.
-            caption: Design System 1.0 in product — provider selection, scheduling, dashboard, and Help, sharing one cohesive UI language.
+          - src: /img/projects/helpling/helpling-ds-hero.webp
+            alt: Design System 1.0 — many modular components arranged into one organised, isometric system.
             tone: default
             size: lg
 
@@ -325,6 +323,11 @@ sections:
             caption: Foundations under the hood — Modal component architecture with Auto Layout, properties, and nested Button variants in Figma.
             tone: default
             size: lg
+          - src: /img/projects/helpling/helpling-ds-product-screens.png
+            alt: Four Helpling mobile screens side by side — provider selection with Anna selected, October date picker, personalized dashboard greeting Isabela, and Help FAQ with suggested articles — showing the Design System applied across product flows.
+            caption: Design System 1.0 in product — provider selection, scheduling, dashboard, and Help, sharing one cohesive UI language.
+            tone: default
+            size: lg
 
       - id: ds-reflection
         layout: reflection
@@ -351,8 +354,11 @@ sections:
         title: Growth, Retention & A/B Experiments
         tagline: Finding the invisible barrier at the start of the funnel — and proving the fix weekly.
         impactLine: +15% conversion lift, >90% user satisfaction, and high long-term adoption across Germany and Singapore.
-        placeholders:
-          - "[IMAGE PLACEHOLDER — growth experiment / How Helpling Works modal / strongest UI visual]"
+        figures:
+          - src: /img/projects/helpling/helpling-growth-hero.webp
+            alt: Growth and experimentation — pastel paths rising upward toward a glowing point, evoking momentum and iterative gains.
+            tone: default
+            size: lg
 
       - id: gr-overview
         layout: overview
