@@ -35,9 +35,14 @@ const nav = site.nav ?? [
         })
       }
     </ul>
+    <div class="site-nav-lang">
+      <LangSwitch locale={locale} hrefs={langHrefs} />
+    </div>
   </nav>
   <div class="topbar-actions">
-    <LangSwitch locale={locale} hrefs={langHrefs} />
+    <div class="topbar-lang">
+      <LangSwitch locale={locale} hrefs={langHrefs} />
+    </div>
     <button
       type="button"
       class="theme-toggle"

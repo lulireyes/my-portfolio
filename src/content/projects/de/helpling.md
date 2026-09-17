@@ -46,9 +46,9 @@ sections:
         tagline: Gestalten für zwei Menschen, die beide glauben, im Recht zu sein.
         impactLine: Ich senkte die operativen Supportkosten um 35%, indem ich die manuelle Bearbeitung von Streitfällen in eine skalierbare Self-Service-Erfahrung verwandelte.
         figures:
-          - src: /img/projects/helpling/helpling-rc-hero.webp
-            alt: Resolution Center — durchscheinende Glasblöcke, die auf eine massive metallische Form treffen und die zwei Seiten eines Marktplatzes evozieren, die eine faire Lösung erreichen.
-            tone: default
+          - src: /img/projects/helpling/helpling-rc-hero.jpg
+            alt: Resolution Center — abstrakte 3D-Formen aus Glas, Metall und weicher Geometrie um einen warmen Kern, die Struktur aus Komplexität andeuten.
+            tone: bare
             size: lg
 
       - id: rc-overview

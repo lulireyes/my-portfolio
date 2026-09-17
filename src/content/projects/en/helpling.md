@@ -46,9 +46,9 @@ sections:
         tagline: Designing for two people who both believe they're right.
         impactLine: Reduced operational support costs by 35% by turning manual dispute handling into a scalable self-service experience.
         figures:
-          - src: /img/projects/helpling/helpling-rc-hero.webp
-            alt: Resolution Center — translucent glass blocks meeting a solid metallic form, evoking two sides of a marketplace reaching a fair resolution.
-            tone: default
+          - src: /img/projects/helpling/helpling-rc-hero.jpg
+            alt: Resolution Center — abstract 3D forms of glass, metal, and soft geometry gathering around a warm core, suggesting structure emerging from complexity.
+            tone: bare
             size: lg
 
       - id: rc-overview

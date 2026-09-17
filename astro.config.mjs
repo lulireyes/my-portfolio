@@ -40,6 +40,10 @@ export default defineConfig({
   site: 'https://lulireyes.github.io',
   base,
   trailingSlash: 'always',
+  build: {
+    // Inline the (small) global stylesheet to remove the render-blocking CSS request.
+    inlineStylesheets: 'always',
+  },
   markdown: {
     processor: unified({
       rehypePlugins: [rehypePrefixBase(base)],

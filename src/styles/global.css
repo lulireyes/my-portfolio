@@ -1,11 +1,8 @@
-@import '@fontsource/space-grotesk/latin-400.css';
 @import '@fontsource/space-grotesk/latin-500.css';
 @import '@fontsource/space-grotesk/latin-600.css';
 @import '@fontsource/space-grotesk/latin-700.css';
 @import '@fontsource/inter/latin-400.css';
 @import '@fontsource/inter/latin-500.css';
-@import '@fontsource/inter/latin-600.css';
-@import '@fontsource/jetbrains-mono/latin-400.css';
 @import '@fontsource/jetbrains-mono/latin-500.css';
 
 /* Dark is the default first-paint theme (also set on <html data-theme="dark">). */
@@ -250,6 +247,11 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 0.15rem;
+}
+
+/* Desktop: language lives in the topbar. Mobile overlay copy is hidden. */
+.site-nav-lang {
+  display: none;
 }
 
 .menu-toggle {
@@ -544,7 +546,7 @@ a.lang-option:focus-visible {
   color: var(--color-tag-ink);
   font-family: var(--font-mono);
   font-size: 0.8125rem;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0.01em;
   line-height: 1.2;
   white-space: nowrap;
@@ -934,7 +936,7 @@ a.lang-option:focus-visible {
   margin: 0;
   font-family: var(--font-display);
   font-size: clamp(1.35rem, 2.4vw, 1.75rem);
-  font-weight: 400;
+  font-weight: 500;
   font-style: italic;
   line-height: 1.35;
   letter-spacing: -0.015em;
@@ -1375,19 +1377,31 @@ html[data-theme='light'] .journey-tags li {
 
 @media (max-width: 640px) {
   .topbar {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     position: relative;
     z-index: 60;
     /* Drop the entrance transform so it can't become the containing block
        for the position:fixed full-screen nav overlay below. */
     animation: none;
+    gap: 0.5rem;
   }
 
-  /* Keep the hamburger/close (and the other actions) tappable above the overlay. */
+  .brand {
+    min-width: 0;
+    font-size: clamp(1.35rem, 5.5vw, 1.85rem);
+  }
+
+  /* Keep the hamburger/close (and theme) tappable above the overlay. */
   .topbar-actions {
     margin-left: auto;
     position: relative;
     z-index: 70;
+    flex-shrink: 0;
+  }
+
+  /* Language moves into the hamburger menu so the bar stays one line. */
+  .topbar-lang {
+    display: none;
   }
 
   .menu-toggle {
@@ -1401,8 +1415,10 @@ html[data-theme='light'] .journey-tags li {
     z-index: 50;
     margin: 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: clamp(2rem, 6vh, 3rem);
     padding:
       max(env(safe-area-inset-top), 1.5rem)
       max(env(safe-area-inset-right), 1.5rem)
@@ -1437,6 +1453,23 @@ html[data-theme='light'] .journey-tags li {
     font-size: clamp(1.6rem, 7vw, 2.25rem);
     font-weight: 500;
     letter-spacing: -0.02em;
+  }
+
+  .site-nav-lang {
+    display: block;
+  }
+
+  .site-nav-lang .lang-switch {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    gap: 0.35rem;
+  }
+
+  .site-nav-lang .lang-option {
+    min-width: 2.75rem;
+    font-size: 1rem;
+    letter-spacing: 0.06em;
   }
 
   .about-block {

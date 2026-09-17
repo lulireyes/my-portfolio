@@ -46,9 +46,9 @@ sections:
         tagline: Diseñar para dos personas que ambas creen tener razón.
         impactLine: Reduje los costes operativos de soporte en un 35% al convertir la gestión manual de disputas en una experiencia de autoservicio escalable.
         figures:
-          - src: /img/projects/helpling/helpling-rc-hero.webp
-            alt: Resolution Center — bloques de cristal translúcido encontrándose con una forma metálica sólida, evocando dos lados de un marketplace que alcanzan una resolución justa.
-            tone: default
+          - src: /img/projects/helpling/helpling-rc-hero.jpg
+            alt: Resolution Center — formas 3D abstractas de cristal, metal y geometría suave reunidas en torno a un núcleo cálido, sugiriendo estructura emergiendo de la complejidad.
+            tone: bare
             size: lg
 
       - id: rc-overview
