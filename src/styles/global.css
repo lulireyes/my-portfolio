@@ -1521,6 +1521,18 @@ html[data-theme='light'] .journey-tags li {
   text-align: left;
 }
 
+/* Large hero image between the title/subtitle and the summary. */
+.case-hero-figure {
+  margin-block: clamp(1.75rem, 4.5vh, 3rem) clamp(0.75rem, 2.5vh, 1.5rem);
+}
+
+.case-hero-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: clamp(0.75rem, 1.5vw, 1.25rem);
+}
+
 .case-summary-block,
 .case-role-block {
   display: grid;

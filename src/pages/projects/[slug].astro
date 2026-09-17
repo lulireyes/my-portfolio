@@ -83,6 +83,14 @@ function sectionMarqueeRepeats(title: string) {
           {d.subtitle && <p class="case-subtitle">{d.subtitle}</p>}
         </header>
 
+        {
+          d.heroImage && (
+            <figure class="case-hero-figure shell-case">
+              <img src={withBase(d.heroImage)} alt={d.heroImageAlt ?? ''} loading="eager" />
+            </figure>
+          )
+        }
+
         <section class="case-summary-block shell-case" aria-labelledby={`summary-${project.id}`}>
           <div class="case-summary-main">
             <h2 class="case-section-title" id={`summary-${project.id}`}>

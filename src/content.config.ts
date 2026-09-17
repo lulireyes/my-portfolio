@@ -184,6 +184,9 @@ const projects = defineCollection({
     impact: z.array(impactItem).default([]),
     /** Path under public/, e.g. /img/projects/example/cover.webp */
     cover: z.string().optional(),
+    /** Large hero image shown after the title/subtitle, before the summary. */
+    heroImage: z.string().optional(),
+    heroImageAlt: z.string().optional(),
     /** Lower numbers appear first */
     order: z.number().default(100),
     /**
