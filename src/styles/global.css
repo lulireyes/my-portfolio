@@ -71,6 +71,16 @@
   box-sizing: border-box;
 }
 
+::selection {
+  background: var(--color-accent);
+  color: #111111;
+}
+
+::-moz-selection {
+  background: var(--color-accent);
+  color: #111111;
+}
+
 html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
@@ -706,7 +716,7 @@ a.lang-option:focus-visible {
      cards cascading diagonally down-left, one per row (staircase rhythm). */
   .philosophy-layout {
     grid-template-columns: 1fr;
-    gap: clamp(2.5rem, 6vh, 4rem);
+    gap: clamp(0.75rem, 1.8vh, 1.35rem);
   }
 
   .philosophy-intro {
@@ -716,7 +726,7 @@ a.lang-option:focus-visible {
   .philosophy-list {
     grid-template-columns: 1fr;
     column-gap: 0;
-    row-gap: clamp(1.75rem, 4vh, 2.5rem);
+    row-gap: clamp(0.5rem, 1.2vh, 1rem);
   }
 
   /* Each card is a readable column; increasing left offset from the last card
