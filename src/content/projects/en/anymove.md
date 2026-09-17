@@ -65,6 +65,11 @@ sections:
           - Creation of Design System components and principles
           - Prototyping & testing
           - Iteration
+        figures:
+          - src: /img/projects/anymove/anymove-atmosphere-architecture.jpg
+            alt: Bright minimalist white interior with a modern staircase, thin handrails, and geometric wall planes photographed from a low angle.
+            tone: bare
+            size: bleed
 
       - id: am-challenge
         layout: challenge
@@ -74,16 +79,10 @@ sections:
           - The experience had to feel consistent whether users were renting a car today or using completely different mobility services in the future, spanning across both web and desktop experiences.
           - "Building an MVP under constraints: solving today's problems without limiting tomorrow's possibilities."
         figures:
-          - src: /img/projects/anymove/anymove-atmosphere-architecture.jpg
-            alt: Bright minimalist white interior with a modern staircase, thin handrails, and geometric wall planes photographed from a low angle.
-            caption: Brand atmosphere — clean architectural calm that set the visual mood for a premium mobility platform.
-            tone: process
-            size: sm
           - src: /img/projects/anymove/anymove-lifestyle-tesla.jpg
             alt: Woman in a red beanie sitting in a Tesla driver’s seat, reaching toward the car’s large center touchscreen.
-            caption: Mobility in context — the in-car moment the product had to feel ready for, not just the phone screens.
-            tone: process
-            size: sm
+            tone: bare
+            size: bleed
 
       - id: am-discovery
         layout: challenge

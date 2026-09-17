@@ -247,6 +247,18 @@ function figureClasses(fig: StoryFigure, extra = '') {
                 ))}
               </ul>
             </div>
+            {(ch.figures?.length ?? 0) > 0 && (
+              <div class:list={['rc-figure-stack', { 'rc-figure-gallery': (ch.figures?.length ?? 0) > 1 }]}>
+                {ch.figures?.map((fig) => (
+                  <figure class={figureClasses(fig)}>
+                    <div class="rc-figure-frame">
+                      <img src={withBase(fig.src)} alt={fig.alt} loading="lazy" decoding="async" />
+                    </div>
+                    {fig.caption && <figcaption class="rc-figure-caption">{fig.caption}</figcaption>}
+                  </figure>
+                ))}
+              </div>
+            )}
           </div>
         )}
 

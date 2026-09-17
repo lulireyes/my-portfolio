@@ -65,6 +65,11 @@ sections:
           - Creación de componentes y principios del Sistema de Diseño
           - Prototipado y testeo
           - Iteración
+        figures:
+          - src: /img/projects/anymove/anymove-atmosphere-architecture.jpg
+            alt: Interior minimalista y luminoso en blanco con una escalera moderna, barandillas finas y planos geométricos en la pared, fotografiado desde un ángulo bajo.
+            tone: bare
+            size: bleed
 
       - id: am-challenge
         layout: challenge
@@ -74,16 +79,10 @@ sections:
           - La experiencia tenía que sentirse coherente tanto si los usuarios alquilaban un coche hoy como si usaban servicios de movilidad completamente distintos en el futuro, abarcando tanto la experiencia web como la de escritorio.
           - "Construir un MVP bajo restricciones: resolver los problemas de hoy sin limitar las posibilidades de mañana."
         figures:
-          - src: /img/projects/anymove/anymove-atmosphere-architecture.jpg
-            alt: Interior minimalista y luminoso en blanco con una escalera moderna, barandillas finas y planos geométricos en la pared, fotografiado desde un ángulo bajo.
-            caption: Atmósfera de marca — la calma arquitectónica y limpia que definió el ambiente visual de una plataforma de movilidad premium.
-            tone: process
-            size: sm
           - src: /img/projects/anymove/anymove-lifestyle-tesla.jpg
             alt: Mujer con un gorro rojo sentada en el asiento del conductor de un Tesla, extendiendo la mano hacia la gran pantalla táctil central del coche.
-            caption: Movilidad en contexto — el momento dentro del coche para el que el producto debía sentirse preparado, no solo las pantallas del teléfono.
-            tone: process
-            size: sm
+            tone: bare
+            size: bleed
 
       - id: am-discovery
         layout: challenge
