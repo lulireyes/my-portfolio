@@ -18,6 +18,10 @@ const nav = site.nav ?? [
   { label: 'About', href: '#about' },
   { label: 'Contact', href: '#contact' },
 ];
+
+const connectBody = site.footer.connectBody ?? site.footer.thanks;
+const emote = '( ◠‿◠ )';
+const connectParts = connectBody.includes(emote) ? connectBody.split(emote) : null;
 ---
 
 <footer class="site-footer" id="contact" aria-labelledby="footer-heading">
@@ -28,7 +32,18 @@ const nav = site.nav ?? [
       <div class="footer-connect">
         <h3 class="footer-connect-heading">{site.footer.connectHeading ?? "Let's connect"}</h3>
         <p class="footer-connect-body">
-          {site.footer.connectBody ?? site.footer.thanks}
+          {
+            connectParts
+              ? connectParts.map((part, index) => (
+                  <>
+                    {part}
+                    {index < connectParts.length - 1 && (
+                      <span class="footer-emote">{emote}</span>
+                    )}
+                  </>
+                ))
+              : connectBody
+          }
         </p>
       </div>
 
