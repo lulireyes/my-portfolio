@@ -60,9 +60,8 @@ sections:
         figures:
           - src: /img/projects/yoona/yoona-atmosphere-fashion-fabric.jpg
             alt: Foto conceptual de moda con una figura sobre un saliente de piedra y una tela blanca translúcida ondeando contra un cielo azul despejado, con un amplio espacio crema abajo para dar aire a la composición.
-            caption: Atmósfera de marca — imágenes de moda etéreas que orientaron la dirección visual, alejándola del software empresarial estéril.
-            tone: process
-            size: sm
+            tone: bare
+            size: full
 
       - id: yo-discovery
         layout: challenge

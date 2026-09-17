@@ -60,9 +60,8 @@ sections:
         figures:
           - src: /img/projects/yoona/yoona-atmosphere-fashion-fabric.jpg
             alt: Mode-Konzeptfoto mit einer Figur auf einem Steinvorsprung und durchscheinendem weißem Stoff, der vor einem klaren blauen Himmel weht, mit viel offenem cremefarbenem Raum darunter als Layout-Freiraum.
-            caption: Markenatmosphäre — luftige Modebilder, die die visuelle Richtung weg von steriler Unternehmenssoftware lenkten.
-            tone: process
-            size: sm
+            tone: bare
+            size: full
 
       - id: yo-discovery
         layout: challenge
