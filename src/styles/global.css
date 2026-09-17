@@ -702,9 +702,11 @@ a.lang-option:focus-visible {
 }
 
 @media (min-width: 1024px) {
+  /* Desktop: single column with the intro on top and the four principle
+     cards cascading diagonally down-left, one per row (staircase rhythm). */
   .philosophy-layout {
-    grid-template-columns: minmax(17rem, 0.85fr) minmax(0, 1.15fr);
-    column-gap: clamp(2.5rem, 5vw, 4.5rem);
+    grid-template-columns: 1fr;
+    gap: clamp(2.5rem, 6vh, 4rem);
   }
 
   .philosophy-intro {
@@ -712,8 +714,33 @@ a.lang-option:focus-visible {
   }
 
   .philosophy-list {
-    column-gap: clamp(2.5rem, 5vw, 4.25rem);
-    row-gap: clamp(2rem, 4.5vh, 2.75rem);
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    row-gap: clamp(1.75rem, 4vh, 2.5rem);
+  }
+
+  /* Each card is a readable column; increasing left offset from the last card
+     (flush-left) up to the first (furthest right) builds the diagonal. Offsets
+     are percentages of the container so the staircase stays proportional and the
+     widest card still fits within the shell with no horizontal overflow. */
+  .philosophy-item {
+    max-width: 28rem;
+  }
+
+  .philosophy-item:nth-child(1) {
+    margin-left: 50%;
+  }
+
+  .philosophy-item:nth-child(2) {
+    margin-left: 34%;
+  }
+
+  .philosophy-item:nth-child(3) {
+    margin-left: 17%;
+  }
+
+  .philosophy-item:nth-child(4) {
+    margin-left: 0;
   }
 
   .philosophy-principle {
@@ -722,7 +749,7 @@ a.lang-option:focus-visible {
 
   .philosophy-desc {
     font-size: 0.90625rem;
-    max-width: 32rem;
+    max-width: 100%;
   }
 }
 
