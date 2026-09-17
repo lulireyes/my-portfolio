@@ -1,6 +1,8 @@
 ---
 title: Yoona.ai
 subtitle: Simplifying the fashion value chain through AI and product design
+heroImage: /img/projects/yoona/yoona-hero.webp
+heroImageAlt: Yoona.ai — a sculptural white ‘Y’ emblem embossed on a soft light surface.
 summary: End-to-end redesign of a deep tech B2B platform that turns AI complexity into an intuitive path from concept to real production and the Metaverse.
 overview:
   - "Yoona.ai is a deep tech B2B service platform designed to simplify and transform the apparel industry value chain—from initial conceptualization to real production and the Metaverse (featuring a streamlined \"3 clicks to Metaverse & Real Production\" workflow). By leveraging artificial intelligence for data analysis, the software empowers fashion brands to generate high-margin cash cow designs, prepare collections for virtual Augmented Reality (AR) fashion shows, and optimize resources sustainably."
@@ -58,9 +60,8 @@ sections:
         figures:
           - src: /img/projects/yoona/yoona-atmosphere-fashion-fabric.jpg
             alt: Fashion concept photo of a figure on a stone ledge with translucent white fabric billowing against a clear blue sky, with open cream space below for layout breathing room.
-            caption: Brand atmosphere — airy fashion imagery that steered the visual direction away from sterile enterprise software.
-            tone: process
-            size: sm
+            tone: bare
+            size: bleed
 
       - id: yo-discovery
         layout: challenge

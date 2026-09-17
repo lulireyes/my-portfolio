@@ -1,9 +1,16 @@
 ---
 import { getSite } from '../lib/site';
-import { withBase } from '../lib/paths';
+import { localeHome, type Locale } from '../lib/i18n';
+import LangSwitch from './LangSwitch.astro';
 
-const site = getSite();
-const home = withBase('/');
+interface Props {
+  locale?: Locale;
+  langHrefs?: Partial<Record<Locale, string>>;
+}
+
+const { locale = 'en', langHrefs } = Astro.props;
+const site = getSite(locale);
+const home = localeHome(locale);
 const nav = site.nav ?? [
   { label: 'Work', href: '#work' },
   { label: 'About', href: '#about' },
@@ -18,9 +25,11 @@ const nav = site.nav ?? [
       {
         nav.map((item) => {
           const hash = item.href.startsWith('#') ? item.href : `#${item.href}`;
+          const isContact = hash.toLowerCase() === '#contact';
+          const href = isContact ? `mailto:${site.email}` : `${home}${hash}`;
           return (
             <li>
-              <a href={`${home}${hash}`}>{item.label}</a>
+              <a href={href}>{item.label}</a>
             </li>
           );
         })
@@ -28,6 +37,7 @@ const nav = site.nav ?? [
     </ul>
   </nav>
   <div class="topbar-actions">
+    <LangSwitch locale={locale} hrefs={langHrefs} />
     <button
       type="button"
       class="theme-toggle"

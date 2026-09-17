@@ -1,7 +1,13 @@
 ---
 import { getSite } from '../lib/site';
+import type { Locale } from '../lib/i18n';
 
-const site = getSite();
+interface Props {
+  locale?: Locale;
+}
+
+const { locale = 'en' } = Astro.props;
+const site = getSite(locale);
 const meta = site.locationMeta;
 ---
 

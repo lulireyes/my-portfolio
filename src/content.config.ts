@@ -50,9 +50,13 @@ const storyFigure = z.object({
   src: z.string(),
   alt: z.string(),
   caption: z.string().optional(),
-  /** Modest process frame by default — not a full-bleed hero; `visual` = bare editorial illustration */
-  tone: z.enum(['process', 'default', 'visual']).default('process'),
-  size: z.enum(['sm', 'md', 'lg', 'full']).default('md'),
+  /**
+   * Modest process frame by default — not a full-bleed hero.
+   * `visual` = bare editorial illustration (inverted in dark mode);
+   * `bare` = frameless photo/screenshot shown as-is (no frame, no inversion).
+   */
+  tone: z.enum(['process', 'default', 'visual', 'bare']).default('process'),
+  size: z.enum(['sm', 'md', 'lg', 'full', 'bleed']).default('md'),
 });
 
 const storySolution = z.object({
@@ -147,9 +151,7 @@ const caseSection = z.object({
   story: z.array(storyChapter).optional(),
 });
 
-const projects = defineCollection({
-  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/projects' }),
-  schema: z.object({
+const projectSchema = z.object({
     title: z.string(),
     subtitle: z.string().optional(),
     /** Short homepage card summary */
@@ -180,6 +182,9 @@ const projects = defineCollection({
     impact: z.array(impactItem).default([]),
     /** Path under public/, e.g. /img/projects/example/cover.webp */
     cover: z.string().optional(),
+    /** Large hero image shown after the title/subtitle, before the summary. */
+    heroImage: z.string().optional(),
+    heroImageAlt: z.string().optional(),
     /** Lower numbers appear first */
     order: z.number().default(100),
     /**
@@ -193,7 +198,21 @@ const projects = defineCollection({
      * Useful for Behance / Medium pieces.
      */
     externalUrl: z.string().url().optional(),
-  }),
 });
 
-export const collections = { projects };
+const projects = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/projects/en' }),
+  schema: projectSchema,
+});
+
+const projectsEs = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/projects/es' }),
+  schema: projectSchema,
+});
+
+const projectsDe = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/projects/de' }),
+  schema: projectSchema,
+});
+
+export const collections = { projects, projectsEs, projectsDe };

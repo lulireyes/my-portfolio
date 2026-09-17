@@ -1,6 +1,8 @@
 ---
 title: AnyMove
 subtitle: Designing a mobility platform before the platform existed.
+heroImage: /img/projects/anymove/anymove-hero.webp
+heroImageAlt: AnyMove — a structured core of cubes held within a glass orbital ring.
 summary: Creating a flexible product foundation for a stealth mobility service designed to grow beyond its first MVP.
 overview:
   - "ANYMOVE started as a stealth project with a bold mission: to create Europe’s end-to-end new mobility platform enabling highly convenient and inclusive mobility services for anyone. Rather than building just a single vehicle rental app, it was designed as a scalable platform to support multiple services, diverse fleets, and entirely new ways of moving."
@@ -63,6 +65,11 @@ sections:
           - Creation of Design System components and principles
           - Prototyping & testing
           - Iteration
+        figures:
+          - src: /img/projects/anymove/anymove-atmosphere-architecture.jpg
+            alt: Bright minimalist white interior with a modern staircase, thin handrails, and geometric wall planes photographed from a low angle.
+            tone: bare
+            size: bleed
 
       - id: am-challenge
         layout: challenge
@@ -72,16 +79,10 @@ sections:
           - The experience had to feel consistent whether users were renting a car today or using completely different mobility services in the future, spanning across both web and desktop experiences.
           - "Building an MVP under constraints: solving today's problems without limiting tomorrow's possibilities."
         figures:
-          - src: /img/projects/anymove/anymove-atmosphere-architecture.jpg
-            alt: Bright minimalist white interior with a modern staircase, thin handrails, and geometric wall planes photographed from a low angle.
-            caption: Brand atmosphere — clean architectural calm that set the visual mood for a premium mobility platform.
-            tone: process
-            size: sm
           - src: /img/projects/anymove/anymove-lifestyle-tesla.jpg
             alt: Woman in a red beanie sitting in a Tesla driver’s seat, reaching toward the car’s large center touchscreen.
-            caption: Mobility in context — the in-car moment the product had to feel ready for, not just the phone screens.
-            tone: process
-            size: sm
+            tone: bare
+            size: bleed
 
       - id: am-discovery
         layout: challenge

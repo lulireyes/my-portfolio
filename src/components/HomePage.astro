@@ -1,0 +1,299 @@
+---
+import LocationBar from './LocationBar.astro';
+import Topbar from './Topbar.astro';
+import SiteFooter from './SiteFooter.astro';
+import PhilosophyIcon from './PhilosophyIcon.astro';
+import { getSite } from '../lib/site';
+import { withBase } from '../lib/paths';
+import { getWorkProjects } from '../lib/workProjects';
+import { t, type Locale } from '../lib/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const site = getSite(locale);
+const strings = t(locale);
+const workCards = site.workCards ?? {};
+
+/** Fixed 4-card Work grid: Helpling, AnyMove, Beelinguapp, Yoona.ai */
+const projects = await getWorkProjects(locale);
+
+/** Locale-aware base for case-study routes, e.g. `projects/`, `es/projects/`, `de/projects/`. */
+const routeBase = locale === 'en' ? 'projects' : `${locale}/projects`;
+const projectHref = (slug: string) => withBase(`${routeBase}/${slug}/`);
+
+type PhilosophyIconId = 'everyone' | 'strategy' | 'collaboration' | 'evidence';
+---
+
+<div class="page">
+  <LocationBar locale={locale} />
+  <Topbar locale={locale} />
+
+  <main>
+    <section class="shell intro" aria-labelledby="intro-heading">
+      <h1 class="intro-headline" id="intro-heading">
+        {
+          site.intro.segments.map((seg) =>
+            seg.style === 'struck' ? (
+              <s class="intro-struck">{seg.text}</s>
+            ) : seg.style === 'accent' ? (
+              <span class="intro-accent">{seg.text}</span>
+            ) : (
+              <Fragment>{seg.text}</Fragment>
+            ),
+          )
+        }
+      </h1>
+      <p class="intro-specializing">{site.specializingLabel}</p>
+      <ul class="specialties" aria-label={site.specializingLabel}>
+        {
+          site.specialties.map((item) => (
+            <li>
+              <span class="specialty-chip">{item}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <hr class="divider" />
+
+    <section class="shell philosophy" aria-labelledby="philosophy-heading">
+      <div class="philosophy-layout">
+        <div class="philosophy-intro-col">
+          <p class="philosophy-label">{site.philosophy.label}</p>
+          <h2 class="philosophy-title" id="philosophy-heading">{site.philosophy.title}</h2>
+          <p class="philosophy-intro">{site.philosophy.intro}</p>
+        </div>
+        <ul class="philosophy-list">
+          {
+            site.philosophy.items.map((item) => (
+              <li class="philosophy-item">
+                <div class="philosophy-icon" aria-hidden="true">
+                  <PhilosophyIcon id={item.id as PhilosophyIconId} />
+                </div>
+                <div class="philosophy-copy">
+                  <h3 class="philosophy-principle">{item.title}</h3>
+                  <p class="philosophy-desc">{item.body}</p>
+                </div>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+
+    {
+      projects.length > 0 && (
+        <section class="shell work" id="work" aria-labelledby="work-heading">
+          <h2 class="work-heading" id="work-heading">
+            {site.workHeading}
+          </h2>
+          <ul class="work-grid">
+            {projects.map((project) => {
+              const href = project.data.externalUrl
+                ? project.data.externalUrl
+                : projectHref(project.id);
+              const external = Boolean(project.data.externalUrl);
+              const summary =
+                workCards[project.id]?.summary ??
+                project.data.summary ??
+                project.data.subtitle ??
+                '';
+              const ctaLabel =
+                project.id === 'helpling' ? strings.viewCaseStudies : strings.viewCaseStudy;
+
+              return (
+                <li>
+                  <a
+                    class="work-card"
+                    href={href}
+                    target={external ? '_blank' : undefined}
+                    rel={external ? 'noopener noreferrer' : undefined}
+                  >
+                    {project.data.cover && (
+                      <img
+                        class="work-cover"
+                        src={withBase(project.data.cover)}
+                        alt=""
+                        loading="lazy"
+                      />
+                    )}
+                    <div class="work-body">
+                      <h3 class="work-title">{project.data.title}</h3>
+                      {summary && <p class="work-summary">{summary}</p>}
+                      <span class="work-cta">{ctaLabel} →</span>
+                    </div>
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      )
+    }
+
+    {
+      site.testimonials?.length > 0 && (
+        <section class="testimonials" aria-label="Testimonials">
+          <div class="shell testimonials-grid">
+            {site.testimonials.map((item) => (
+              <figure class="testimonial">
+                {item.avatar && (
+                  <img
+                    class="testimonial-avatar"
+                    src={withBase(item.avatar)}
+                    alt=""
+                    width="104"
+                    height="104"
+                    loading="lazy"
+                  />
+                )}
+                <blockquote class="testimonial-quote">
+                  <p>“{item.quote}”</p>
+                </blockquote>
+                <figcaption class="testimonial-meta">
+                  {item.name} - {item.role}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+      )
+    }
+
+    {
+      site.about && (
+        <section class="shell about" id="about" aria-labelledby="about-heading">
+          <h2 class="about-heading" id="about-heading">
+            {site.about.heading}
+          </h2>
+          <div class="about-blocks">
+            <div class="about-block about-block--path">
+              <span class="about-photo-slot" aria-hidden="true"></span>
+              <p class="about-path">{site.about.path}</p>
+            </div>
+            {site.about.blocks.map((block) => (
+              <div class="about-block">
+                {block.photo && (
+                  <img
+                    class="about-photo"
+                    src={withBase(block.photo)}
+                    alt=""
+                    width="160"
+                    height="160"
+                    loading="lazy"
+                  />
+                )}
+                <p class="about-text">{block.text}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )
+    }
+
+    {
+      site.journey && (
+        <section class="shell journey" aria-labelledby="journey-heading">
+          <h2 class="journey-heading" id="journey-heading">
+            {site.journey.heading}
+          </h2>
+          <ul class="journey-list">
+            {site.journey.items.map((item) => (
+              <li class="journey-item">
+                <div class="journey-rail" aria-hidden="true">
+                  <span class="journey-logo-frame">
+                    {item.logo && (
+                      <img
+                        class="journey-logo"
+                        src={withBase(item.logo)}
+                        alt=""
+                        width="56"
+                        height="56"
+                        loading="lazy"
+                      />
+                    )}
+                  </span>
+                </div>
+                <div class="journey-body">
+                  <p class="journey-dates">{item.dates}</p>
+                  <h3 class="journey-company">{item.company}</h3>
+                  <p class="journey-role">{item.role}</p>
+                  {item.description && <p class="journey-desc">{item.description}</p>}
+                  {(item.tags?.length || item.caseStudy) && (
+                    <div class="journey-meta">
+                      {item.tags?.length ? (
+                        <ul class="journey-tags" aria-label={`${item.company} focus areas`}>
+                          {item.tags.map((tag) => (
+                            <li>{tag}</li>
+                          ))}
+                        </ul>
+                      ) : null}
+                      {item.caseStudy && (
+                        <a
+                          class="journey-case"
+                          href={projectHref(item.caseStudy)}
+                        >
+                          {strings.journeyCaseStudy}
+                          <svg
+                            class="journey-case-icon"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            aria-hidden="true"
+                          >
+                            <path d="M9 5l7 7-7 7" />
+                          </svg>
+                        </a>
+                      )}
+                    </div>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+  </main>
+
+  <SiteFooter locale={locale} />
+</div>
+
+<script>
+  function getPreferredTheme() {
+    const stored = localStorage.getItem('theme');
+    if (stored === 'light' || stored === 'dark') return stored;
+    return 'dark';
+  }
+
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    document.documentElement.style.colorScheme = theme;
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute('content', theme === 'dark' ? '#161616' : '#fafafa');
+    const toggleBtn = document.getElementById('theme-toggle');
+    if (toggleBtn) {
+      toggleBtn.setAttribute(
+        'aria-label',
+        theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'
+      );
+    }
+  }
+
+  const toggle = document.getElementById('theme-toggle');
+  applyTheme(getPreferredTheme());
+
+  toggle?.addEventListener('click', () => {
+    const next =
+      document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    localStorage.setItem('theme', next);
+    applyTheme(next);
+  });
+</script>

@@ -46,9 +46,8 @@ sections:
         tagline: Designing for two people who both believe they're right.
         impactLine: Reduced operational support costs by 35% by turning manual dispute handling into a scalable self-service experience.
         figures:
-          - src: /img/projects/helpling/helpling-rc-issue-flow-phones.png
-            alt: Two Helpling Resolution Center phone screens — Create new request issue categories on the left, and a follow-up screen to narrow the problem with a Continue button on the right.
-            caption: Resolution Center in product — structured issue intake and guided follow-up, designed for clarity under stress.
+          - src: /img/projects/helpling/helpling-rc-hero.webp
+            alt: Resolution Center — translucent glass blocks meeting a solid metallic form, evoking two sides of a marketplace reaching a fair resolution.
             tone: default
             size: lg
 
@@ -74,10 +73,10 @@ sections:
       - id: rc-outcomes
         layout: impact
         title: Outcomes
-        lead: Turning manual dispute handling into a scalable self-service experience changed both the cost structure of resolution and how independently users could move through it.
+        lead: Turning manual dispute handling into a scalable self-service experience improved operational efficiency — reducing German operational cost by 35% and lowering the incident rate for the German Operations Team — while changing how independently users could move through resolution.
         metrics:
           - value: 35%
-            label: reduction in operational support costs
+            label: reduction in German operational cost
             verified: true
           - value: 91%
             label: self-service adoption
@@ -162,17 +161,37 @@ sections:
         layout: solution
         title: The Solution
         lead: The Resolution Center turned those decisions into a coherent experience — organised around visibility, self-service, transparency and consistency across both sides of the marketplace.
+        figures:
+          - src: /img/projects/helpling/helpling-rc-flow-cleaner-not-here.webp
+            alt: End-to-end user flow for the customer scenario "My cleaner is not here", from reporting the problem to resolution.
+            caption: Customer flow — "My cleaner is not here", from report to resolution.
+            tone: default
+            size: full
+          - src: /img/projects/helpling/helpling-rc-flow-customer-new-issue.webp
+            alt: End-to-end user flow for a customer reporting a new issue through the Resolution Center.
+            caption: Customer reports a new issue — the end-to-end resolution flow.
+            tone: default
+            size: full
+          - src: /img/projects/helpling/helpling-rc-flow-provider-response.webp
+            alt: End-to-end user flow for a provider responding to a reported issue in the Resolution Center.
+            caption: Provider's response flow to a reported issue.
+            tone: default
+            size: full
+          - src: /img/projects/helpling/helpling-rc-flow-partial-refund-provider.webp
+            alt: Provider flow for a partial refund, triggered when the wrong duration was billed or the customer was dissatisfied with the quality.
+            caption: Provider flow — partial refund (wrong duration billed or dissatisfaction with quality).
+            tone: default
+            size: full
+          - src: /img/projects/helpling/helpling-rc-flow-full-refund-provider.webp
+            alt: Provider flow for a full refund, triggered when the cleaner didn't show, cancelled, the clean was rescheduled, or there was a double booking.
+            caption: Provider flow — full refund (cleaner didn't show, cancelled, rescheduled, or double booking).
+            tone: default
+            size: full
         solutions:
           - title: Visibility
             body: Users can understand the status of their case — where they are, what has been submitted, and what happens next — instead of waiting in an opaque process.
           - title: Self-service
             body: Predictable disputes can be handled without agent intervention, while complex cases still route to human judgment.
-            figure:
-              src: /img/projects/helpling/helpling-rc-service-portal-issue.png
-              alt: Service-Portal create-new-request screen listing billing errors, cleaner no-show, damage during an event, and wrongful fee charge as selectable issue cards.
-              caption: Structured self-service entry — each issue type maps to a clear next action.
-              tone: default
-              size: lg
           - title: Transparency
             body: The experience communicates what information is being considered and why a path is being taken — clarity over vague legal or procedural language.
           - title: Cross-platform consistency
@@ -204,11 +223,11 @@ sections:
       - id: rc-impact
         layout: impact
         title: Impact
-        lead: By turning manual dispute handling into a scalable self-service experience, the Resolution Center reduced operational support cost while shifting where human capacity was needed.
-        pullQuote: The result wasn't just a better customer experience. It changed where human operational capacity was needed.
+        lead: By turning manual dispute handling into a scalable self-service experience, improving operational efficiency reduced German operational cost by 35% and lowered the incident rate for the German Operations Team, while shifting where human capacity was needed.
+        pullQuote: The result wasn't just a better customer experience. It reduced the incident rate for the German Operations Team and changed where human operational capacity was needed.
         metrics:
           - value: 35%
-            label: reduction in operational support costs
+            label: reduction in German operational cost
             verified: true
           - value: 91%
             label: self-service adoption
@@ -265,9 +284,8 @@ sections:
         tagline: Scaling a product starts with scaling decisions.
         impactLine: "Bringing order to chaos: how I built Helpling’s first cross-platform Design System from the ground up."
         figures:
-          - src: /img/projects/helpling/helpling-ds-product-screens.png
-            alt: Four Helpling mobile screens side by side — provider selection with Anna selected, October date picker, personalized dashboard greeting Isabela, and Help FAQ with suggested articles — showing the Design System applied across product flows.
-            caption: Design System 1.0 in product — provider selection, scheduling, dashboard, and Help, sharing one cohesive UI language.
+          - src: /img/projects/helpling/helpling-ds-hero.webp
+            alt: Design System 1.0 — many modular components arranged into one organised, isometric system.
             tone: default
             size: lg
 
@@ -290,8 +308,12 @@ sections:
         paragraphs:
           - "A quick product audit revealed immediate red flags: 6 versions of the primary button, 3 different icon libraries, and 0 shared documentation."
           - Designers were constantly reinventing the wheel, engineers were implementing slightly different variations of the same components, and the lack of a single source of truth created unnecessary cognitive load for everyone.
-        placeholders:
-          - "[VISUAL PLACEHOLDER — examples of inconsistent patterns across the existing product]"
+        figures:
+          - src: /img/projects/helpling/helpling-ds-product-screens.png
+            alt: Four Helpling mobile screens side by side — provider selection with Anna selected, October date picker, personalized dashboard greeting Isabela, and Help FAQ with suggested articles — showing the Design System applied across product flows.
+            caption: Design System 1.0 in product — provider selection, scheduling, dashboard, and Help, sharing one cohesive UI language.
+            tone: default
+            size: lg
 
       - id: ds-approach
         layout: strategy
@@ -351,8 +373,11 @@ sections:
         title: Growth, Retention & A/B Experiments
         tagline: Finding the invisible barrier at the start of the funnel — and proving the fix weekly.
         impactLine: +15% conversion lift, >90% user satisfaction, and high long-term adoption across Germany and Singapore.
-        placeholders:
-          - "[IMAGE PLACEHOLDER — growth experiment / How Helpling Works modal / strongest UI visual]"
+        figures:
+          - src: /img/projects/helpling/helpling-growth-hero.webp
+            alt: Growth and experimentation — pastel paths rising upward toward a glowing point, evoking momentum and iterative gains.
+            tone: default
+            size: lg
 
       - id: gr-overview
         layout: overview
@@ -376,9 +401,9 @@ sections:
           - "The problem was not a missing feature. It was a comprehension barrier at the moment of highest intent: people needed just enough context to feel confident continuing, without slowing down the conversion path."
         pullQuote: The drop-off looked like a conversion problem. Underneath, it was a clarity problem.
         figures:
-          - src: /img/projects/helpling/helpling-growth-whiteboard-churn.jpg
-            alt: Hand-drawn whiteboard funnel diagram in red marker, grouping service friction into customer and provider problems.
-            caption: Early problem framing on the whiteboard — mapping funnel friction into customer vs. provider causes before we jumped to solutions.
+          - src: /img/projects/helpling/helpling-growth-wireflow.jpg
+            alt: Hand-drawn mobile wireflow sketches in blue ink showing Helpling onboarding and booking steps, including account and address screens.
+            caption: Discovery sketches for the onboarding and booking flow — low-fidelity wireflows used to pressure-test the funnel before high-fidelity work.
             size: md
 
       - id: gr-methodology
@@ -395,9 +420,9 @@ sections:
           - title: Contextual question marks
             body: Inline help affordances that surfaced explanations at the moment of confusion, tested alongside the core variants.
         figures:
-          - src: /img/projects/helpling/helpling-growth-wireflow.jpg
-            alt: Hand-drawn mobile wireflow sketches in blue ink showing Helpling onboarding and booking steps, including account and address screens.
-            caption: Discovery sketches for the onboarding and booking flow — low-fidelity wireflows used to pressure-test the funnel before high-fidelity work.
+          - src: /img/projects/helpling/helpling-growth-whiteboard-churn.jpg
+            alt: Hand-drawn whiteboard funnel diagram in red marker, grouping service friction into customer and provider problems.
+            caption: Early problem framing on the whiteboard — mapping funnel friction into customer vs. provider causes before we jumped to solutions.
             size: sm
           - src: /img/projects/helpling/helpling-growth-usability-session.png
             alt: Remote usability testing interface showing the Helpling Offers app beside a participant video feed with eyes barred and a session activity log.

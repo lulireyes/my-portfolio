@@ -4,6 +4,7 @@
  * Layout variants create visual rhythm — not a repeating card template.
  */
 import { withBase } from '../lib/paths';
+import { t, type Locale } from '../lib/i18n';
 
 interface Perspective {
   title: string;
@@ -27,8 +28,8 @@ interface StoryFigure {
   src: string;
   alt: string;
   caption?: string;
-  tone?: 'process' | 'default' | 'visual';
-  size?: 'sm' | 'md' | 'lg' | 'full';
+  tone?: 'process' | 'default' | 'visual' | 'bare';
+  size?: 'sm' | 'md' | 'lg' | 'full' | 'bleed';
 }
 interface Solution {
   title: string;
@@ -96,9 +97,11 @@ interface Chapter {
 
 interface Props {
   chapters: Chapter[];
+  locale?: Locale;
 }
 
-const { chapters } = Astro.props;
+const { chapters, locale = 'en' } = Astro.props;
+const cs = t(locale).caseStudy;
 
 function figureClasses(fig: StoryFigure, extra = '') {
   const tone = fig.tone ?? 'process';
@@ -113,7 +116,7 @@ function figureClasses(fig: StoryFigure, extra = '') {
       <section class={`rc-chapter rc-chapter--${ch.layout}`} id={ch.id} aria-labelledby={`${ch.id}-title`}>
         {ch.layout === 'hero' && (
           <div class="rc-hero shell-case">
-            <p class="rc-kicker">Case Study</p>
+            <p class="rc-kicker">{cs.kicker}</p>
             <h3 class="rc-hero-title" id={`${ch.id}-title`}>
               {ch.title}
             </h3>
@@ -149,13 +152,13 @@ function figureClasses(fig: StoryFigure, extra = '') {
             </header>
             <div class:list={['rc-overview-grid', { 'rc-overview-grid--no-role': !(ch.roleLine || ch.responsibilities) }]}>
               <div class="rc-overview-col">
-                <h4 class="rc-subhead">{ch.contextLabel ?? 'Context'}</h4>
+                <h4 class="rc-subhead">{ch.contextLabel ?? cs.context}</h4>
                 {ch.paragraphs?.map((p) => (
                   <p class="rc-body">{p}</p>
                 ))}
               </div>
               <div class="rc-overview-col">
-                <h4 class="rc-subhead">{ch.challengeLabel ?? 'The challenge'}</h4>
+                <h4 class="rc-subhead">{ch.challengeLabel ?? cs.challenge}</h4>
                 {ch.lead && <p class="rc-body">{ch.lead}</p>}
                 {ch.challengeIntro && (
                   <p class="rc-body rc-body--tight">{ch.challengeIntro}</p>
@@ -170,7 +173,7 @@ function figureClasses(fig: StoryFigure, extra = '') {
               </div>
               {(ch.roleLine || ch.responsibilities) && (
                 <div class="rc-overview-col rc-overview-col--role">
-                  <h4 class="rc-subhead">{ch.roleLabel ?? 'My role'}</h4>
+                  <h4 class="rc-subhead">{ch.roleLabel ?? cs.myRole}</h4>
                   {ch.roleLine && <p class="rc-body">{ch.roleLine}</p>}
                   {ch.responsibilities && (
                     <p class="rc-responsibilities">{ch.responsibilities}</p>
@@ -244,6 +247,18 @@ function figureClasses(fig: StoryFigure, extra = '') {
                 ))}
               </ul>
             </div>
+            {(ch.figures?.length ?? 0) > 0 && (
+              <div class:list={['rc-figure-stack', { 'rc-figure-gallery': (ch.figures?.length ?? 0) > 1 }]}>
+                {ch.figures?.map((fig) => (
+                  <figure class={figureClasses(fig)}>
+                    <div class="rc-figure-frame">
+                      <img src={withBase(fig.src)} alt={fig.alt} loading="lazy" decoding="async" />
+                    </div>
+                    {fig.caption && <figcaption class="rc-figure-caption">{fig.caption}</figcaption>}
+                  </figure>
+                ))}
+              </div>
+            )}
           </div>
         )}
 
@@ -380,7 +395,7 @@ function figureClasses(fig: StoryFigure, extra = '') {
               {ch.paragraphs?.map((p) => (
                 <p class="rc-body">{p}</p>
               ))}
-              <p class="rc-body rc-body--tight">The experience needed to communicate:</p>
+              <p class="rc-body rc-body--tight">{cs.communicate}</p>
               <ul class="rc-list">
                 {ch.bullets?.map((item) => (
                   <li>{item}</li>
@@ -412,7 +427,7 @@ function figureClasses(fig: StoryFigure, extra = '') {
                 </div>
                 {(ch.placeholders?.length ?? 0) > 2 && (
                   <div class="rc-design-compare shell-case">
-                    <p class="rc-compare-label">Customer + Provider</p>
+                    <p class="rc-compare-label">{cs.customerProvider}</p>
                     <div class="rc-compare-grid">
                       {(ch.placeholders ?? []).slice(2).map((ph) => (
                         <figure class="rc-placeholder rc-placeholder--side" role="img" aria-label={ph}>
@@ -441,25 +456,25 @@ function figureClasses(fig: StoryFigure, extra = '') {
               ))}
             </ul>
             {(ch.tradeoffs?.length ?? 0) > 0 && (
-              <div class="rc-tradeoffs" aria-label="Design trade-offs">
+              <div class="rc-tradeoffs" aria-label={cs.tradeoffsLabel}>
                 <div class="rc-tradeoff-head" aria-hidden="true">
-                  <span>User need</span>
-                  <span>Constraint</span>
-                  <span>Design response</span>
+                  <span>{cs.userNeed}</span>
+                  <span>{cs.constraint}</span>
+                  <span>{cs.designResponse}</span>
                 </div>
-                {ch.tradeoffs?.map((t) => (
+                {ch.tradeoffs?.map((tradeoff) => (
                   <div class="rc-tradeoff">
                     <p>
-                      <span class="rc-tradeoff-mobile-label">User need</span>
-                      {t.need}
+                      <span class="rc-tradeoff-mobile-label">{cs.userNeed}</span>
+                      {tradeoff.need}
                     </p>
                     <p>
-                      <span class="rc-tradeoff-mobile-label">Constraint</span>
-                      {t.constraint}
+                      <span class="rc-tradeoff-mobile-label">{cs.constraint}</span>
+                      {tradeoff.constraint}
                     </p>
                     <p>
-                      <span class="rc-tradeoff-mobile-label">Design response</span>
-                      {t.response}
+                      <span class="rc-tradeoff-mobile-label">{cs.designResponse}</span>
+                      {tradeoff.response}
                     </p>
                   </div>
                 ))}
@@ -581,7 +596,7 @@ function figureClasses(fig: StoryFigure, extra = '') {
               <div class="rc-before-after">
                 {(ch.before?.length ?? 0) > 0 && (
                   <div class="rc-ba-col">
-                    <h4 class="rc-ba-label">Before</h4>
+                    <h4 class="rc-ba-label">{cs.before}</h4>
                     <ul class="rc-ba-list">
                       {ch.before?.map((item) => (
                         <li>{item}</li>
@@ -591,7 +606,7 @@ function figureClasses(fig: StoryFigure, extra = '') {
                 )}
                 {(ch.after?.length ?? 0) > 0 && (
                   <div class="rc-ba-col">
-                    <h4 class="rc-ba-label">After</h4>
+                    <h4 class="rc-ba-label">{cs.after}</h4>
                     <ul class="rc-ba-list">
                       {ch.after?.map((item) => (
                         <li>{item}</li>
@@ -632,36 +647,12 @@ function figureClasses(fig: StoryFigure, extra = '') {
 
         {ch.layout === 'cta' && (
           <div class="rc-cta shell-case">
-            {!ch.contactInline && (
-              <header class="rc-chapter-head">
-                <h3 class="rc-chapter-title" id={`${ch.id}-title`}>
-                  {ch.title}
-                </h3>
-              </header>
-            )}
-            {ch.contactInline ? (
-              <p class="rc-cta-lead" id={`${ch.id}-title`}>
-                {ch.lead}
-                {ch.contactHref && ch.contactLabel && (
-                  <>
-                    {' '}
-                    <a class="rc-cta-link rc-cta-link--inline" href={ch.contactHref}>
-                      {ch.contactLabel}
-                    </a>
-                    {ch.contactSuffix ?? '.'}
-                  </>
-                )}
-              </p>
-            ) : (
-              <>
-                {ch.lead && <p class="rc-cta-lead">{ch.lead}</p>}
-                {ch.contactHref && ch.contactLabel && (
-                  <a class="rc-cta-link" href={ch.contactHref}>
-                    {ch.contactLabel}
-                  </a>
-                )}
-              </>
-            )}
+            <p class="rc-cta-lead" id={`${ch.id}-title`}>
+              {cs.ctaLead}{' '}
+              <a class="rc-cta-link rc-cta-link--inline" href="mailto:lucianareyes@gmail.com">
+                {cs.ctaLink}
+              </a>
+            </p>
           </div>
         )}
       </section>

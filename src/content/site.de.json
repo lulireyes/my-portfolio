@@ -1,0 +1,194 @@
+{
+  "name": "Luli Reyes",
+  "role": "Produktdesignerin",
+  "location": "Valencia, Spanien",
+  "email": "lucianareyes@gmail.com",
+  "intro": {
+    "segments": [
+      { "text": "Product Designerin", "style": "accent" },
+      { "text": " in ", "style": "accent" },
+      { "text": "Berlin", "style": "struck" },
+      { "text": " ", "style": "normal" },
+      { "text": "Valencia", "style": "accent" },
+      { "text": ", die digitale Produkte mit dem Menschen im Mittelpunkt gestaltet.", "style": "normal" }
+    ]
+  },
+  "specializingLabel": "Spezialisiert auf:",
+  "specialties": ["UX/UI", "Research", "Prototyping"],
+  "philosophy": {
+    "label": "Design-Philosophie",
+    "title": "Design beginnt mit Absicht.",
+    "intro": "Die Menschen verstehen, für die wir gestalten, ihren Kontext und die Probleme, die wir lösen wollen – und dabei bewusst darauf achten, wie sich die Erfahrung anfühlen soll.",
+    "items": [
+      {
+        "id": "everyone",
+        "title": "Design ist für alle da",
+        "body": "Gutes Design beginnt damit, die Menschen, ihre Bedürfnisse und ihren Kontext zu verstehen. Barrierefreiheit und Inklusion sollten von Anfang an Teil des Prozesses sein."
+      },
+      {
+        "id": "strategy",
+        "title": "Design ist Strategie",
+        "body": "Ich verbinde die Bedürfnisse der Menschen, Research und Geschäftsziele, um Entscheidungen zu treffen, die wirkungsvolle Ergebnisse schaffen."
+      },
+      {
+        "id": "collaboration",
+        "title": "Design ist Zusammenarbeit",
+        "body": "Die besten Produkte entstehen aus unterschiedlichen Perspektiven. Ich arbeite eng mit Produkt, Engineering, Data und Stakeholdern zusammen, um Ideen in bessere Entscheidungen zu verwandeln."
+      },
+      {
+        "id": "evidence",
+        "title": "Design braucht Evidenz",
+        "body": "Ideen sind Ausgangspunkte, keine Antworten. Research, Usability-Tests, Daten und echtes Feedback helfen, Annahmen zu hinterfragen und die nächsten Schritte zu leiten."
+      }
+    ]
+  },
+  "workHeading": "Projekte",
+  "nav": [
+    { "label": "Projekte", "href": "#work" },
+    { "label": "Über mich", "href": "#about" },
+    { "label": "Kontakt", "href": "#contact" }
+  ],
+  "workCards": {
+    "helpling": {
+      "summary": "Ich habe eine Funktion zur Konfliktlösung gestaltet und eingeführt, die die Betriebskosten um 35 % senkte und den Support effizienter machte."
+    },
+    "anymove": {
+      "summary": "Eine flexible Produktbasis für einen Mobilitätsdienst im Stealth-Modus – gebaut, um über das erste MVP hinaus zu wachsen."
+    },
+    "beelinguapp": {
+      "summary": "Sprachenlernen soll sich weniger wie Lernen anfühlen: eine EdTech-App mit über 1 Mio. Nutzer:innen."
+    },
+    "yoona": {
+      "summary": "Ganzheitliches Redesign einer B2B-Deep-Tech-Plattform, die die Komplexität von KI in einen intuitiven Weg vom Konzept zur realen Produktion und ins Metaverse verwandelt."
+    }
+  },
+  "testimonials": [
+    {
+      "quote": "Luli ist eine fantastische Mitstreiterin. Sie führte Nutzerinterviews mit echter Neugier und entwickelte ein tiefes Einfühlungsvermögen für unsere Nutzer:innen, das sich klar in ihren Designs widerspiegelte. Sie war umsichtig, kooperativ und eine echte Freude in der Zusammenarbeit.",
+      "name": "Anil Ravindrakumar",
+      "role": "Senior Product Manager bei Groove",
+      "avatar": "/img/testimonials/anil.webp"
+    },
+    {
+      "quote": "Luli ist eine Naturgewalt. Sie ist immer voller Energie und bereit, nicht nur eine neue Idee vorzuschlagen, sondern sie auch umzusetzen. Von ihr habe ich gelernt, jedes Problem zu lösen, das unseren Plänen im Weg stand – und das sogar mit Optimismus und positiver Energie. Ich empfehle sie, wenn du ein kompetentes, motiviertes und proaktives Teammitglied brauchst.",
+      "name": "Maddalena Zampitelli",
+      "role": "Design-Mentorin an der Apple Academy",
+      "avatar": "/img/testimonials/maddalena.webp"
+    }
+  ],
+  "about": {
+    "heading": "Über mich",
+    "path": "Buenos Aires → Berlin → Valencia durch Design",
+    "blocks": [
+      {
+        "photo": "/img/about/photo-1.webp",
+        "text": "Mich hat schon immer mehr interessiert, was hinter den Kulissen passiert, als das, was am Ende auf dem Bildschirm landet. Diese Neugier führte mich zuerst nach Buenos Aires, wo ich Film studierte und mich auf Art Direction spezialisierte. Es folgten zehn Jahre in Videoproduktion, Art Direction und Schnitt – und ich habe jede Minute davon geliebt."
+      },
+      {
+        "photo": "/img/about/photo-2.webp",
+        "text": "Dann zog ich nach Berlin und stieg bei einer deutschen VoD-Plattform als Content Managerin ein. Dort entdeckte ich meine Faszination für menschliches Verhalten und Psychologie und dafür, wie Interfaces gestaltet werden, um echte Probleme zu lösen. Was als Neugier nebenbei begann, wurde nach und nach zu Stunden autodidaktischen UX/UI-Lernens – bis mir klar wurde, dass ich das lieber tue als alles andere. Manche Leidenschaften werden zu dem, was man ein Leben lang macht."
+      },
+      {
+        "photo": "/img/about/photo-3.webp",
+        "text": "In den letzten über 6 Jahren habe ich mit deutschen und internationalen Unternehmen in den Bereichen Serviceplattformen, Mobilität, EdTech und Marktplätze gearbeitet und Produkte für Menschen in Deutschland, Singapur und darüber hinaus gestaltet. Dieselbe Neugier wie immer, nur auf einem anderen Bildschirm: Menschen verstehen, wie Dinge funktionieren und was eine Erfahrung mühelos wirken lässt."
+      },
+      {
+        "photo": "/img/about/photo-4.webp",
+        "text": "Außerhalb der Arbeit entdecke ich gern neue Orte, lade Freunde zum Essen ein, werde beim Brettspiel ehrgeizig und spiele – seit meinem Umzug nach Valencia – Padel. Ich bin außerdem Mutter, wohl der anspruchsvollste und erfüllendste Titel, den ich je hatte. Ich komme ursprünglich aus Argentinien und bin außerdem deutsche Staatsbürgerin."
+      }
+    ]
+  },
+  "journey": {
+    "heading": "Der Werdegang",
+    "items": [
+      {
+        "company": "Helpling",
+        "role": "Senior Product Designerin",
+        "dates": "2022 – 2025",
+        "logo": "/img/logos/helpling.webp",
+        "description": "Ich leitete das Produktdesign für die Kunden- und Partner-Apps in Deutschland und Singapur – von komplexen Service-Flows und dem Design System 1.0 bis zu Growth-Experimenten, die Streitkosten senkten und die Conversion steigerten.",
+        "tags": ["Marketplace", "Designsysteme", "Growth"],
+        "caseStudy": "helpling"
+      },
+      {
+        "company": "AnyMove",
+        "role": "Produktdesignerin",
+        "dates": "2022",
+        "logo": "/img/logos/anymove.webp",
+        "description": "Ich gestaltete eine flexible Produktbasis für eine europäische Mobilitätsplattform im Stealth-Modus: ein MVP für Web und Desktop sowie das erste Design System, gebaut, um über den ersten Service hinaus zu wachsen.",
+        "tags": ["Mobilität", "0→1", "Designsysteme"],
+        "caseStudy": "anymove"
+      },
+      {
+        "company": "Beelinguapp",
+        "role": "Produktdesignerin & Illustratorin",
+        "dates": "2021 – 2022",
+        "logo": "/img/logos/beelinguapp.webp",
+        "description": "Ich prägte die Lern-Flows und die Illustration einer EdTech-App mit über 1 Mio. Nutzer:innen und ließ das Üben einer Sprache eher wie das Lesen einer Geschichte wirken als wie das Pauken von Karteikarten.",
+        "tags": ["EdTech", "B2C", "Illustration"],
+        "caseStudy": "beelinguapp"
+      },
+      {
+        "company": "Skoove",
+        "role": "Designerin",
+        "dates": "2021",
+        "logo": "/img/logos/skoove.webp",
+        "description": "Ich gestaltete Produktoberflächen für eine interaktive App zum Klavierlernen, mit Fokus auf klare Übungs-Flows und motivierendes visuelles Feedback für Selbstlernende.",
+        "tags": ["EdTech", "Musik", "B2C"]
+      },
+      {
+        "company": "yoona.ai",
+        "role": "Produktdesignerin",
+        "dates": "2020",
+        "logo": "/img/logos/yoona.webp",
+        "description": "Ich leitete das ganzheitliche Redesign einer B2B-Deep-Tech-Modeplattform und vereinheitlichte Web und Desktop, damit sich KI-, 3D-Produktions- und Metaverse-Workflows intuitiv anfühlen – mit einem MVP, das heute in Produktion ist.",
+        "tags": ["KI", "B2B", "Mode"],
+        "caseStudy": "yoona"
+      },
+      {
+        "company": "Mello",
+        "role": "UX/UI-Designerin",
+        "dates": "2020",
+        "logo": "/img/logos/mello.webp",
+        "description": "Ich gestaltete die UX/UI eines Produkts in der Frühphase und verwandelte unklare Anforderungen in klare Flows und zugängliche Interfaces, die schnelle Iteration ermöglichten.",
+        "tags": ["UX/UI", "Startup", "0→1"]
+      },
+      {
+        "company": "PANTAFLIX AG",
+        "role": "Content Managerin",
+        "dates": "2017 – 2019",
+        "logo": "/img/logos/pantaflix.webp",
+        "description": "Ich verantwortete die Inhalte einer deutschen VoD-Plattform und verband Storytelling-Handwerk mit dem operativen Betrieb digitaler Produkte, bevor ich vollständig ins Produktdesign wechselte.",
+        "tags": ["Medien", "Content", "VoD"]
+      }
+    ]
+  },
+  "seo": {
+    "title": "Luli Reyes — Produktdesignerin",
+    "description": "In Valencia ansässige Produktdesignerin mit Fokus auf durchdachte, menschzentrierte Produkte. UX/UI, Research und Barrierefreiheit."
+  },
+  "locationMeta": {
+    "city": "Valencia, ES",
+    "coordinates": "39.4699° N, 0.3763° W",
+    "timeZone": "Europe/Madrid"
+  },
+  "links": [
+    {
+      "label": "Linkedin",
+      "href": "https://www.linkedin.com/in/lucianareyes"
+    },
+    {
+      "label": "GitHub",
+      "href": "https://github.com/lulireyes"
+    }
+  ],
+  "footer": {
+    "thanks": "Danke für deinen Besuch!",
+    "smile": "(^_^)",
+    "location": "Valencia, Spanien",
+    "email": "lucianareyes@gmail.com",
+    "connectHeading": "Lass uns vernetzen",
+    "connectBody": "Ich unterhalte mich jederzeit gern über Produktdesign, Research oder Möglichkeiten zur Zusammenarbeit ( ◠‿◠ )",
+    "madeIn": "Gestaltet in Valencia, Spanien"
+  }
+}
