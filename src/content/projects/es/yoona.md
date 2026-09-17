@@ -61,7 +61,7 @@ sections:
           - src: /img/projects/yoona/yoona-atmosphere-fashion-fabric.jpg
             alt: Foto conceptual de moda con una figura sobre un saliente de piedra y una tela blanca translúcida ondeando contra un cielo azul despejado, con un amplio espacio crema abajo para dar aire a la composición.
             tone: bare
-            size: full
+            size: bleed
 
       - id: yo-discovery
         layout: challenge

@@ -56,7 +56,7 @@ const storyFigure = z.object({
    * `bare` = frameless photo/screenshot shown as-is (no frame, no inversion).
    */
   tone: z.enum(['process', 'default', 'visual', 'bare']).default('process'),
-  size: z.enum(['sm', 'md', 'lg', 'full']).default('md'),
+  size: z.enum(['sm', 'md', 'lg', 'full', 'bleed']).default('md'),
 });
 
 const storySolution = z.object({

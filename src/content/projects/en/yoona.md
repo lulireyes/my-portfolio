@@ -61,7 +61,7 @@ sections:
           - src: /img/projects/yoona/yoona-atmosphere-fashion-fabric.jpg
             alt: Fashion concept photo of a figure on a stone ledge with translucent white fabric billowing against a clear blue sky, with open cream space below for layout breathing room.
             tone: bare
-            size: full
+            size: bleed
 
       - id: yo-discovery
         layout: challenge

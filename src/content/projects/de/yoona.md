@@ -61,7 +61,7 @@ sections:
           - src: /img/projects/yoona/yoona-atmosphere-fashion-fabric.jpg
             alt: Mode-Konzeptfoto mit einer Figur auf einem Steinvorsprung und durchscheinendem weißem Stoff, der vor einem klaren blauen Himmel weht, mit viel offenem cremefarbenem Raum darunter als Layout-Freiraum.
             tone: bare
-            size: full
+            size: bleed
 
       - id: yo-discovery
         layout: challenge
