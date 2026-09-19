@@ -19,6 +19,8 @@ interface Insight {
 interface Principle {
   title: string;
   body: string;
+  tradeoff?: string;
+  figures?: StoryFigure[];
 }
 interface Tradeoff {
   need: string;
@@ -65,7 +67,8 @@ interface Chapter {
     | 'collaboration'
     | 'impact'
     | 'reflection'
-    | 'cta';
+    | 'cta'
+    | 'split';
   tagline?: string;
   impactLine?: string;
   lead?: string;
@@ -90,6 +93,8 @@ interface Chapter {
   challengeIntro?: string;
   contextLabel?: string;
   roleLabel?: string;
+  asideTitle?: string;
+  metricsInline?: boolean;
   contactHref?: string;
   contactLabel?: string;
   contactInline?: boolean;
@@ -117,6 +122,16 @@ const cs = t(locale).caseStudy;
               {ch.title}
             </h3>
             {ch.tagline && <p class="rc-hero-tagline">{ch.tagline}</p>}
+            {(ch.metrics?.length ?? 0) > 0 && (
+              <ul class="rc-hero-metrics" aria-label="Key outcomes">
+                {ch.metrics?.map((m) => (
+                  <li class="rc-hero-metric">
+                    <p class="rc-hero-metric-value">{m.value}</p>
+                    <p class="rc-hero-metric-label">{m.label}</p>
+                  </li>
+                ))}
+              </ul>
+            )}
             {ch.impactLine && <p class="rc-hero-impact">{ch.impactLine}</p>}
             {(ch.figures?.length ?? 0) > 0 ? (
               <div class:list={['rc-figure-stack', { 'rc-figure-gallery': (ch.figures?.length ?? 0) > 1 }]}>
@@ -130,6 +145,29 @@ const cs = t(locale).caseStudy;
                   <span class="rc-placeholder-label">{ph}</span>
                 </figure>
               ))
+            )}
+            {(ch.paragraphs?.length ?? 0) > 0 && (
+              <div class="rc-hero-intro">
+                {ch.paragraphs?.map((p) => (
+                  <p class="rc-body">{p}</p>
+                ))}
+              </div>
+            )}
+            {(ch.roleLine || ch.responsibilities) && (
+              <aside class="case-meta rc-hero-meta" aria-label={cs.projectDetails}>
+                {ch.roleLine && (
+                  <div class="case-meta-item">
+                    <span class="case-meta-label">{cs.role}</span>
+                    <p class="case-meta-value">{ch.roleLine}</p>
+                  </div>
+                )}
+                {ch.responsibilities && (
+                  <div class="case-meta-item">
+                    <span class="case-meta-label">{cs.workedWith}</span>
+                    <p class="case-meta-value">{ch.responsibilities}</p>
+                  </div>
+                )}
+              </aside>
             )}
           </div>
         )}
@@ -307,10 +345,62 @@ const cs = t(locale).caseStudy;
                 ))}
               </ul>
             )}
+            {ch.impactLine && <p class="rc-body rc-insight-closing">{ch.impactLine}</p>}
             {(ch.figures?.length ?? 0) > 0 && (
               <div class:list={['rc-figure-stack', { 'rc-figure-gallery': (ch.figures?.length ?? 0) > 1 }]}>
                 {ch.figures?.map((fig) => (
                   <CaseFigure fig={fig} expandLabel={cs.expandImage} />
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+
+        {ch.layout === 'split' && (
+          <div class="rc-challenge shell-case">
+            <header class="rc-chapter-head">
+              <h3 class="rc-chapter-title" id={`${ch.id}-title`}>
+                {ch.title}
+              </h3>
+            </header>
+            {ch.lead && <p class="rc-lead">{ch.lead}</p>}
+            <div class="rc-prose-stack">
+              {ch.paragraphs?.map((p) => (
+                <p class="rc-body">{p}</p>
+              ))}
+            </div>
+            <div class="rc-split rc-split--text-figure">
+              <div class="rc-split-main">
+                {ch.asideTitle && <h4 class="rc-subhead">{ch.asideTitle}</h4>}
+                {(ch.perspectives?.length ?? 0) > 0 ? (
+                  <div class="rc-perspectives rc-perspectives--stack">
+                    {ch.perspectives?.map((p) => (
+                      <article class="rc-perspective">
+                        <h4 class="rc-perspective-title">{p.title}</h4>
+                        <p class="rc-body">{p.body}</p>
+                      </article>
+                    ))}
+                  </div>
+                ) : (
+                  ch.bullets?.map((item) => (
+                    <p class="rc-body">{item}</p>
+                  ))
+                )}
+              </div>
+              {(ch.figures?.length ?? 0) > 0 && (
+                <div class="rc-split-aside">
+                  {ch.figures?.map((fig) => (
+                    <CaseFigure fig={fig} expandLabel={cs.expandImage} />
+                  ))}
+                </div>
+              )}
+            </div>
+            {ch.pullQuote && <blockquote class="rc-pull">{ch.pullQuote}</blockquote>}
+            {(ch.challengeIntro || (ch.constraints?.length ?? 0) > 0) && (
+              <div class="rc-prose-stack rc-prose-stack--after-split">
+                {ch.challengeIntro && <p class="rc-body">{ch.challengeIntro}</p>}
+                {ch.constraints?.map((item) => (
+                  <p class="rc-body">{item}</p>
                 ))}
               </div>
             )}
@@ -330,9 +420,34 @@ const cs = t(locale).caseStudy;
                 <article class="rc-principle">
                   <h4 class="rc-principle-title">{pr.title}</h4>
                   <p class="rc-body">{pr.body}</p>
+                  {(pr.figures?.length ?? 0) > 0 && (
+                    <div class="rc-figure-stack rc-principle-figures rc-principle-figures--before">
+                      <CaseFigure fig={pr.figures![0]} expandLabel={cs.expandImage} />
+                    </div>
+                  )}
+                  {pr.tradeoff && (
+                    <p class="rc-principle-tradeoff">
+                      <span class="rc-principle-tradeoff-label">{cs.tradeoffLabel}</span> {pr.tradeoff}
+                    </p>
+                  )}
+                  {(pr.figures?.length ?? 0) > 1 && (
+                    <div class="rc-figure-stack rc-principle-figures rc-principle-figures--after">
+                      {pr.figures?.slice(1).map((fig) => (
+                        <CaseFigure fig={fig} expandLabel={cs.expandImage} />
+                      ))}
+                    </div>
+                  )}
                 </article>
               ))}
             </div>
+            {(ch.paragraphs?.length ?? 0) > 0 && (
+              <div class="rc-strategy-follow">
+                {ch.asideTitle && <h4 class="rc-subhead">{ch.asideTitle}</h4>}
+                {ch.paragraphs?.map((p) => (
+                  <p class="rc-body">{p}</p>
+                ))}
+              </div>
+            )}
             {(ch.figures?.length ?? 0) > 0 ? (
               <div class:list={['rc-figure-stack', { 'rc-figure-gallery': (ch.figures?.length ?? 0) > 1 }]}>
                 {ch.figures?.map((fig) => (
@@ -459,6 +574,23 @@ const cs = t(locale).caseStudy;
                 ))}
               </div>
             )}
+            {ch.contactHref && ch.contactLabel && (
+              <p class="rc-solution-contact">
+                {ch.contactInline ? (
+                  <>
+                    {ch.paragraphs?.[0] ? `${ch.paragraphs[0]} ` : ''}
+                    <a class="rc-cta-link rc-cta-link--inline" href={ch.contactHref}>
+                      {ch.contactLabel}
+                    </a>
+                    {ch.contactSuffix ?? ''}
+                  </>
+                ) : (
+                  <a class="rc-cta-link rc-cta-link--inline" href={ch.contactHref}>
+                    {ch.contactLabel}
+                  </a>
+                )}
+              </p>
+            )}
             <div class="rc-solution-grid">
               {ch.solutions?.map((sol) => (
                 <article class="rc-solution-item">
@@ -519,24 +651,49 @@ const cs = t(locale).caseStudy;
                 {ch.title}
               </h3>
             </header>
-            {ch.metrics?.[0] && (
-              <p class="rc-impact-hero">
-                <span class="rc-impact-hero-value">{ch.metrics[0].value}</span>
-                <span class="rc-impact-hero-label">{ch.metrics[0].label}</span>
-              </p>
-            )}
-            {ch.lead && <p class="rc-body">{ch.lead}</p>}
-            {ch.pullQuote && <blockquote class="rc-pull">{ch.pullQuote}</blockquote>}
-            {(ch.metrics?.length ?? 0) > 1 && (
-              <ul class="rc-metric-secondary">
-                {ch.metrics?.slice(1).map((m) => (
-                  <li class:list={['rc-metric-item', { 'rc-metric-item--placeholder': !m.verified }]}>
-                    <p class="rc-metric-value">{m.value}</p>
-                    <p class="rc-metric-label">{m.label}</p>
-                    {m.note && <p class="rc-metric-note">{m.note}</p>}
-                  </li>
+            {ch.metricsInline ? (
+              <div class="rc-metrics-inline">
+                {ch.metrics?.map((m) => (
+                  <p class="rc-metric-inline">
+                    <span class="rc-metric-inline-value">{m.value}</span>
+                    {' '}
+                    <span class="rc-metric-inline-label">{m.label}.</span>
+                    {m.note && (
+                      <>
+                        {' '}
+                        {m.note.split(/(-?\d+%)/).map((part) =>
+                          /^-?\d+%$/.test(part) ? (
+                            <span class="rc-metric-inline-value">{part}</span>
+                          ) : (
+                            part
+                          ),
+                        )}
+                      </>
+                    )}
+                  </p>
                 ))}
-              </ul>
+              </div>
+            ) : (
+              <>
+                {ch.metrics?.[0] && (
+                  <p class="rc-impact-hero">
+                    <span class="rc-impact-hero-value">{ch.metrics[0].value}</span>
+                    <span class="rc-impact-hero-label">{ch.metrics[0].label}</span>
+                  </p>
+                )}
+                {ch.lead && <p class="rc-body">{ch.lead}</p>}
+                {(ch.metrics?.length ?? 0) > 1 && (
+                  <ul class="rc-metric-secondary">
+                    {ch.metrics?.slice(1).map((m) => (
+                      <li class:list={['rc-metric-item', { 'rc-metric-item--placeholder': !m.verified }]}>
+                        <p class="rc-metric-value">{m.value}</p>
+                        <p class="rc-metric-label">{m.label}</p>
+                        {m.note && <p class="rc-metric-note">{m.note}</p>}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </>
             )}
             {((ch.before?.length ?? 0) > 0 || (ch.after?.length ?? 0) > 0) && (
               <div class="rc-before-after">
@@ -562,6 +719,7 @@ const cs = t(locale).caseStudy;
                 )}
               </div>
             )}
+            {ch.pullQuote && <blockquote class="rc-pull">{ch.pullQuote}</blockquote>}
           </div>
         )}
 

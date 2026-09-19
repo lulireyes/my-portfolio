@@ -53,12 +53,6 @@ const summaryParagraphs = Array.isArray(overviewRaw)
     : [];
 const period = d.period ?? (d.year ? String(d.year) : '');
 const hasSections = d.sections.length > 0;
-/** Role is told once in CaseStory overview (or section meta) — skip the page Summary Role chip. */
-const roleInStory = d.sections.some(
-  (section) =>
-    Boolean(section.role) ||
-    Boolean(section.story?.some((chapter) => chapter.roleLine || chapter.roleLabel || chapter.responsibilities)),
-);
 
 function sectionMarqueeRepeats(title: string) {
   return Math.max(18, Math.ceil(480 / Math.max(title.length, 1)));
@@ -102,18 +96,18 @@ function sectionMarqueeRepeats(title: string) {
           </div>
           <aside class="case-meta" aria-label={cs.projectDetails}>
             {
-              d.role && !roleInStory && (
-                <div class="case-meta-item">
-                  <span class="case-meta-label">{cs.role}</span>
-                  <p class="case-meta-value">{d.role}</p>
-                </div>
-              )
-            }
-            {
               period && (
                 <div class="case-meta-item">
                   <span class="case-meta-label">{cs.year}</span>
                   <p class="case-meta-value">{period}</p>
+                </div>
+              )
+            }
+            {
+              d.role && (
+                <div class="case-meta-item">
+                  <span class="case-meta-label">{cs.role}</span>
+                  <p class="case-meta-value">{d.role}</p>
                 </div>
               )
             }

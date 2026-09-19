@@ -15,7 +15,7 @@ tags:
   - Wachstum
 year: 2025
 period: August 2022 – Dezember 2025
-role: Produktdesignerin, UX, Researcherin
+role: Senior Produktdesignerin
 market: Marktplatz · Deutschland / Singapur / EU
 highlights:
   - before: "Ich gestaltete und lancierte das "
@@ -44,112 +44,88 @@ sections:
         layout: hero
         title: Resolution Center
         tagline: Gestalten für zwei Menschen, die beide glauben, im Recht zu sein.
-        impactLine: Ich senkte die operativen Supportkosten um 35%, indem ich die manuelle Bearbeitung von Streitfällen in eine skalierbare Self-Service-Erfahrung verwandelte.
+        metrics:
+          - value: "-35%"
+            label: deutsche Betriebskosten
+            verified: true
+          - value: "91%"
+            label: Self-Service-Adoption
+            verified: true
+          - value: "84%"
+            label: ohne Agenten gelöst
+            verified: true
         figures:
           - src: /img/projects/helpling/helpling-rc-hero.jpg
             alt: Resolution Center — abstrakte 3D-Formen aus Glas, Metall und weicher Geometrie um einen warmen Kern, die Struktur aus Komplexität andeuten.
             tone: bare
             size: lg
-
-      - id: rc-overview
-        layout: overview
-        title: Überblick
-        contextLabel: Kontext
-        challengeLabel: Die Herausforderung
-        roleLabel: Meine Rolle
         paragraphs:
-          - Helpling ist ein Marktplatz, der Kunden und Haushaltsdienstleister verbindet. Streitfälle zwischen beiden Seiten wurden manuell vom Betriebsteam bearbeitet. Mit dem Wachstum des Marktplatzes wurde das zunehmend schwer zu skalieren.
-        challengeIntro: "Das Resolution Center musste:"
-        bullets:
-          - sowohl Kunden als auch Dienstleister über einen zweiseitigen Marktplatz hinweg unterstützen
-          - unnötige manuelle Eingriffe reduzieren, ohne menschliches Urteilsvermögen dort zu entfernen, wo es zählte
-          - vorhersehbare Streitszenarien in Self-Service-Pfade strukturieren
-          - den Prozess für beide Seiten klarer und transparenter machen
-          - Vertrauen und die wahrgenommene Fairness bewahren
-          - innerhalb der operativen, geschäftlichen, rechtlichen/richtlinienbezogenen und technischen Realitäten funktionieren
-        roleLine: Ich leitete das Produktdesign durchgängig — Discovery, Research, Servicedesign, plattformübergreifende UX, Informationsarchitektur, Usability-Testing und Rollout — in enger Zusammenarbeit mit Produkt, Betrieb, Data und Engineering.
-        responsibilities: Discovery · Nutzerforschung · Servicedesign · Plattformübergreifende UX · Informationsarchitektur · Usability-Testing · Rollout
-
-      - id: rc-outcomes
-        layout: impact
-        title: Ergebnisse
-        lead: Die manuelle Streitbearbeitung in eine skalierbare Self-Service-Erfahrung zu verwandeln steigerte die operative Effizienz — senkte die deutschen Betriebskosten um 35% und verringerte die Vorfallrate für das deutsche Operations-Team — und veränderte zugleich, wie eigenständig Nutzer die Lösung durchlaufen konnten.
-        metrics:
-          - value: 35%
-            label: Reduktion der deutschen Betriebskosten
-            verified: true
-          - value: 91%
-            label: Self-Service-Adoption
-            verified: true
-          - value: 84%
-            label: Aufgaben ohne Agenten abgeschlossen
-            verified: true
-          - value: 93%
-            label: Nutzer-Engagement
-            verified: true
+          - Helplings Streitfälle wurden vom Betriebsteam bearbeitet, ein Fall nach dem anderen. Das funktionierte, solange die Volumina klein waren. Doch auf einem Marktplatz kann jede neue Buchung zu einem neuen Streitfall werden — Wachstum bedeutete also mehr manuelle Arbeit.
+          - Ich gestaltete ein Resolution Center, das vorhersehbare Fälle in den Self-Service verschiebt und menschliches Urteilsvermögen für die Fälle behält, die es brauchen.
+        roleLine: Senior Produktdesignerin, durchgängige Designverantwortung
+        responsibilities: Produkt, Betrieb, Data, Engineering
 
       - id: rc-challenge
-        layout: challenge
+        layout: split
         title: Das Problem
-        lead: Helpling skalierte als Marktplatz, doch die Streitbeilegung war nicht mitgewachsen — und ließ Kunden, Dienstleister und das Betriebsteam in einem manuellen Modell feststecken.
-        paragraphs:
-          - "Der Eingriff war keine Support-FAQ und kein schnelleres Ticketformular. Es war ein Resolution Center, das zwischen beiden Seiten des Marktplatzes saß: strukturiert genug, um das Betriebsteam zu entlasten, transparent genug, um Vertrauen zu schützen, und begrenzt durch geschäftliche, rechtliche und richtlinienbezogene Realität."
-          - Das messbare Ergebnis war ein skalierbareres Betriebsmodell — mit einer Reduktion der operativen Supportkosten um 35% — bei gleichzeitiger Verfügbarkeit menschlichen Urteilsvermögens, wenn Fälle nicht per Self-Service gelöst werden konnten.
-          - Das Designproblem bestand nicht einfach darin, die Streitbeilegung für eine Partei einfacher zu machen. Es ging darum, ein System zu gestalten, das für Kunde ↔ Resolution Center ↔ Dienstleister funktioniert, das Betriebsteam unterstützt und unter Wachstum standhält.
+        lead: Wenn eine Reinigungskraft nicht erscheint oder die berechneten Stunden nicht zu den geleisteten passen, stehen zwei Menschen auf gegenüberliegenden Seiten — und beide fühlen sich ungerecht behandelt. Jeder dieser Fälle ging an das Betriebsteam zur Untersuchung und Entscheidung.
+        asideTitle: Drei Bedürfnisse, ein System
         perspectives:
-          - title: Kunde
-            body: Kunden wollten Unterstützung, Einblick in das Geschehen und die Gewissheit, dass ihr Anliegen und ihr Geld fair behandelt wurden.
+          - title: Kunden
+            body: Kunden wollten den Nachweis, dass ihr Anliegen und ihr Geld in sicheren Händen waren.
           - title: Dienstleister
-            body: Dienstleister brauchten Transparenz darüber, wie Streitfälle bewertet wurden, und die Beruhigung, dass ihre Arbeit und ihr Verdienst fair behandelt wurden.
+            body: Dienstleister wollten, dass ihre Arbeit und ihr Verdienst fair beurteilt werden.
           - title: Betrieb
-            body: Das Betriebsteam musste Streitfälle manuell untersuchen und lösen, darunter Fälle, die wiederkehrenden und relativ vorhersehbaren Mustern folgten.
-          - title: Geschäft & Rahmenbedingungen
-            body: Mit steigendem Volumen wurde die manuelle Bearbeitung teuer und schwer skalierbar. Die Herausforderung waren nicht nur weniger Support-Kontakte — es ging darum, das Vertrauen auf beiden Seiten zu bewahren und zugleich ein skalierbareres Betriebsmodell innerhalb rechtlicher, richtlinienbezogener und technischer Grenzen zu schaffen.
-        pullQuote: Das Ziel war nicht, eine Seite des Marktplatzes zu optimieren. Es war, ein System zu gestalten, das für den Marktplatz als Ganzes funktionieren konnte.
+            body: Das Betriebsteam untersuchte von Hand Fälle, die denselben wenigen Mustern folgten.
         figures:
-          - src: /img/projects/helpling/helpling-rc-chaos-to-order.png
-            alt: Minimalistische Linienzeichnung — ein verworrenes Gekritzel links, das über eine sanfte Kurve in eine ordentliche konzentrische Spirale rechts übergeht.
+          - src: /img/projects/helpling/helpling-rc-cust-prov-ops.png
+            alt: Venn-Diagramm mit drei überlappenden Kreisen, beschriftet mit Customers, Providers und Ops.
             tone: visual
-            size: full
+            size: lg
+        challengeIntro: Die geschäftliche Herausforderung war ein Lösungsmodell, das mit dem Marktplatz wachsen konnte, ohne dass der Aufwand im gleichen Tempo wuchs — innerhalb rechtlicher, richtlinienbezogener und technischer Grenzen.
 
       - id: rc-process
-        layout: insights
+        layout: mapping
         title: Wie ich vorgegangen bin
-        lead: Bevor ich Screens gestaltete, kartierte ich den Service dahinter — wie Streitfälle ins System kamen, wo das Betriebsteam eingriff und welche Rahmenbedingungen Automatisierung oder Kommunikation einschränkten.
-        paragraphs:
-          - "Ich arbeitete mit Betrieb, Produkt und Data zusammen, um Lösung als System zu verstehen: Kunde ↔ Resolution Center ↔ Dienstleister, mit Betrieb, Geschäftsregeln und rechtlichen/richtlinienbezogenen Rahmenbedingungen darunter."
-          - Historische Falldaten und Gespräche mit dem Betriebsteam zeigten, dass viele Streitfälle wiederkehrenden Szenarien folgten. Das bedeutete nicht, dass jeder Fall automatisiert werden konnte. Es bedeutete, dass das System um Muster herum gestaltet werden konnte — mit klaren Self-Service-Pfaden für vorhersehbare Fälle und Raum für menschliches Urteilsvermögen, wenn es darauf ankam.
-        bullets:
-          - wie Streitfälle ins System kamen und wie Fälle kategorisiert wurden
-          - welche Informationen das Betriebsteam für eine Entscheidung brauchte
-          - wo manuelle Eingriffe nötig waren gegenüber dort, wo sich Muster wiederholten
-          - was Nutzer während des gesamten Prozesses sehen mussten
-          - die geschäftlichen, operativen, rechtlichen und richtlinienbezogenen Implikationen verschiedener Lösungspfade
+        lead: "Bevor ich einen Screen zeichnete, kartierte ich den Service: wie Streitfälle hereinkamen, wo das Betriebsteam eingriff und was Automatisierung begrenzte. Falldaten und Gespräche mit dem Betriebsteam zeigten, dass die meisten Streitfälle eine Handvoll Szenarien wiederholten. Nicht alle, aber genug, um Self-Service für die vorhersehbaren zu gestalten und Menschen für den Rest zu behalten."
         figures:
           - src: /img/projects/helpling/helpling-rc-whiteboard-refund-logic.jpg
             alt: Whiteboard-Skizze einer Case-Seite mit Aktionen für Erstatten und Ablehnen, die sich in Logik für vollständige gegenüber teilweiser Erstattung mit stundenbasierten Optionen und Zeitnotizen verzweigt.
             caption: Frühe Erstattungs- und Falllogik auf dem Whiteboard — Mapping voller vs. teilweiser Pfade, bevor die Flows zum Produkt wurden.
             tone: process
-            size: md
+            size: lg
           - src: /img/projects/helpling/helpling-rc-journey-map-workshop.jpg
             alt: Kollaborativer Workshop-Tisch mit einer gedruckten UX-Journey-Map und Klebezetteln zu Themen wie Kunde, Problem und Interesse.
             caption: Funktionsübergreifende Discovery — das Journey-Mapping, das prägte, was das Resolution Center lösen musste.
             tone: process
-            size: sm
+            size: lg
 
       - id: rc-decisions
         layout: strategy
-        title: Entscheidungen, die das Produkt geprägt haben
-        lead: Ich leitete die Designentscheidungen durchgängig und richtete Produkt, Betrieb, Data und Engineering auf ein gemeinsames Modell aus — keine Übergabekette. Jedes Prinzip unten entstand aus einer Beobachtung, einer Entscheidung, die ich traf, und dem, was sie ermöglichte.
+        title: Drei Entscheidungen, die es geprägt haben
+        lead: "Das Prinzip hinter allen dreien: Menschen das lösen lassen, was keine Menschen braucht — und menschliche Beteiligung klar machen, wenn sie nötig ist."
         principles:
-          - title: Den Prozess sichtbar machen
-            body: "Beobachtung: Nutzer brauchten Status und nächste Schritte, nicht nur ein Ergebnis. Entscheidung: für Prozess-Lesbarkeit auf beiden Seiten gestalten. Grund: Undurchsichtigkeit ließ selbst faire Ergebnisse unfair wirken. Ergebnis: klarere Pfade durch Erfassung, Antwort und Lösung."
-          - title: Für beide Seiten des Marktplatzes gestalten
-            body: "Beobachtung: derselbe Streitfall konnte von Kunde und Dienstleister sehr unterschiedlich wahrgenommen werden. Entscheidung: zwei Motivationen und zwei Fairness-Perspektiven in einem System berücksichtigen. Grund: eine Seite zu optimieren würde das Vertrauen der anderen brechen. Ergebnis: plattformübergreifende Flows, die beide Parteien orientiert hielten."
-          - title: Menschen lösen lassen, was keine Menschen erfordert
-            body: "Beobachtung: wiederkehrende Szenarien banden weiterhin Kapazität des Betriebsteams. Entscheidung: vorhersehbare Fälle in Self-Service strukturieren und Agenten für Komplexität reservieren. Grund: die Zeit des Betriebsteams war dort am wertvollsten, wo Urteilsvermögen zählte. Ergebnis: höhere Self-Service-Adoption und weniger manuelle Last bei Routinefällen."
-          - title: Für das ganze System gestalten
-            body: "Beobachtung: Screens allein konnten rechtliche, richtlinienbezogene und operative Realität nicht tragen. Entscheidung: die Erfahrung gemeinsam mit Produkt, Betrieb, Data und Engineering um die Rahmenbedingungen herum formen. Grund: ein Lösungs-Flow funktioniert nur, wenn er für Nutzer und für die Teams dahinter funktioniert. Ergebnis: ein auslieferbares Modell, dem das Betriebsteam vertrauen konnte."
+          - title: "1. Den Prozess zeigen, nicht nur das Ergebnis."
+            body: "Faire Ergebnisse fühlten sich unfair an, wenn Menschen nicht sehen konnten, was geschah. Usability-Tests bestätigten es: Nach dem Öffnen eines Falls hatten Kunden und Dienstleister Schwierigkeiten, den Status zu finden. Er war vergraben. Also holte ich ihn nach vorne. Das Erste, was man beim Öffnen des Resolution Centers sieht, ist eine Karte mit dem aktuellen Status des Falls."
+            tradeoff: rechtliche und richtlinienbezogene Grenzen beschränkten, was wir kommunizieren konnten. Ich gestaltete für Klarheit über den Prozess (Status, eingereichte Informationen, nächste Aktionen), statt Entscheidungslogik zu überklären, die wir nicht teilen konnten.
+            figures:
+              - src: /img/projects/helpling/helpling-rc-transparency-1.png
+                alt: Falllistenkarte mit Status Under review, Fall-ID und Streitgrund Cleaner was late.
+                tone: bare
+                size: lg
+              - src: /img/projects/helpling/helpling-rc-transparency-2.png
+                alt: Resolution-Center-Fallstatusbildschirm mit einer Fortschritts-Timeline für Einreichung, Prüfung und geschätzte Lösung.
+                tone: bare
+                size: lg
+          - title: "2. Ein Modell, zwei Seiten."
+            body: Kunde und Dienstleister teilen dieselbe Fallstruktur, jeweils durch die eigenen Bedürfnisse gesehen.
+            tradeoff: ihre Bedürfnisse konnten innerhalb desselben Streitfalls in Konflikt geraten. Ich gestaltete für Fairness auf Marktplatzebene, sodass beide Seiten den Prozess lesen können — statt die Erfahrung für eine Partei zu optimieren.
+          - title: "3. Das Vorhersehbare automatisieren, Ausnahmen schützen."
+            body: "Nichterscheinen, Stornierungen und falsch berechnete Stunden folgen strukturierten Pfaden und enden in einer vollständigen oder teilweisen Erstattung. Für das Geschäft bedeutete das: mehr Buchungen hießen nicht mehr proportional mehr Arbeitslast."
+            tradeoff: nicht jeder Fall konnte automatisiert werden. Self-Service baut auf wiederkehrenden Mustern auf, mit expliziten Pfaden zu einem Agenten, wenn ein Fall sie verlässt. Das Ziel war nicht maximale Automatisierung, sondern das richtige Maß für jeden Falltyp.
+        asideTitle: Wie wir arbeiteten
+        paragraphs:
+          - Das Betriebsteam brachte die wiederkehrenden Muster und Grenzfälle hervor, Data zeigte, welche sich zu strukturieren lohnten, Engineering definierte, was sich realistisch automatisieren ließ, und Produkt wog Nutzer- und Geschäftsprioritäten ab. Meine Aufgabe war, diese Inputs zu einer Erfahrung über die Kunden- und Partner-Apps hinweg zu verbinden.
         figures:
           - src: /img/projects/helpling/helpling-rc-figma-iteration-board.png
             alt: Figma-Board mit dem Titel Resolution Center 1. iteration mobile, das den Flow B des Kunden zum Melden eines neuen Problems und den Antwort-Flow des Dienstleisters mit detaillierten Screen-Rastern darunter zeigt.
@@ -160,88 +136,29 @@ sections:
       - id: rc-solution
         layout: solution
         title: Die Lösung
-        lead: Das Resolution Center verwandelte diese Entscheidungen in eine kohärente Erfahrung — organisiert um Sichtbarkeit, Self-Service, Transparenz und Konsistenz über beide Seiten des Marktplatzes hinweg.
-        figures:
-          - src: /img/projects/helpling/helpling-rc-flow-cleaner-not-here.webp
-            alt: End-to-End-Nutzerflow für das Kundenszenario „Meine Reinigungskraft ist nicht da“, von der Meldung des Problems bis zur Lösung.
-            caption: Kundenflow — „Meine Reinigungskraft ist nicht da“, von der Meldung bis zur Lösung.
-            tone: default
-            size: full
-          - src: /img/projects/helpling/helpling-rc-flow-customer-new-issue.webp
-            alt: End-to-End-Nutzerflow für eine:n Kund:in, der:die über das Resolution Center ein neues Problem meldet.
-            caption: Kunde meldet ein neues Problem — der End-to-End-Lösungsflow.
-            tone: default
-            size: full
-          - src: /img/projects/helpling/helpling-rc-flow-provider-response.webp
-            alt: End-to-End-Nutzerflow für Dienstleister:innen, die auf ein gemeldetes Problem im Resolution Center reagieren.
-            caption: Antwortflow der Dienstleister:innen auf ein gemeldetes Problem.
-            tone: default
-            size: full
-          - src: /img/projects/helpling/helpling-rc-flow-partial-refund-provider.webp
-            alt: Dienstleister-Flow für eine Teilerstattung, ausgelöst, wenn die falsche Dauer berechnet wurde oder der:die Kund:in mit der Qualität unzufrieden war.
-            caption: Dienstleister-Flow — Teilerstattung (falsche Dauer berechnet oder Unzufriedenheit mit der Qualität).
-            tone: default
-            size: full
-          - src: /img/projects/helpling/helpling-rc-flow-full-refund-provider.webp
-            alt: Dienstleister-Flow für eine vollständige Erstattung, ausgelöst, wenn die Reinigungskraft nicht erschien, stornierte, die Reinigung verschoben wurde oder es eine Doppelbuchung gab.
-            caption: Dienstleister-Flow — vollständige Erstattung (nicht erschienen, storniert, verschoben oder Doppelbuchung).
-            tone: default
-            size: full
-        solutions:
-          - title: Sichtbarkeit
-            body: Nutzer können den Status ihres Falls verstehen — wo sie stehen, was eingereicht wurde und was als Nächstes passiert — statt in einem undurchsichtigen Prozess zu warten.
-          - title: Self-Service
-            body: Vorhersehbare Streitfälle können ohne Eingriff eines Agenten bearbeitet werden, während komplexe Fälle weiterhin an menschliches Urteilsvermögen geleitet werden.
-          - title: Transparenz
-            body: Die Erfahrung kommuniziert, welche Informationen berücksichtigt werden und warum ein Pfad eingeschlagen wird — Klarheit statt vager rechtlicher oder verfahrensbezogener Sprache.
-          - title: Plattformübergreifende Konsistenz
-            body: Dasselbe Lösungsmodell funktioniert für Kunden und Dienstleister, sodass beide Seiten des Marktplatzes innerhalb eines Systems orientiert bleiben.
-
-      - id: rc-constraints
-        layout: constraints
-        title: Innerhalb von Rahmenbedingungen gestalten
-        lead: Gutes Produktdesign bedeutete nicht, die perfekte Erfahrung isoliert zu finden. Es bedeutete, eine Lösung zu finden, die für Nutzer nützlich, für das Geschäft tragfähig, für den Betrieb umsetzbar und innerhalb der Grenzen von Produkt und Service möglich war.
-        constraints:
-          - Kunden- und Dienstleisterbedürfnisse konnten in Konflikt geraten
-          - das Betriebsteam brauchte genug Informationen, um komplexe Fälle zu bearbeiten
-          - vorhersehbare Fälle brauchten strukturierte Automatisierung, ohne Vertrauen zu entfernen
-          - die Erfahrung musste über beide Seiten des Marktplatzes hinweg funktionieren
-          - geschäftliche Skalierbarkeit war wichtig
-          - rechtliche und richtlinienbezogene Rahmenbedingungen beeinflussten, was kommuniziert oder automatisiert werden konnte
-          - technische und produktbezogene Rahmenbedingungen beeinflussten, was sich realistisch umsetzen ließ
-        tradeoffs:
-          - need: Nutzer brauchten Transparenz über Status, Eingaben und nächste Schritte.
-            constraint: Rechtliche und richtlinienbezogene Grenzen beschränkten, was kommuniziert oder automatisiert werden konnte.
-            response: Ich gestaltete für Prozessklarheit innerhalb dessen, was geteilt werden konnte — Status, eingereichte Informationen und nächste Aktionen — statt eingeschränkte Entscheidungslogik zu überklären.
-          - need: Vorhersehbare Fälle mussten gelöst werden, ohne auf das Betriebsteam zu warten.
-            constraint: Nicht jeder Fall konnte automatisiert werden; komplexe Fälle brauchten weiterhin menschliches Urteilsvermögen.
-            response: Ich strukturierte Self-Service um wiederkehrende Muster herum, mit expliziten Pfaden zur Einbindung eines Agenten, wenn der Fall den vorhersehbaren Pfad verließ.
-          - need: Beide Seiten mussten das Gefühl haben, dass der Prozess fair war.
-            constraint: Kunden- und Dienstleisterbedürfnisse konnten innerhalb desselben Streitfalls in Konflikt geraten.
-            response: Ich gestaltete für Fairness auf Marktplatzebene — Lesbarkeit auf beiden Seiten — statt die Erfahrung für eine Partei zu optimieren.
-
-      - id: rc-impact
-        layout: impact
-        title: Wirkung
         figures:
           - src: /video/resolution_center.mp4
             alt: Resolution-Center-Durchlauf mit dem Streitlösungsfluss in der Helpling-App.
             tone: bare
-            size: md
-        lead: Indem das Resolution Center die manuelle Streitbearbeitung in eine skalierbare Self-Service-Erfahrung verwandelte, senkte die gesteigerte operative Effizienz die deutschen Betriebskosten um 35% und verringerte die Vorfallrate für das deutsche Operations-Team, während sie zugleich verschob, wo menschliche Kapazität benötigt wurde.
-        pullQuote: Das Ergebnis war nicht nur eine bessere Kundenerfahrung. Es verringerte die Vorfallrate für das deutsche Operations-Team und veränderte, wo menschliche operative Kapazität benötigt wurde.
+            size: full
+        paragraphs:
+          - Möchtest du den kompletten Flow sehen?
+        contactInline: true
+        contactHref: "mailto:lucianareyes@gmail.com"
+        contactLabel: Melde dich.
+
+      - id: rc-impact
+        layout: impact
+        title: Ergebnisse
+        metricsInline: true
         metrics:
-          - value: 35%
-            label: Reduktion der deutschen Betriebskosten
+          - value: "-35%"
+            label: deutsche Betriebskosten
+            note: Wiederkehrende Fälle von manueller Untersuchung in strukturierten Self-Service zu bringen, reduzierte den Aufwand, den das Betriebsteam pro Fall brauchte.
             verified: true
-          - value: 91%
+          - value: "91%"
             label: Self-Service-Adoption
-            verified: true
-          - value: 84%
-            label: Aufgaben ohne Agenten abgeschlossen
-            verified: true
-          - value: 93%
-            label: Nutzer-Engagement
+            note: 84% der Fälle wurden ohne Agenten gelöst.
             verified: true
         before:
           - Manuelle Untersuchung wiederkehrender Fälle
@@ -253,29 +170,24 @@ sections:
           - Automatisierte Pfade, wo Muster es zuließen
           - Betriebsteam auf komplexe Fälle fokussiert
           - Ein skalierbareres Lösungsmodell über den Marktplatz hinweg
+        pullQuote: Das Ergebnis war nicht nur eine bessere Kundenerfahrung. Es verringerte die Vorfallrate für das deutsche Operations-Team und veränderte, wo menschliche operative Kapazität benötigt wurde.
 
       - id: rc-learned
         layout: insights
         title: Was ich gelernt habe
-        lead: Im Rückblick hatten die bleibenden Lektionen weniger mit Screens zu tun und mehr damit, wie Fairness in einem zweiseitigen Marktplatz funktioniert.
-        pullQuote: Fairness und wahrgenommene Fairness sind nicht immer dasselbe.
-        paragraphs:
-          - Ein objektiv faires Ergebnis kann sich dennoch unfair anfühlen, wenn der Prozess dahinter undurchsichtig ist.
-          - Dieses Projekt bekräftigte, dass Klarheit Teil des Service selbst ist — besonders wenn Nutzer mit Geld, Konflikt oder Unsicherheit zu tun haben.
+        lead: Fairness und wahrgenommene Fairness sind nicht dasselbe. Ein Ergebnis kann richtig sein und sich trotzdem falsch anfühlen, wenn der Prozess undurchsichtig ist. Die Statuskarte hat das Ergebnis keines einzigen Falls geändert. Sie hat verändert, wie fair der Prozess sich anfühlte.
         insights:
-          - title: Vorhersehbare Muster ließen sich strukturieren
-            body: Ein großer Anteil der Streitfälle folgte wiederkehrenden Szenarien. Diese erforderten nicht immer manuelle Untersuchung — was einen Weg zu Self-Service eröffnete, ohne so zu tun, als wäre jeder Fall gleich.
-          - title: Undurchsichtigkeit erzeugt Reibung
+          - title: Vorhersehbare Muster ließen sich strukturieren.
+            body: Ein großer Anteil der Streitfälle folgte wiederkehrenden Szenarien. Diese erforderten nicht immer manuelle Untersuchung, was einen Weg zu Self-Service eröffnete, ohne so zu tun, als wäre jeder Fall gleich.
+          - title: Undurchsichtigkeit erzeugt Reibung.
             body: Nutzer suchten nicht nur ein Ergebnis. Sie mussten verstehen, was geschah, welche Informationen berücksichtigt worden waren und was als Nächstes passieren würde.
-          - title: Effizienz darf nicht auf Kosten des Vertrauens gehen
-            body: Die Automatisierung der Lösung funktioniert nur, wenn beide Seiten den Prozess verstehen und akzeptieren können — Fairness und wahrgenommene Fairness sind in einem Marktplatz-Streitfall eng verknüpft.
+          - title: Effizienz darf nicht auf Kosten des Vertrauens gehen.
+            body: Die Automatisierung der Lösung funktioniert nur, wenn beide Seiten den Prozess verstehen und akzeptieren können.
+        impactLine: Automatisierung sollte Reibung entfernen, nicht das Gefühl, gehört zu werden.
 
       - id: rc-cta
         layout: cta
         title: Kontakt aufnehmen
-        lead: Interessiert am Denken hinter diesem Projekt? Melde dich, um mehr zu erfahren.
-        contactHref: "mailto:lucianareyes@gmail.com"
-        contactLabel: lucianareyes@gmail.com
 
   - id: design-system
     title: Design System 1.0

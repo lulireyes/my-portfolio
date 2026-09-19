@@ -15,7 +15,7 @@ tags:
   - Crecimiento
 year: 2025
 period: Agosto 2022 – Diciembre 2025
-role: Diseñadora de Producto, UX, Investigadora
+role: Diseñadora de Producto Senior
 market: Marketplace · Alemania / Singapur / UE
 highlights:
   - before: "Diseñé y lancé el "
@@ -44,112 +44,88 @@ sections:
         layout: hero
         title: Resolution Center
         tagline: Diseñar para dos personas que ambas creen tener razón.
-        impactLine: Reduje los costes operativos de soporte en un 35% al convertir la gestión manual de disputas en una experiencia de autoservicio escalable.
+        metrics:
+          - value: "-35%"
+            label: coste operativo alemán
+            verified: true
+          - value: "91%"
+            label: adopción del autoservicio
+            verified: true
+          - value: "84%"
+            label: resuelto sin un agente
+            verified: true
         figures:
           - src: /img/projects/helpling/helpling-rc-hero.jpg
             alt: Resolution Center — formas 3D abstractas de cristal, metal y geometría suave reunidas en torno a un núcleo cálido, sugiriendo estructura emergiendo de la complejidad.
             tone: bare
             size: lg
-
-      - id: rc-overview
-        layout: overview
-        title: Resumen
-        contextLabel: Contexto
-        challengeLabel: El desafío
-        roleLabel: Mi rol
         paragraphs:
-          - Helpling es un marketplace que conecta a clientes con proveedores de servicios para el hogar. Las disputas entre ambas partes se gestionaban manualmente por Operaciones. A medida que el marketplace crecía, esto se volvía cada vez más difícil de escalar.
-        challengeIntro: "El Resolution Center necesitaba:"
-        bullets:
-          - dar soporte tanto a clientes como a proveedores en un marketplace de dos lados
-          - reducir la intervención manual innecesaria sin eliminar el criterio humano allí donde importaba
-          - estructurar escenarios de disputa predecibles en rutas de autoservicio
-          - hacer el proceso más claro y transparente para ambas partes
-          - preservar la confianza y la percepción de justicia
-          - funcionar dentro de las realidades operativas, de negocio, legales/de políticas y técnicas
-        roleLine: Lideré el diseño de producto de principio a fin — descubrimiento, investigación, diseño de servicios, UX multiplataforma, arquitectura de la información, pruebas de usabilidad y lanzamiento — trabajando estrechamente con Producto, Operaciones, Datos e Ingeniería.
-        responsibilities: Descubrimiento · Investigación con usuarios · Diseño de servicios · UX multiplataforma · Arquitectura de la información · Pruebas de usabilidad · Lanzamiento
-
-      - id: rc-outcomes
-        layout: impact
-        title: Resultados
-        lead: Convertir la gestión manual de disputas en una experiencia de autoservicio escalable mejoró la eficiencia operativa — reduciendo el coste operativo alemán en un 35% y disminuyendo la tasa de incidencias del equipo de Operaciones alemán — a la vez que cambiaba la independencia con la que los usuarios podían recorrer la resolución.
-        metrics:
-          - value: 35%
-            label: reducción del coste operativo alemán
-            verified: true
-          - value: 91%
-            label: adopción del autoservicio
-            verified: true
-          - value: 84%
-            label: tareas completadas sin un agente
-            verified: true
-          - value: 93%
-            label: engagement del usuario
-            verified: true
+          - Las disputas de Helpling las gestionaba Operaciones, un caso a la vez. Eso funcionaba mientras los volúmenes eran pequeños. Pero en un marketplace, cada nueva reserva puede convertirse en una nueva disputa, así que crecer significaba más trabajo manual.
+          - Diseñé un Resolution Center que mueve los casos predecibles al autoservicio y reserva el criterio humano para los que lo necesitan.
+        roleLine: Diseñadora de Producto Senior, liderando el diseño de extremo a extremo
+        responsibilities: Producto, Operaciones, Datos, Ingeniería
 
       - id: rc-challenge
-        layout: challenge
+        layout: split
         title: El problema
-        lead: Helpling escalaba como marketplace, pero la resolución de disputas no había escalado con él — dejando a clientes, proveedores y Operaciones atrapados en un modelo manual.
-        paragraphs:
-          - "La intervención no era unas FAQ de soporte ni un formulario de tickets más rápido. Era un Resolution Center situado entre ambos lados del marketplace: lo bastante estructurado para aliviar la carga de Operaciones, lo bastante transparente para proteger la confianza y limitado por la realidad de negocio, legal y de políticas."
-          - El resultado medible fue un modelo operativo más escalable — con una reducción del 35% en los costes operativos de soporte — manteniendo el criterio humano disponible cuando los casos no podían resolverse por autoservicio.
-          - El problema de diseño no era simplemente facilitar la resolución de disputas para una parte. Era diseñar un sistema que funcionara para Cliente ↔ Resolution Center ↔ Proveedor, que diera soporte a Operaciones y que se sostuviera bajo el crecimiento.
+        lead: Cuando un limpiador no se presenta, o las horas facturadas no coinciden con las horas trabajadas, dos personas quedan en lados opuestos y ambas se sienten perjudicadas. Cada uno de esos casos iba a Operaciones para investigar y decidir.
+        asideTitle: Tres necesidades, un sistema
         perspectives:
-          - title: Cliente
-            body: Los clientes querían soporte, visibilidad de lo que estaba pasando y la confianza de que su problema y su dinero se estaban gestionando de forma justa.
-          - title: Proveedor
-            body: Los proveedores necesitaban transparencia sobre cómo se evaluaban las disputas y la tranquilidad de que su trabajo y sus ingresos se trataban de forma justa.
+          - title: Clientes
+            body: Los clientes querían la prueba de que su problema y su dinero estaban en buenas manos.
+          - title: Proveedores
+            body: Los proveedores querían que su trabajo y sus ingresos se juzgaran con justicia.
           - title: Operaciones
-            body: Operaciones tenía que investigar y resolver las disputas manualmente, incluidos casos que seguían patrones recurrentes y relativamente predecibles.
-          - title: Negocio y restricciones
-            body: A medida que crecía el volumen, la gestión manual se volvía cara y difícil de escalar. El reto no era solo menos contactos de soporte — era mantener la confianza en ambas partes creando un modelo operativo más escalable dentro de los límites legales, de políticas y técnicos.
-        pullQuote: El objetivo no era optimizar un lado del marketplace. Era diseñar un sistema que pudiera funcionar para el marketplace en su conjunto.
+            body: Operaciones investigaba a mano casos que seguían los mismos pocos patrones.
         figures:
-          - src: /img/projects/helpling/helpling-rc-chaos-to-order.png
-            alt: Dibujo minimalista de líneas — un garabato enredado a la izquierda que se transforma, a través de una curva suave, en una espiral concéntrica ordenada a la derecha.
+          - src: /img/projects/helpling/helpling-rc-cust-prov-ops.png
+            alt: Diagrama de Venn con tres círculos superpuestos etiquetados Customers, Providers y Ops.
             tone: visual
-            size: full
+            size: lg
+        challengeIntro: El reto de negocio era un modelo de resolución que pudiera crecer con el marketplace sin que el esfuerzo creciera al mismo ritmo, dentro de los límites legales, de políticas y técnicos.
 
       - id: rc-process
-        layout: insights
+        layout: mapping
         title: Cómo lo abordé
-        lead: Antes de diseñar pantallas, mapeé el servicio que había detrás — cómo entraban las disputas al sistema, dónde intervenía Operaciones y qué restricciones limitaban la automatización o la comunicación.
-        paragraphs:
-          - "Trabajé con Operaciones, Producto y Datos para entender la resolución como un sistema: Cliente ↔ Resolution Center ↔ Proveedor, con Operaciones, reglas de negocio y restricciones legales/de políticas por debajo."
-          - Los datos históricos de casos y las conversaciones con Operaciones mostraron que muchas disputas seguían escenarios recurrentes. Eso no significaba que todos los casos pudieran automatizarse. Significaba que el sistema podía diseñarse en torno a patrones — con rutas de autoservicio claras para los casos predecibles y espacio para el criterio humano cuando importaba.
-        bullets:
-          - cómo entraban las disputas al sistema y cómo se categorizaban los casos
-          - qué información necesitaba Operaciones para decidir
-          - dónde se requería intervención manual frente a dónde se repetían los patrones
-          - qué necesitaban ver los usuarios a lo largo del proceso
-          - las implicaciones de negocio, operativas, legales y de políticas de las distintas rutas de resolución
+        lead: "Antes de dibujar una pantalla, mapeé el servicio: cómo entraban las disputas, dónde intervenía Operaciones y qué limitaba la automatización. Los datos de casos y las conversaciones con Operaciones mostraron que la mayoría de las disputas repetían un puñado de escenarios. No todos, pero los suficientes para diseñar autoservicio para los predecibles y dejar a las personas el resto."
         figures:
           - src: /img/projects/helpling/helpling-rc-whiteboard-refund-logic.jpg
             alt: Boceto en pizarra de una página de Caso con acciones de Reembolsar y Rechazar, que se ramifica en lógica de reembolso total frente a parcial con opciones por horas y notas de tiempos.
             caption: Lógica temprana de reembolsos y casos en la pizarra — mapeando rutas totales frente a parciales antes de que los flujos se convirtieran en producto.
             tone: process
-            size: md
+            size: lg
           - src: /img/projects/helpling/helpling-rc-journey-map-workshop.jpg
             alt: Mesa de taller colaborativo con un mapa de recorrido de UX impreso y notas adhesivas para temas de cliente, problema e interés.
             caption: Descubrimiento multifuncional — el mapeo del recorrido que informó lo que el Resolution Center necesitaba resolver.
             tone: process
-            size: sm
+            size: lg
 
       - id: rc-decisions
         layout: strategy
-        title: Decisiones que dieron forma al producto
-        lead: Lideré las decisiones de diseño de principio a fin, alineando a Producto, Operaciones, Datos e Ingeniería en torno a un modelo compartido — no a una cadena de traspasos. Cada principio a continuación surgió de algo que observamos, una decisión que tomé y lo que eso hizo posible.
+        title: Tres decisiones que lo dieron forma
+        lead: "El principio detrás de las tres: dejar que la gente resuelva lo que no requiere personas, y hacer clara la implicación humana cuando sí la requiere."
         principles:
-          - title: Hacer el proceso visible
-            body: "Observación: los usuarios necesitaban estado y próximos pasos, no solo un resultado. Decisión: diseñar para la legibilidad del proceso en ambas partes. Razón: la opacidad hacía que incluso los resultados justos se sintieran injustos. Resultado: rutas más claras a través del registro, la respuesta y la resolución."
-          - title: Diseñar para ambos lados del marketplace
-            body: "Observación: la misma disputa podía percibirse de forma muy distinta por un cliente y por un proveedor. Decisión: contemplar dos motivaciones y dos lentes de justicia en un mismo sistema. Razón: optimizar un lado rompería la confianza en el otro. Resultado: flujos multiplataforma que mantenían orientadas a ambas partes."
-          - title: Dejar que la gente resuelva lo que no requiere personas
-            body: "Observación: los escenarios recurrentes seguían consumiendo capacidad de Operaciones. Decisión: estructurar los casos predecibles en autoservicio y reservar a los agentes para la complejidad. Razón: el tiempo de Operaciones era más valioso allí donde importaba el criterio. Resultado: mayor adopción del autoservicio y menos carga manual en los casos rutinarios."
-          - title: Diseñar para todo el sistema
-            body: "Observación: las pantallas por sí solas no podían cargar con la realidad legal, de políticas y operativa. Decisión: dar forma a la experiencia en torno a las restricciones junto a Producto, Operaciones, Datos e Ingeniería. Razón: un flujo de resolución solo funciona si funciona para los usuarios y para los equipos que están detrás. Resultado: un modelo lanzable en el que Operaciones podía confiar."
+          - title: "1. Mostrar el proceso, no solo el resultado."
+            body: "Los resultados justos se sentían injustos cuando la gente no podía ver qué estaba pasando. Las pruebas de usabilidad lo confirmaron: tras abrir un caso, tanto clientes como proveedores tenían dificultades para encontrar su estado. Estaba enterrado. Así que lo moví al frente. Lo primero que cualquiera ve al abrir el Resolution Center es una tarjeta con el estado actual de su caso."
+            tradeoff: los límites legales y de políticas restringían lo que podíamos comunicar. Diseñé para la claridad del proceso (estado, información enviada, próximas acciones) en lugar de sobreexplicar una lógica de decisión que no podíamos compartir.
+            figures:
+              - src: /img/projects/helpling/helpling-rc-transparency-1.png
+                alt: Tarjeta de lista de casos que muestra el estado Under review, el ID del caso y el motivo de la disputa Cleaner was late.
+                tone: bare
+                size: lg
+              - src: /img/projects/helpling/helpling-rc-transparency-2.png
+                alt: Pantalla de estado del caso en el Resolution Center con una línea de tiempo de progreso para el registro, la revisión y la resolución estimada.
+                tone: bare
+                size: lg
+          - title: "2. Un modelo, dos lados."
+            body: Cliente y proveedor comparten la misma estructura de caso, cada uno vista a través de sus propias necesidades.
+            tradeoff: sus necesidades podían entrar en conflicto dentro de la misma disputa. Diseñé para la justicia a nivel de marketplace, con ambas partes capaces de leer el proceso, en lugar de optimizar la experiencia para una sola parte.
+          - title: "3. Automatizar lo predecible, proteger las excepciones."
+            body: Las no presentaciones, las cancelaciones y las horas mal facturadas siguen rutas estructuradas, que terminan en un reembolso total o parcial. Para el negocio, eso significó que más reservas ya no implicaban proporcionalmente más carga de trabajo.
+            tradeoff: no todos los casos podían automatizarse. El autoservicio se construye en torno a patrones recurrentes, con rutas explícitas hacia un agente cuando un caso se sale de ellos. El objetivo no era la máxima automatización, sino el nivel adecuado para cada tipo de caso.
+        asideTitle: Cómo trabajamos
+        paragraphs:
+          - Operaciones sacó a la luz los patrones recurrentes y los casos límite, Datos mostró cuáles merecían estructurarse, Ingeniería definió qué podía automatizarse de forma realista y Producto equilibró las prioridades de usuario y de negocio. Mi trabajo fue conectar esas entradas en una sola experiencia a través de las apps de Cliente y Proveedor.
         figures:
           - src: /img/projects/helpling/helpling-rc-figma-iteration-board.png
             alt: Tablero de Figma titulado Resolution Center 1. iteración móvil, que muestra el flujo B de reportar un nuevo problema del cliente y el flujo de respuesta del proveedor, con cuadrículas detalladas de pantallas debajo.
@@ -160,88 +136,29 @@ sections:
       - id: rc-solution
         layout: solution
         title: La solución
-        lead: El Resolution Center convirtió esas decisiones en una experiencia coherente — organizada en torno a la visibilidad, el autoservicio, la transparencia y la consistencia en ambos lados del marketplace.
-        figures:
-          - src: /img/projects/helpling/helpling-rc-flow-cleaner-not-here.webp
-            alt: Flujo de usuario de principio a fin para el escenario del cliente «Mi limpiador/a no está», desde reportar el problema hasta la resolución.
-            caption: Flujo del cliente — «Mi limpiador/a no está», del reporte a la resolución.
-            tone: default
-            size: full
-          - src: /img/projects/helpling/helpling-rc-flow-customer-new-issue.webp
-            alt: Flujo de usuario de principio a fin para un cliente que reporta un problema nuevo a través del Resolution Center.
-            caption: El cliente reporta un problema nuevo — flujo de resolución de principio a fin.
-            tone: default
-            size: full
-          - src: /img/projects/helpling/helpling-rc-flow-provider-response.webp
-            alt: Flujo de usuario de principio a fin para un proveedor que responde a un problema reportado en el Resolution Center.
-            caption: Flujo de respuesta del proveedor ante un problema reportado.
-            tone: default
-            size: full
-          - src: /img/projects/helpling/helpling-rc-flow-partial-refund-provider.webp
-            alt: Flujo del proveedor para un reembolso parcial, activado cuando se facturó una duración incorrecta o el cliente quedó insatisfecho con la calidad.
-            caption: Flujo del proveedor — reembolso parcial (duración mal facturada o insatisfacción con la calidad).
-            tone: default
-            size: full
-          - src: /img/projects/helpling/helpling-rc-flow-full-refund-provider.webp
-            alt: Flujo del proveedor para un reembolso total, activado cuando el limpiador/a no se presentó, canceló, la limpieza se reprogramó o hubo una doble reserva.
-            caption: Flujo del proveedor — reembolso total (no se presentó, cancelación, reprogramación o doble reserva).
-            tone: default
-            size: full
-        solutions:
-          - title: Visibilidad
-            body: Los usuarios pueden entender el estado de su caso — dónde están, qué se ha enviado y qué sucede a continuación — en lugar de esperar dentro de un proceso opaco.
-          - title: Autoservicio
-            body: Las disputas predecibles pueden gestionarse sin intervención de un agente, mientras que los casos complejos siguen dirigiéndose al criterio humano.
-          - title: Transparencia
-            body: La experiencia comunica qué información se está considerando y por qué se toma una ruta — claridad por encima de un lenguaje legal o procedimental vago.
-          - title: Consistencia multiplataforma
-            body: El mismo modelo de resolución funciona para clientes y proveedores, de modo que ambos lados del marketplace permanecen orientados dentro de un único sistema.
-
-      - id: rc-constraints
-        layout: constraints
-        title: Diseñar dentro de las restricciones
-        lead: El buen diseño de producto no consistía en encontrar la experiencia perfecta de forma aislada. Consistía en encontrar una solución que fuera útil para los usuarios, viable para el negocio, factible para Operaciones y posible dentro de las restricciones del producto y del servicio.
-        constraints:
-          - las necesidades de clientes y proveedores podían entrar en conflicto
-          - Operaciones necesitaba suficiente información para gestionar los casos complejos
-          - los casos predecibles necesitaban una automatización estructurada sin eliminar la confianza
-          - la experiencia tenía que funcionar en ambos lados del marketplace
-          - la escalabilidad del negocio importaba
-          - las restricciones legales y de políticas influían en lo que se podía comunicar o automatizar
-          - las restricciones técnicas y de producto influían en lo que se podía entregar de forma realista
-        tradeoffs:
-          - need: Los usuarios necesitaban transparencia sobre el estado, los datos aportados y los próximos pasos.
-            constraint: Los límites legales y de políticas restringían lo que se podía comunicar o automatizar.
-            response: Diseñé para la claridad del proceso dentro de lo que se podía compartir — estado, información enviada y próximas acciones — en lugar de sobreexplicar una lógica de decisión restringida.
-          - need: Los casos predecibles necesitaban resolverse sin esperar a Operaciones.
-            constraint: No todos los casos podían automatizarse; los casos complejos seguían necesitando criterio humano.
-            response: Estructuré el autoservicio en torno a patrones recurrentes, con rutas explícitas hacia la intervención de un agente cuando el caso se salía del camino predecible.
-          - need: Ambas partes necesitaban sentir que el proceso era justo.
-            constraint: Las necesidades de cliente y proveedor podían entrar en conflicto dentro de la misma disputa.
-            response: Diseñé para una justicia a nivel de marketplace — legibilidad en ambas partes — en lugar de optimizar la experiencia para una sola parte.
-
-      - id: rc-impact
-        layout: impact
-        title: Impacto
         figures:
           - src: /video/resolution_center.mp4
             alt: Recorrido del Resolution Center mostrando el flujo de resolución de disputas en la app de Helpling.
             tone: bare
-            size: md
-        lead: Al convertir la gestión manual de disputas en una experiencia de autoservicio escalable, la mejora de la eficiencia operativa redujo el coste operativo alemán en un 35% y disminuyó la tasa de incidencias del equipo de Operaciones alemán, a la vez que cambiaba dónde se necesitaba la capacidad humana.
-        pullQuote: El resultado no fue solo una mejor experiencia de cliente. Redujo la tasa de incidencias del equipo de Operaciones alemán y cambió dónde se necesitaba la capacidad operativa humana.
+            size: full
+        paragraphs:
+          - ¿Quieres ver el flujo completo?
+        contactInline: true
+        contactHref: "mailto:lucianareyes@gmail.com"
+        contactLabel: Ponte en contacto.
+
+      - id: rc-impact
+        layout: impact
+        title: Resultados
+        metricsInline: true
         metrics:
-          - value: 35%
-            label: reducción del coste operativo alemán
+          - value: "-35%"
+            label: coste operativo alemán
+            note: Mover los casos recurrentes de la investigación manual al autoservicio estructurado redujo el esfuerzo que Operaciones necesitaba por caso.
             verified: true
-          - value: 91%
+          - value: "91%"
             label: adopción del autoservicio
-            verified: true
-          - value: 84%
-            label: tareas completadas sin un agente
-            verified: true
-          - value: 93%
-            label: engagement del usuario
+            note: El 84% de los casos se resolvió sin un agente.
             verified: true
         before:
           - Investigación manual de casos recurrentes
@@ -253,29 +170,24 @@ sections:
           - Rutas automatizadas donde los patrones lo permitían
           - Operaciones centrada en los casos complejos
           - Un modelo de resolución más escalable en todo el marketplace
+        pullQuote: El resultado no fue solo una mejor experiencia de cliente. Redujo la tasa de incidencias del equipo de Operaciones alemán y cambió dónde se necesitaba la capacidad operativa humana.
 
       - id: rc-learned
         layout: insights
         title: Lo que aprendí
-        lead: Mirando atrás, las lecciones duraderas tenían menos que ver con las pantallas y más con cómo funciona la justicia en un marketplace de dos lados.
-        pullQuote: La justicia y la percepción de justicia no siempre son lo mismo.
-        paragraphs:
-          - Un resultado objetivamente justo puede seguir sintiéndose injusto si el proceso que hay detrás es opaco.
-          - Este proyecto reforzó que la claridad forma parte del propio servicio — especialmente cuando los usuarios lidian con dinero, conflictos o incertidumbre.
+        lead: La justicia y la percepción de justicia no son lo mismo. Un resultado puede ser correcto y aun así sentirse injusto si el proceso es opaco. La tarjeta de estado no cambió el resultado de un solo caso. Cambió cuán justo se sentía el proceso.
         insights:
-          - title: Los patrones predecibles podían estructurarse
-            body: Una gran proporción de las disputas seguía escenarios recurrentes. No siempre requerían investigación manual — lo que abrió una vía hacia el autoservicio sin pretender que todos los casos fueran iguales.
-          - title: La opacidad genera fricción
+          - title: Los patrones predecibles podían estructurarse.
+            body: Una gran proporción de las disputas seguía escenarios recurrentes. No siempre requerían investigación manual, lo que abrió una vía hacia el autoservicio sin pretender que todos los casos fueran iguales.
+          - title: La opacidad genera fricción.
             body: Los usuarios no solo buscaban un resultado. Necesitaban entender qué estaba pasando, qué información se había considerado y qué sucedería a continuación.
-          - title: La eficiencia no puede lograrse a costa de la confianza
-            body: Automatizar la resolución solo funciona si ambas partes pueden entender y aceptar el proceso — la justicia y la percepción de justicia están estrechamente ligadas en una disputa de marketplace.
+          - title: La eficiencia no puede lograrse a costa de la confianza.
+            body: Automatizar la resolución solo funciona si ambas partes pueden entender y aceptar el proceso.
+        impactLine: La automatización debería eliminar fricción, no la sensación de ser escuchado.
 
       - id: rc-cta
         layout: cta
         title: Ponte en contacto
-        lead: ¿Te interesa el pensamiento detrás de este proyecto? Escríbeme para saber más.
-        contactHref: "mailto:lucianareyes@gmail.com"
-        contactLabel: lucianareyes@gmail.com
 
   - id: design-system
     title: Design System 1.0

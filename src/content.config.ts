@@ -34,11 +34,6 @@ const storyInsight = z.object({
   body: z.string(),
 });
 
-const storyPrinciple = z.object({
-  title: z.string(),
-  body: z.string(),
-});
-
 const storyTradeoff = z.object({
   need: z.string(),
   constraint: z.string(),
@@ -57,6 +52,15 @@ const storyFigure = z.object({
    */
   tone: z.enum(['process', 'default', 'visual', 'bare']).default('process'),
   size: z.enum(['sm', 'md', 'lg', 'full', 'bleed']).default('md'),
+});
+
+const storyPrinciple = z.object({
+  title: z.string(),
+  body: z.string(),
+  /** Optional trade-off note under the principle */
+  tradeoff: z.string().optional(),
+  /** Optional figures tied to this principle (e.g. after a trade-off) */
+  figures: z.array(storyFigure).default([]),
 });
 
 const storySolution = z.object({
@@ -98,6 +102,7 @@ const storyChapter = z.object({
     'impact',
     'reflection',
     'cta',
+    'split',
   ]),
   tagline: z.string().optional(),
   impactLine: z.string().optional(),
@@ -132,6 +137,10 @@ const storyChapter = z.object({
   challengeIntro: z.string().optional(),
   contextLabel: z.string().optional(),
   roleLabel: z.string().optional(),
+  /** Title above a split/aside block (e.g. "Three needs, one system") */
+  asideTitle: z.string().optional(),
+  /** When true, impact metrics render as a narrative list instead of a giant first metric */
+  metricsInline: z.boolean().default(false),
   contactHref: z.string().optional(),
   contactLabel: z.string().optional(),
   /** When true, contact link is rendered inline inside the CTA lead */

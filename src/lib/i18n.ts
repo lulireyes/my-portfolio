@@ -29,6 +29,7 @@ type CaseStudyStrings = {
   year: string;
   productMarket: string;
   myRole: string;
+  workedWith: string;
   team: string;
   focus: string;
   process: string;
@@ -50,6 +51,7 @@ type CaseStudyStrings = {
   constraint: string;
   designResponse: string;
   tradeoffsLabel: string;
+  tradeoffLabel: string;
   communicate: string;
   customerProvider: string;
   ctaLead: string;
@@ -86,6 +88,7 @@ export const ui: Record<Locale, UIStrings> = {
       year: 'Year',
       productMarket: 'Product / Market',
       myRole: 'My Role',
+      workedWith: 'Worked with',
       team: 'Team',
       focus: 'Focus',
       process: 'Process',
@@ -107,6 +110,7 @@ export const ui: Record<Locale, UIStrings> = {
       constraint: 'Constraint',
       designResponse: 'Design response',
       tradeoffsLabel: 'Design trade-offs',
+      tradeoffLabel: 'Trade-off:',
       communicate: 'The experience needed to communicate:',
       customerProvider: 'Customer + Provider',
       ctaLead: 'Want to know more about this project?',
@@ -130,6 +134,7 @@ export const ui: Record<Locale, UIStrings> = {
       year: 'Año',
       productMarket: 'Producto / Mercado',
       myRole: 'Mi rol',
+      workedWith: 'Trabajé con',
       team: 'Equipo',
       focus: 'Enfoque',
       process: 'Proceso',
@@ -151,6 +156,7 @@ export const ui: Record<Locale, UIStrings> = {
       constraint: 'Restricción',
       designResponse: 'Respuesta de diseño',
       tradeoffsLabel: 'Compromisos de diseño',
+      tradeoffLabel: 'Compromiso:',
       communicate: 'La experiencia necesitaba comunicar:',
       customerProvider: 'Cliente + Proveedor',
       ctaLead: '¿Quieres saber más sobre este proyecto?',
@@ -174,6 +180,7 @@ export const ui: Record<Locale, UIStrings> = {
       year: 'Jahr',
       productMarket: 'Produkt / Markt',
       myRole: 'Meine Rolle',
+      workedWith: 'Zusammenarbeit mit',
       team: 'Team',
       focus: 'Schwerpunkt',
       process: 'Prozess',
@@ -195,6 +202,7 @@ export const ui: Record<Locale, UIStrings> = {
       constraint: 'Einschränkung',
       designResponse: 'Design-Antwort',
       tradeoffsLabel: 'Design-Kompromisse',
+      tradeoffLabel: 'Abwägung:',
       communicate: 'Die Erfahrung musste Folgendes vermitteln:',
       customerProvider: 'Kunde + Anbieter',
       ctaLead: 'Möchtest du mehr über dieses Projekt erfahren?',
