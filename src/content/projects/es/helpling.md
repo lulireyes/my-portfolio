@@ -32,7 +32,7 @@ highlights:
     title: Crecimiento, retención y experimentos A/B
     href: "#growth-retention"
     after: " en conversión y retención, combinando insights cualitativos, datos de producto y experimentación para identificar oportunidades y lograr un "
-    emphasis: "aumento del 15% en la conversión."
+    emphasis: "aumento del 7% en la conversión."
 sections:
   - id: resolution-center
     title: Resolution Center
@@ -113,7 +113,7 @@ sections:
                 alt: Tarjeta de lista de casos que muestra el estado Under review, el ID del caso y el motivo de la disputa Cleaner was late.
                 tone: bare
                 size: lg
-              - src: /img/projects/helpling/helpling-rc-transparency-2.png
+              - src: /img/projects/helpling/helpling-rc-transparency-3.png
                 alt: Pantalla de estado del caso en el Resolution Center con una línea de tiempo de progreso para el registro, la revisión y la resolución estimada.
                 tone: bare
                 size: lg
@@ -289,7 +289,7 @@ sections:
         layout: hero
         title: Crecimiento, retención y experimentos A/B
         tagline: Encontrar la barrera invisible al inicio del funnel — y demostrar la solución cada semana.
-        impactLine: +15% de aumento en la conversión, >90% de satisfacción del usuario y una alta adopción a largo plazo en Alemania y Singapur.
+        impactLine: +7% de aumento en la conversión, >90% de satisfacción del usuario y una alta adopción a largo plazo en Alemania y Singapur.
         figures:
           - src: /img/projects/helpling/helpling-growth-hero.webp
             alt: Crecimiento y experimentación — caminos en tonos pastel que ascienden hacia un punto brillante, evocando impulso y mejoras iterativas.
@@ -305,7 +305,7 @@ sections:
         paragraphs:
           - Impulsar las métricas de crecimiento y retención en los mercados de Alemania y Singapur mediante pruebas A/B semanales continuas.
           - Colaborar estrechamente con Product Managers, Datos, Ingeniería, Marketing, Operaciones y stakeholders de negocio.
-        lead: "+15% de aumento en la conversión, >90% de satisfacción del usuario y una alta adopción a largo plazo."
+        lead: "+7% de aumento en la conversión, >90% de satisfacción del usuario y una alta adopción a largo plazo."
         roleLine: "Rol: Diseñadora de Producto (Crecimiento y Retención)"
         responsibilities: "Alcance: estrategia de crecimiento y retención, pruebas A/B semanales, entrevistas con usuarios, pruebas de usabilidad, análisis de la competencia, talleres multifuncionales, diseño de interacción y prototipado"
 
@@ -370,10 +370,10 @@ sections:
       - id: gr-impact
         layout: impact
         title: Resultados e impacto a largo plazo
-        lead: El experimento ganador entregó un aumento de conversión medible y fuertes señales de satisfacción — y permaneció en producción un año después, evidencia de un valor de producto duradero más allá de un test puntual.
+        lead: El experimento entregó un aumento de conversión medible y fuertes señales de satisfacción — y permaneció en producción un año después, evidencia de un valor de producto duradero más allá de un test puntual.
         pullQuote: Un experimento semanal que se convirtió en un comportamiento de producto duradero.
         metrics:
-          - value: +15%
+          - value: +7%
             label: aumento en la conversión
             verified: true
           - value: ">90%"

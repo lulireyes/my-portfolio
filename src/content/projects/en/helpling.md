@@ -32,7 +32,7 @@ highlights:
     title: Growth, Retention & A/B Experiments
     href: "#growth-retention"
     after: " across conversion and retention, combining qualitative insights, product data and experimentation to identify opportunities and deliver a "
-    emphasis: "15% conversion uplift."
+    emphasis: "7% conversion uplift."
 sections:
   - id: resolution-center
     title: Resolution Center
@@ -113,7 +113,7 @@ sections:
                 alt: Case list card showing Under review status, case ID, and dispute reason Cleaner was late.
                 tone: bare
                 size: lg
-              - src: /img/projects/helpling/helpling-rc-transparency-2.png
+              - src: /img/projects/helpling/helpling-rc-transparency-3.png
                 alt: Resolution Center case status screen with a progress timeline for filing, review, and estimated resolution.
                 tone: bare
                 size: lg
@@ -289,7 +289,7 @@ sections:
         layout: hero
         title: Growth, Retention & A/B Experiments
         tagline: Finding the invisible barrier at the start of the funnel — and proving the fix weekly.
-        impactLine: +15% conversion lift, >90% user satisfaction, and high long-term adoption across Germany and Singapore.
+        impactLine: +7% conversion lift, >90% user satisfaction, and high long-term adoption across Germany and Singapore.
         figures:
           - src: /img/projects/helpling/helpling-growth-hero.webp
             alt: Growth and experimentation — pastel paths rising upward toward a glowing point, evoking momentum and iterative gains.
@@ -305,7 +305,7 @@ sections:
         paragraphs:
           - Driving growth and retention metrics across Germany and Singapore markets through continuous weekly A/B testing.
           - Collaborating closely with Product Managers, Data, Engineering, Marketing, Operations, and Business stakeholders.
-        lead: "+15% conversion lift, >90% user satisfaction, and high long-term adoption."
+        lead: "+7% conversion lift, >90% user satisfaction, and high long-term adoption."
         roleLine: "Role: Product Designer (Growth & Retention)"
         responsibilities: "Scope: Growth & Retention Strategy, Weekly A/B Testing, User Interviews, Usability Testing, Competitor Analysis, Cross-functional Workshops, Interaction Design & Prototyping"
 
@@ -373,7 +373,7 @@ sections:
         lead: The winning experiment delivered a measurable conversion lift and strong satisfaction signals — and remained in production a year later, evidence of durable product value beyond a one-off test.
         pullQuote: A weekly experiment that became lasting product behaviour.
         metrics:
-          - value: +15%
+          - value: +7%
             label: conversion lift
             verified: true
           - value: ">90%"

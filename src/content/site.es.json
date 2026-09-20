@@ -14,8 +14,8 @@
       { "text": ", enfocada en crear productos que ponen a las personas en el centro.", "style": "normal" }
     ]
   },
-  "specializingLabel": "Especializándome en:",
-  "specialties": ["UX/UI", "Investigación", "Prototipado"],
+  "specializingLabel": "Especializada en:"
+  "specialties": ["UX/UI", "Research", "Prototipado"],
   "philosophy": {
     "label": "Filosofía de diseño",
     "title": "El diseño empieza con intención.",
@@ -87,15 +87,15 @@
       },
       {
         "photo": "/img/about/photo-2.webp",
-        "text": "Luego me mudé a Berlín y me uní a una plataforma de VoD alemana como Content Manager. Ahí encontré una fascinación por el comportamiento humano y la psicología, y por cómo se diseñan las interfaces para resolver problemas reales. Lo que empezó como una curiosidad paralela se convirtió poco a poco en horas de UX/UI autodidacta, hasta que me di cuenta de que prefería hacer eso antes que cualquier otra cosa. Algunas pasiones se convierten en aquello a lo que te dedicas de por vida."
+        "text": "Luego me mudé a Berlín y entré en una plataforma de VoD alemana como Content Manager. Ahí descubrí mi fascinación por el comportamiento humano y la psicología, y por cómo se diseñan las interfaces para resolver problemas reales. Lo que empezó como una curiosidad paralela se convirtió poco a poco en horas de UX/UI autodidacta, hasta que me di cuenta de que prefería hacer eso antes que cualquier otra cosa."
       },
       {
         "photo": "/img/about/photo-3.webp",
-        "text": "Durante los últimos más de 6 años he trabajado con empresas alemanas e internacionales en plataformas de servicios, movilidad, EdTech y marketplaces, diseñando productos para personas en Alemania, Singapur y más allá. La misma curiosidad de siempre, solo que en otra pantalla: entender a las personas, cómo funcionan las cosas y qué hace que una experiencia se sienta natural."
+        "text": "Durante más de seis años he trabajado con empresas alemanas e internacionales en plataformas de servicios, movilidad, EdTech y marketplaces, diseñando productos para personas en Alemania, Singapur y más allá. La misma curiosidad de siempre, solo que en otra pantalla: entender a las personas, cómo funcionan las cosas y qué hace que una experiencia se sienta natural."
       },
       {
         "photo": "/img/about/photo-4.webp",
-        "text": "Fuera del trabajo, me encanta descubrir lugares nuevos, recibir amigos a cenar, jugar juegos de mesa y, desde que me mudé a Valencia, jugar al pádel. También soy mamá, probablemente el título de trabajo más exigente y gratificante que he tenido. Soy originaria de Argentina y también tengo ciudadanía alemana."
+        "text": "Fuera del trabajo, me encanta descubrir lugares nuevos, invitar amigos a cenar, jugar juegos de mesa y, desde que me mudé a Valencia, jugar al pádel. También soy mamá, probablemente el rol más exigente y gratificante que he tenido. Soy originaria de Argentina y también tengo ciudadanía alemana."
       }
     ]
   },
@@ -189,7 +189,7 @@
     "location": "Valencia, España",
     "email": "lucianareyes@gmail.com",
     "connectHeading": "Conectemos",
-    "connectBody": "Siempre feliz de conversar sobre diseño, producto, investigación u oportunidades de colaboración ( ◠‿◠ )",
+    "connectBody": "Hablemos de diseño, producto, research o de trabajar juntos ( ◠‿◠ )",
     "madeIn": "Hecho en Valencia, España"
   }
 }

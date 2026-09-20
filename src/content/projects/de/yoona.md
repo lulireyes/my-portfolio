@@ -1,12 +1,12 @@
 ---
 title: Yoona.ai
-subtitle: Die Wertschöpfungskette der Mode durch KI und Produktdesign vereinfachen
+subtitle: Die Wertschöpfungskette der Mode mit KI und Produktdesign vereinfachen
 heroImage: /img/projects/yoona/yoona-hero.webp
-heroImageAlt: Yoona.ai — ein skulpturales weißes ‚Y‘ mit weichen blauen Wellenformen, geprägt in eine helle Oberfläche.
-summary: Durchgängiges Redesign einer Deep-Tech-B2B-Plattform, die KI-Komplexität in einen intuitiven Weg vom Konzept bis zur realen Produktion und zum Metaverse verwandelt.
+heroImageAlt: Yoona.ai – ein skulpturales weißes „Y“ mit weichen blauen Wellenformen, in eine helle Oberfläche geprägt.
+summary: "End-to-End-Redesign einer Deep-Tech-B2B-Plattform: KI-Komplexität wird zu einem intuitiven Weg vom Konzept bis zur realen Produktion und ins Metaverse."
 overview:
-  - "Yoona.ai ist eine Deep-Tech-B2B-Serviceplattform, die die Wertschöpfungskette der Bekleidungsindustrie vereinfachen und transformieren soll — von der ersten Konzeption bis zur realen Produktion und zum Metaverse (mit einem schlanken Workflow „3 Klicks zu Metaverse & realer Produktion“). Durch den Einsatz künstlicher Intelligenz zur Datenanalyse befähigt die Software Modemarken, margenstarke Cash-Cow-Designs zu erzeugen, Kollektionen für virtuelle Augmented-Reality-(AR-)Modenschauen vorzubereiten und Ressourcen nachhaltig zu optimieren."
-  - "Als Produktdesignerin bestand mein Hauptziel darin, das durchgängige Redesign sowohl der Web-Plattform als auch der Desktop-Anwendung zu leiten. Ziel war es, die Nutzererfahrung zu vereinheitlichen, die Produktadoption zu fördern und ein voll funktionsfähiges MVP zu liefern, das aktuell in Produktion ist und durch High-Fidelity-Prototypen abgesichert wurde, die per Nutzertests validiert wurden."
+  - "Yoona.ai ist eine B2B-Serviceplattform auf Deep-Tech-Basis, die die Wertschöpfungskette der Bekleidungsindustrie vereinfachen und verändern will – von der ersten Idee bis zur realen Produktion und ins Metaverse, mit einem schlanken Workflow unter dem Motto „3 Klicks zu Metaverse & realer Produktion“. Die Software nutzt künstliche Intelligenz zur Datenanalyse und hilft Modemarken dabei, besonders margenstarke Designs zu entwickeln, Kollektionen für virtuelle AR-Modenschauen (Augmented Reality) vorzubereiten und Ressourcen nachhaltig einzusetzen."
+  - "Als Product Designerin war es mein Hauptziel, das End-to-End-Redesign der Web-Plattform und der Desktop-Anwendung zu verantworten. Wir wollten das Nutzungserlebnis vereinheitlichen, die Nutzung des Produkts fördern und ein voll funktionsfähiges MVP liefern – heute im Livebetrieb und abgesichert durch High-Fidelity-Prototypen, die wir in Nutzertests validiert haben."
 tags:
   - KI
   - B2B
@@ -14,28 +14,28 @@ tags:
   - Redesign
 year: 2020
 period: "2020"
-role: Produktdesignerin (End-to-End)
-roleSummary: "Produktdesignerin (End-to-End) — Redesign von Web- & Desktop-App, qualitative Nutzerforschung, Komponenten und Prinzipien des Designsystems, Wireframing, Prototyping und High-Fidelity-Testing. Status: MVP live / in Produktion."
+role: Product Designerin (End-to-End)
+roleSummary: "Product Designerin (End-to-End) — Redesign der Web- und Desktop-App, qualitative User Research, Komponenten und Prinzipien des Design Systems, Wireframing, Prototyping und High-Fidelity-Tests. Status: MVP live / im Livebetrieb."
 market: Mode · B2B-SaaS · Deep Tech · KI
 highlights:
-  - Ich leitete das durchgängige Redesign von Web und Desktop, damit Modemarken vom Konzept zu produktions- und AR-fertigen Ergebnissen gelangen konnten, ohne eine überwältigende Lernkurve.
-  - Ich baute modulare UI-Komponenten und eine verfeinerte visuelle Sprache für die Manipulation von 3D-Assets und die Datenvisualisierung — und schlug so eine Brücke zwischen der Strenge des Deep Tech und der Ästhetik der Mode.
-  - Ich lieferte ein live geschaltetes MVP in Produktion, das die Kosten für physische Muster senkte und dank klarerer, menschlicher KI-Workflows die Time-to-Market beschleunigte.
+  - Ich habe das End-to-End-Redesign von Web und Desktop verantwortet, damit Modemarken vom Konzept zu produktions- und AR-fertigen Ergebnissen kommen – ohne steile Lernkurve.
+  - Ich habe modulare UI-Komponenten und eine überarbeitete visuelle Sprache für die Bearbeitung von 3D-Assets und die Datenvisualisierung aufgebaut – als Brücke zwischen der Präzision von Deep Tech und der Ästhetik der Mode.
+  - Ich habe ein MVP live in Produktion gebracht, das die Kosten für physische Muster senkt und mit klareren, menschlicheren KI-Workflows die Time-to-Market verkürzt.
 order: 4
 draft: false
 cover: /img/projects/yoona/cover.webp
 sections:
   - id: yoona-case
-    title: Yoona.ai
+    title: Yoona.ai Case Study
     story:
       - id: yo-hero
         layout: hero
-        title: Die Wertschöpfungskette der Mode durch KI und Produktdesign vereinfachen
-        impactLine: Durchgängiges Redesign einer Deep-Tech-B2B-Plattform — vom Konzept bis zur realen Produktion und zum Metaverse.
+        title: Die Wertschöpfungskette der Mode mit KI und Produktdesign vereinfachen
+        impactLine: End-to-End-Redesign einer Deep-Tech-B2B-Plattform – vom Konzept bis zur realen Produktion und ins Metaverse.
         figures:
           - src: /img/projects/yoona/yoona-web-mens-tshirts-assistants.png
-            alt: Silbernes Laptop-Mockup der yoona.ai-Web-App — linke Seitenleiste mit Yolandas Premium-Account, Your Assistants, Your Data und Your Collections; Hauptarbeitsbereich mit dem Titel Men’s T-shirts, der ein Raster KI-gemusterter T-Shirts zeigt, wobei ein Element für Sammlungsaktionen gehovert ist.
-            caption: Produkt-UI — der Men’s-T-shirts-Assistenten-Arbeitsbereich mit Sammlungsraster, Datensätzen und produktionsbereiten Design-Aktionen.
+            alt: "Silbernes Laptop-Mockup der yoona.ai-Web-App: links die Seitenleiste mit dem Premium-Account von Yolanda sowie „Your Assistants“, „Your Data“ und „Your Collections“; im Hauptbereich unter dem Titel „Men’s T-shirts“ ein Raster mit KI-gemusterten T-Shirts, wobei ein Element mit Sammlungsaktionen im Hover-Zustand ist."
+            caption: "Produkt-UI: der Assistenten-Arbeitsbereich „Men’s T-shirts“ mit Kollektionsraster, Datensätzen und produktionsreifen Design-Aktionen."
             tone: default
             size: lg
 
@@ -46,49 +46,49 @@ sections:
         challengeLabel: Die Herausforderung
         roleLabel: Meine Rolle & Verantwortlichkeiten
         paragraphs:
-          - "Yoona.ai ist eine Deep-Tech-B2B-Serviceplattform, die die Wertschöpfungskette der Bekleidungsindustrie vereinfachen und transformieren soll — von der ersten Konzeption bis zur realen Produktion und zum Metaverse (mit einem schlanken Workflow „3 Klicks zu Metaverse & realer Produktion“). Durch den Einsatz künstlicher Intelligenz zur Datenanalyse befähigt die Software Modemarken, margenstarke Cash-Cow-Designs zu erzeugen, Kollektionen für virtuelle Augmented-Reality-(AR-)Modenschauen vorzubereiten und Ressourcen nachhaltig zu optimieren."
-        lead: Als Produktdesignerin bestand mein Hauptziel darin, das durchgängige Redesign sowohl der Web-Plattform als auch der Desktop-Anwendung zu leiten. Ziel war es, die Nutzererfahrung zu vereinheitlichen, die Produktadoption zu fördern und ein voll funktionsfähiges MVP zu liefern, das aktuell in Produktion ist und durch High-Fidelity-Prototypen abgesichert wurde, die per Nutzertests validiert wurden.
-        roleLine: "Rolle: Produktdesignerin (End-to-End)"
-        responsibilities: "Umfang: Redesign von Web- & Desktop-App, qualitative Nutzerforschung, Komponenten und Prinzipien des Designsystems, Wireframing, Prototyping und High-Fidelity-Testing. Status: MVP live / in Produktion."
+          - "Yoona.ai ist eine B2B-Serviceplattform auf Deep-Tech-Basis, die die Wertschöpfungskette der Bekleidungsindustrie vereinfachen und verändern will – von der ersten Idee bis zur realen Produktion und ins Metaverse, mit einem schlanken Workflow unter dem Motto „3 Klicks zu Metaverse & realer Produktion“. Die Software nutzt künstliche Intelligenz zur Datenanalyse und hilft Modemarken dabei, besonders margenstarke Designs zu entwickeln, Kollektionen für virtuelle AR-Modenschauen (Augmented Reality) vorzubereiten und Ressourcen nachhaltig einzusetzen."
+        lead: Als Product Designerin war es mein Hauptziel, das End-to-End-Redesign der Web-Plattform und der Desktop-Anwendung zu verantworten. Wir wollten das Nutzungserlebnis vereinheitlichen, die Nutzung des Produkts fördern und ein voll funktionsfähiges MVP liefern – heute im Livebetrieb und abgesichert durch High-Fidelity-Prototypen, die wir in Nutzertests validiert haben.
+        roleLine: "Rolle: Product Designerin (End-to-End)"
+        responsibilities: "Umfang: Redesign der Web- und Desktop-App, qualitative User Research, Komponenten und Prinzipien des Design Systems, Wireframing, Prototyping und High-Fidelity-Tests. Status: MVP live / im Livebetrieb."
 
       - id: yo-challenge
         layout: challenge
-        title: "Die Herausforderung: Deep-Tech-Komplexität in eine intuitive Erfahrung verwandeln"
-        lead: Auch wenn KI-gestütztes 3D-Design und Technologie zur Textilproduktion immenses Potenzial bergen, erzeugte ihre steile technische Komplexität Reibung für traditionelle Modeprofis und Produktmanager.
+        title: "Die Herausforderung: Deep-Tech-Komplexität in ein intuitives Erlebnis verwandeln"
+        lead: KI-gestütztes 3D-Design und Technologien für die Textilproduktion haben enormes Potenzial. Ihre steile technische Komplexität sorgte aber für Reibung bei klassischen Modeprofis und Produktmanager:innen.
         paragraphs:
-          - Die strategische Herausforderung bestand darin, komplexe Algorithmen und riesige Datenanalysen in klare, menschliche und vorhersehbare Interfaces zu übersetzen. Das ermöglichte Marken, die Kosten für physische Muster drastisch zu senken, ihren CO₂-Fußabdruck zu reduzieren und die Time-to-Market zu beschleunigen — ohne eine überwältigende Lernkurve.
+          - Die strategische Aufgabe bestand darin, komplexe Algorithmen und riesige Datenanalysen in klare, menschliche und vorhersehbare Interfaces zu übersetzen. So konnten Marken die Kosten für physische Muster drastisch senken, ihren CO₂-Fußabdruck verringern und die Time-to-Market verkürzen – ohne steile Lernkurve.
         figures:
           - src: /img/projects/yoona/yoona-atmosphere-fashion-fabric.jpg
-            alt: Mode-Konzeptfoto mit einer Figur auf einem Steinvorsprung und durchscheinendem weißem Stoff, der vor einem klaren blauen Himmel weht.
+            alt: "Modekonzeptfoto: Eine Figur steht auf einem Felsvorsprung, während durchscheinender weißer Stoff vor klarem blauem Himmel weht."
             tone: bare
             size: lg
 
       - id: yo-discovery
         layout: challenge
-        title: "Prozess & Wertlieferung — Discovery und qualitative Forschung"
-        lead: Um die tatsächlichen Bedürfnisse von Mode-Designteams aufzudecken, strukturierte ich eine Forschungsphase rund um qualitative Interviews mit zentralen Branchennutzern (Modedesignern und Produktdirektoren).
+        title: "Prozess: Discovery und qualitative Research"
+        lead: Um herauszufinden, was Modedesign-Teams wirklich brauchen, habe ich eine Research-Phase rund um qualitative Interviews mit zentralen Nutzer:innen der Branche aufgebaut (Modedesigner:innen und Produktdirektor:innen).
         paragraphs:
-          - "Zentrales Insight: Die Profis wollten nicht „lernen, wie man ein KI-Tool benutzt“ — sie brauchten eine natürliche Erweiterung ihres traditionellen kreativen Workflows, die Trendanalyse und die Erzeugung von Basismustern automatisiert."
-          - "Übersetzung ins Produkt: Ich definierte User-Flows, in denen die KI als nahtloser Co-Pilot agiert und repetitive Aufgaben drastisch reduziert."
-        pullQuote: "Die Profis wollten kein KI-Tool erlernen — sie brauchten eine natürliche Erweiterung ihres kreativen Workflows."
+          - "Zentrale Erkenntnis: Die Profis wollten nicht „lernen, wie man ein KI-Tool bedient“ – sie brauchten eine natürliche Erweiterung ihres klassischen kreativen Workflows, die Trendanalyse und die Erstellung von Basismustern automatisiert."
+          - "Übersetzung ins Produkt: Ich habe User-Flows definiert, in denen die KI als nahtloser Co-Pilot agiert und wiederkehrende Aufgaben stark reduziert."
+        pullQuote: Die Profis wollten kein KI-Tool lernen. Sie brauchten eine natürliche Erweiterung ihres kreativen Workflows.
 
       - id: yo-architecture
         layout: mapping
-        title: "Produktarchitektur: Redesign von Web- & Desktop-App"
-        lead: Ich trieb das umfassende Redesign der Plattform voran und balancierte die öffentliche B2B-Akquise- und Conversion-Website mit der tiefen, funktionalen Umgebung der Desktop-App.
+        title: "Produktarchitektur: Redesign von Web- und Desktop-App"
+        lead: Ich habe das umfassende Redesign der Plattform vorangetrieben und dabei die öffentliche B2B-Website für Akquise und Conversion mit der funktionalen Tiefe der Desktop-App in Einklang gebracht.
         paragraphs:
-          - "Durchgängige Flows: Ich gestaltete den kritischen Pfad von der Datenaufnahme globaler Trends bis zum Export produktionsfertiger 3D-Dateien oder AR-Visualisierungsformate."
-          - "Nachhaltiger Fokus: Ich integrierte Echtzeit-Kennzahlen zur Umweltwirkung direkt ins Kontrollpanel, förderte bewusste Designentscheidungen und minimierte den Bedarf an der Herstellung physischer Muster."
+          - "End-to-End-Flows: Ich habe den kritischen Pfad gestaltet – von der Aufnahme globaler Trenddaten bis zum Export produktionsfertiger 3D-Dateien oder AR-Visualisierungen."
+          - "Fokus auf Nachhaltigkeit: Ich habe Umweltkennzahlen in Echtzeit direkt ins Dashboard integriert. Das fördert bewusste Designentscheidungen und verringert den Bedarf an physischen Mustern."
 
       - id: yo-design-system
         layout: strategy
-        title: Designsysteme und Markenkohärenz
-        lead: "Um die Wahrnehmung einer zukunftsweisenden Marke an der Schnittstelle von Deep Tech und Mode zu vereinheitlichen:"
+        title: Design System und Markenkohärenz
+        lead: "Damit die Marke an der Schnittstelle von Deep Tech und Mode als zukunftsweisend und einheitlich wahrgenommen wird:"
         principles:
           - title: Komponenten & Prinzipien
-            body: Ich baute modulare UI-Komponenten, die speziell auf die Manipulation von 3D-Assets und die Datenvisualisierung zugeschnitten waren, und legte damit die Grundlage für ein skalierbares Plattform-Designsystem.
+            body: Ich habe modulare UI-Komponenten entwickelt, die speziell auf die Bearbeitung von 3D-Assets und die Datenvisualisierung zugeschnitten sind, und damit die Grundlage für ein skalierbares Design System der Plattform gelegt.
           - title: Visuelle Richtung
-            body: Ich verlieh Yoona.ai eine frische, verfeinerte visuelle Sprache, die es vom sterilen Look traditioneller Unternehmenssoftware wegführte und mit der anspruchsvollen Ästhetik der Modebranche in Einklang brachte, ohne strenge technische Präzision aufzugeben.
+            body: Ich habe Yoona.ai eine frische, überarbeitete visuelle Sprache gegeben. Sie löst die Marke vom sterilen Look klassischer Unternehmenssoftware und passt zur anspruchsvollen Ästhetik der Modebranche – ohne an technischer Präzision einzubüßen.
         figures:
           - src: /video/yoona.mp4
             alt: Yoona.ai Designsystem in Bewegung — modulare UI für 3D-Asset-Manipulation und Datenvisualisierung.
@@ -97,27 +97,26 @@ sections:
 
       - id: yo-prototyping
         layout: challenge
-        title: Prototyping & High-Fidelity-Testing
-        lead: Ich entwickelte interaktive High-Fidelity-Prototypen, um KI-gestützte 3D-Design-Generierung und AR-Pre-Visualisierungsumgebungen zu simulieren.
+        title: Prototyping & High-Fidelity-Tests
+        lead: Ich habe interaktive High-Fidelity-Prototypen gebaut, um KI-gestützte 3D-Design-Generierung sowie AR-Umgebungen zur Vorab-Visualisierung und Prüfung von Kollektionen zu simulieren.
         paragraphs:
-          - "Ich führte iterative Usability-Testing-Sessions durch, um Reibung an kritischen Workflow-Meilensteinen zu beseitigen, und sorgte dafür, dass sich das Versprechen „3 Klicks bis zur Produktion“ in eine reibungslose Realität übersetzte."
-          - Abgedeckt wurden interaktive High-Fidelity-Prototypen für KI-gestützte 3D-Generierung, AR-Pre-Visualisierungsumgebungen zur Kollektionsprüfung und iteratives Usability-Testing an kritischen Workflow-Meilensteinen.
+          - "Ich habe iterative Usability-Tests durchgeführt, um Reibung an kritischen Meilensteinen des Workflows zu beseitigen – damit das Versprechen „3 Klicks bis zur Produktion“ im Alltag wirklich aufgeht."
 
       - id: yo-results
         layout: strategy
         title: Ergebnisse & Wirkung
         principles:
-          - title: MVP in Produktion
-            body: Die Plattform ist aktuell aktiv und operativ und dient als technologische Kerninfrastruktur für Marken, die ihre Kollektionen digitalisieren möchten.
+          - title: MVP im Livebetrieb
+            body: Die Plattform ist aktiv und im operativen Einsatz und dient Marken, die ihre Kollektionen digitalisieren wollen, als technologische Kerninfrastruktur.
           - title: Operative Effizienz
-            body: Ich verkürzte die Entwicklungszeiten von Kollektionen und die mit physischen Prototypen verbundenen Kosten drastisch und trieb messbare Kennzahlen zu Nachhaltigkeit und bewusstem Konsum voran.
-          - title: Markenkonsolidierung
-            body: Ich lieferte ein kohärentes Interface, das den Wert fortschrittlicher Technologie klar vermittelt und die Adoption für Bekleidungsunternehmen erleichtert, die bereit sind, den Sprung in die Digitalisierung und ins Metaverse zu wagen.
+            body: Ich habe dazu beigetragen, die Entwicklungszeiten von Kollektionen und die Kosten für physische Prototypen deutlich zu senken, und messbare Fortschritte bei Nachhaltigkeit und bewusstem Konsum angestoßen.
+          - title: Einheitliche Marke
+            body: Ich habe ein stimmiges Interface geliefert, das den Wert fortschrittlicher Technologie klar vermittelt und Bekleidungsunternehmen den Einstieg erleichtert, die den Sprung in die Digitalisierung und ins Metaverse wagen wollen.
 
       - id: yo-cta
         layout: cta
         title: Kontakt aufnehmen
-        lead: Interessiert am Denken hinter diesem Projekt? Melde dich, um mehr zu erfahren.
+        lead: Du willst mehr über dieses Projekt wissen? Lass uns sprechen.
         contactHref: "mailto:lucianareyes@gmail.com"
         contactLabel: lucianareyes@gmail.com
 ---

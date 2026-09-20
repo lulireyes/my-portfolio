@@ -1,135 +1,135 @@
 ---
 title: Helpling
-summary: Ich gestaltete und lancierte eine Funktion zur Streitbeilegung, die die Betriebskosten um 35% senkte und die Support-Effizienz verbesserte.
+summary: "Senior Product Designerin bei Helpling: Resolution Center (-35 % operative Kosten), erstes Design System und datengetriebenes Growth & Retention."
 order: 1
 draft: false
 cover: /img/projects/helpling/cover.webp
 overview:
-  - Helpling ist Europas führende Plattform für Haushaltsdienstleistungen und verbindet Kunden mit vertrauenswürdigen Dienstleistern über mehrere Märkte hinweg.
-  - Ich stieg bei Helpling als Produktdesignerin ein und wuchs zur Senior Produktdesignerin heran, arbeitete an den Customer- und Partner-Apps in Deutschland und Singapur. Ich arbeitete an allem — von komplexen Service-Erfahrungen und neuen Produktinitiativen bis hin zu Wachstum, Retention und Experimenten.
-  - Meine Arbeit war in Forschung und Evidenz verankert. Ich kombinierte regelmäßig qualitative Insights aus Nutzerinterviews und Usability-Tests mit quantitativen Daten, Produktanalytik und Experimenten, um Probleme zu verstehen, Annahmen zu hinterfragen und Designentscheidungen zu leiten.
+  - Helpling ist Europas führender Online-Marktplatz zur Vermittlung haushaltsnaher Dienstleistungen.
+  - Ich bin bei Helpling als Product Designerin eingestiegen und zur Senior Product Designerin aufgestiegen. Dabei habe ich an den Customer- und Partner-Apps in Deutschland und Singapur gearbeitet – von komplexen Service-Erlebnissen und neuen Produktinitiativen bis hin zu Growth, Retention und Experimenten.
+  - Meine Arbeit stützt sich auf Research und Daten. Ich habe qualitative Erkenntnisse aus Nutzerinterviews und Usability-Tests regelmäßig mit quantitativen Daten, Produktanalysen und Experimenten kombiniert, um Probleme zu verstehen, Annahmen zu hinterfragen und Designentscheidungen fundiert zu treffen.
 tags:
   - Durchgängiges Design
   - Marktplatz
   - Designsysteme
-  - Wachstum
+  - Growth
 year: 2025
 period: August 2022 – Dezember 2025
-role: Senior Produktdesignerin
+role: Senior Product Designerin
 market: Marktplatz · Deutschland / Singapur / EU
 highlights:
-  - before: "Ich gestaltete und lancierte das "
+  - before: "Ich habe das "
     title: Resolution Center
     href: "#resolution-center"
-    after: ", eine neue Erfahrung, die Kunden und Partnern half, Probleme eigenständiger zu lösen, während sie zugleich "
-    emphasis: "die operativen Supportkosten um 35% senkte."
-  - before: "Ich baute Helplings erstes "
+    after: " gestaltet und gelauncht: eine neue Lösung, mit der Kund:innen und Partner Probleme selbstständiger klären können – und die "
+    emphasis: "die operativen Supportkosten um 35 % gesenkt hat."
+  - before: "Ich habe Helplings erstes "
     title: Design System 1.0
     href: "#design-system"
-    after: " von Grund auf und schuf eine gemeinsame Grundlage über die Customer- und Partner-Apps hinweg, um "
-    emphasis: "Konsistenz und Skalierbarkeit im gesamten Produkt zu verbessern."
-  - before: "Ich leitete "
-    title: Wachstum, Retention & A/B-Experimente
+    after: " von Grund auf aufgebaut und damit eine gemeinsame Basis für die Customer- und Partner-Apps geschaffen, "
+    emphasis: "für mehr Konsistenz und Skalierbarkeit im gesamten Produkt."
+  - before: "Ich habe "
+    title: Growth, Retention & A/B-Tests
     href: "#growth-retention"
-    after: " in den Bereichen Conversion und Retention, kombinierte qualitative Insights, Produktdaten und Experimente, um Chancen zu identifizieren und ein "
-    emphasis: "Conversion-Plus von 15% zu erzielen."
+    after: " für Conversion und Retention vorangetrieben und dabei qualitative Erkenntnisse, Produktdaten und Experimente kombiniert, um Chancen zu erkennen – mit "
+    emphasis: "7 % mehr Conversion als Ergebnis."
 sections:
   - id: resolution-center
     title: Resolution Center
     emoji: "🤝"
-    role: Durchgängige Produktdesignerin
+    role: Durchgängige Product Designerin
     timeline: 6 Monate
     story:
       - id: rc-hero
         layout: hero
         title: Resolution Center
-        tagline: Gestalten für zwei Menschen, die beide glauben, im Recht zu sein.
+        tagline: Design für zwei Menschen, die sich beide im Recht fühlen.
         metrics:
           - value: "-35%"
-            label: deutsche Betriebskosten
+            label: operative Kosten in Deutschland
             verified: true
           - value: "91%"
-            label: Self-Service-Adoption
+            label: Self-Service-Nutzung
             verified: true
           - value: "84%"
-            label: ohne Agenten gelöst
+            label: ohne Agent gelöst
             verified: true
         figures:
           - src: /img/projects/helpling/helpling-rc-hero.jpg
-            alt: Resolution Center — abstrakte 3D-Formen aus Glas, Metall und weicher Geometrie um einen warmen Kern, die Struktur aus Komplexität andeuten.
+            alt: Resolution Center – abstrakte 3D-Formen aus Glas, Metall und weicher Geometrie um einen warmen Kern, die Struktur inmitten von Komplexität andeuten.
             tone: bare
             size: lg
         paragraphs:
-          - Helplings Streitfälle wurden vom Betriebsteam bearbeitet, ein Fall nach dem anderen. Das funktionierte, solange die Volumina klein waren. Doch auf einem Marktplatz kann jede neue Buchung zu einem neuen Streitfall werden — Wachstum bedeutete also mehr manuelle Arbeit.
-          - Ich gestaltete ein Resolution Center, das vorhersehbare Fälle in den Self-Service verschiebt und menschliches Urteilsvermögen für die Fälle behält, die es brauchen.
-        roleLine: Senior Produktdesignerin, durchgängige Designverantwortung
-        responsibilities: Produkt, Betrieb, Data, Engineering
+          - Bei Helpling hat das Ops-Team Streitfälle bisher einzeln bearbeitet, einen Fall nach dem anderen. Das funktionierte, solange die Fallzahlen niedrig waren. Auf einem Marktplatz kann aber jede neue Buchung zum Streitfall werden – Wachstum bedeutete also automatisch mehr manuelle Arbeit.
+          - Ich habe ein Resolution Center gestaltet, das vorhersehbare Fälle in den Self-Service verlagert und menschliches Urteilsvermögen dort einsetzt, wo es gebraucht wird.
+        roleLine: Senior Product Designerin, Design-Ownership von Anfang bis Ende
+        responsibilities: Product, Operations, Data, Engineering
 
       - id: rc-challenge
         layout: split
         title: Das Problem
-        lead: Wenn eine Reinigungskraft nicht erscheint oder die berechneten Stunden nicht zu den geleisteten passen, stehen zwei Menschen auf gegenüberliegenden Seiten — und beide fühlen sich ungerecht behandelt. Jeder dieser Fälle ging an das Betriebsteam zur Untersuchung und Entscheidung.
+        lead: Wenn eine Reinigungskraft nicht erscheint oder die abgerechneten Stunden nicht zu den tatsächlich geleisteten passen, stehen sich zwei Menschen gegenüber – und beide fühlen sich ungerecht behandelt. Jeder dieser Fälle ging zur Prüfung und Entscheidung an das Ops-Team.
         asideTitle: Drei Bedürfnisse, ein System
         perspectives:
-          - title: Kunden
-            body: Kunden wollten den Nachweis, dass ihr Anliegen und ihr Geld in sicheren Händen waren.
-          - title: Dienstleister
-            body: Dienstleister wollten, dass ihre Arbeit und ihr Verdienst fair beurteilt werden.
-          - title: Betrieb
-            body: Das Betriebsteam untersuchte von Hand Fälle, die denselben wenigen Mustern folgten.
+          - title: Kund:innen
+            body: Kund:innen wollten sicher sein, dass ihr Anliegen und ihr Geld gut aufgehoben sind.
+          - title: Dienstleister:innen
+            body: Dienstleister:innen wollten, dass ihre Arbeit und ihr Verdienst fair bewertet werden.
+          - title: Operations
+            body: Das Ops-Team hat Fälle von Hand geprüft, die immer nach denselben wenigen Mustern abliefen.
         figures:
           - src: /img/projects/helpling/helpling-rc-cust-prov-ops.png
-            alt: Venn-Diagramm mit drei überlappenden Kreisen, beschriftet mit Customers, Providers und Ops.
+            alt: Venn-Diagramm mit drei sich überlappenden Kreisen, beschriftet mit Customers, Providers und Ops.
             tone: visual
             size: lg
-        challengeIntro: Die geschäftliche Herausforderung war ein Lösungsmodell, das mit dem Marktplatz wachsen konnte, ohne dass der Aufwand im gleichen Tempo wuchs — innerhalb rechtlicher, richtlinienbezogener und technischer Grenzen.
+        challengeIntro: "Die Herausforderung fürs Business: ein Modell zur Konfliktlösung, das mit dem Marktplatz mitwachsen kann, ohne dass der Aufwand im gleichen Tempo steigt – und das innerhalb rechtlicher, interner und technischer Vorgaben funktioniert."
 
       - id: rc-process
         layout: mapping
-        title: Wie ich vorgegangen bin
-        lead: "Bevor ich einen Screen zeichnete, kartierte ich den Service: wie Streitfälle hereinkamen, wo das Betriebsteam eingriff und was Automatisierung begrenzte. Falldaten und Gespräche mit dem Betriebsteam zeigten, dass die meisten Streitfälle eine Handvoll Szenarien wiederholten. Nicht alle, aber genug, um Self-Service für die vorhersehbaren zu gestalten und Menschen für den Rest zu behalten."
+        title: So bin ich vorgegangen
+        lead: "Bevor ich den ersten Screen gezeichnet habe, habe ich den Service kartiert: Wie kommen Streitfälle rein, wo greift das Ops-Team ein und was begrenzt die Automatisierung? Falldaten und Gespräche mit dem Ops-Team haben gezeigt, dass sich die meisten Streitfälle auf eine Handvoll Szenarien zurückführen lassen. Nicht alle, aber genug, um die vorhersehbaren per Self-Service abzudecken und Menschen für den Rest einzusetzen."
         figures:
           - src: /img/projects/helpling/helpling-rc-whiteboard-refund-logic.jpg
-            alt: Whiteboard-Skizze einer Case-Seite mit Aktionen für Erstatten und Ablehnen, die sich in Logik für vollständige gegenüber teilweiser Erstattung mit stundenbasierten Optionen und Zeitnotizen verzweigt.
-            caption: Frühe Erstattungs- und Falllogik auf dem Whiteboard — Mapping voller vs. teilweiser Pfade, bevor die Flows zum Produkt wurden.
+            alt: Whiteboard-Skizze einer Case-Seite mit den Aktionen „Erstatten" und „Ablehnen", die sich in die Logik für volle und teilweise Erstattung verzweigen, mit stundenbasierten Optionen und Zeitnotizen.
+            caption: "Frühe Erstattungs- und Falllogik am Whiteboard: volle und teilweise Erstattung durchgespielt, bevor daraus Produkt-Flows wurden."
             tone: process
             size: lg
           - src: /img/projects/helpling/helpling-rc-journey-map-workshop.jpg
-            alt: Kollaborativer Workshop-Tisch mit einer gedruckten UX-Journey-Map und Klebezetteln zu Themen wie Kunde, Problem und Interesse.
-            caption: Funktionsübergreifende Discovery — das Journey-Mapping, das prägte, was das Resolution Center lösen musste.
+            alt: Kollaborativer Workshop-Tisch mit einer ausgedruckten UX-Journey-Map und Klebezetteln zu Themen wie Kund:in, Problem und Interesse.
+            caption: "Funktionsübergreifende Discovery: Das Journey-Mapping hat geprägt, was das Resolution Center lösen musste."
             tone: process
             size: lg
 
       - id: rc-decisions
         layout: strategy
-        title: Drei Entscheidungen, die es geprägt haben
-        lead: "Das Prinzip hinter allen dreien: Menschen das lösen lassen, was keine Menschen braucht — und menschliche Beteiligung klar machen, wenn sie nötig ist."
+        title: Drei Entscheidungen, die das Resolution Center geprägt haben
+        lead: "Das Prinzip hinter allen dreien: Was keine Menschen braucht, sollen Nutzer:innen selbst lösen können – und wo ein Mensch nötig ist, soll das klar erkennbar sein."
         principles:
           - title: "1. Den Prozess zeigen, nicht nur das Ergebnis."
-            body: "Faire Ergebnisse fühlten sich unfair an, wenn Menschen nicht sehen konnten, was geschah. Usability-Tests bestätigten es: Nach dem Öffnen eines Falls hatten Kunden und Dienstleister Schwierigkeiten, den Status zu finden. Er war vergraben. Also holte ich ihn nach vorne. Das Erste, was man beim Öffnen des Resolution Centers sieht, ist eine Karte mit dem aktuellen Status des Falls."
-            tradeoff: rechtliche und richtlinienbezogene Grenzen beschränkten, was wir kommunizieren konnten. Ich gestaltete für Klarheit über den Prozess (Status, eingereichte Informationen, nächste Aktionen), statt Entscheidungslogik zu überklären, die wir nicht teilen konnten.
+            body: "Faire Ergebnisse haben sich unfair angefühlt, wenn man nicht sehen konnte, was gerade passiert. Das haben auch die Usability-Tests bestätigt: Nachdem Kund:innen und Dienstleister:innen einen Fall geöffnet hatten, fanden sie den Status kaum – er war zu tief vergraben. Also habe ich ihn nach vorn geholt: Das Erste, was man beim Öffnen des Resolution Centers sieht, ist eine Karte mit dem aktuellen Status des Falls."
+            tradeoff: Rechtliche und interne Vorgaben schränkten ein, was wir kommunizieren durften. Deshalb habe ich auf Klarheit beim Prozess gesetzt (Status, eingereichte Informationen, nächste Schritte), statt Entscheidungslogik zu erklären, die wir gar nicht offenlegen konnten.
             figures:
               - src: /img/projects/helpling/helpling-rc-transparency-1.png
-                alt: Falllistenkarte mit Status Under review, Fall-ID und Streitgrund Cleaner was late.
+                alt: Fallkarte in der Liste mit dem Status „Under review", der Fall-ID und dem Streitgrund „Cleaner was late".
                 tone: bare
                 size: lg
-              - src: /img/projects/helpling/helpling-rc-transparency-2.png
-                alt: Resolution-Center-Fallstatusbildschirm mit einer Fortschritts-Timeline für Einreichung, Prüfung und geschätzte Lösung.
+              - src: /img/projects/helpling/helpling-rc-transparency-3.png
+                alt: Statusbildschirm eines Falls im Resolution Center mit einer Fortschritts-Timeline für Einreichung, Prüfung und voraussichtliche Lösung.
                 tone: bare
                 size: lg
           - title: "2. Ein Modell, zwei Seiten."
-            body: Kunde und Dienstleister teilen dieselbe Fallstruktur, jeweils durch die eigenen Bedürfnisse gesehen.
-            tradeoff: ihre Bedürfnisse konnten innerhalb desselben Streitfalls in Konflikt geraten. Ich gestaltete für Fairness auf Marktplatzebene, sodass beide Seiten den Prozess lesen können — statt die Erfahrung für eine Partei zu optimieren.
+            body: Kund:in und Dienstleister:in teilen sich dieselbe Fallstruktur, jeweils aus der eigenen Perspektive betrachtet.
+            tradeoff: Die Bedürfnisse der beiden Seiten konnten sich innerhalb desselben Streitfalls widersprechen. Deshalb habe ich auf Fairness auf Marktplatzebene hin gestaltet, sodass beide Seiten den Prozess nachvollziehen können – statt die Erfahrung für nur eine Partei zu optimieren.
           - title: "3. Das Vorhersehbare automatisieren, Ausnahmen schützen."
-            body: "Nichterscheinen, Stornierungen und falsch berechnete Stunden folgen strukturierten Pfaden und enden in einer vollständigen oder teilweisen Erstattung. Für das Geschäft bedeutete das: mehr Buchungen hießen nicht mehr proportional mehr Arbeitslast."
-            tradeoff: nicht jeder Fall konnte automatisiert werden. Self-Service baut auf wiederkehrenden Mustern auf, mit expliziten Pfaden zu einem Agenten, wenn ein Fall sie verlässt. Das Ziel war nicht maximale Automatisierung, sondern das richtige Maß für jeden Falltyp.
-        asideTitle: Wie wir arbeiteten
+            body: "Nichterscheinen, Stornierungen und falsch abgerechnete Stunden folgen festen Pfaden und enden in einer vollen oder teilweisen Erstattung. Für das Business hieß das: Mehr Buchungen bedeuten nicht mehr automatisch proportional mehr Aufwand."
+            tradeoff: Nicht jeder Fall ließ sich automatisieren. Self-Service basiert auf wiederkehrenden Mustern – mit klaren Wegen zu einem Agenten, sobald ein Fall davon abweicht. Das Ziel war nicht maximale Automatisierung, sondern das richtige Maß für jeden Falltyp.
+        asideTitle: So haben wir zusammengearbeitet
         paragraphs:
-          - Das Betriebsteam brachte die wiederkehrenden Muster und Grenzfälle hervor, Data zeigte, welche sich zu strukturieren lohnten, Engineering definierte, was sich realistisch automatisieren ließ, und Produkt wog Nutzer- und Geschäftsprioritäten ab. Meine Aufgabe war, diese Inputs zu einer Erfahrung über die Kunden- und Partner-Apps hinweg zu verbinden.
+          - Das Ops-Team hat die wiederkehrenden Muster und Sonderfälle geliefert, Data hat gezeigt, bei welchen sich Strukturierung lohnt, Engineering hat definiert, was sich realistisch automatisieren lässt, und Product hat Nutzer- und Business-Prioritäten gegeneinander abgewogen. Meine Aufgabe war es, diese Inputs zu einer durchgängigen Erfahrung über die Customer- und Partner-Apps zu verbinden.
         figures:
           - src: /img/projects/helpling/helpling-rc-figma-iteration-board.png
-            alt: Figma-Board mit dem Titel Resolution Center 1. iteration mobile, das den Flow B des Kunden zum Melden eines neuen Problems und den Antwort-Flow des Dienstleisters mit detaillierten Screen-Rastern darunter zeigt.
-            caption: Erstes mobiles Iterations-Board — Kundenerfassung und Antwort-Flows des Dienstleisters durchgängig kartiert vor dem High-Fidelity-Feinschliff.
+            alt: "Figma-Board „Resolution Center 1. iteration mobile\": der Flow „B\" für Kund:innen zum Melden eines neuen Problems und der Antwort-Flow der Dienstleister:innen, darunter die detaillierten Screens."
+            caption: "Erstes Iterations-Board für Mobile: Melde-Flow der Kund:innen und Antwort-Flow der Dienstleister:innen, durchgängig kartiert, bevor es an den High-Fidelity-Feinschliff ging."
             tone: default
             size: lg
 
@@ -142,10 +142,10 @@ sections:
             tone: bare
             size: full
         paragraphs:
-          - Möchtest du den kompletten Flow sehen?
+          - Du willst den kompletten Flow sehen?
         contactInline: true
         contactHref: "mailto:lucianareyes@gmail.com"
-        contactLabel: Melde dich.
+        contactLabel: Schreib mir.
 
       - id: rc-impact
         layout: impact
@@ -153,37 +153,37 @@ sections:
         metricsInline: true
         metrics:
           - value: "-35%"
-            label: deutsche Betriebskosten
-            note: Wiederkehrende Fälle von manueller Untersuchung in strukturierten Self-Service zu bringen, reduzierte den Aufwand, den das Betriebsteam pro Fall brauchte.
+            label: operative Kosten in Deutschland
+            note: Wiederkehrende Fälle wandern von der manuellen Prüfung in einen strukturierten Self-Service, dadurch sank der Aufwand des Ops-Teams pro Fall.
             verified: true
           - value: "91%"
-            label: Self-Service-Adoption
-            note: 84% der Fälle wurden ohne Agenten gelöst.
+            label: Self-Service-Nutzung
+            note: 84% der Fälle wurden ohne Agent gelöst.
             verified: true
         before:
-          - Manuelle Untersuchung wiederkehrender Fälle
-          - Kapazität des Betriebsteams in vorhersehbaren Szenarien gebunden
+          - Wiederkehrende Fälle wurden manuell geprüft
+          - Ops-Kapazität war in vorhersehbaren Szenarien gebunden
           - Höhere operative Supportkosten
-          - Eingeschränkte Sichtbarkeit für Kunden und Dienstleister
+          - Kund:innen und Dienstleister:innen hatten kaum Einblick
         after:
           - Strukturierter Self-Service für vorhersehbare Streitfälle
-          - Automatisierte Pfade, wo Muster es zuließen
-          - Betriebsteam auf komplexe Fälle fokussiert
-          - Ein skalierbareres Lösungsmodell über den Marktplatz hinweg
-        pullQuote: Das Ergebnis war nicht nur eine bessere Kundenerfahrung. Es verringerte die Vorfallrate für das deutsche Operations-Team und veränderte, wo menschliche operative Kapazität benötigt wurde.
+          - Automatisierte Pfade, wo Muster es zulassen
+          - Ops-Team konzentriert sich auf komplexe Fälle
+          - Ein Lösungsmodell, das sich über den ganzen Marktplatz besser skalieren lässt
+        pullQuote: Das Ergebnis war nicht nur eine bessere Kundenerfahrung. Die Zahl der Vorfälle beim deutschen Ops-Team ging zurück, und es hat sich verschoben, wo menschliche Ops-Kapazität überhaupt gebraucht wird.
 
       - id: rc-learned
         layout: insights
         title: Was ich gelernt habe
-        lead: Fairness und wahrgenommene Fairness sind nicht dasselbe. Ein Ergebnis kann richtig sein und sich trotzdem falsch anfühlen, wenn der Prozess undurchsichtig ist. Die Statuskarte hat das Ergebnis keines einzigen Falls geändert. Sie hat verändert, wie fair der Prozess sich anfühlte.
+        lead: Fairness und gefühlte Fairness sind nicht dasselbe. Ein Ergebnis kann richtig sein und sich trotzdem falsch anfühlen, wenn der Prozess undurchsichtig ist. Die Statuskarte hat das Ergebnis keines einzigen Falls verändert – aber wie fair sich der Prozess anfühlt.
         insights:
-          - title: Vorhersehbare Muster ließen sich strukturieren.
-            body: Ein großer Anteil der Streitfälle folgte wiederkehrenden Szenarien. Diese erforderten nicht immer manuelle Untersuchung, was einen Weg zu Self-Service eröffnete, ohne so zu tun, als wäre jeder Fall gleich.
-          - title: Undurchsichtigkeit erzeugt Reibung.
-            body: Nutzer suchten nicht nur ein Ergebnis. Sie mussten verstehen, was geschah, welche Informationen berücksichtigt worden waren und was als Nächstes passieren würde.
-          - title: Effizienz darf nicht auf Kosten des Vertrauens gehen.
-            body: Die Automatisierung der Lösung funktioniert nur, wenn beide Seiten den Prozess verstehen und akzeptieren können.
-        impactLine: Automatisierung sollte Reibung entfernen, nicht das Gefühl, gehört zu werden.
+          - title: Vorhersehbare Muster lassen sich strukturieren.
+            body: Ein großer Teil der Streitfälle folgte wiederkehrenden Szenarien. Die brauchten nicht immer eine manuelle Prüfung. Das hat den Weg zum Self-Service geöffnet, ohne so zu tun, als wäre jeder Fall gleich.
+          - title: Intransparenz erzeugt Reibung.
+            body: Nutzer:innen wollten nicht nur ein Ergebnis. Sie wollten verstehen, was passiert, welche Informationen berücksichtigt wurden und was als Nächstes kommt.
+          - title: Effizienz darf nicht auf Kosten von Vertrauen gehen.
+            body: Automatisierte Konfliktlösung funktioniert nur, wenn beide Seiten den Prozess verstehen und akzeptieren können.
+        impactLine: Automatisierung sollte Reibung abbauen – nicht das Gefühl, gehört zu werden.
 
       - id: rc-cta
         layout: cta
@@ -192,17 +192,17 @@ sections:
   - id: design-system
     title: Design System 1.0
     emoji: "🎨"
-    role: Senior Produktdesignerin
+    role: Senior Product Designerin
     timeline: 6 Monate
     story:
       - id: ds-hero
         layout: hero
         title: Design System 1.0
         tagline: Ein Produkt zu skalieren beginnt damit, Entscheidungen zu skalieren.
-        impactLine: "Ordnung ins Chaos bringen: wie ich Helplings erstes plattformübergreifendes Design System von Grund auf baute."
+        impactLine: "Ordnung im Chaos: Wie ich Helplings erstes plattformübergreifendes Design System von Grund auf aufgebaut habe."
         figures:
           - src: /img/projects/helpling/helpling-ds-hero.webp
-            alt: Design System 1.0 — viele modulare Komponenten, angeordnet zu einem geordneten, isometrischen System.
+            alt: Design System 1.0 – viele modulare Komponenten, zu einem geordneten, isometrischen System angeordnet.
             tone: default
             size: lg
 
@@ -213,86 +213,83 @@ sections:
         challengeLabel: Die Herausforderung
         roleLabel: Meine Rolle
         paragraphs:
-          - "Als ich bei Helpling einstieg, gab es kein Designsystem. Da das Produkt schnell über mehrere Märkte und Teams hinweg skaliert war, hatte UI-Fragmentierung ganz natürlich überhandgenommen: für eine einzige Aktion wie einen Primary Button gab es sechs verschiedene Versionen, verstreut über das Produkt, ohne gemeinsame Icon-Bibliotheken oder einheitliche Richtlinien."
-        lead: In dieser chaotischen Landschaft wollte ich Struktur schaffen. Was als Initiative begann, meinen eigenen Workflow aufzuräumen, entwickelte sich organisch zur Mission, Helplings erstes gemeinsames Design System zu bauen — konzipiert, um Design und Engineering im gesamten Unternehmen auszurichten.
-        roleLine: "Rolle: Senior Produktdesignerin · Zeitraum: 6 Monate"
-        responsibilities: "Verantwortlichkeiten: Produkt-Audit, Komponentenarchitektur, Atomic-Design-Methodik, Aufbau einer plattformübergreifenden Figma-Bibliothek und teamübergreifende Zusammenarbeit."
+          - "Als ich zu Helpling kam, gab es kein Design System. Das Produkt war schnell über mehrere Märkte und Teams hinweg gewachsen, und die UI war zwangsläufig zersplittert: Allein für eine einzige Aktion wie den Primary Button gab es sechs verschiedene Versionen, verstreut im ganzen Produkt – ohne gemeinsame Icon-Bibliothek und ohne einheitliche Guidelines."
+        lead: Mitten in diesem Chaos wollte ich Struktur schaffen. Was als Aufräumaktion für meinen eigenen Workflow begann, wurde nach und nach zur Mission, Helplings erstes gemeinsames Design System aufzubauen – als Grundlage, um Design und Engineering im ganzen Unternehmen aufeinander abzustimmen.
+        roleLine: "Rolle: Senior Product Designerin · Zeitraum: 6 Monate"
+        responsibilities: "Aufgaben: Produkt-Audit, Komponentenarchitektur, Atomic-Design-Methodik, Aufbau einer plattformübergreifenden Figma-Bibliothek und teamübergreifende Zusammenarbeit."
 
       - id: ds-problem
         layout: challenge
-        title: "Das eigentliche Problem: Chaos vs. Struktur"
-        lead: Das Produkt war nicht kaputt, aber es litt unter stiller, sich anhäufender Reibung.
+        title: "Das eigentliche Problem: Chaos oder Struktur"
+        lead: Das Produkt war nicht kaputt – aber es litt unter stiller, sich aufsummierender Reibung.
         paragraphs:
-          - "Ein schnelles Produkt-Audit offenbarte sofortige Warnsignale: 6 Versionen des Primary Buttons, 3 verschiedene Icon-Bibliotheken und 0 gemeinsame Dokumentation."
-          - Designer erfanden ständig das Rad neu, Engineers implementierten leicht unterschiedliche Varianten derselben Komponenten, und das Fehlen einer einzigen Quelle der Wahrheit erzeugte für alle unnötige kognitive Last.
+          - "Ein schnelles Produkt-Audit brachte sofort Warnsignale zutage: 6 Versionen des Primary Buttons, 3 verschiedene Icon-Bibliotheken und 0 gemeinsame Dokumentation."
+          - Designer:innen haben ständig das Rad neu erfunden, Entwickler:innen haben leicht abweichende Varianten derselben Komponenten umgesetzt, und ohne eine zentrale Source of Truth entstand für alle unnötiger Mehraufwand.
         figures:
           - src: /img/projects/helpling/helpling-ds-product-screens.png
-            alt: Vier Helpling-Mobile-Screens nebeneinander — Dienstleisterauswahl mit ausgewählter Anna, Datumsauswahl für Oktober, personalisierte Dashboard-Begrüßung für Isabela und Help-FAQ mit vorgeschlagenen Artikeln — die das Design System über die Produktflows hinweg zeigen.
-            caption: Design System 1.0 im Produkt — Dienstleisterauswahl, Terminplanung, Dashboard und Help, die eine kohärente UI-Sprache teilen.
+            alt: "Vier mobile Helpling-Screens nebeneinander: Auswahl der Dienstleisterin mit ausgewählter Anna, Datumsauswahl für Oktober, personalisierte Dashboard-Begrüßung für Isabela und Hilfe-FAQ mit vorgeschlagenen Artikeln. Sie zeigen das Design System in den verschiedenen Produkt-Flows."
+            caption: "Design System 1.0 im Produkt: Dienstleisterauswahl, Terminplanung, Dashboard und Hilfe teilen sich eine gemeinsame UI-Sprache."
             tone: default
             size: lg
 
       - id: ds-approach
         layout: strategy
         title: "Ordnung schaffen: der Bottom-up-Ansatz"
-        lead: Um das anzugehen, wartete ich nicht auf Erlaubnis oder ein Top-down-Mandat — ich begann damit, meine eigene Arbeit zu ordnen, und skalierte sie nach außen.
+        lead: Ich habe nicht auf eine Erlaubnis oder ein Mandat von oben gewartet, sondern bei meiner eigenen Arbeit angefangen und das Stück für Stück nach außen getragen.
         principles:
           - title: Der atomare Ansatz
-            body: Ich adaptierte die Atomic-Design-Methodik, um das System logisch zu strukturieren, und brach die UI von Atomen bis zu Templates herunter.
-          - title: Plattformübergreifende Zusammenarbeit
-            body: Hand in Hand mit einer weiteren Designerin tauchten wir tief in das Multiplattform-Ökosystem ein — wir auditierten und rekonstruierten Komponenten separat für Customer App, Partner App und Connect App, klar aufgeschlüsselt nach Mobile und Desktop.
+            body: Ich habe die Atomic-Design-Methodik adaptiert, um das System logisch zu strukturieren, und die UI in ihre Bestandteile zerlegt – von Atomen bis zu Templates.
+          - title: Zusammenarbeit über Plattformen hinweg
+            body: "Gemeinsam mit einer weiteren Designerin habe ich mich tief in das Multiplattform-Ökosystem eingearbeitet: Wir haben die Komponenten für Customer App, Partner App und Connect App jeweils separat auditiert und neu aufgebaut, sauber getrennt nach Mobile und Desktop."
           - title: Die Grundlagen legen
-            body: Wir etablierten Kernregeln für Typografie, Abstände und Farbe mithilfe von Figmas Auto Layout und Variants und stellten sicher, dass die Namenskonventionen des Engineerings von Tag eins an respektiert wurden.
+            body: Wir haben Grundregeln für Typografie, Abstände und Farben festgelegt – mit Auto Layout und Variants in Figma – und dafür gesorgt, dass die Namenskonventionen des Engineerings von Anfang an eingehalten wurden.
         figures:
           - src: /img/projects/helpling/helpling-ds-atomic-modular.webp
-            alt: Flache Illustration bunter geometrischer Bausteine, in Treppenform gestapelt, neben einer kleinen Personensilhouette auf einem gelben Rasterhintergrund.
-            caption: Atomarer Ansatz — modulare Bausteine, die von einfachen Teilen zu einem kohärenten System skalieren.
+            alt: Flache Illustration bunter geometrischer Bausteine, die wie eine Treppe gestapelt sind, neben einer kleinen Personensilhouette auf gelbem Rasterhintergrund.
+            caption: "Atomarer Ansatz: modulare Bausteine, die von einfachen Teilen zu einem stimmigen System wachsen."
             tone: default
             size: md
           - src: /img/projects/helpling/helpling-ds-collaboration.webp
-            alt: Flache Illustration zweier einander zugewandter Personensilhouetten mit überlappenden Sprechblasen — eine umrissen, eine in massivem Teal — auf weißem Hintergrund.
-            caption: Zusammenarbeit und Forschung — Designer über Plattformen hinweg durch gemeinsames Gespräch und Kritik ausrichten.
+            alt: Flache Illustration zweier einander zugewandter Personensilhouetten mit sich überlappenden Sprechblasen, eine als Umriss, eine in vollem Teal, auf weißem Hintergrund.
+            caption: "Zusammenarbeit und Research: Designer:innen über Plattformen hinweg durch gemeinsamen Austausch und Kritik auf eine Linie bringen."
             tone: default
             size: md
           - src: /img/projects/helpling/helpling-ds-foundations-scaling.webp
-            alt: Flache Illustration verschachtelter lila Quadrate, an der unteren linken Ecke ausgerichtet, umrahmt von einem schwarzen Auswahlrahmen mit Figma-artigen Eckgriffen.
-            caption: Grundlagen und Komponenten — Skalieren von einem gemeinsamen Ursprung aus mit klarer Struktur und Auswahl.
+            alt: Flache Illustration ineinander verschachtelter lila Quadrate, an der unteren linken Ecke ausgerichtet und von einem schwarzen Auswahlrahmen mit Figma-typischen Eck-Handles umgeben.
+            caption: "Grundlagen und Komponenten: von einem gemeinsamen Ursprung aus skalieren, mit klarer Struktur und Auswahl."
             tone: default
             size: md
           - src: /img/projects/helpling/helpling-ds-modal-component.png
-            alt: Figma-Panels für eine Modal-Komponente, die die verschachtelte Layer-Hierarchie, Eigenschaften für Größe und Buttons sowie verschachtelte Button-Varianten für Größe, Typ, Status, Label und Icons zeigen.
-            caption: Grundlagen unter der Haube — Architektur der Modal-Komponente mit Auto Layout, Eigenschaften und verschachtelten Button-Varianten in Figma.
+            alt: "Figma-Panels für eine Modal-Komponente: verschachtelte Layer-Hierarchie, Properties für Größe und Buttons sowie verschachtelte Button-Varianten für Größe, Typ, Status, Label und Icons."
+            caption: "Grundlagen unter der Haube: Architektur der Modal-Komponente mit Auto Layout, Properties und verschachtelten Button-Varianten in Figma."
             tone: default
             size: lg
 
       - id: ds-reflection
         layout: reflection
-        title: Die Reflexion & die zentrale Erkenntnis
+        title: Rückblick und wichtigste Erkenntnis
         paragraphs:
-          - "Die technischen Grundlagen eines Design Systems zu bauen ist ein enormer Meilenstein, aber dieses Projekt lehrte mich eine unschätzbare Senior-Lektion: Die Komponenten zu erstellen ist nur die halbe Miete; ein System über ein ganzes Unternehmen hinweg zu skalieren erfordert aktive Governance, kontinuierliche Fürsprache und tiefe kulturelle Ausrichtung."
-          - "Zentrale Erkenntnis: Ein Design System kann nicht allein durch UI-Qualität überleben. Echte Adoption erfordert es, Brücken zwischen Teams zu bauen, gemeinsame Verantwortung zu sichern und den Rollout mit dem Tempo der Organisation abzustimmen."
+          - "Die technische Basis eines Design Systems aufzubauen ist ein großer Meilenstein. Aber dieses Projekt hat mir eine Senior-Lektion mitgegeben, die ich nicht mehr vergesse: Die Komponenten zu bauen ist nur die halbe Arbeit. Ein System im ganzen Unternehmen zu skalieren, braucht aktive Governance, kontinuierliche Überzeugungsarbeit und eine tiefe kulturelle Verankerung."
+          - "Wichtigste Erkenntnis: Ein Design System überlebt nicht allein durch UI-Qualität. Echte Akzeptanz entsteht nur, wenn man Brücken zwischen Teams baut, geteilte Verantwortung schafft und den Rollout an das Tempo der Organisation anpasst."
 
       - id: ds-cta
         layout: cta
         title: Kontakt aufnehmen
-        lead: Interessiert am Denken hinter diesem Projekt? Melde dich, um mehr zu erfahren.
-        contactHref: "mailto:lucianareyes@gmail.com"
-        contactLabel: lucianareyes@gmail.com
 
   - id: growth-retention
-    title: Wachstum, Retention & A/B-Experimente
+    title: Growth, Retention & A/B-Tests
     emoji: "🚀"
-    role: Produktdesignerin (Wachstum & Retention)
+    role: Product Designerin (Growth & Retention)
     timeline: Laufend
     story:
       - id: gr-hero
         layout: hero
-        title: Wachstum, Retention & A/B-Experimente
-        tagline: Die unsichtbare Barriere am Anfang des Funnels finden — und die Lösung wöchentlich belegen.
-        impactLine: +15% Conversion-Plus, >90% Nutzerzufriedenheit und hohe langfristige Adoption in Deutschland und Singapur.
+        title: Growth, Retention & A/B-Tests
+        tagline: Die unsichtbare Hürde am Anfang des Funnels finden – und die Lösung Woche für Woche belegen.
+        impactLine: +7 % Conversion, >90 % Nutzerzufriedenheit und hohe langfristige Nutzung in Deutschland und Singapur.
         figures:
           - src: /img/projects/helpling/helpling-growth-hero.webp
-            alt: Wachstum und Experimente — pastellfarbene Pfade, die nach oben zu einem leuchtenden Punkt aufsteigen und Momentum sowie iterative Zugewinne evozieren.
+            alt: Growth und Experimente – pastellfarbene Pfade, die nach oben zu einem leuchtenden Punkt führen und Momentum sowie schrittweise Verbesserungen ausdrücken.
             tone: default
             size: lg
 
@@ -303,103 +300,100 @@ sections:
         challengeLabel: Wirkung
         roleLabel: Meine Rolle
         paragraphs:
-          - Wachstums- und Retentionskennzahlen über die Märkte Deutschland und Singapur hinweg durch kontinuierliches wöchentliches A/B-Testing vorantreiben.
-          - Enge Zusammenarbeit mit Product Managern, Data, Engineering, Marketing, Betrieb und Business-Stakeholdern.
-        lead: "+15% Conversion-Plus, >90% Nutzerzufriedenheit und hohe langfristige Adoption."
-        roleLine: "Rolle: Produktdesignerin (Wachstum & Retention)"
-        responsibilities: "Umfang: Wachstums- & Retentionsstrategie, wöchentliches A/B-Testing, Nutzerinterviews, Usability-Testing, Wettbewerbsanalyse, funktionsübergreifende Workshops, Interaction Design & Prototyping"
+          - Growth- und Retention-Kennzahlen in Deutschland und Singapur durch kontinuierliche wöchentliche A/B-Tests voranbringen.
+          - Enge Zusammenarbeit mit Product Managern, Data, Engineering, Marketing, Operations und Business-Stakeholdern.
+        lead: "+7 % Conversion, >90 % Nutzerzufriedenheit und hohe langfristige Nutzung."
+        roleLine: "Rolle: Product Designerin (Growth & Retention)"
+        responsibilities: "Umfang: Growth- und Retention-Strategie, wöchentliche A/B-Tests, Nutzerinterviews, Usability-Tests, Wettbewerbsanalyse, funktionsübergreifende Workshops, Interaction Design & Prototyping"
 
       - id: gr-challenge
         layout: challenge
         title: Die Herausforderung
-        lead: Eine unsichtbare Verständnisbarriere am Anfang des Funnels angehen, die weltweit frühe Absprünge verursachte.
+        lead: Eine unsichtbare Verständnishürde am Anfang des Funnels beheben, die weltweit zu frühen Absprüngen führte.
         paragraphs:
-          - Nutzer betraten den Buchungs-Funnel ohne ein klares mentales Modell davon, wie Helpling funktioniert. Diese Lücke zeigte sich als Zögern, abgebrochene Sessions und frühe Absprünge — besonders bei Erstkunden in Deutschland und Singapur.
-          - "Das Problem war keine fehlende Funktion. Es war eine Verständnisbarriere im Moment der höchsten Intention: Menschen brauchten gerade genug Kontext, um sich sicher zu fühlen weiterzumachen, ohne den Conversion-Pfad zu verlangsamen."
-        pullQuote: Der Absprung sah aus wie ein Conversion-Problem. Darunter war es ein Klarheitsproblem.
+          - Nutzer:innen sind in den Buchungs-Funnel eingestiegen, ohne ein klares mentales Modell davon zu haben, wie Helpling funktioniert. Diese Lücke zeigte sich in Zögern, abgebrochenen Sessions und frühen Absprüngen – besonders bei Erstkund:innen in Deutschland und Singapur.
+          - "Das Problem war keine fehlende Funktion, sondern eine Verständnishürde im Moment der größten Kaufbereitschaft: Die Leute brauchten gerade so viel Kontext, dass sie sich sicher genug fühlten weiterzumachen – ohne den Conversion-Pfad auszubremsen."
+        pullQuote: Der Absprung sah nach einem Conversion-Problem aus. Darunter lag ein Klarheitsproblem.
         figures:
           - src: /img/projects/helpling/helpling-growth-wireflow.jpg
-            alt: Handgezeichnete mobile Wireflow-Skizzen in blauer Tinte, die die Onboarding- und Buchungsschritte von Helpling zeigen, einschließlich Konto- und Adress-Screens.
-            caption: Discovery-Skizzen für den Onboarding- und Buchungs-Flow — Low-Fidelity-Wireflows, mit denen der Funnel vor der High-Fidelity-Arbeit auf die Probe gestellt wurde.
+            alt: Handgezeichnete mobile Wireflow-Skizzen in blauer Tinte, die die Onboarding- und Buchungsschritte von Helpling zeigen, unter anderem die Screens für Konto und Adresse.
+            caption: "Discovery-Skizzen für den Onboarding- und Buchungs-Flow: Low-Fidelity-Wireflows, mit denen wir den Funnel getestet haben, bevor es an High-Fidelity ging."
             size: md
 
       - id: gr-methodology
         layout: strategy
         title: Methodik & Prozess
-        lead: Funktionsübergreifende Ausrichtung, rigorose Nutzerinterviews, Usability-Testing und Wettbewerbsanalyse formten ein fokussiertes Set testbarer Varianten — einschließlich kontextueller Fragezeichen neben drei Kernoptionen.
+        lead: Funktionsübergreifende Abstimmung, gründliche Nutzerinterviews, Usability-Tests und Wettbewerbsanalyse haben zu einem fokussierten Set testbarer Varianten geführt – darunter kontextuelle Fragezeichen neben drei Kernoptionen.
         principles:
-          - title: Option A — Klassisches Onboarding
-            body: Eine vertraute, mehrstufige Einführung, die Nutzer aufklären sollte, bevor sie den Funnel betraten.
-          - title: Option B — FAQ-Seite
-            body: Eine Self-Service-Oberfläche mit Antworten auf häufige Fragen, erreichbar vor oder während der Buchungsreise.
-          - title: Option C — Kontextuelles Modal vor dem Funnel
-            body: Ein leichtgewichtiges „How Helpling Works“-Modal, das den Service im Kontext erklärte, direkt vor dem Funnel — ohne einen vollständigen Onboarding-Pfad zu erzwingen.
+          - title: Option A – Klassisches Onboarding
+            body: Eine vertraute, mehrstufige Einführung, die Nutzer:innen erklären sollte, wie Helpling funktioniert, bevor sie in den Funnel einsteigen.
+          - title: Option B – FAQ-Seite
+            body: Ein Self-Service-Bereich mit Antworten auf häufige Fragen, erreichbar vor oder während der Buchung.
+          - title: Option C – Kontextuelles Modal vor dem Funnel
+            body: Ein schlankes „How Helpling Works"-Modal, das den Service direkt vor dem Funnel im Kontext erklärt – ohne einen kompletten Onboarding-Pfad zu erzwingen.
           - title: Kontextuelle Fragezeichen
-            body: Inline-Hilfen, die Erklärungen im Moment der Verwirrung einblendeten und neben den Kernvarianten getestet wurden.
+            body: Kleine Inline-Hilfen, die genau dann Erklärungen einblenden, wenn Verwirrung entsteht. Sie wurden neben den Kernvarianten getestet.
         figures:
           - src: /img/projects/helpling/helpling-growth-whiteboard-churn.jpg
-            alt: Handgezeichnetes Whiteboard-Funnel-Diagramm in rotem Marker, das Service-Reibung in Kunden- und Dienstleisterprobleme gruppiert.
-            caption: Frühe Problemrahmung auf dem Whiteboard — Funnel-Reibung in Kunden- vs. Dienstleisterursachen kartieren, bevor wir zu Lösungen sprangen.
+            alt: Handgezeichnetes Whiteboard-Funnel-Diagramm in rotem Marker, das die Reibungspunkte des Service in Probleme auf Kund:innen- und Dienstleister:innen-Seite gruppiert.
+            caption: "Frühe Problemdefinition am Whiteboard: Reibung im Funnel nach Ursachen bei Kund:innen und Dienstleister:innen sortiert, bevor wir zu Lösungen übergegangen sind."
             size: sm
           - src: /img/projects/helpling/helpling-growth-usability-session.png
-            alt: Remote-Usability-Testing-Oberfläche, die die Helpling-Offers-App neben dem Videofeed eines Teilnehmers mit verdeckten Augen und einem Session-Aktivitätsprotokoll zeigt.
-            caption: Remote-Usability-Session zur Validierung des Verständnisses von Angeboten und Buchungen — Identität des Teilnehmers geschützt; der Feed zeigt Live-Research-Notizen.
+            alt: Remote-Usability-Test-Oberfläche mit der Helpling-Offers-App neben dem Videofeed eines Teilnehmers mit verdeckten Augen und einem Protokoll der Session-Aktivität.
+            caption: Remote-Usability-Session, um zu prüfen, wie gut Angebote und Buchungen verstanden werden. Identität des Teilnehmers geschützt; im Feed sind Live-Research-Notizen zu sehen.
             size: sm
           - src: /img/projects/helpling/helpling-growth-retro-board.png
-            alt: Team-Retrospektive-Board mit vier Quadranten voller Klebezettel zu den Themen Continue, Kudos, Stop und Start.
-            caption: Kollaborationskontext aus einer Team-Retrospektive — Kultur und kontinuierliche Verbesserung neben dem Wachstums-Workstream.
+            alt: Board einer Team-Retrospektive mit vier Quadranten voller Klebezettel zu Continue, Kudos, Stop und Start.
+            caption: "Einblick aus einer Team-Retro: Kultur und kontinuierliche Verbesserung neben dem Growth-Workstream."
             size: sm
 
       - id: gr-experimentation
         layout: solution
         title: Experimente, Interaction Design & Validierung
-        lead: Option C — das kontextuelle „How Helpling Works“-Modal vor dem Funnel — ging als Siegervariante hervor. Ich gestaltete das Interaction Design, sanfte Mikroanimationen und eine enge Übergabe an die Entwicklung, damit sich die Erfahrung in Produktion ausgefeilt anfühlte.
+        lead: Option C, das kontextuelle „How Helpling Works"-Modal vor dem Funnel, hat sich als Gewinnervariante durchgesetzt. Ich habe das Interaction Design, dezente Mikroanimationen und die enge Übergabe an die Entwicklung übernommen, damit sich die Erfahrung im Livebetrieb ausgereift anfühlt.
         figures:
           - src: /img/projects/helpling/helpling-growth-figma-iteration.jpg
-            alt: Figma-Board mit der Beschriftung Ticket 1 Iteration mit Einstiegspunkt-Screens, einem V1-Flow mit Text und Icons und einem READ-ME-Panel mit Interaction-Design-Spezifikation.
-            caption: Experimentier-Board für Ticket 1 — Einstiegspunkte, V1-Screen-Iterationen und Interaction-Specs, geschrieben für eine saubere Übergabe an das Engineering.
+            alt: Figma-Board „Ticket 1 Iteration" mit Einstiegspunkt-Screens, einem V1-Flow mit Text und Icons und einem README-Panel mit der Interaction-Design-Spezifikation.
+            caption: "Experiment-Board für Ticket 1: Einstiegspunkte, V1-Screens und Interaction-Specs, geschrieben für eine saubere Übergabe ans Engineering."
             size: md
         solutions:
-          - title: Siegervariante
-            body: Option C als klarsten Weg validieren, um frühe Absprünge zu reduzieren und dabei das Funnel-Momentum zu bewahren.
+          - title: Gewinnervariante
+            body: Option C hat sich als klarster Weg bestätigt, frühe Absprünge zu reduzieren und dabei den Schwung im Funnel zu erhalten.
           - title: Interaktion & Motion
-            body: Maßgeschneidertes Interaction Design und zurückhaltende Mikroanimationen, die das Verständnis stärkten, ohne Reibung hinzuzufügen — mit Berücksichtigung von prefers-reduced-motion in der Implementierung.
+            body: Maßgeschneidertes Interaction Design und zurückhaltende Mikroanimationen, die das Verständnis stärken, ohne zusätzliche Reibung zu erzeugen – in der Umsetzung inklusive prefers-reduced-motion.
           - title: Übergabe an die Entwicklung
-            body: Enge Zusammenarbeit mit dem Engineering, um eine produktionsreife Erfahrung auszuliefern, abgestimmt auf das Designsystem und die Experiment-Instrumentierung.
+            body: Enge Zusammenarbeit mit dem Engineering, um eine produktionsreife Lösung auszuliefern, die zum Design System und zur Experiment-Instrumentierung passt.
 
       - id: gr-impact
         layout: impact
         title: Ergebnisse & langfristige Wirkung
-        lead: Das siegreiche Experiment lieferte ein messbares Conversion-Plus und starke Zufriedenheitssignale — und blieb ein Jahr später noch in Produktion, ein Beleg für dauerhaften Produktwert über einen einmaligen Test hinaus.
-        pullQuote: Ein wöchentliches Experiment, das zu dauerhaftem Produktverhalten wurde.
+        lead: Das Gewinnerexperiment brachte messbar mehr Conversion und starke Zufriedenheitssignale – und war ein Jahr später immer noch live. Ein Beleg dafür, dass es über einen einmaligen Test hinaus dauerhaften Wert schafft.
+        pullQuote: Ein wöchentliches Experiment, das zum festen Bestandteil des Produkts wurde.
         metrics:
-          - value: +15%
-            label: Conversion-Plus
+          - value: +7%
+            label: Conversion
             verified: true
-          - value: ">90%"
+          - value: "90%"
             label: Nutzerzufriedenheit
             verified: true
           - value: "1 Jahr+"
-            label: weiterhin live in Produktion
+            label: weiterhin live
             verified: true
         before:
-          - Unsichtbare Verständnisbarriere am Funnel-Eingang
-          - Frühe globale Absprünge
+          - Unsichtbare Verständnishürde am Funnel-Einstieg
+          - Frühe Absprünge in allen Märkten
           - Unklares mentales Modell davon, wie Helpling funktioniert
         after:
-          - Kontextuelles „How Helpling Works“-Modal
+          - Kontextuelles „How Helpling Works"-Modal
           - Höhere Conversion und Zufriedenheit
-          - Anhaltende Adoption in Produktion
+          - Anhaltende Nutzung im Livebetrieb
 
       - id: gr-cta
         layout: cta
         title: Kontakt aufnehmen
-        lead: Interessiert am Denken hinter diesem Projekt? Melde dich, um mehr zu erfahren.
-        contactHref: "mailto:lucianareyes@gmail.com"
-        contactLabel: lucianareyes@gmail.com
         figures:
           - src: /video/modal.mp4
-            alt: Animierter How Helpling Works Flow — Cleaner suchen, prüfen, bestätigen, stornieren oder umbuchen.
+            alt: Animierter How Helpling Works Flow – Cleaner suchen, prüfen, bestätigen, stornieren oder umbuchen.
             tone: bare
             size: md
 ---
