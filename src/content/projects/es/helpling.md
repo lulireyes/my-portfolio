@@ -230,7 +230,7 @@ sections:
             alt: Cuatro pantallas móviles de Helpling una junto a otra — selección de proveedor con Anna seleccionada, selector de fecha de octubre, saludo personalizado del panel a Isabela, y FAQ de Ayuda con artículos sugeridos — mostrando el Design System aplicado a lo largo de los flujos del producto.
             caption: Design System 1.0 en el producto — selección de proveedor, agenda, panel y Ayuda, compartiendo un único lenguaje de UI cohesivo.
             tone: default
-            size: lg
+            size: full
 
       - id: ds-approach
         layout: strategy

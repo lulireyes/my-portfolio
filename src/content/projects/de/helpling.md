@@ -230,7 +230,7 @@ sections:
             alt: "Vier mobile Helpling-Screens nebeneinander: Auswahl der Dienstleisterin mit ausgewählter Anna, Datumsauswahl für Oktober, personalisierte Dashboard-Begrüßung für Isabela und Hilfe-FAQ mit vorgeschlagenen Artikeln. Sie zeigen das Design System in den verschiedenen Produkt-Flows."
             caption: "Design System 1.0 im Produkt: Dienstleisterauswahl, Terminplanung, Dashboard und Hilfe teilen sich eine gemeinsame UI-Sprache."
             tone: default
-            size: lg
+            size: full
 
       - id: ds-approach
         layout: strategy

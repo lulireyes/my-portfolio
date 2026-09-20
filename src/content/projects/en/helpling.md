@@ -227,10 +227,10 @@ sections:
           - Designers were constantly reinventing the wheel, engineers were implementing slightly different variations of the same components, and the lack of a single source of truth created unnecessary cognitive load for everyone.
         figures:
           - src: /img/projects/helpling/helpling-ds-product-screens.png
-            alt: Four Helpling mobile screens side by side — provider selection with Anna selected, October date picker, personalized dashboard greeting Isabela, and Help FAQ with suggested articles — showing the Design System applied across product flows.
+            alt: Four Helpling mobile screens side by side — provider selection with Anna selected, October date picker, personalized dashboard greeting Isabelle, and Help FAQ with suggested articles — showing the Design System applied across product flows.
             caption: Design System 1.0 in product — provider selection, scheduling, dashboard, and Help, sharing one cohesive UI language.
             tone: default
-            size: lg
+            size: full
 
       - id: ds-approach
         layout: strategy

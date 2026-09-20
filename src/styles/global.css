@@ -26,6 +26,9 @@
   --color-tag-border: rgba(216, 209, 194, 0.55);
   --color-tag-ink: #d8d1c2;
   --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.35);
+  /* Selection: body ink → black; accent/orange → white */
+  --selection-text: #111111;
+  --selection-accent-text: #ffffff;
   color-scheme: dark;
 }
 
@@ -48,6 +51,9 @@
   --color-tag-border: #111111;
   --color-tag-ink: #111111;
   --shadow-soft: 0 18px 40px rgba(17, 17, 17, 0.06);
+  /* Selection: body ink → white; accent/orange → black */
+  --selection-text: #ffffff;
+  --selection-accent-text: #111111;
   color-scheme: light;
 }
 
@@ -70,12 +76,43 @@
 
 ::selection {
   background: var(--color-accent);
-  color: #111111;
+  color: var(--selection-fg, var(--selection-text));
 }
 
 ::-moz-selection {
   background: var(--color-accent);
-  color: #111111;
+  color: var(--selection-fg, var(--selection-text));
+}
+
+/* Orange/accent copy: invert selection ink against the orange highlight */
+:is(
+  .intro-accent,
+  .work-heading,
+  .work-cta,
+  .testimonial-quote,
+  .about-heading,
+  .journey-heading,
+  .journey-case,
+  .case-highlight-link,
+  .case-prose :where(a),
+  .case-pager a,
+  .rc-kicker,
+  .rc-hero-metric-value,
+  .rc-perspective-title,
+  .rc-metric-inline-value,
+  .rc-impact-hero-value,
+  #gr-impact .rc-metric-value,
+  .rc-ba-label,
+  .rc-cta-link,
+  .prose :where(a)
+),
+.brand:hover,
+.site-nav-list a:hover,
+.work-card:hover .work-title,
+.work-card:focus .work-title,
+.work-card:focus-visible .work-title,
+.work-card:active .work-title {
+  --selection-fg: var(--selection-accent-text);
 }
 
 html {
@@ -2989,6 +3026,18 @@ html[data-theme='dark'] .rc-figure--visual .rc-figure-frame img,
 .case-study[data-project='beelinguapp'] .rc-figure-frame img {
   border-radius: 1rem;
   background: transparent;
+}
+
+/* Design System product screens strip — full column width */
+#ds-problem .rc-figure--full {
+  max-width: 100%;
+  width: 100%;
+  margin-block: clamp(1.5rem, 4vh, 2.75rem);
+}
+
+#ds-problem .rc-figure--full .rc-figure-frame img {
+  width: 100%;
+  height: auto;
 }
 
 /* Design System "Laying the Foundations" gallery: uniform image cards. */
