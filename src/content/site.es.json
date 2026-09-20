@@ -14,7 +14,7 @@
       { "text": ", enfocada en crear productos que ponen a las personas en el centro.", "style": "normal" }
     ]
   },
-  "specializingLabel": "Especializada en:"
+  "specializingLabel": "Especializada en:",
   "specialties": ["UX/UI", "Research", "Prototipado"],
   "philosophy": {
     "label": "Filosofía de diseño",
