@@ -379,7 +379,7 @@ sections:
           - value: ">90%"
             label: satisfacción del usuario
             verified: true
-          - value: "1 año+"
+          - value: "+1 año"
             label: aún activo en producción
             verified: true
         before:

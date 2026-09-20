@@ -2634,6 +2634,11 @@ html[data-theme='dark'] #rc-challenge .rc-figure--visual .rc-figure-frame img,
   color: var(--color-ink);
 }
 
+/* Helpling Growth/Retention Results: secondary metrics match hero accent */
+#gr-impact .rc-metric-value {
+  color: var(--color-accent);
+}
+
 .rc-metric-label {
   margin: 0;
   font-size: var(--case-fs-body);
