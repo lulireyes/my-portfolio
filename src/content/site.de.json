@@ -13,8 +13,7 @@
       { "text": ", die digitale Produkte mit dem Menschen im Mittelpunkt gestaltet.", "style": "normal" }
     ]
   },
-  "specializingLabel": "Spezialisiert auf:",
-  "specialties": ["UX/UI", "Research", "Prototyping"],
+  "introBio": "Ich bin argentinisch-deutsche Produktdesignerin mit über 6 Jahren Erfahrung an digitalen Produkten.",
   "philosophy": {
     "label": "Design-Philosophie",
     "title": "Design beginnt mit Absicht.",

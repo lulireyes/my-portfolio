@@ -14,8 +14,7 @@
       { "text": ", enfocada en crear productos que ponen a las personas en el centro.", "style": "normal" }
     ]
   },
-  "specializingLabel": "Especializada en:",
-  "specialties": ["UX/UI", "Research", "Prototipado"],
+  "introBio": "Soy una diseñadora de producto argentino-alemana con más de 6 años trabajando en productos digitales.",
   "philosophy": {
     "label": "Filosofía de diseño",
     "title": "El diseño empieza con intención.",

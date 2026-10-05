@@ -240,15 +240,14 @@ p {
 }
 
 .brand {
-  /* ~35pt on 1512pt PDF page ≈ 2.2× nav (~16pt) */
   font-family: var(--font-display);
-  font-size: clamp(1.875rem, 2.6vw, 2.4rem);
+  font-size: 1.5rem; /* 24px */
   font-weight: 500;
   letter-spacing: -0.02em;
   line-height: 1.1;
   color: var(--color-beige);
   text-decoration: none;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .brand:hover {
@@ -1433,7 +1432,7 @@ html[data-theme='light'] .journey-tags li {
 
   .brand {
     min-width: 0;
-    font-size: clamp(1.35rem, 5.5vw, 1.85rem);
+    font-size: 1.5rem; /* 24px */
   }
 
   /* Only the open/close control stays above the overlay. */
