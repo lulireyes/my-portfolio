@@ -62,7 +62,7 @@ sections:
         paragraphs:
           - Las disputas de Helpling las gestionaba Operaciones, un caso a la vez. Eso funcionaba mientras los volúmenes eran pequeños. Pero en un marketplace, cada nueva reserva puede convertirse en una nueva disputa, así que crecer significaba más trabajo manual.
           - Diseñé un Resolution Center que mueve los casos predecibles al autoservicio y reserva el criterio humano para los que lo necesitan.
-        roleLine: Diseñadora de Producto Senior, liderando el diseño de extremo a extremo
+        roleLine: Diseñadora de Producto, liderando el diseño de extremo a extremo
         responsibilities: Producto, Operaciones, Datos, Ingeniería
 
       - id: rc-challenge
@@ -306,7 +306,7 @@ sections:
           - Impulsar las métricas de crecimiento y retención en los mercados de Alemania y Singapur mediante pruebas A/B semanales continuas.
           - Colaborar estrechamente con Product Managers, Datos, Ingeniería, Marketing, Operaciones y stakeholders de negocio.
         lead: "+7% de aumento en la conversión, >90% de satisfacción del usuario y una alta adopción a largo plazo."
-        roleLine: "Rol: Diseñadora de Producto (Crecimiento y Retención)"
+        roleLine: "Rol: Diseñadora de Producto Senior (Crecimiento y Retención)"
         responsibilities: "Alcance: estrategia de crecimiento y retención, pruebas A/B semanales, entrevistas con usuarios, pruebas de usabilidad, análisis de la competencia, talleres multifuncionales, diseño de interacción y prototipado"
 
       - id: gr-challenge

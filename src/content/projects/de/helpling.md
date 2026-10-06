@@ -62,7 +62,7 @@ sections:
         paragraphs:
           - Bei Helpling hat das Ops-Team Streitfälle bisher einzeln bearbeitet, einen Fall nach dem anderen. Das funktionierte, solange die Fallzahlen niedrig waren. Auf einem Marktplatz kann aber jede neue Buchung zum Streitfall werden – Wachstum bedeutete also automatisch mehr manuelle Arbeit.
           - Ich habe ein Resolution Center gestaltet, das vorhersehbare Fälle in den Self-Service verlagert und menschliches Urteilsvermögen dort einsetzt, wo es gebraucht wird.
-        roleLine: Senior Product Designerin, Design-Ownership von Anfang bis Ende
+        roleLine: Product Designerin, Design-Ownership von Anfang bis Ende
         responsibilities: Product, Operations, Data, Engineering
 
       - id: rc-challenge
@@ -303,7 +303,7 @@ sections:
           - Growth- und Retention-Kennzahlen in Deutschland und Singapur durch kontinuierliche wöchentliche A/B-Tests voranbringen.
           - Enge Zusammenarbeit mit Product Managern, Data, Engineering, Marketing, Operations und Business-Stakeholdern.
         lead: "+7 % Conversion, >90 % Nutzerzufriedenheit und hohe langfristige Nutzung."
-        roleLine: "Rolle: Product Designerin (Growth & Retention)"
+        roleLine: "Rolle: Senior Product Designerin (Growth & Retention)"
         responsibilities: "Umfang: Growth- und Retention-Strategie, wöchentliche A/B-Tests, Nutzerinterviews, Usability-Tests, Wettbewerbsanalyse, funktionsübergreifende Workshops, Interaction Design & Prototyping"
 
       - id: gr-challenge

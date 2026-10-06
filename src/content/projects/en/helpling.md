@@ -62,7 +62,7 @@ sections:
         paragraphs:
           - Helpling's disputes were handled by Operations, one case at a time. That worked while volumes were small. But in a marketplace, every new booking can become a new dispute, so growth meant more manual work.
           - I designed a Resolution Center that moves predictable cases into self-service and keeps human judgement for the ones that need it.
-        roleLine: Senior Product Designer, leading design end to end
+        roleLine: Product Designer, leading design end to end
         responsibilities: Product, Operations, Data, Engineering
 
       - id: rc-challenge
@@ -306,7 +306,7 @@ sections:
           - Driving growth and retention metrics across Germany and Singapore markets through continuous weekly A/B testing.
           - Collaborating closely with Product Managers, Data, Engineering, Marketing, Operations, and Business stakeholders.
         lead: "+7% conversion lift, >90% user satisfaction, and high long-term adoption."
-        roleLine: "Role: Product Designer (Growth & Retention)"
+        roleLine: "Role: Senior Product Designer (Growth & Retention)"
         responsibilities: "Scope: Growth & Retention Strategy, Weekly A/B Testing, User Interviews, Usability Testing, Competitor Analysis, Cross-functional Workshops, Interaction Design & Prototyping"
 
       - id: gr-challenge
