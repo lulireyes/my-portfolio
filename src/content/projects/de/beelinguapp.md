@@ -102,7 +102,7 @@ sections:
         metrics:
           - value: "5M+"
             label: Downloads bis heute (Apple und Android)
-          - value: "+20 %"
+          - value: "+20 %"
             label: WAU der Karteikartenfunktion
           - value: "15+ Tage"
             label: Retention bei zahlenden und kostenlosen Nutzer:innen

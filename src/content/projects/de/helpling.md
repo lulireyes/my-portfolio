@@ -1,6 +1,6 @@
 ---
 title: Helpling
-summary: "Senior Product Designerin bei Helpling: Resolution Center (-35 % operative Kosten), erstes Design System und datengetriebenes Growth & Retention."
+summary: "Senior Product Designerin bei Helpling: Resolution Center (-35 % operative Kosten), erstes Design System und datengetriebenes Growth & Retention."
 order: 1
 draft: false
 cover: /img/projects/helpling/cover.webp
@@ -22,7 +22,7 @@ highlights:
     title: Resolution Center
     href: "#resolution-center"
     after: " gestaltet und gelauncht: eine neue Lösung, mit der Kund:innen und Partner Probleme selbstständiger klären können – und die "
-    emphasis: "die operativen Supportkosten um 35 % gesenkt hat."
+    emphasis: "die operativen Supportkosten um 35 % gesenkt hat."
   - before: "Ich habe Helplings erstes "
     title: Design System 1.0
     href: "#design-system"
@@ -32,7 +32,7 @@ highlights:
     title: Growth, Retention & A/B-Tests
     href: "#growth-retention"
     after: " für Conversion und Retention vorangetrieben und dabei qualitative Erkenntnisse, Produktdaten und Experimente kombiniert, um Chancen zu erkennen – mit "
-    emphasis: "7 % mehr Conversion als Ergebnis."
+    emphasis: "7 % mehr Conversion als Ergebnis."
 sections:
   - id: resolution-center
     title: Resolution Center
@@ -45,13 +45,13 @@ sections:
         title: Resolution Center
         tagline: Design für zwei Menschen, die sich beide im Recht fühlen.
         metrics:
-          - value: "-35%"
+          - value: "-35 %"
             label: operative Kosten in Deutschland
             verified: true
-          - value: "91%"
+          - value: "91 %"
             label: Self-Service-Nutzung
             verified: true
-          - value: "84%"
+          - value: "84 %"
             label: ohne Agent gelöst
             verified: true
         figures:
@@ -152,13 +152,13 @@ sections:
         title: Ergebnisse
         metricsInline: true
         metrics:
-          - value: "-35%"
+          - value: "-35 %"
             label: operative Kosten in Deutschland
             note: Wiederkehrende Fälle wandern von der manuellen Prüfung in einen strukturierten Self-Service, dadurch sank der Aufwand des Ops-Teams pro Fall.
             verified: true
-          - value: "91%"
+          - value: "91 %"
             label: Self-Service-Nutzung
-            note: 84% der Fälle wurden ohne Agent gelöst.
+            note: 84 % der Fälle wurden ohne Agent gelöst.
             verified: true
         before:
           - Wiederkehrende Fälle wurden manuell geprüft
@@ -269,7 +269,7 @@ sections:
         layout: reflection
         title: Rückblick und wichtigste Erkenntnis
         paragraphs:
-          - "Die technische Basis eines Design Systems aufzubauen ist ein großer Meilenstein. Aber dieses Projekt hat mir eine Senior-Lektion mitgegeben, die ich nicht mehr vergesse: Die Komponenten zu bauen ist nur die halbe Arbeit. Ein System im ganzen Unternehmen zu skalieren, braucht aktive Governance, kontinuierliche Überzeugungsarbeit und eine tiefe kulturelle Verankerung."
+          - "Die technische Basis eines Design Systems aufzubauen ist ein großer Meilenstein. Aber dieses Projekt hat mir eine wichtige Lektion mitgegeben, die ich nicht mehr vergesse: Die Komponenten zu bauen ist nur die halbe Arbeit. Ein System im ganzen Unternehmen zu skalieren, braucht aktive Governance, kontinuierliche Überzeugungsarbeit und eine tiefe kulturelle Verankerung."
           - "Wichtigste Erkenntnis: Ein Design System überlebt nicht allein durch UI-Qualität. Echte Akzeptanz entsteht nur, wenn man Brücken zwischen Teams baut, geteilte Verantwortung schafft und den Rollout an das Tempo der Organisation anpasst."
 
       - id: ds-cta
@@ -286,7 +286,7 @@ sections:
         layout: hero
         title: Growth, Retention & A/B-Tests
         tagline: Die unsichtbare Hürde am Anfang des Funnels finden – und die Lösung Woche für Woche belegen.
-        impactLine: +7 % Conversion, >90 % Nutzerzufriedenheit und hohe langfristige Nutzung in Deutschland und Singapur.
+        impactLine: +7 % Conversion, >90 % Nutzerzufriedenheit und hohe langfristige Nutzung in Deutschland und Singapur.
         figures:
           - src: /img/projects/helpling/helpling-growth-hero.webp
             alt: Growth und Experimente – pastellfarbene Pfade, die nach oben zu einem leuchtenden Punkt führen und Momentum sowie schrittweise Verbesserungen ausdrücken.
@@ -302,7 +302,7 @@ sections:
         paragraphs:
           - Growth- und Retention-Kennzahlen in Deutschland und Singapur durch kontinuierliche wöchentliche A/B-Tests voranbringen.
           - Enge Zusammenarbeit mit Product Managern, Data, Engineering, Marketing, Operations und Business-Stakeholdern.
-        lead: "+7 % Conversion, >90 % Nutzerzufriedenheit und hohe langfristige Nutzung."
+        lead: "+7 % Conversion, >90 % Nutzerzufriedenheit und hohe langfristige Nutzung."
         roleLine: "Rolle: Product Designerin (Growth & Retention)"
         responsibilities: "Umfang: Growth- und Retention-Strategie, wöchentliche A/B-Tests, Nutzerinterviews, Usability-Tests, Wettbewerbsanalyse, funktionsübergreifende Workshops, Interaction Design & Prototyping"
 
@@ -370,10 +370,10 @@ sections:
         lead: Das Gewinnerexperiment brachte messbar mehr Conversion und starke Zufriedenheitssignale – und war ein Jahr später immer noch live. Ein Beleg dafür, dass es über einen einmaligen Test hinaus dauerhaften Wert schafft.
         pullQuote: Ein wöchentliches Experiment, das zum festen Bestandteil des Produkts wurde.
         metrics:
-          - value: +7%
+          - value: +7 %
             label: Conversion
             verified: true
-          - value: "90%"
+          - value: "90 %"
             label: Nutzerzufriedenheit
             verified: true
           - value: "1 Jahr+"

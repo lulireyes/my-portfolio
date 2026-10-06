@@ -269,7 +269,7 @@ sections:
         layout: reflection
         title: The Reflection & Key Takeaway
         paragraphs:
-          - "Building the technical foundations of a Design System is a massive milestone, but this project taught me an invaluable senior lesson: Creating the components is only half the battle; scaling a system across an entire company requires active governance, continuous advocacy, and deep cultural alignment."
+          - "Building the technical foundations of a Design System is a massive milestone, but this project taught me an important lesson: Creating the components is only half the battle; scaling a system across an entire company requires active governance, continuous advocacy, and deep cultural alignment."
           - "Key takeaway: A design system cannot survive on UI quality alone. True adoption requires building bridges between teams, securing shared ownership, and timing the rollout with the organization's pace."
 
       - id: ds-cta

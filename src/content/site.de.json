@@ -13,10 +13,10 @@
       { "text": ", die digitale Produkte mit dem Menschen im Mittelpunkt gestaltet.", "style": "normal" }
     ]
   },
-  "introBio": "Ich bin argentinisch-deutsche Produktdesignerin mit über 6 Jahren Erfahrung an digitalen Produkten.",
+  "introBio": "Ich bin argentinisch-deutsche Produktdesignerin mit über 6 Jahren Erfahrung im Design digitaler Produkte.",
   "philosophy": {
     "label": "Design-Philosophie",
-    "title": "Design beginnt mit Absicht.",
+    "title": "Design beginnt mit Intention.",
     "intro": "Die Menschen verstehen, für die wir gestalten, ihren Kontext und die Probleme, die wir lösen wollen – und dabei bewusst darauf achten, wie sich die Erfahrung anfühlen soll.",
     "items": [
       {
@@ -36,7 +36,7 @@
       },
       {
         "id": "evidence",
-        "title": "Design braucht Evidenz",
+        "title": "Design braucht Belege",
         "body": "Ideen sind Ausgangspunkte, keine Antworten. Research, Usability-Tests, Daten und echtes Feedback helfen, Annahmen zu hinterfragen und die nächsten Schritte zu leiten."
       }
     ]
@@ -49,7 +49,7 @@
   ],
   "workCards": {
     "helpling": {
-      "summary": "Ich habe das Resolution Center gestaltet und gelauncht: ein Self-Service für Streitfälle, der die operativen Kosten um 35 % gesenkt hat."
+      "summary": "Ich habe das Resolution Center gestaltet und gelauncht: eine Self-Service-Lösung für Streitfälle, die die operativen Kosten um 35\u00a0% gesenkt hat."
     },
     "anymove": {
       "summary": "Ich habe das MVP einer Stealth-Mobilitätsplattform von Grund auf gestaltet: mit flexiblem Home-Screen und den ersten Komponenten des Design Systems."
@@ -63,7 +63,7 @@
   },
   "testimonials": [
     {
-      "quote": "Luli ist eine fantastische Mitstreiterin. Sie führte Nutzerinterviews mit echter Neugier und entwickelte ein tiefes Einfühlungsvermögen für unsere Nutzer:innen, das sich klar in ihren Designs widerspiegelte. Sie war umsichtig, kooperativ und eine echte Freude in der Zusammenarbeit.",
+      "quote": "Luli ist eine fantastische Kollegin. Sie führte Nutzerinterviews mit echter Neugier und entwickelte ein tiefes Einfühlungsvermögen für unsere Nutzer:innen, das sich klar in ihren Designs widerspiegelte. Sie war umsichtig, kooperativ und eine echte Freude in der Zusammenarbeit.",
       "name": "Anil Ravindrakumar",
       "role": "Senior Product Manager bei Groover",
       "avatar": "/img/testimonials/anil.webp"
@@ -106,7 +106,7 @@
         "dates": "2022 – 2025",
         "logo": "/img/logos/helpling.webp",
         "description": "Ich leitete das Produktdesign für die Kunden- und Partner-Apps in Deutschland und Singapur – von komplexen Service-Flows und dem Design System 1.0 bis zu Growth-Experimenten, die Streitkosten senkten und die Conversion steigerten.",
-        "tags": ["Marketplace", "Designsysteme", "Growth"],
+        "tags": ["Marktplatz", "Designsysteme", "Growth"],
         "caseStudy": "helpling"
       },
       {

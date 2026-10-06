@@ -269,7 +269,7 @@ sections:
         layout: reflection
         title: La reflexión y el aprendizaje clave
         paragraphs:
-          - "Construir las bases técnicas de un Design System es un hito enorme, pero este proyecto me enseñó una lección senior invaluable: crear los componentes es solo la mitad de la batalla; escalar un sistema por toda una compañía requiere gobernanza activa, defensa continua y una profunda alineación cultural."
+          - "Construir las bases técnicas de un Design System es un hito enorme, pero este proyecto me enseñó una lección importante: crear los componentes es solo la mitad de la batalla; escalar un sistema por toda una compañía requiere gobernanza activa, defensa continua y una profunda alineación cultural."
           - "Aprendizaje clave: un sistema de diseño no puede sobrevivir solo por la calidad de su UI. La adopción real exige tender puentes entre equipos, asegurar una propiedad compartida y sincronizar el despliegue con el ritmo de la organización."
 
       - id: ds-cta
