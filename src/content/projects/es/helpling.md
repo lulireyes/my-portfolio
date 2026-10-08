@@ -6,7 +6,7 @@ draft: false
 cover: /img/projects/helpling/cover.webp
 overview:
   - Helpling es la plataforma líder de servicios para el hogar en Europa, que conecta a clientes con proveedores de servicios de confianza en múltiples mercados.
-  - Me incorporé a Helpling como Diseñadora de Producto y crecí hasta convertirme en Diseñadora de Producto Senior, trabajando en las apps de Cliente y de Partner en Alemania y Singapur. Trabajé en todo, desde experiencias de servicio complejas y nuevas iniciativas de producto hasta crecimiento, retención y experimentación.
+  - Me incorporé a Helpling como Diseñadora de Producto y crecí hasta convertirme en Diseñadora de Producto Senior, trabajando en las apps de Cliente y de Partner en Alemania y Singapur. Las apps eran híbridas, así que diseñé una única experiencia móvil para iOS y Android, cuidando que se sintiera coherente y fiable en cada plataforma, y responsive en móvil y desktop. Trabajé en todo, desde experiencias de servicio complejas y nuevas iniciativas de producto hasta crecimiento, retención y experimentación.
   - Mi trabajo se apoyó en la investigación y la evidencia. Combinaba con regularidad insights cualitativos de entrevistas con usuarios y pruebas de usabilidad con datos cuantitativos, analítica de producto y experimentación para entender problemas, cuestionar suposiciones y guiar las decisiones de diseño.
 tags:
   - Diseño de extremo a extremo

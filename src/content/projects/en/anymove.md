@@ -6,7 +6,7 @@ heroImageAlt: AnyMove — an abstract silver and white sculpture of branching fo
 summary: Creating a flexible product foundation for a stealth mobility service designed to grow beyond its first MVP.
 overview:
   - "ANYMOVE started as a stealth project with a bold mission: to create Europe’s end-to-end new mobility platform enabling highly convenient and inclusive mobility services for anyone. Rather than building just a single vehicle rental app, it was designed as a scalable platform to support multiple services, diverse fleets, and entirely new ways of moving."
-  - "How do you create an experience that feels consistent today while leaving room for services that don't exist yet? Working closely with Product, Marketing, and Engineering, I helped design the MVP from the ground up across web and desktop apps."
+  - "How do you create an experience that feels consistent today while leaving room for services that don't exist yet? Working closely with Product, Marketing, and Engineering, I helped design the MVP from the ground up across web and desktop apps. The mobile product was a native iOS app — there was no Android version — designed end to end in line with Apple's Human Interface Guidelines."
 tags:
   - End-to-end design
   - 0→1
@@ -47,7 +47,7 @@ sections:
         challengeLabel: The challenge
         paragraphs:
           - "ANYMOVE started as a stealth project with a bold mission: to create Europe’s end-to-end new mobility platform enabling highly convenient and inclusive mobility services for anyone. Rather than building just a single vehicle rental app, it was designed as a scalable platform to support multiple services, diverse fleets, and entirely new ways of moving."
-        lead: How do you create an experience that feels consistent today while leaving room for services that don't exist yet? Working closely with Product, Marketing, and Engineering, I helped design the MVP from the ground up across web and desktop apps.
+        lead: How do you create an experience that feels consistent today while leaving room for services that don't exist yet? Working closely with Product, Marketing, and Engineering, I helped design the MVP from the ground up across web and desktop apps. The mobile product was a native iOS app — there was no Android version — designed end to end in line with Apple's Human Interface Guidelines.
 
       - id: am-role
         layout: system

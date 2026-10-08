@@ -7,6 +7,7 @@ summary: "Sprachenlernen, das sich weniger nach Lernen anfühlt: eine EdTech-App
 overview:
   - Beelinguapp ist eine Sprachlern-App, die auf Geschichten setzt und weltweit von mehr als einer Million Lernenden genutzt wird. Statt Üben als Drill mit Karteikarten zu behandeln, arbeitet das Produkt mit Geschichten und Illustrationen. So fühlen sich Sessions eher nach Lesen an als nach Lernen.
   - Ich habe Produktdesign und Illustration beigesteuert – von Lernflows über visuelles Storytelling bis zu einer UI, die auf Retention ausgelegt ist, damit tägliches Üben leicht, zugänglich und einladend bleibt.
+  - "Ich war die Designerin für zwei native Teams, iOS und Android, und habe jedes Design an die jeweilige Plattform angepasst: Material Design für Android und Apples Human Interface Guidelines für iOS, mit einem eigenen Handoff für jedes Team. Um die Arbeit über Figma hinaus zu prüfen, habe ich die Designs auf echten Geräten beider Plattformen reviewt."
 tags:
   - Ed-Tech
   - B2C
@@ -47,6 +48,7 @@ sections:
         paragraphs:
           - Beelinguapp will, dass das Lernen einer Sprache so leicht und unterhaltsam ist wie das Lesen deines Lieblingsbuchs. Dabei nutzen wir die Neurowissenschaft des Spracherwerbs – der einfachste Weg, Verständnis aufzubauen und fließend zu sprechen. Mit Paralleltexten machen wir uns die natürliche Fähigkeit des Gehirns zunutze, Sprachen im Kontext zu lernen.
           - Bei Beelinguapp fühlt sich Sprachenlernen weniger nach Hausaufgaben an. Geschichten und Illustrationen gehörten schon zur Marke. Die Chance lag darin, sie tiefer im Learning Loop zu verankern – für ein weltweites B2C-Publikum von über einer Million Nutzer:innen.
+          - "Ich war die Designerin für zwei native Teams, iOS und Android, und habe jedes Design an die jeweilige Plattform angepasst: Material Design für Android und Apples Human Interface Guidelines für iOS, mit einem eigenen Handoff für jedes Team. Um die Arbeit über Figma hinaus zu prüfen, habe ich die Designs auf echten Geräten beider Plattformen reviewt."
         lead: Die Motivation sank, wenn sich Sessions wie Schularbeit anfühlten. Das Produkt brauchte Lernmomente, die klare Ziele beibehalten, ohne die Leichtigkeit zu verlieren, mit der Menschen am nächsten Tag wiederkommen.
         roleLine: "Rolle: Product Designerin & Illustratorin"
         responsibilities: "Umfang: Lernflows, visuelles Storytelling, Illustrationssysteme und eine auf Retention ausgelegte UI für eine Sprachlern-App, die auf Geschichten setzt. Zeitraum: 2021 – 2022."

@@ -6,7 +6,7 @@ heroImageAlt: AnyMove – eine abstrakte silber-weiße Skulptur aus verzweigten 
 summary: "Ich habe das MVP einer Stealth-Mobilitätsplattform von Grund auf gestaltet: mit flexiblem Home-Screen und den ersten Komponenten des Design Systems."
 overview:
   - "ANYMOVE startete als Stealth-Projekt mit einer mutigen Mission: eine neue End-to-End-Mobilitätsplattform für Europa zu bauen, die hochkomfortable und inklusive Mobilität für alle möglich macht. Statt nur eine App für Fahrzeugvermietung zu entwickeln, war sie von Anfang an als skalierbare Plattform gedacht, die mehrere Services, unterschiedliche Flotten und ganz neue Fortbewegungsformen unterstützt."
-  - "Wie baut man ein Erlebnis, das sich heute stimmig anfühlt und zugleich Platz für Services lässt, die es noch gar nicht gibt? Gemeinsam mit Product, Marketing und Engineering habe ich das MVP von Grund auf für Web- und Desktop-App mitgestaltet."
+  - "Wie baut man ein Erlebnis, das sich heute stimmig anfühlt und zugleich Platz für Services lässt, die es noch gar nicht gibt? Gemeinsam mit Product, Marketing und Engineering habe ich das MVP von Grund auf für Web- und Desktop-App mitgestaltet. Das Mobile-Produkt war eine native iOS-App — ohne Android-Version —, durchgängig entlang der Human Interface Guidelines von Apple gestaltet."
 tags:
   - Durchgängiges Design
   - 0→1
@@ -47,7 +47,7 @@ sections:
         challengeLabel: Die Herausforderung
         paragraphs:
           - "ANYMOVE startete als Stealth-Projekt mit einer mutigen Mission: eine neue End-to-End-Mobilitätsplattform für Europa zu bauen, die hochkomfortable und inklusive Mobilität für alle möglich macht. Statt nur eine App für Fahrzeugvermietung zu entwickeln, war sie von Anfang an als skalierbare Plattform gedacht, die mehrere Services, unterschiedliche Flotten und ganz neue Fortbewegungsformen unterstützt."
-        lead: Wie baut man ein Erlebnis, das sich heute stimmig anfühlt und zugleich Platz für Services lässt, die es noch gar nicht gibt? Gemeinsam mit Product, Marketing und Engineering habe ich das MVP von Grund auf für Web- und Desktop-App mitgestaltet.
+        lead: Wie baut man ein Erlebnis, das sich heute stimmig anfühlt und zugleich Platz für Services lässt, die es noch gar nicht gibt? Gemeinsam mit Product, Marketing und Engineering habe ich das MVP von Grund auf für Web- und Desktop-App mitgestaltet. Das Mobile-Produkt war eine native iOS-App — ohne Android-Version —, durchgängig entlang der Human Interface Guidelines von Apple gestaltet.
 
       - id: am-role
         layout: system

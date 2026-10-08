@@ -7,6 +7,7 @@ summary: Hacer que aprender idiomas se sienta menos como estudiar — una app Ed
 overview:
   - Beelinguapp es una app de aprendizaje de idiomas basada en narrativa, usada por más de un millón de estudiantes en todo el mundo. En lugar de tratar la práctica como ejercicios repetitivos y tarjetas de memoria, el producto se apoya en historias e ilustración para que las sesiones se sientan más cercanas a la lectura que al estudio.
   - Aporté diseño de producto e ilustración — dando forma a los flujos de aprendizaje, a la narrativa visual y a una UI centrada en la retención, para que la práctica diaria se mantuviera ligera, accesible y digna de volver a ella.
+  - "Trabajé como diseñadora para dos equipos nativos, iOS y Android, adaptando cada diseño a su plataforma: Material Design para Android y las Human Interface Guidelines de Apple para iOS, con un handoff separado para cada equipo. Para validar el trabajo más allá de Figma, revisaba los diseños en dispositivos reales de ambas plataformas."
 tags:
   - Ed-Tech
   - B2C
@@ -47,6 +48,7 @@ sections:
         paragraphs:
           - La misión de Beelinguapp es hacer que aprender un idioma sea tan simple y divertido como leer tu libro favorito. Nos apoyamos en la neurociencia de la adquisición del lenguaje — la forma más simple de ganar comprensión y desarrollar fluidez. Usando el método de textos paralelos, activamos la capacidad natural del cerebro para aprender idiomas en contexto.
           - Beelinguapp hace que aprender un idioma se sienta menos como una tarea escolar. Las historias y la ilustración ya formaban parte de la marca — la oportunidad estaba en entrelazarlas más profundamente en el bucle de aprendizaje para una audiencia B2C global de más de un millón de usuarios.
+          - "Trabajé como diseñadora para dos equipos nativos, iOS y Android, adaptando cada diseño a su plataforma: Material Design para Android y las Human Interface Guidelines de Apple para iOS, con un handoff separado para cada equipo. Para validar el trabajo más allá de Figma, revisaba los diseños en dispositivos reales de ambas plataformas."
         lead: La motivación caía cuando las sesiones se sentían como trabajo escolar. El producto necesitaba momentos de aprendizaje que mantuvieran claros los objetivos sin perder la ligereza que hace que la gente vuelva al día siguiente.
         roleLine: "Rol: Diseñadora de Producto e Ilustradora"
         responsibilities: "Alcance: Flujos de aprendizaje, narrativa visual, sistemas de ilustración y UI centrada en la retención para una app de idiomas basada en narrativa. Periodo: 2021 – 2022."

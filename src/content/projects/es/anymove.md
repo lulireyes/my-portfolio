@@ -6,7 +6,7 @@ heroImageAlt: AnyMove — una escultura abstracta plateada y blanca de formas ra
 summary: Crear una base de producto flexible para un servicio de movilidad en modo stealth, diseñado para crecer más allá de su primer MVP.
 overview:
   - "ANYMOVE comenzó como un proyecto stealth con una misión audaz: crear la plataforma de nueva movilidad de extremo a extremo de Europa, que hiciera posibles servicios de movilidad altamente cómodos e inclusivos para cualquier persona. En lugar de construir una única app de alquiler de vehículos, se concibió como una plataforma escalable capaz de soportar múltiples servicios, flotas diversas y formas de moverse completamente nuevas."
-  - "¿Cómo creas una experiencia que resulte coherente hoy y, al mismo tiempo, deje espacio para servicios que todavía no existen? Trabajando estrechamente con Producto, Marketing e Ingeniería, ayudé a diseñar el MVP desde cero en las apps web y de escritorio."
+  - "¿Cómo creas una experiencia que resulte coherente hoy y, al mismo tiempo, deje espacio para servicios que todavía no existen? Trabajando estrechamente con Producto, Marketing e Ingeniería, ayudé a diseñar el MVP desde cero en las apps web y de escritorio. El producto móvil era una app nativa solo para iOS — sin versión Android —, diseñada de extremo a extremo siguiendo las Human Interface Guidelines de Apple."
 tags:
   - Diseño de extremo a extremo
   - 0→1
@@ -47,7 +47,7 @@ sections:
         challengeLabel: El desafío
         paragraphs:
           - "ANYMOVE comenzó como un proyecto stealth con una misión audaz: crear la plataforma de nueva movilidad de extremo a extremo de Europa, que hiciera posibles servicios de movilidad altamente cómodos e inclusivos para cualquier persona. En lugar de construir una única app de alquiler de vehículos, se concibió como una plataforma escalable capaz de soportar múltiples servicios, flotas diversas y formas de moverse completamente nuevas."
-        lead: ¿Cómo creas una experiencia que resulte coherente hoy y, al mismo tiempo, deje espacio para servicios que todavía no existen? Trabajando estrechamente con Producto, Marketing e Ingeniería, ayudé a diseñar el MVP desde cero en las apps web y de escritorio.
+        lead: ¿Cómo creas una experiencia que resulte coherente hoy y, al mismo tiempo, deje espacio para servicios que todavía no existen? Trabajando estrechamente con Producto, Marketing e Ingeniería, ayudé a diseñar el MVP desde cero en las apps web y de escritorio. El producto móvil era una app nativa solo para iOS — sin versión Android —, diseñada de extremo a extremo siguiendo las Human Interface Guidelines de Apple.
 
       - id: am-role
         layout: system

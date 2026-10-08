@@ -6,7 +6,7 @@ draft: false
 cover: /img/projects/helpling/cover.webp
 overview:
   - Helpling ist Europas führender Online-Marktplatz zur Vermittlung haushaltsnaher Dienstleistungen.
-  - Ich bin bei Helpling als Product Designerin eingestiegen und zur Senior Product Designerin aufgestiegen. Dabei habe ich an den Customer- und Partner-Apps in Deutschland und Singapur gearbeitet – von komplexen Service-Erlebnissen und neuen Produktinitiativen bis hin zu Growth, Retention und Experimenten.
+  - Ich bin bei Helpling als Product Designerin eingestiegen und zur Senior Product Designerin aufgestiegen. Dabei habe ich an den Customer- und Partner-Apps in Deutschland und Singapur gearbeitet. Die Apps waren hybrid aufgebaut, deshalb habe ich eine einheitliche Mobile Experience für iOS und Android gestaltet – konsistent und verlässlich auf beiden Plattformen, und responsive für Mobile und Desktop. Meine Arbeit reichte von komplexen Service-Erlebnissen und neuen Produktinitiativen bis hin zu Growth, Retention und Experimenten.
   - Meine Arbeit stützt sich auf Research und Daten. Ich habe qualitative Erkenntnisse aus Nutzerinterviews und Usability-Tests regelmäßig mit quantitativen Daten, Produktanalysen und Experimenten kombiniert, um Probleme zu verstehen, Annahmen zu hinterfragen und Designentscheidungen fundiert zu treffen.
 tags:
   - Durchgängiges Design

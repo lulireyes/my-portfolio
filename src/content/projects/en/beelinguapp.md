@@ -7,6 +7,7 @@ summary: Making language learning feel less like studying — an EdTech app with
 overview:
   - Beelinguapp is a narrative-driven language learning app used by more than a million learners worldwide. Instead of treating practice as drills and flashcards, the product leans on stories and illustration so sessions feel closer to reading than studying.
   - I contributed product design and illustration — shaping learning flows, visual storytelling, and retention-focused UI so everyday practice stayed light, approachable, and worth coming back to.
+  - "I worked as the designer for two native teams, iOS and Android, adapting each design to its platform: Material Design for Android and Apple's Human Interface Guidelines for iOS, with a separate handoff for each team. To validate the work beyond Figma, I reviewed designs on real devices for both platforms."
 tags:
   - Ed-Tech
   - B2C
@@ -47,6 +48,7 @@ sections:
         paragraphs:
           - The mission of Beelinguapp is to make learning a language as simple and fun as reading your favourite book. We use the neuroscience of language acquisition — the simplest way to gain understanding and develop fluency. Using the parallel texts method, we unlock the brain's natural ability to learn languages in context.
           - Beelinguapp makes language learning feel less like homework. Stories and illustration were already part of the brand — the opportunity was weaving them deeper into the learning loop for a global B2C audience of more than a million users.
+          - "I worked as the designer for two native teams, iOS and Android, adapting each design to its platform: Material Design for Android and Apple's Human Interface Guidelines for iOS, with a separate handoff for each team. To validate the work beyond Figma, I reviewed designs on real devices for both platforms."
         lead: Motivation dropped when sessions felt like schoolwork. The product needed learning moments that stayed clear on goals without losing the lightness that makes people return the next day.
         roleLine: "Role: Product Designer & Illustrator"
         responsibilities: "Scope: Learning flows, visual storytelling, illustration systems, and retention-focused UI for a narrative-driven language app. Timeline: 2021 – 2022."
