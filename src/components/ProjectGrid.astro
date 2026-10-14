@@ -1,0 +1,40 @@
+---
+import { Image } from 'astro:assets';
+import { dictionary } from '../i18n';
+import type { Locale } from '../config';
+import type { ProjectRow } from './ProjectIndex.astro';
+import { localizedPath } from '../i18n';
+
+interface Props {
+  locale: Locale;
+  projects: ProjectRow[];
+}
+
+import './ProjectGrid.css';
+
+const { locale, projects } = Astro.props;
+const t = dictionary(locale);
+---
+
+<div class="grid">
+  {
+    projects.map((project) => (
+      <figure class="grid__item">
+        <a
+          class="grid__link"
+          href={localizedPath(locale, `/proyectos/${project.slug}`)}
+        >
+          <Image
+            src={project.cover}
+            alt={project.coverAlt}
+            widths={[400, 800, 1200]}
+            sizes="(max-width: 720px) 100vw, 50vw"
+          />
+        </a>
+        <figcaption>
+          {project.number} — {t.index.captionPlaceholder}
+        </figcaption>
+      </figure>
+    ))
+  }
+</div>

@@ -1,0 +1,49 @@
+.contact {
+  margin-top: 160px;
+}
+
+.contact h2 {
+  margin: 0 0 16px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 400;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--ink);
+}
+
+.contact__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px 40px;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 24px;
+}
+
+.contact__mail {
+  text-decoration: none;
+  font-size: clamp(28px, 6vw, 88px);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  font-stretch: 85%;
+  font-variation-settings: 'wdth' 85;
+  line-height: 1;
+}
+
+.contact__arrow {
+  color: var(--cobalt);
+}
+
+.contact__links {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.7;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 720px) {
+  .contact {
+    margin-top: 80px;
+  }
+}

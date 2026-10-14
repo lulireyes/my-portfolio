@@ -1,0 +1,78 @@
+---
+import type { ImageMetadata } from 'astro';
+import { dictionary, localizedPath } from '../i18n';
+import type { Locale } from '../config';
+
+export interface ProjectRow {
+  slug: string;
+  title: string;
+  number: string;
+  disciplines: string[];
+  year: number;
+  status: string;
+  cover: ImageMetadata;
+  coverAlt: string;
+}
+
+interface Props {
+  locale: Locale;
+  projects: ProjectRow[];
+}
+
+import './ProjectIndex.css';
+
+const { locale, projects } = Astro.props;
+const t = dictionary(locale);
+const nextNumber = String(projects.length + 1).padStart(3, '0');
+const developing = t.project.inDevelopment;
+---
+
+<section class="index" id="indice" aria-labelledby="indice-t">
+  <div class="index__head">
+    <h2 id="indice-t">{t.index.title}</h2>
+    <span class="index__year">{t.index.yearSuffix}</span>
+  </div>
+  <div class="index__scroll">
+    <div class="index__table">
+      <div class="index__cols" aria-hidden="true">
+        <span class="c-n">{t.index.colNumber}</span>
+        <span class="c-p">{t.index.colProject}</span>
+        <span class="c-d">{t.index.colDisciplines}</span>
+        <span class="c-y">{t.index.colYear}</span>
+        <span class="c-s">{t.index.colStatus}</span>
+      </div>
+      {
+        projects.map((project) => (
+          <a
+            class="index__row"
+            href={localizedPath(locale, `/proyectos/${project.slug}`)}
+          >
+            <span class="c-n mono">{project.number}</span>
+            <span class="c-p title">{project.title}</span>
+            <span class="c-d mono">{project.disciplines.join(', ')}</span>
+            <span class="c-y mono">{project.year}</span>
+            <span class="c-s mono">
+              {project.status === developing ? (
+                <span class="index__status">
+                  <span class="index__dot" aria-hidden="true" />
+                  {project.status}
+                </span>
+              ) : (
+                project.status
+              )}
+            </span>
+          </a>
+        ))
+      }
+      <div class="index__row index__row--yours">
+        <span class="c-n mono">{nextNumber}</span>
+        <span class="c-rest title">
+          {t.index.yours}{' '}
+          <a class="index__write" href={`${localizedPath(locale, '/')}#contacto`}>
+            {t.index.writeUs}
+          </a>
+        </span>
+      </div>
+    </div>
+  </div>
+</section>

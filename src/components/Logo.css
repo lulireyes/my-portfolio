@@ -1,0 +1,62 @@
+.logo {
+  color: var(--ink);
+}
+
+.logo--horizontal {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  white-space: nowrap;
+}
+
+.logo--horizontal .logo__word {
+  font-family: var(--font-sans);
+  font-size: var(--header-logo-size);
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  font-variation-settings: 'wdth' var(--wdth-wide);
+}
+
+.logo--horizontal .logo__studio {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.logo--stacked {
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+}
+
+.logo__stack {
+  display: inline-flex;
+  flex-direction: column;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  font-size: 40px;
+  line-height: 0.8;
+}
+
+.logo__re {
+  font-variation-settings: 'wdth' 125;
+}
+
+.logo__yes {
+  font-variation-settings: 'wdth' 82;
+}
+
+.logo--stacked .logo__studio {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  padding-bottom: 2px;
+}
+
+.logo__dot {
+  color: var(--cobalt);
+}

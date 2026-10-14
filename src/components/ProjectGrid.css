@@ -1,0 +1,29 @@
+.grid {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 20px;
+}
+
+.grid__item {
+  margin: 0;
+}
+
+.grid__link {
+  display: block;
+  text-decoration: none;
+}
+
+.grid__link img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--placeholder-bg);
+}
+
+.grid__item figcaption {
+  margin-top: 10px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+}

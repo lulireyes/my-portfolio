@@ -1,63 +1,25 @@
-# Luciana Reyes — Portfolio
+# Reyes Studio
 
-Personal portfolio site for [Luciana Reyes](https://github.com/lulireyes), Product Designer in Berlin.
+Sitio estático de [reyes-studio.com](https://reyes-studio.com): estudio de producto digital (diseño + ingeniería), Valencia.
 
-**https://lulireyes.github.io/my-portfolio/**
+Stack: Astro + TypeScript estricto, CSS propio, MDX, i18n (`/` ES, `/en` EN), Fontsource (Archivo variable con `wdth`, DM Mono), output estático para Vercel.
 
-## Develop
+## Local
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Content (Markdown CMS)
-
-### Homepage
-
-Edit [`src/content/site.json`](src/content/site.json):
-
-- `name`, `role`, `location`, `tagline`, `about`
-- `seo.title` / `seo.description`
-- `links` (LinkedIn, Medium, …)
-- `footer`
-
-### Case studies
-
-1. Add images under `public/img/projects/<slug>/`
-2. Create `src/content/projects/<slug>.md`:
-
-```md
----
-title: Project name
-subtitle: One-line summary
-year: 2026
-order: 1
-draft: false
-cover: /img/projects/my-project/cover.webp
----
-
-## Overview
-
-Write the case study in Markdown.
-
-![Detail](/img/projects/my-project/detail.webp)
-```
-
-Frontmatter:
-
-| Field | Meaning |
-| --- | --- |
-| `draft` | `true` hides the project (default) |
-| `order` | Lower numbers appear first |
-| `cover` | Path under `public/` |
-| `externalUrl` | Optional; card links out (Behance/Medium) instead of a case study page |
-
-There is a draft template at `src/content/projects/example-case-study.md`. Set `draft: false` to publish it.
-
-## Build
+Abre `http://localhost:4321`.
 
 ```bash
 npm run build
 npm run preview
 ```
+
+## Contenido
+
+- Copy: `src/i18n/es.ts` (inglés listo para traducir en `src/i18n/en.ts`)
+- Contacto / redes: `src/config.ts`
+- Proyectos: `src/content/proyectos/*.mdx`

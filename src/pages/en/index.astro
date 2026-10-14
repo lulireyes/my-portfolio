@@ -1,0 +1,11 @@
+---
+import { getCollection } from 'astro:content';
+import HomePage from '../../components/HomePage.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const projectCount = (await getCollection('proyectos')).length;
+---
+
+<BaseLayout locale="en" projectCount={projectCount}>
+  <HomePage locale="en" />
+</BaseLayout>

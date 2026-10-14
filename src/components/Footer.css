@@ -1,0 +1,34 @@
+.footer__meta {
+  margin-top: 140px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+  padding-bottom: 12px;
+}
+
+.footer__mark {
+  margin: 0 0 -4vw;
+  padding: 0 2vw;
+  font-size: 26vw;
+  line-height: 0.8;
+  font-weight: 800;
+  font-stretch: 125%;
+  font-variation-settings: 'wdth' 125;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.footer__mark span {
+  color: var(--cobalt);
+}
+
+@media (max-width: 720px) {
+  .footer__meta {
+    margin-top: 80px;
+  }
+}

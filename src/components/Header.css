@@ -1,0 +1,44 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 40px;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.header__logo {
+  flex: 1 1 200px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.header__logo:hover {
+  color: inherit;
+}
+
+.header__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 28px;
+  justify-content: flex-end;
+}
+
+.header__nav a {
+  text-decoration: none;
+}
+
+.header__lang {
+  color: var(--muted);
+}
+
+.header__lang a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.header__lang [aria-current='page'] {
+  color: var(--muted);
+}

@@ -1,0 +1,39 @@
+---
+import './Logo.css';
+
+interface Props {
+  variant?: 'horizontal' | 'stacked';
+  class?: string;
+}
+
+const { variant = 'horizontal', class: className } = Astro.props;
+---
+
+{
+  variant === 'horizontal' ? (
+    <span
+      class:list={['logo', 'logo--horizontal', className]}
+      role="img"
+      aria-label="Reyes Studio"
+    >
+      <span class="logo__word">
+        Reyes<span class="logo__dot">.</span>
+      </span>
+      <span class="logo__studio">Studio</span>
+    </span>
+  ) : (
+    <span
+      class:list={['logo', 'logo--stacked', className]}
+      role="img"
+      aria-label="Reyes Studio"
+    >
+      <span class="logo__stack">
+        <span class="logo__re">
+          RE<span class="logo__dot">.</span>
+        </span>
+        <span class="logo__yes">YES</span>
+      </span>
+      <span class="logo__studio">Studio</span>
+    </span>
+  )
+}
