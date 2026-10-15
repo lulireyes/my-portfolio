@@ -1,7 +1,6 @@
 ---
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { Image } from 'astro:assets';
 import { dictionary } from '../../i18n';
 import Footer from '../../components/Footer.astro';
 
@@ -41,7 +40,7 @@ const developing = entry.data.status === t.project.inDevelopment;
       </span>
     </p>
     <figure class="project__cover">
-      <Image src={entry.data.cover} alt={entry.data.coverAlt} />
+      <div class="project__ph">{entry.data.coverAlt}</div>
       <figcaption>{entry.data.number} — {t.index.captionPlaceholder}</figcaption>
     </figure>
     <p class="project__summary">{entry.data.summary}</p>
@@ -105,11 +104,17 @@ const developing = entry.data.status === t.project.inDevelopment;
     margin: 40px 0 0;
   }
 
-  .project__cover img {
-    width: 100%;
+  .project__ph {
     aspect-ratio: 4 / 3;
-    object-fit: cover;
     background: var(--placeholder-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 16px;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--muted);
   }
 
   .project__cover figcaption {

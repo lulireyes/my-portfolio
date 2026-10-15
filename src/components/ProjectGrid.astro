@@ -1,9 +1,7 @@
 ---
-import { Image } from 'astro:assets';
-import { dictionary } from '../i18n';
+import { dictionary, localizedPath } from '../i18n';
 import type { Locale } from '../config';
 import type { ProjectRow } from './ProjectIndex.astro';
-import { localizedPath } from '../i18n';
 
 interface Props {
   locale: Locale;
@@ -24,12 +22,7 @@ const t = dictionary(locale);
           class="grid__link"
           href={localizedPath(locale, `/proyectos/${project.slug}`)}
         >
-          <Image
-            src={project.cover}
-            alt={project.coverAlt}
-            widths={[400, 800, 1200]}
-            sizes="(max-width: 720px) 100vw, 50vw"
-          />
+          <span class="grid__ph">{project.coverAlt}</span>
         </a>
         <figcaption>
           {project.number} — {t.index.captionPlaceholder}
