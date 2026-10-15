@@ -1,0 +1,27 @@
+---
+import { site, type Locale } from '../config';
+import { dictionary } from '../i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+import './Contact.css';
+
+const { locale } = Astro.props;
+const t = dictionary(locale);
+---
+
+<section class="contact" id="contacto" aria-labelledby="cont-t">
+  <h2 id="cont-t">{t.contact.title}</h2>
+  <div class="contact__row">
+    <a class="contact__mail" href={`mailto:${site.email}`}>
+      {site.email} <span class="contact__arrow">↗</span>
+    </a>
+    <div class="contact__links">
+      <a href={site.callUrl}>{t.contact.call}</a>
+      <a href={site.linkedinUrl}>{t.contact.linkedin}</a>
+      <a href={site.instagramUrl}>{t.contact.instagram}</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,36 @@
+:root {
+  --paper: #ffffff;
+  --ink: #111111;
+  --ink-soft: #3a3a3a;
+  --muted: #6a6a6a;
+  --muted-row: #9a9a9a;
+  --line: #d6d6d6;
+  --cobalt: #1f3bff;
+  --cobalt-on-dark: #6f86ff;
+  --placeholder-bg: #f0f0ee;
+
+  --font-sans: 'Archivo Variable', Archivo, sans-serif;
+  --font-mono: 'DM Mono', ui-monospace, monospace;
+
+  --wdth-condensed: 62;
+  --wdth-body: 90;
+  --wdth-title: 85;
+  --wdth-wide: 125;
+
+  --page-max: 1440px;
+  --gutter: 40px;
+  --grid-gap: 20px;
+  --header-pad-y: 32px;
+  --header-logo-size: 32px;
+
+  --ease-dock: cubic-bezier(0.7, 0, 0.2, 1);
+  --ease-wide: cubic-bezier(0.65, 0, 0.25, 1);
+  --ease-rise: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@media (max-width: 720px) {
+  :root {
+    --gutter: 16px;
+    --header-pad-y: 20px;
+  }
+}

@@ -1,0 +1,28 @@
+---
+import type { Locale } from '../config';
+import { dictionary } from '../i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+import './Process.css';
+
+const { locale } = Astro.props;
+const t = dictionary(locale);
+---
+
+<section class="process" id="proceso" aria-labelledby="proc-t">
+  <h2 id="proc-t">{t.process.title}</h2>
+  <ol>
+    {
+      t.process.items.map((item) => (
+        <li>
+          <span class="process__n">{item.n}</span>
+          <span class="process__title">{item.title}</span>
+          <span class="process__body">{item.body}</span>
+        </li>
+      ))
+    }
+  </ol>
+</section>

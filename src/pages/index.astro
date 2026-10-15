@@ -1,14 +1,11 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
 import HomePage from '../components/HomePage.astro';
-import { getSite } from '../lib/site';
-import { t } from '../lib/i18n';
-import '../styles/global.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
-const locale = 'en' as const;
-const site = getSite(locale);
+const projectCount = (await getCollection('proyectos')).length;
 ---
 
-<BaseLayout title={site.seo.title} description={site.seo.description} lang={t(locale).htmlLang}>
-  <HomePage locale={locale} />
+<BaseLayout locale="es" projectCount={projectCount}>
+  <HomePage locale="es" />
 </BaseLayout>

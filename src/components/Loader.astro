@@ -1,0 +1,63 @@
+---
+import './Loader.css';
+---
+
+<div class="rs-loader loader" id="loader" aria-hidden="true">
+  <div class="loader__lockup" role="img" aria-label="Reyes Studio">
+    <div class="loader__word">
+      {
+        ['R', 'e', 'y', 'e', 's'].map((letter, i) => (
+          <span class="loader__mask">
+            <span class="loader__letter" style={`animation-delay: ${i * 60}ms`}>
+              {letter}
+            </span>
+          </span>
+        ))
+      }
+      <span class="loader__dot">.</span>
+    </div>
+    <div class="loader__sub">Studio</div>
+  </div>
+</div>
+
+<script is:inline>
+  (function () {
+    var KEY = 'reyes-studio-loader';
+    var loader = document.getElementById('loader');
+    var root = document.documentElement;
+    var reduce = false;
+    try {
+      reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    } catch (e) {}
+    var seen = false;
+    try {
+      seen = sessionStorage.getItem(KEY) === '1';
+    } catch (e) {}
+
+    function finish() {
+      root.classList.remove('rs-load');
+      if (loader) {
+        loader.setAttribute('hidden', '');
+        loader.setAttribute('aria-hidden', 'true');
+      }
+      try {
+        sessionStorage.setItem(KEY, '1');
+      } catch (e) {}
+    }
+
+    if (reduce || seen || !loader) {
+      finish();
+      return;
+    }
+
+    loader.removeAttribute('hidden');
+    var done = false;
+    function once() {
+      if (done) return;
+      done = true;
+      finish();
+    }
+    window.setTimeout(once, 3400);
+    window.setTimeout(once, 3500);
+  })();
+</script>

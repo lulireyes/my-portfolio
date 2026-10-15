@@ -1,0 +1,55 @@
+---
+import type { Locale } from '../config';
+import { dictionary, localizedPath } from '../i18n';
+import Logo from './Logo.astro';
+
+interface Props {
+  locale: Locale;
+  projectCount: number;
+  currentPath: string;
+}
+
+import './Header.css';
+
+const { locale, projectCount, currentPath } = Astro.props;
+const t = dictionary(locale);
+const home = localizedPath(locale, '/');
+const count = String(projectCount).padStart(2, '0');
+const otherLocale: Locale = locale === 'es' ? 'en' : 'es';
+const switchPath =
+  otherLocale === 'es'
+    ? currentPath.replace(/^\/en/, '') || '/'
+    : localizedPath('en', currentPath.replace(/^\/en/, '') || '/');
+---
+
+<header class="header">
+  <a class="header__logo" href={home} aria-label={t.nav.homeAria} data-header-logo>
+    <Logo variant="horizontal" />
+  </a>
+  <nav class="header__nav" aria-label={t.nav.primary}>
+    <a href={`${home}#indice`}>{t.nav.index} ({count})</a>
+    <a href={`${home}#servicios`}>{t.nav.services}</a>
+    <a href={`${home}#contacto`}>{t.nav.contact}</a>
+    <span class="header__lang">
+      {
+        locale === 'es' ? (
+          <>
+            <span aria-current="page">{t.lang.es}</span>
+            {' / '}
+            <a href={switchPath} hreflang="en" lang="en">
+              {t.lang.en}
+            </a>
+          </>
+        ) : (
+          <>
+            <a href={switchPath} hreflang="es" lang="es">
+              {t.lang.es}
+            </a>
+            {' / '}
+            <span aria-current="page">{t.lang.en}</span>
+          </>
+        )
+      }
+    </span>
+  </nav>
+</header>

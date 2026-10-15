@@ -1,178 +1,74 @@
 ---
-import spaceGrotesk500 from '@fontsource/space-grotesk/files/space-grotesk-latin-500-normal.woff2?url';
-import inter400 from '@fontsource/inter/files/inter-latin-400-normal.woff2?url';
+import '../styles/global.css';
+import '../components/Footer.css';
+import { site, type Locale } from '../config';
+import { dictionary } from '../i18n';
+import Header from '../components/Header.astro';
+import Loader from '../components/Loader.astro';
 
 interface Props {
+  locale: Locale;
   title?: string;
   description?: string;
-  lang?: string;
-  /** Optional absolute or site-relative path for social share image. */
-  image?: string;
+  projectCount: number;
 }
 
-const {
-  title = 'Luli Reyes — Product Designer',
-  description = 'Valencia-based product designer focused on thoughtful, people-first products.',
-  lang = 'en',
-  image,
-} = Astro.props;
-
-const backToTopLabel =
-  lang === 'es' ? 'Volver arriba' : lang === 'de' ? 'Nach oben' : 'Back to top';
-
-const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
-const siteOrigin = (Astro.site?.origin ?? 'https://lulireyes.github.io').replace(/\/$/, '');
-const canonicalPath = Astro.url.pathname.endsWith('/')
-  ? Astro.url.pathname
-  : `${Astro.url.pathname}/`;
-const canonicalUrl = `${siteOrigin}${canonicalPath}`;
-const ogImagePath = image ?? `${base}og-image.png`;
-const ogImageUrl = ogImagePath.startsWith('http')
-  ? ogImagePath
-  : `${siteOrigin}${ogImagePath.startsWith('/') ? ogImagePath : `/${ogImagePath}`}`;
+const { locale, title, description, projectCount } = Astro.props;
+const t = dictionary(locale);
+const pageTitle = title ? `${title} — ${t.meta.title}` : t.meta.title;
+const pageDescription = description ?? t.meta.description;
+const canonical = new URL(Astro.url.pathname, site.domain).href;
+const ogImage = new URL('/favicons/og.png', site.domain).href;
 ---
 
 <!doctype html>
-<html lang={lang} data-theme="dark" style="color-scheme: dark">
+<html lang={locale}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content={description} />
-    <meta name="generator" content={Astro.generator} />
-    <meta name="theme-color" content="#161616" />
-    <link rel="canonical" href={canonicalUrl} />
-    <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
-    <link rel="icon" href={`${base}favicon.ico`} />
-    <link rel="apple-touch-icon" href={`${base}apple-touch-icon.png`} />
-
-    <!-- Social share preview (WhatsApp, LinkedIn, Slack, iMessage, X…) -->
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription} />
+    <link rel="canonical" href={canonical} />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Luli Reyes" />
-    <meta property="og:locale" content={lang === 'es' ? 'es_ES' : lang === 'de' ? 'de_DE' : 'en_US'} />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:url" content={canonicalUrl} />
-    <meta property="og:image" content={ogImageUrl} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="LR — Luli Reyes, Product Designer" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={ogImageUrl} />
-
-    <link
-      rel="preload"
-      href={spaceGrotesk500}
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href={inter400}
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={pageDescription} />
+    <link rel="icon" href="/favicons/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicons/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" sizes="180x180" />
+    <link rel="alternate" hreflang="es" href={new URL(Astro.url.pathname.replace(/^\/en/, '') || '/', site.domain).href} />
+    <link rel="alternate" hreflang="en" href={new URL(Astro.url.pathname.startsWith('/en') ? Astro.url.pathname : `/en${Astro.url.pathname === '/' ? '' : Astro.url.pathname}`, site.domain).href} />
     <script is:inline>
       (function () {
         try {
-          var stored = localStorage.getItem('theme');
-          // Default to dark when there is no explicit saved preference.
-          var theme = stored === 'light' || stored === 'dark' ? stored : 'dark';
-          document.documentElement.setAttribute('data-theme', theme);
-          document.documentElement.style.colorScheme = theme;
-        } catch (e) {
-          document.documentElement.setAttribute('data-theme', 'dark');
-          document.documentElement.style.colorScheme = 'dark';
-        }
+          var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          var seen = false;
+          try {
+            seen = sessionStorage.getItem('reyes-studio-loader') === '1';
+          } catch (e) {}
+          if (!reduce && !seen) document.documentElement.classList.add('rs-load');
+        } catch (e) {}
       })();
     </script>
-    <title>{title}</title>
   </head>
   <body>
-    <slot />
-
-    <div id="cursor-dot" class="cursor-dot" aria-hidden="true"></div>
-
-    <button type="button" class="scroll-top" id="scroll-top" aria-label={backToTopLabel} title={backToTopLabel}>
-      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-        <path d="M12 19V6" />
-        <path d="M6.5 11.5 12 6l5.5 5.5" />
-      </svg>
-    </button>
-
-    <script>
-      const btn = document.getElementById('scroll-top');
-      if (btn) {
-        const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)');
-        // Appears after scrolling roughly two viewport heights.
-        const threshold = () => window.innerHeight * 2;
-
-        function sync() {
-          if (window.scrollY > threshold()) btn.classList.add('is-visible');
-          else btn.classList.remove('is-visible');
-        }
-
-        window.addEventListener('scroll', sync, { passive: true });
-        window.addEventListener('resize', sync);
-        sync();
-
-        btn.addEventListener('click', () => {
-          window.scrollTo({ top: 0, behavior: prefersReduced.matches ? 'auto' : 'smooth' });
-        });
-      }
-    </script>
-
-    <script>
-      const dot = document.getElementById('cursor-dot');
-      if (dot && window.matchMedia('(pointer: fine)').matches) {
-        let revealed = false;
-        let lastX = 0;
-        let lastY = 0;
-        let lastT = 0;
-        // Pixels-per-millisecond; a quick flick easily exceeds this.
-        const FAST_SPEED = 1.6;
-        let fastTimer = 0;
-
-        window.addEventListener(
-          'mousemove',
-          (event) => {
-            const x = event.clientX;
-            const y = event.clientY;
-            dot.style.left = `${x}px`;
-            dot.style.top = `${y}px`;
-
-            if (!revealed) {
-              revealed = true;
-              dot.classList.add('is-visible');
-            } else {
-              const now = event.timeStamp || performance.now();
-              const dt = now - lastT;
-              if (dt > 0) {
-                const speed = Math.hypot(x - lastX, y - lastY) / dt;
-                if (speed > FAST_SPEED) {
-                  dot.classList.add('is-fast');
-                  if (fastTimer) clearTimeout(fastTimer);
-                  fastTimer = window.setTimeout(() => {
-                    dot.classList.remove('is-fast');
-                    fastTimer = 0;
-                  }, 140);
-                }
-              }
-            }
-
-            lastX = x;
-            lastY = y;
-            lastT = event.timeStamp || performance.now();
-          },
-          { passive: true },
-        );
-
-        window.addEventListener('mousedown', () => dot.classList.add('is-clicking'));
-        window.addEventListener('mouseup', () => dot.classList.remove('is-clicking'));
-      }
-    </script>
+    <a class="skip" href="#content">{t.skip}</a>
+    <Loader />
+    <div class="rs-page">
+      <div class="page-shell">
+        <Header
+          locale={locale}
+          projectCount={projectCount}
+          currentPath={Astro.url.pathname}
+        />
+        <slot />
+      </div>
+      <p class="footer__mark" aria-hidden="true">Reyes<span>.</span></p>
+    </div>
   </body>
 </html>
